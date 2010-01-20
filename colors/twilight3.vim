@@ -65,7 +65,7 @@ exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  
 exe 'hi Comment        guifg='.s:mid_grey_blue     .' guibg='.s:darkgrey        .' gui=italic'
 exe 'hi TODO           guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=italic,bold'
 
-exe 'hi Title          guifg='.s:white             .' guibg='.s:darkgrey        .' gui=none'
+exe 'hi Title          guifg='.s:grey_blue             .' guibg='.s:darkgrey        .' gui=none'
 
 exe 'hi Constant       guifg='.s:red               .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi String         guifg='.s:green             .' guibg='.s:darkgrey        .' gui=none'

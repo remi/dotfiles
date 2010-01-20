@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Fichier de configuration pour gvim
 " @author       Rémi Prévost remi-exomel-com
-" @version      20091115
+" @version      20100119
 "
 " ----------------------------------------------------------------------------------------------------
 
@@ -22,8 +22,6 @@ set guifont=Monaco:h12
 
 " Schéma de couleur
 " ------------------------------------------------------------
-"colorscheme jellybeans
-"colorscheme twilight
 colorscheme twilight3
 
 " Options 'fullscreen'
