@@ -262,3 +262,7 @@ map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>d :FufDir<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenVsplit = ''
+
+" Strip les balises HTML de la sélection
+" ----------------------------------------------------------------------------------------------------
+vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
