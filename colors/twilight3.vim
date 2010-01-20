@@ -1,3 +1,4 @@
+" original http://www.vim.org/scripts/script.php?script_id=1677
 
 set background=dark
 
@@ -9,6 +10,7 @@ endif
 
 let colors_name = "twilight"
 
+" Variables
 let s:grey_blue = '#8a9597'
 let s:light_grey_blue = '#a0a8b0'
 let s:dark_grey_blue = '#34383c'
@@ -45,7 +47,6 @@ endif
 
 hi Visual guibg=#404040
 
-"hi Cursor guifg=NONE guibg=#586068
 hi Cursor guibg=#b0d0f0
 
 exe 'hi Normal         guifg='.s:white             .' guibg='.s:darkgrey
@@ -82,32 +83,9 @@ exe 'hi PreProc        guifg='.s:grey_blue         .' guibg='.s:darkgrey        
 exe 'hi Operator       guifg='.s:light_orange      .' guibg='.s:darkgrey        .' gui=none'
 exe 'hi Type           guifg='.s:yellow            .' guibg='.s:darkgrey        .' gui=italic'
 
-"hi Identifier guifg=#7587a6
-" Type d: 'class'
-"hi Structure guifg=#9B859D gui=underline
-"hi Function guifg=#dad085
-" dylan: method, library, ... d: if, return, ...
-"hi Statement guifg=#7187a1 gui=NONE
-" Keywords  d: import, module...
-"hi PreProc guifg=#8fbfdc
-"gui=underline
-"hi Operator guifg=#a07020
-"hi Repeat guifg=#906040 gui=underline
-"hi Type guifg=#708090
-
-"hi Type guifg=#f9ee98 gui=NONE
-
-"hi NonText guifg=#808080 guibg=#303030
-
-"hi Macro guifg=#a0b0c0 gui=underline
-
-"Tabs, trailing spaces, etc (lcs)
-"hi SpecialKey guifg=#808080 guibg=#343434
-
-"hi TooLong guibg=#ff0000 guifg=#f8f8f8
-
+hi Directory guifg=#dad085 gui=NONE
+hi Error guibg=#aa0000
 hi Search guifg=#606000 guibg=#c0c000 gui=bold
 
-hi Directory guifg=#dad085 gui=NONE
-hi Error guibg=#602020
-
+" Javascript
+exe 'hi javaScriptRegexpString guifg='.s:violet

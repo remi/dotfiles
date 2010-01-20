@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Fichier de configuration pour gvim
 " @author       Rémi Prévost remi-exomel-com
-" @version      20100119
+" @version      20100120
 "
 " ----------------------------------------------------------------------------------------------------
 
@@ -15,6 +15,7 @@ set cursorline
 " ------------------------------------------------------------
 set transp=20
 set transp=10
+set transp=5
 
 " Police
 " ------------------------------------------------------------
