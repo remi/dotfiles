@@ -264,3 +264,5 @@ vnoremap a/ f/oF/
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>d :FufDir<CR>
+let g:fuf_keyPreview = '<C-k>'
+let g:fuf_keyOpenVsplit = ''
