@@ -89,3 +89,9 @@ hi Search guifg=#606000 guibg=#c0c000 gui=bold
 
 " Javascript
 exe 'hi javaScriptRegexpString guifg='.s:violet
+
+hi User1 guibg=#222222 guifg=white
+hi User2 guibg=#303030 guifg=#888888
+hi User3 guibg=#303030 guifg=#888888
+hi User4 guibg=#303030 guifg=#aa0000
+hi User5 guibg=#303030 guifg=#ffffff

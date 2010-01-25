@@ -191,6 +191,9 @@ let g:no_html_menu = 'yes'
 if !has('gui_running')
 	syntax on
 	colorscheme camo
+else
+	syntax on
+	colorscheme twilight3
 endif
 
 " NERDTree
@@ -244,10 +247,22 @@ sunmap e
 
 " On définit la statusline
 " ----------------------------------------------------------------------------------------------------
-set statusline=
-set statusline+=%<%f\ %h%m%r%=
-set statusline+=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}
-set statusline+=%k\ %-14.(%l,%c%V%)\ %P
+function! GetCWD()
+	return expand(":pwd")
+endfunction
+
+set statusline=%1*%f%*\ \ 
+set statusline+=%3*fenc:%*%{strlen(&fenc)?&fenc:'none'}\ \ 
+set statusline+=%3*ff:%*%{&ff}\ \ 
+set statusline+=%3*ft:%*%{strlen(&ft)?&ft:'<none>'}\ \ 
+"set statusline+=%3*et:%*%{(&expandtab)?'et':'noet'}\ \ 
+set statusline+=%3*pwd:%*%{getcwd()}\ \ 
+set statusline+=%h\ %m\ %r
+set statusline+=%=
+set statusline+=%3*col:%*%c\ \ 
+set statusline+=%3*line:%*%l\ \ 
+set statusline+=%3*total:%*%L\ \ 
+set statusline+=%3*position:%*%P
 
 " Permet de sélectionner le texte entre deux `/` parce que vim ne le supporte pas nativement
 " ----------------------------------------------------------------------------------------------------
