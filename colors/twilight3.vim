@@ -86,6 +86,7 @@ exe 'hi IncSearch      guifg=#f0a0c0                  guibg=#302028             
 
 " Javascript
 exe 'hi javaScriptRegexpString guifg='.s:violet
+hi link javaScriptValue Constant
 
 " Custom (for statusline)
 exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
