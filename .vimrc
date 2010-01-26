@@ -251,18 +251,23 @@ function! GetCWD()
 	return expand(":pwd")
 endfunction
 
-set statusline=%1*%f%*\ \ 
-set statusline+=%3*fenc:%*%{strlen(&fenc)?&fenc:'none'}\ \ 
-set statusline+=%3*ff:%*%{&ff}\ \ 
+function! IsHelp()
+	return &buftype=='help'?' (help) ':''
+endfunction
+
+set statusline=%1*%f%*
+set statusline+=%7*%{&modified?'\ (modified)':'\ '}%*
+set statusline+=%5*%{IsHelp()}%*
+set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%*
+set statusline+=%3*fenc:%*%{strlen(&fenc)?&fenc:'none'}%*\ \ 
+set statusline+=%3*ff:%*%{&ff}%*\ \ 
 set statusline+=%3*ft:%*%{strlen(&ft)?&ft:'<none>'}\ \ 
-"set statusline+=%3*et:%*%{(&expandtab)?'et':'noet'}\ \ 
-set statusline+=%3*pwd:%*%{getcwd()}\ \ 
-set statusline+=%h\ %m\ %r
+set statusline+=%<%3*pwd:%*%{getcwd()}\ \ 
 set statusline+=%=
 set statusline+=%3*col:%*%c\ \ 
 set statusline+=%3*line:%*%l\ \ 
-set statusline+=%3*total:%*%L\ \ 
-set statusline+=%3*position:%*%P
+set statusline+=%3*total:%*%L\ 
+"set statusline+=%3*position:%*%P
 
 " Permet de sélectionner le texte entre deux `/` parce que vim ne le supporte pas nativement
 " ----------------------------------------------------------------------------------------------------

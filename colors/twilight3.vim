@@ -26,6 +26,7 @@ let s:cyan = '#74dad9'
 let s:darkgrey = '#1a1a1a'
 let s:grey = '#303030'
 let s:lightgrey = '#605958'
+let s:midgrey = '#888888'
 let s:white = '#fffedc'
 
 if version >= 700
@@ -86,9 +87,9 @@ exe 'hi IncSearch      guifg=#f0a0c0                  guibg=#302028             
 " Javascript
 exe 'hi javaScriptRegexpString guifg='.s:violet
 
-" Custom
-hi User1 guibg=#222222 guifg=white
-hi User2 guibg=#303030 guifg=#888888
-hi User3 guibg=#303030 guifg=#888888
-hi User4 guibg=#303030 guifg=#aa0000
-hi User5 guibg=#303030 guifg=#ffffff
+" Custom (for statusline)
+exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
+exe 'hi User3          guibg='.s:grey.'               guifg='.s:midgrey
+exe 'hi User5          guibg='.s:grey.'               guifg='.s:violet
+exe 'hi User6          guibg='.s:grey.'               guifg='.s:red
+exe 'hi User7          guibg='.s:grey.'               guifg='.s:light_orange
