@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Fichier de configuration pour vim
 " @author       Remi Prevost remi-exomel-com
-" @version      20100119
+" @version      20100126
 "
 " ----------------------------------------------------------------------------------------------------
 
@@ -255,7 +255,11 @@ function! IsHelp()
 	return &buftype=='help'?' (help) ':''
 endfunction
 
-set statusline=%1*%f%*
+function! GetName()
+	return expand("%")==''?'<none>':expand("%")
+endfunction
+
+set statusline=%3*[%1*%{GetName()}%3*]%*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%*
 set statusline+=%5*%{IsHelp()}%*
 set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%*
@@ -267,7 +271,6 @@ set statusline+=%=
 set statusline+=%3*col:%*%c\ \ 
 set statusline+=%3*line:%*%l\ \ 
 set statusline+=%3*total:%*%L\ 
-"set statusline+=%3*position:%*%P
 
 " Permet de sélectionner le texte entre deux `/` parce que vim ne le supporte pas nativement
 " ----------------------------------------------------------------------------------------------------
