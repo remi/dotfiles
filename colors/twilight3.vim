@@ -30,7 +30,7 @@ let s:midgrey = '#888888'
 let s:white = '#fffedc'
 
 if version >= 700
-  exe 'hi CursorLine guibg=#262626'
+	exe 'hi CursorLine guibg=#262626'
 	exe 'hi CursorColumn guibg=#262626'
 	exe 'hi MatchParen guifg=white guibg=#80a090 gui=bold'
 
@@ -87,6 +87,16 @@ exe 'hi IncSearch      guifg=#f0a0c0                  guibg=#302028             
 " Javascript
 exe 'hi javaScriptRegexpString guifg='.s:violet
 hi link javaScriptValue Constant
+
+" NERDTree
+hi link treePart Special
+hi link treePartFile Type
+hi link treeFile Normal
+hi link treeExecFile Title
+hi link treeDirSlash Identifier
+hi link treeClosable Type
+hi link treeDir Directory
+hi link treeLink Function
 
 " Custom (for statusline)
 exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
