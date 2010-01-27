@@ -2,7 +2,8 @@
 "   Original: Gergely Kontra <kgergely@mcl.hu>
 "   Current:  Eric Van Dewoestine <ervandew@gmail.com> (as of version 0.4)
 "   Please direct all correspondence to Eric.
-" Version: 0.51
+" Version: 1.0
+" GetLatestVimScripts: 1643 1 :AutoInstall: supertab.vim
 "
 " Description: {{{
 "   Use your tab key to do all your completion in insert mode!
@@ -62,99 +63,31 @@ if exists('complType') " Integration with other completion functions.
   finish
 endif
 
+let s:save_cpo=&cpo
+set cpo&vim
+
 " Global Variables {{{
 
-  " Used to set the default completion type.
-  " There is no need to escape this value as that will be done for you when
-  " the type is set.
-  " Ex.  let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-  "
-  " Note that a special value of 'context' is supported which will result in
-  " super tab attempting to use the text preceding the cursor to decide which
-  " type of completion to attempt.  Currently super tab can recognize method
-  " calls or attribute references via '.', '::' or '->', and file path
-  " references containing '/'.
-  " Ex. let g:SuperTabDefaultCompletionType = 'context'
-  " /usr/l<tab>  # will use filename completion
-  " myvar.t  # will use user completion if completefunc set, or omni
-  "          # completion if omnifunc set.
-  " myvar->  # same as above
-  "
-  " When using context completion, super tab will fall back to a secondary
-  " default completion type set by g:SuperTabContextDefaultCompletionType.
   if !exists("g:SuperTabDefaultCompletionType")
     let g:SuperTabDefaultCompletionType = "<c-p>"
   endif
 
-  " Sets the default completion type used when g:SuperTabDefaultCompletionType
-  " is set to 'context' and the text preceding the cursor does not match any
-  " patterns mapped to other specific completion types.
   if !exists("g:SuperTabContextDefaultCompletionType")
     let g:SuperTabContextDefaultCompletionType = "<c-p>"
   endif
 
-  " When 'context' completion is enabled, this setting can be used to fallback
-  " to g:SuperTabContextDefaultCompletionType as the default for files whose
-  " file type occurs in this configured list.  This allows you to provide an
-  " exclusion for which 'context' completion is not activated.
-  if !exists("g:SuperTabContextFileTypeExclusions")
-    let g:SuperTabContextFileTypeExclusions = []
+  if !exists("g:SuperTabCompletionContexts")
+    let g:SuperTabCompletionContexts = ['s:ContextText']
   endif
 
-  " Used to set a list of variable, completion type pairs used to determine
-  " the default completion type to use for the current buffer.  If the
-  " variable is non-zero and non-empty then the associated completion type
-  " will be used.
-  " Ex. To use omni or user completion when available, but fall back to the
-  " global default otherwise:
-  "   let g:SuperTabDefaultCompletionTypeDiscovery = [
-  "       \ "&completefunc:<c-x><c-u>",
-  "       \ "&omnifunc:<c-x><c-o>",
-  "     \ ]
-  if !exists("g:SuperTabDefaultCompletionTypeDiscovery")
-    let g:SuperTabDefaultCompletionTypeDiscovery = []
+  if !exists("g:SuperTabRetainCompletionDuration")
+    let g:SuperTabRetainCompletionDuration = 'insert'
   endif
 
-  " Determines if, and for how long, the current completion type is retained.
-  " The possible values include:
-  " 0 - The current completion type is only retained for the current completion.
-  "     Once you have chosen a completion result or exited the completion
-  "     mode, the default completion type is restored.
-  " 1 - The current completion type is saved for the duration of your vim
-  "     session or until you enter a different completion mode.
-  "     (SuperTab default).
-  " 2 - The current completion type is saved until you exit insert mode (via
-  "     ESC).  Once you exit insert mode the default completion type is
-  "     restored.
-  if !exists("g:SuperTabRetainCompletionType")
-    let g:SuperTabRetainCompletionType = 1
-  endif
-
-  " Sets whether or not mid word completion is enabled.
-  " When enabled, <tab> will kick off completion when ever a word character is
-  " to the left of the cursor.  When disabled, completion will only occur if
-  " the char to the left is a word char and the char to the right is not (you
-  " are at the end of the word).
   if !exists("g:SuperTabMidWordCompletion")
     let g:SuperTabMidWordCompletion = 1
   endif
 
-  " The following two variables allow you to set the key mapping used to kick
-  " off the current completion.  By default this is <tab> and <s-tab>.  To
-  " change to something like <c-space> and <s-c-space>, you can add the
-  " following to your vimrc.
-  "
-  "   let g:SuperTabMappingForward = '<c-space>'
-  "   let g:SuperTabMappingBackward = '<s-c-space>'
-  "
-  " Note: if the above does not have the desired effect (which may happen in
-  " console version of vim), you can try the following mappings.  Although the
-  " backwards mapping still doesn't seem to work in the console for me, your
-  " milage may vary.
-  "
-  "   let g:SuperTabMappingForward = '<nul>'
-  "   let g:SuperTabMappingBackward = '<s-nul>'
-  "
   if !exists("g:SuperTabMappingForward")
     let g:SuperTabMappingForward = '<tab>'
   endif
@@ -162,19 +95,10 @@ endif
     let g:SuperTabMappingBackward = '<s-tab>'
   endif
 
-  " Sets the key mapping used to insert a literal tab where supertab would
-  " otherwise attempt to kick off insert completion.
-  " The default is '<c-tab>' (ctrl-tab) which unfortunately might not work at
-  " the console.  So if you are using a console vim and want this
-  " functionality, you'll have to change it to something that is supported.
   if !exists("g:SuperTabMappingTabLiteral")
     let g:SuperTabMappingTabLiteral = '<c-tab>'
   endif
 
-  " Sets whether or not to pre-highlight first match when completeopt has
-  " the popup menu enabled and the 'longest' option as well.
-  " When enabled, <tab> will kick off completion and pre-select the first
-  " entry in the popup menu, allowing you to simply hit <enter> to use it.
   if !exists("g:SuperTabLongestHighlight")
     let g:SuperTabLongestHighlight = 0
   endif
@@ -213,48 +137,58 @@ endif
 
 " }}}
 
-" CtrlXPP() {{{
-" Handles entrance into completion mode.
-function! CtrlXPP()
-  if &smd
-    echo '' | echo '-- ^X++ mode (' . s:modes . ')'
-  endif
-  let complType = nr2char(getchar())
-  if stridx(s:types, complType) != -1
-    if stridx("\<c-e>\<c-y>", complType) != -1 " no memory, just scroll...
-      return "\<c-x>" . complType
-    elseif stridx('np', complType) != -1
-      let complType = nr2char(char2nr(complType) - 96)
-    else
-      let complType = "\<c-x>" . complType
-    endif
+" SuperTabSetDefaultCompletionType(type) {{{
+" Globally available function that users can use to set the default
+" completion type for the current buffer, like in an ftplugin.
+function! SuperTabSetDefaultCompletionType(type)
+  " init hack for <c-x><c-v> workaround.
+  let b:complCommandLine = 0
 
-    if g:SuperTabRetainCompletionType
-      let b:complType = complType
-    endif
+  let b:SuperTabDefaultCompletionType = a:type
 
-    " Hack to workaround appent bug when invoking command line completion via
-    " <c-r>=
-    if complType == "\<c-x>\<c-v>"
-      return s:CommandLineCompletion()
-    endif
-
-    return complType
-  endif
-
-  echohl "Unknown mode"
-  return complType
+  " set the current completion type to the default
+  call SuperTabSetCompletionType(b:SuperTabDefaultCompletionType)
 endfunction " }}}
 
 " SuperTabSetCompletionType(type) {{{
-" Globally available function that user's can use to create mappings to
-" quickly switch completion modes.  Useful when a user wants to restore the
-" default or switch to another mode without having to kick off a completion
-" of that type or use SuperTabHelp.
-" Example mapping to restore SuperTab default:
+" Globally available function that users can use to create mappings to quickly
+" switch completion modes.  Useful when a user wants to restore the default or
+" switch to another mode without having to kick off a completion of that type
+" or use SuperTabHelp.  Note, this function only changes the current
+" completion type, not the default, meaning that the default will still be
+" restored once the configured retension duration has been met (see
+" g:SuperTabRetainCompletionDuration).  To change the default for the current
+" buffer, use SuperTabDefaultCompletionType(type) instead.  Example mapping to
+" restore SuperTab default:
 "   nmap <F6> :call SetSuperTabCompletionType("<c-p>")<cr>
 function! SuperTabSetCompletionType(type)
   exec "let b:complType = \"" . escape(a:type, '<') . "\""
+endfunction " }}}
+
+" SuperTabAlternateCompletion(type) {{{
+" Function which can be mapped to a key to kick off an alternate completion
+" other than the default.  For instance, if you have 'context' as the default
+" and want to map ctrl+space to issue keyword completion.
+" Note: due to the way vim expands ctrl characters in mappings, you cannot
+" create the alternate mapping like so:
+"    imap <c-space> <c-r>=SuperTabAlternateCompletion("<c-p>")<cr>
+" instead, you have to use \<lt> to prevent vim from expanding the key
+" when creating the mapping.
+"    gvim:
+"      imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-p>")<cr>
+"    console:
+"      imap <nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-p>")<cr>
+function! SuperTabAlternateCompletion(type)
+  call SuperTabSetCompletionType(a:type)
+  " end any current completion before attempting to start the new one.
+  " use feedkeys to prevent possible remapping of <c-e> from causing issues.
+  "call feedkeys("\<c-e>", 'n')
+  " ^ since we can't detect completion mode vs regular insert mode, we force
+  " vim into keyword completion mode and end that mode to prevent the regular
+  " insert behavior of <c-e> from occurring.
+  call feedkeys("\<c-x>\<c-p>\<c-e>", 'n')
+  call feedkeys(b:complType)
+  return ''
 endfunction " }}}
 
 " s:Init {{{
@@ -273,8 +207,8 @@ function! s:Init()
   augroup END
 
   " Setup mechanism to restore orignial completion type upon leaving insert
-  " mode if g:SuperTabRetainCompletionType == 2
-  if g:SuperTabRetainCompletionType == 2
+  " mode if configured to do so
+  if g:SuperTabRetainCompletionDuration == 'insert'
     augroup supertab_retain
       autocmd!
       autocmd InsertLeave * call s:SetDefaultCompletionType()
@@ -292,34 +226,42 @@ function! s:InitBuffer()
   " init hack for <c-x><c-v> workaround.
   let b:complCommandLine = 0
 
-  if !exists("b:SuperTabDefaultCompletionType")
-    " loop through discovery list to find the default
-    if !empty(g:SuperTabDefaultCompletionTypeDiscovery)
-      " backward compatiability with old string value.
-      if type(g:SuperTabDefaultCompletionTypeDiscovery) == 1
-        let dlist = split(g:SuperTabDefaultCompletionTypeDiscovery, ',')
-      else
-        let dlist = g:SuperTabDefaultCompletionTypeDiscovery
-      endif
-      for pair in dlist
-        let var = substitute(pair, '\(.*\):.*', '\1', '')
-        let type = substitute(pair, '.*:\(.*\)', '\1', '')
-        exec 'let value = ' . var
-        if value !~ '^\s*$' && value != '0'
-          let b:SuperTabDefaultCompletionType = type
-          break
-        endif
-      endfor
+  let b:SuperTabDefaultCompletionType = g:SuperTabDefaultCompletionType
+
+  " set the current completion type to the default
+  call SuperTabSetCompletionType(b:SuperTabDefaultCompletionType)
+endfunction " }}}
+
+" s:ManualCompletionEnter() {{{
+" Handles manual entrance into completion mode.
+function! s:ManualCompletionEnter()
+  if &smd
+    echo '' | echohl ModeMsg | echo '-- ^X++ mode (' . s:modes . ')' | echohl None
+  endif
+  let complType = nr2char(getchar())
+  if stridx(s:types, complType) != -1
+    if stridx("\<c-e>\<c-y>", complType) != -1 " no memory, just scroll...
+      return "\<c-x>" . complType
+    elseif stridx('np', complType) != -1
+      let complType = nr2char(char2nr(complType) - 96)
+    else
+      let complType = "\<c-x>" . complType
     endif
 
-    " fallback to configured default.
-    if !exists("b:SuperTabDefaultCompletionType")
-      let b:SuperTabDefaultCompletionType = g:SuperTabDefaultCompletionType
+    if index(['insert', 'session'], g:SuperTabRetainCompletionDuration) != -1
+      let b:complType = complType
     endif
+
+    " Hack to workaround bug when invoking command line completion via <c-r>=
+    if complType == "\<c-x>\<c-v>"
+      return s:CommandLineCompletion()
+    endif
+
+    return complType
   endif
 
-  " set the default completion type.
-  call SuperTabSetCompletionType(b:SuperTabDefaultCompletionType)
+  echohl "Unknown mode"
+  return complType
 endfunction " }}}
 
 " s:SetCompletionType() {{{
@@ -337,7 +279,8 @@ endfunction " }}}
 
 " s:SetDefaultCompletionType() {{{
 function! s:SetDefaultCompletionType()
-  if exists('b:SuperTabDefaultCompletionType') && !b:complCommandLine
+  if exists('b:SuperTabDefaultCompletionType') &&
+  \ (!exists('b:complCommandLine') || !b:complCommandLine)
     call SuperTabSetCompletionType(b:SuperTabDefaultCompletionType)
   endif
 endfunction " }}}
@@ -365,31 +308,24 @@ function! s:SuperTab(command)
       \   (b:complType == 'context' &&
       \    tolower(g:SuperTabContextDefaultCompletionType) == '<c-p>'))
       return "\<c-n>"
+    elseif a:command == 'p' &&
+      \ (b:complType == "\<c-n>" ||
+      \   (b:complType == 'context' &&
+      \    tolower(g:SuperTabContextDefaultCompletionType) == '<c-n>'))
+      return "\<c-p>"
     endif
 
+    " handle 'context' completion.
     if b:complType == 'context'
-      if index(g:SuperTabContextFileTypeExclusions, &ft) == -1
-        let curline = getline('.')
-        let cnum = col('.')
-        let synname = synIDattr(synID(line('.'), cnum - 1, 1), 'name')
-        if curline =~ '.*/\w*\%' . cnum . 'c' ||
-          \ ((has('win32') || has('win64')) && curline =~ '.*\\\w*\%' . cnum . 'c')
-          return "\<c-x>\<c-f>" . key
-        elseif curline =~ '.*\(\w\|[\])]\)\(\.\|::\|->\)\w*\%' . cnum . 'c' &&
-          \ synname !~ '\(String\|Comment\)'
-          if &completefunc != ''
-            return "\<c-x>\<c-u>" . key
-          elseif &omnifunc != ''
-            return "\<c-x>\<c-o>" . key
-          endif
-        endif
+      let complType = s:ContextCompletion()
+      if complType == ''
+        exec "let complType = \"" .
+          \ escape(g:SuperTabContextDefaultCompletionType, '<') . "\""
       endif
-      exec "let complType = \"" . escape(g:SuperTabContextDefaultCompletionType, '<') . "\""
       return complType . key
     endif
 
-    " Hack to workaround appent bug when invoking command line completion via
-    " <c-r>=
+    " Hack to workaround bug when invoking command line completion via <c-r>=
     if b:complType == "\<c-x>\<c-v>"
       return s:CommandLineCompletion()
     endif
@@ -471,11 +407,82 @@ function! s:CommandLineCompletion()
     \ "let b:complCommandLine = 0\<cr>"
 endfunction " }}}
 
+" s:ContextCompletion() {{{
+function! s:ContextCompletion()
+  let contexts = exists('b:SuperTabCompletionContexts') ?
+    \ b:SuperTabCompletionContexts : g:SuperTabCompletionContexts
+
+  for context in contexts
+    try
+      let Context = function(context)
+      let complType = Context()
+      unlet Context
+      if type(complType) == 1 && complType != ''
+        return complType
+      endif
+    catch /E700/
+      echohl Error
+      echom 'supertab: no context function "' . context . '" found.'
+      echohl None
+    endtry
+  endfor
+  return ''
+endfunction " }}}
+
+" s:ContextDiscover() {{{
+function! s:ContextDiscover()
+  let discovery = exists('g:SuperTabContextDiscoverDiscovery') ?
+    \ g:SuperTabContextDiscoverDiscovery : []
+
+  " loop through discovery list to find the default
+  if !empty(discovery)
+    for pair in discovery
+      let var = substitute(pair, '\(.*\):.*', '\1', '')
+      let type = substitute(pair, '.*:\(.*\)', '\1', '')
+      exec 'let value = ' . var
+      if value !~ '^\s*$' && value != '0'
+        exec "let complType = \"" . escape(type, '<') . "\""
+        return complType
+      endif
+    endfor
+  endif
+endfunction " }}}
+
+" s:ContextText() {{{
+function! s:ContextText()
+  let exclusions = exists('g:SuperTabContextTextFileTypeExclusions') ?
+    \ g:SuperTabContextTextFileTypeExclusions : []
+
+  if index(exclusions, &ft) == -1
+    let curline = getline('.')
+    let cnum = col('.')
+    let synname = synIDattr(synID(line('.'), cnum - 1, 1), 'name')
+    if curline =~ '.*/\w*\%' . cnum . 'c' ||
+      \ ((has('win32') || has('win64')) && curline =~ '.*\\\w*\%' . cnum . 'c')
+      return "\<c-x>\<c-f>"
+
+    elseif curline =~ '.*\(\w\|[\])]\)\(\.\|::\|->\)\w*\%' . cnum . 'c' &&
+      \ synname !~ '\(String\|Comment\)'
+      let omniPrecedence = exists('g:SuperTabContextTextOmniPrecedence') ?
+        \ g:SuperTabContextTextOmniPrecedence : ['&completefunc', '&omnifunc']
+
+      for omniFunc in omniPrecedence
+        if omniFunc !~ '^&'
+          let omniFunc = '&' . omniFunc
+        endif
+        if getbufvar(bufnr('%'), omniFunc) != ''
+          return omniFunc == '&omnifunc' ? "\<c-x>\<c-o>" : "\<c-x>\<c-u>"
+        endif
+      endfor
+    endif
+  endif
+endfunction " }}}
+
 " Key Mappings {{{
   " map a regular tab to ctrl-tab (note: doesn't work in console vim)
   exec 'inoremap ' . g:SuperTabMappingTabLiteral . ' <tab>'
 
-  imap <c-x> <c-r>=CtrlXPP()<cr>
+  imap <c-x> <c-r>=<SID>ManualCompletionEnter()<cr>
 
   " From the doc |insert.txt| improved
   exec 'imap ' . g:SuperTabMappingForward . ' <c-n>'
@@ -497,5 +504,7 @@ endfunction " }}}
 " }}}
 
 call s:Init()
+
+let &cpo = s:save_cpo
 
 " vim:ft=vim:fdm=marker
