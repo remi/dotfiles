@@ -286,6 +286,27 @@ map <Leader>d :FufDir<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenVsplit = ''
 
+" Supertab
+" ----------------------------------------------------------------------------------------------------
+set ofu=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = 'context'
+
+" Log les fichiers ouverts avec la date
+" ----------------------------------------------------------------------------------------------------
+function! LogEachFile()
+	if &buftype != 'help'
+		redir >> ~/.vimlog
+			echo "(".strftime("%F %T").")  ".expand("%:p")
+		redir END
+	endif
+endfunction
+autocmd! BufReadPre * silent call LogEachFile()
+
+" MRU plugin
+" ----------------------------------------------------------------------------------------------------
+let MRU_File = "/Users/remi/.vimmru"
+map <Leader>m :MRU<CR>
+
 " Strip les balises HTML de la sélection
 " ----------------------------------------------------------------------------------------------------
 vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
