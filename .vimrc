@@ -72,9 +72,10 @@ let php_special_functions = 0
 
 " Backups
 " ----------------------------------------------------------------------------------------------------
-set noswapfile " no blablabla.swp!
 set backup
+set swapfile
 set backupdir=$HOME/.vim-local/.vimbackup
+set directory=$HOME/.vim-local/.vimswap
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
 " No automatic word-wrap!
@@ -180,7 +181,6 @@ let g:do_xhtml_mappings = 'yes'
 let g:no_html_toolbar = 'yes'
 let g:no_html_menu = 'yes'
 
-
 " Different colorschemes if we're running vim or gvim
 " ----------------------------------------------------------------------------------------------------
 if !has('gui_running')
@@ -280,7 +280,7 @@ map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>d :FufDir<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenVsplit = ''
-let g:fuf_infoFile = '~/.vim-local/.vim-fuf'
+let g:fuf_infoFile = '~/.vim-local/.vimfuf'
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
