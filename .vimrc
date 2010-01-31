@@ -1,111 +1,110 @@
 " ----------------------------------------------------------------------------------------------------
 "
 " @file         .vimrc
-" @description  Fichier de configuration pour vim
-" @author       Remi Prevost remi-exomel-com
-" @version      20100126
+" @description  Vim configuration file
+" @author       Rémi Prévost remi-exomel-com
+" @version      20100130
 "
 " ----------------------------------------------------------------------------------------------------
 
-" On change le `working directory` chaque fois qu’on change de fichier
+" Change the working path each time we switch buffers
 " ----------------------------------------------------------------------------------------------------
 au BufEnter * cd %:p:h
 
-" On définit la virgule comme touche 'leader'
+" Define the leader key
 " ----------------------------------------------------------------------------------------------------
 let mapleader = ","
 let g:mapleader = ","
 
-" Active la coloration de la syntaxe
+" Activate syntax highlithing
 " ----------------------------------------------------------------------------------------------------
 syntax on
 
-" Active le mode 256 couleurs (parce qu'on l'utilise souvent en remote!)
+" Activate 256 colors mode (to use in terminal mode)
 " ----------------------------------------------------------------------------------------------------
 set t_Co=256
 
-" Place le curseur là où il était lors de la fermeture
+" Move the cursor to its last location in the file
 " ----------------------------------------------------------------------------------------------------
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
-" Détecteur automatique les règles d'indentation
+" Activate filetype-based indent settings
 " ----------------------------------------------------------------------------------------------------
 filetype indent on
 
-" Options diverses
+" Misc. options
 " ----------------------------------------------------------------------------------------------------
-set showcmd " Affiche la commande qui est en train d’être entrée
-set showmode " Affiche le mode actuel
-set smartcase " Recherche intelligente
-set incsearch " Recherche incrémentale
-set mouse=a " Active la souris dans tous les modes
-set number " Affiche les numéros de ligne
-set ruler " Affiche la position du curseur dans le fichier
-set ignorecase " Ignore la casse lors des recherches
-set ts=4 " Une tabulation = 4 caractères
-set shiftwidth=4 " Une tabulation = 4 caractères
-set softtabstop=4 " Une tabulation = 4 caractères
-set whichwrap=h,l,~,[,],<,> " À quel caractère on doit 'wrapper'
-set scrolloff=4 " Nombre de lignes à toujours afficher à partir du bas/haut de la fenêtre
-set laststatus=2 " On montre toujours la barre de status
-set noautoread " On ne recharge un fichier s'il a changé
-set title " Le nom du fichier dans le titre de la fenêtre
-set showmatch " Met en surbrillance les parenthèses
-set autoindent " Auto-indentation du code
-set smartindent " Auto-indentation intelligente
-set showtabline=2 " On affiche toujours les onglets
-set hlsearch " On met en surbrillance le terme recherché
-set vb t_vb= " Pas de bell
+set showcmd " Display the command as we type it
+set showmode " Display the current mode
+set smartcase " Smart-case search mode
+set incsearch " Start to search as soon as we type
+set mouse=a " Use the mouse in all modes
+set number " Show line numbers
+set ts=4 " A tab = 4 spaces
+let &shiftwidth=&ts
+let softtabstop=&ts
+set whichwrap=h,l,~,[,],<,> " Which caracters to wrap
+set scrolloff=4 " Scroll offset
+set laststatus=2 " Always show the status line
+set noautoread " Do not reload the file if it changes
+set title " Display filename in window title
+set showmatch " Show matching parentheses
+set autoindent " Code auto-indent
+set smartindent " Smart code auto-indent
+set showtabline=2 " Always display tabs
+set hlsearch " Highlight matching search result
+set vb t_vb= " No visual bell
+set viminfo='50,<1000,s100,h,n~/.vim-local/.viminfo " Viminfo settings
 
 set noeol
 set wildmenu
 set wildmode=full
 set switchbuf=useopen
 
-" Encodage du fichier (toujours UTF-8!)
+" Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
 set encoding=utf-8
 set fileencoding=utf-8
 
-" On empêche la mise en surbrillance spéciale de certaines fonctions PHP
+" Do not highlight special PHP functions (to ensure compatibility with most color schemes)
 " ----------------------------------------------------------------------------------------------------
 let php_special_functions = 0
 
 " Backups
 " ----------------------------------------------------------------------------------------------------
-set noswapfile " pas de blablabla.swp!
+set noswapfile " no blablabla.swp!
 set backup
-set backupdir=$HOME/.vimbackup
+set backupdir=$HOME/.vim-local/.vimbackup
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
-" Pas de retour à la ligne automatique!
+" No automatic word-wrap!
 " ----------------------------------------------------------------------------------------------------
 set nowrap 
 set sidescroll=4
 set listchars+=precedes:←,extends:→
 
-" On accroche souvent Shift-Up et Shift-Down en mode visuel...
+" I often wrongly press 'Shift' in visual mode…
 " ----------------------------------------------------------------------------------------------------
 vnoremap <S-Up> k
 vnoremap <S-Down> j
 
-" Permet une navigation plus facile entre les différents splits
+" Easy split navigation
 " ----------------------------------------------------------------------------------------------------
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 noremap <C-K> <C-W>k
 noremap <C-J> <C-W>j
 
-" Parce que CTRL-], c'est pas facile sur un clavier canadien
+" Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
 noremap <C-T> <C-]>
 
-" Déplacer des lignes facilement
+" Easy line moving
 " ----------------------------------------------------------------------------------------------------
 noremap <C-Up> ddkkp
 noremap <C-Down> ddp
 
-" Navigation par onglets
+" Easy tab navigation
 " ----------------------------------------------------------------------------------------------------
 noremap <S-C-Tab> :tabprevious<CR>
 inoremap <S-C-Tab> <Esc>:tabprevious<CR>
@@ -117,31 +116,31 @@ vnoremap <C-Tab> <Esc>:tabnext<CR>
 noremap <M-D-Left> <Esc>:tabprevious<CR>
 noremap <M-D-Right> <Esc>:tabnext<CR>
 
-" Rafraichit le fichier actuel
+" Reload the current file
 " ----------------------------------------------------------------------------------------------------
 noremap <D-r> :e<CR>
 
-" Ajoute des accolades ouvrantes et fermantes
+" Add pairs of matching curly braces
 " ----------------------------------------------------------------------------------------------------
 inoremap ;{ {<CR><CR>}<Esc>ki<Tab>
 noremap ;{ i{<CR><CR>}<Esc>ki<Tab>
 
-" Permet de sélectionner jusqu'à la fin d'une ligne
+" Select a line until its ending
 " ----------------------------------------------------------------------------------------------------
 vnoremap # $h
 
-" Exécute le fichier actuel avec python
+" Execute the current file with Python
 " ----------------------------------------------------------------------------------------------------
 noremap <F2> :!python %<cr>
 
-" Touches de fonctions
+" Function keys
 " ----------------------------------------------------------------------------------------------------
 noremap <F9> :set list!<Bar>set list?<CR>
 noremap <F8> :set wrap!<Bar>set wrap?<CR>
 noremap <F10> :set paste!<Bar>set paste?<CR>
 noremap <F11> :set expandtab!<Bar>set expandtab?<CR>
 
-" Insère la date courrante
+" Insert current date
 " ----------------------------------------------------------------------------------------------------
 " format YYYYMMDD (eg. 20100105)
 inoremap <D-d> <C-R>=strftime("%Y%m%d")<CR>
@@ -150,43 +149,39 @@ noremap ª cw<C-R>=strftime("%Y%m%d")<CR><Esc>b
 inoremap <D-D> <C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>
 noremap ˇ cw<C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR><Esc>b
 
-" Duplique la ligne
+" Duplicate line
 " ----------------------------------------------------------------------------------------------------
 noremap <D-d> yyP
 vnoremap <D-d> y'>p
 
-" Sélectionne uniquement le texte de la ligne
+" Select only the text caracters in the current line
 " ----------------------------------------------------------------------------------------------------
 noremap √ ^v$
 
-" Sélectionne uniquement le mot actuel
-" ----------------------------------------------------------------------------------------------------
-noremap ∑ ebve
-
-" Indentation plus intuitive en mode visuel
+" Easy indentation in visual mode
 " ----------------------------------------------------------------------------------------------------
 vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
 
-" Claire les termes mis en surbrillance
+" Clear search-highlighted terms
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 
-" Active le support des plugins spécifiques à un type de fichier
+" Activate filetype plugins
 " ----------------------------------------------------------------------------------------------------
 filetype on
 filetype plugin on
 
-" Configuration du plugin html.vim
+" html.vim settings
 " ----------------------------------------------------------------------------------------------------
 let g:do_xhtml_mappings = 'yes'
 let g:no_html_toolbar = 'yes'
 let g:no_html_menu = 'yes'
 
 
-" Schémas de couleurs selon si on roule gvim
+" Different colorschemes if we're running vim or gvim
 " ----------------------------------------------------------------------------------------------------
 if !has('gui_running')
 	syntax on
@@ -196,7 +191,7 @@ else
 	colorscheme twilight3
 endif
 
-" NERDTree
+" NERDTree settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>, :NERDTreeToggle %:p:h<cr>
 map <Leader>f :NERDTreeFind<cr>
@@ -207,11 +202,11 @@ let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore = ['\~$', '^\._', '^\.git$']
 
-" Syntastic
+" Syntastic settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>e :Errors<CR>
 
-" Taglist
+" Taglist settings
 " ----------------------------------------------------------------------------------------------------
 map éé :TlistToggle<cr>
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -221,22 +216,22 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
 
-" Sauvegarde rapide
+" Fast save
 " ----------------------------------------------------------------------------------------------------
 nmap <leader>w :w!<cr>
 
-" Insère une nouvelle ligne
+" Insert a new line
 " ----------------------------------------------------------------------------------------------------
 map K <Esc>i<CR><Esc><Esc>
 
-" Commands personnalisées (parce qu'on accroche <Shift> des fois
+" We often press 'Shift' when we should not
 " ----------------------------------------------------------------------------------------------------
 command! Q q
 command! W w
 command! Wq wq
 command! WQ wq
 
-" On veut que `w`, `b` et `e` suive le 'CamelCase'
+" CamelCaseMotion settings
 " ----------------------------------------------------------------------------------------------------
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
@@ -245,7 +240,7 @@ sunmap w
 sunmap b
 sunmap e
 
-" On définit la statusline
+" Statusline
 " ----------------------------------------------------------------------------------------------------
 function! GetCWD()
 	return expand(":pwd")
@@ -272,41 +267,42 @@ set statusline+=%3*col:%*%c\ \
 set statusline+=%3*line:%*%l\ \ 
 set statusline+=%3*total:%*%L\ 
 
-" Permet de sélectionner le texte entre deux `/` parce que vim ne le supporte pas nativement
+" Add a new '/' text object
 " ----------------------------------------------------------------------------------------------------
 onoremap i/ :normal T/vt/<CR>
 onoremap a/ :normal F/vf/<CR>
 vnoremap i/ t/oT/
 vnoremap a/ f/oF/
 
-" FuzzyFinder
+" FuzzyFinder settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>d :FufDir<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenVsplit = ''
+let g:fuf_infoFile = '~/.vim-local/.vim-fuf'
 
-" Supertab
+" Supertab settings
 " ----------------------------------------------------------------------------------------------------
 set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
 
-" Log les fichiers ouverts avec la date
+" We log each file opening in an external file
 " ----------------------------------------------------------------------------------------------------
 function! LogEachFile()
 	if &buftype != 'help'
-		redir >> ~/.vimlog
+		redir >> ~/.vim-local/.vimlog
 			echo "(".strftime("%F %T").")  ".expand("%:p")
 		redir END
 	endif
 endfunction
 autocmd! BufReadPre * silent call LogEachFile()
 
-" MRU plugin
+" MRU settings
 " ----------------------------------------------------------------------------------------------------
-let MRU_File = "/Users/remi/.vimmru"
+let MRU_File = "/Users/remi/.vim-local/.vimmru"
 map <Leader>m :MRU<CR>
 
-" Strip les balises HTML de la sélection
+" Strip HTML tags in selected line
 " ----------------------------------------------------------------------------------------------------
 vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
