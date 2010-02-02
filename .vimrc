@@ -36,6 +36,7 @@ filetype indent on
 " ----------------------------------------------------------------------------------------------------
 set showcmd " Display the command as we type it
 set showmode " Display the current mode
+set ignorecase " Ignore case when searching
 set smartcase " Smart-case search mode
 set incsearch " Start to search as soon as we type
 set mouse=a " Use the mouse in all modes
@@ -301,7 +302,10 @@ autocmd! BufReadPre * silent call LogEachFile()
 " MRU settings
 " ----------------------------------------------------------------------------------------------------
 let MRU_File = "/Users/remi/.vim-local/.vimmru"
+let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
+autocmd BufEnter __MRU_Files__ set scrolloff=0 
+autocmd BufLeave __MRU_Files__ set scrolloff=4 
 
 " Strip HTML tags in selected line
 " ----------------------------------------------------------------------------------------------------
