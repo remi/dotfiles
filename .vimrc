@@ -85,6 +85,11 @@ set nowrap
 set sidescroll=4
 set listchars+=precedes:←,extends:→
 
+" Let's remap Enter and Backspace
+" ----------------------------------------------------------------------------------------------------
+vnoremap  <silent>
+vnoremap <BS> hx
+
 " I often wrongly press 'Shift' in visual mode…
 " ----------------------------------------------------------------------------------------------------
 vnoremap <S-Up> k
