@@ -62,6 +62,7 @@ set showtabline=2 " Always display tabs
 set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
 set viminfo='50,<1000,s100,h,n~/.vim-local/.viminfo " Viminfo settings
+set mls=10 " Check for modelines in the first and last 10 lines
 
 set noeol
 set wildmenu
