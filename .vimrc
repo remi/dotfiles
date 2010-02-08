@@ -383,4 +383,11 @@ augroup StampBackup
 augroup END
 " }}}
 
+" Easy fold opening-closing {{{
+" ----------------------------------------------------------------------------------------------------
+noremap <silent> <CR> zo
+noremap <silent> <S-CR> zc
+noremap <silent> <S-D-CR> zMzo
+" }}}
+
 " vim: fdm=marker
