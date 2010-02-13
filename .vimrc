@@ -3,7 +3,8 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost remi-exomel-com
-" @version      20100206
+" @version      20100213
+" vim: fdm=marker
 "
 " ----------------------------------------------------------------------------------------------------
 
@@ -92,9 +93,11 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
 " No automatic word-wrap! {{{
 " ----------------------------------------------------------------------------------------------------
-set nowrap 
+set nowrap
 set sidescroll=4
-set listchars+=precedes:←,extends:→
+set listchars=precedes:←,extends:→,nbsp:%,trail:⠿,tab:\|·,eol:\ 
+set list
+
 " }}}
 
 " Let's remap Enter and Backspace {{{
@@ -233,7 +236,8 @@ endif
 map <Leader>, :NERDTreeToggle %:p:h<cr>
 map <Leader>f :NERDTreeFind<cr>
 map <Leader>v :NERDTree /Volumes/<cr>
-map <Leader>c :NERDTree 
+map <Leader>c :NERDTree
+let NERDTreeBookmarksFile="/Users/remi/.vim-local/.NERDTreeBookmarks"
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
@@ -352,8 +356,8 @@ autocmd! BufReadPre * silent call LogEachFile()
 let MRU_File = "/Users/remi/.vim-local/.vimmru"
 let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
-autocmd BufEnter __MRU_Files__ set scrolloff=0 
-autocmd BufLeave __MRU_Files__ set scrolloff=4 
+autocmd BufEnter __MRU_Files__ set scrolloff=0
+autocmd BufLeave __MRU_Files__ set scrolloff=4
 " }}}
 
 " Strip HTML tags in selected line {{{
@@ -391,5 +395,3 @@ noremap <silent> <S-D-CR> zMzo
 noremap <silent> <S-D-Up> zk
 noremap <silent> <S-D-Down> zj
 " }}}
-
-" vim: fdm=marker
