@@ -10,7 +10,7 @@
 
 " On met la ligne du curseur en surbrillance {{{
 " ------------------------------------------------------------
-set cursorline
+set nocursorline
 "}}}
 
 " Transparence {{{
