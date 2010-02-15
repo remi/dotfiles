@@ -95,7 +95,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " ----------------------------------------------------------------------------------------------------
 set nowrap
 set sidescroll=4
-set listchars=precedes:←,extends:→,nbsp:%,trail:⠿,tab:\|·,eol:\ 
+set listchars=precedes:←,extends:→,nbsp:◊,trail:⠿,tab:\|·,eol:\ 
 set list
 
 " }}}
@@ -104,6 +104,7 @@ set list
 " ----------------------------------------------------------------------------------------------------
 vnoremap  <silent>
 vnoremap <BS> hx
+set backspace=indent,eol,start
 " }}}
 
 " I often wrongly press 'Shift' in visual mode… {{{
