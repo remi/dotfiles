@@ -396,3 +396,9 @@ noremap <silent> <S-D-CR> zMzo
 noremap <silent> <S-D-Up> zk
 noremap <silent> <S-D-Down> zj
 " }}}
+
+" Easy blank lines {{{
+" ----------------------------------------------------------------------------------------------------
+noremap <silent> ø <Esc>o<Esc>k
+noremap <silent> Ø <Esc>O<Esc>j
+" }}}
