@@ -64,6 +64,7 @@ set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
 set viminfo='50,<1000,s100,h,n~/.vim-local/.viminfo " Viminfo settings
 set mls=10 " Check for modelines in the first and last 10 lines
+set modeline
 
 set noeol
 set wildmenu
@@ -238,7 +239,7 @@ map <Leader>, :NERDTreeToggle %:p:h<cr>
 map <Leader>f :NERDTreeFind<cr>
 map <Leader>v :NERDTree /Volumes/<cr>
 map <Leader>c :NERDTree
-let NERDTreeBookmarksFile="/Users/remi/.vim-local/.NERDTreeBookmarks"
+let NERDTreeBookmarksFile="/home/remi/.vim-local/.NERDTreeBookmarks"
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
@@ -354,7 +355,7 @@ autocmd! BufReadPre * silent call LogEachFile()
 
 " MRU settings {{{
 " ----------------------------------------------------------------------------------------------------
-let MRU_File = "/Users/remi/.vim-local/.vimmru"
+let MRU_File = "/home/remi/.vim-local/.vimmru"
 let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
 autocmd BufEnter __MRU_Files__ set scrolloff=0
