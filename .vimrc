@@ -238,7 +238,7 @@ map <Leader>, :NERDTreeToggle %:p:h<cr>
 map <Leader>f :NERDTreeFind<cr>
 map <Leader>v :NERDTree /Volumes/<cr>
 map <Leader>c :NERDTree
-let NERDTreeBookmarksFile="/Users/remi/.vim-local/.NERDTreeBookmarks"
+let NERDTreeBookmarksFile=expand('$HOME').'/.vim-local/.NERDTreeBookmarks'
 let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
@@ -354,7 +354,7 @@ autocmd! BufReadPre * silent call LogEachFile()
 
 " MRU settings {{{
 " ----------------------------------------------------------------------------------------------------
-let MRU_File = "/Users/remi/.vim-local/.vimmru"
+let MRU_File=expand("$HOME")."/.vim-local/.vimmru"
 let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
 autocmd BufEnter __MRU_Files__ set scrolloff=0
@@ -401,4 +401,11 @@ noremap <silent> <S-D-Down> zj
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> ø <Esc>o<Esc>k
 noremap <silent> Ø <Esc>O<Esc>j
+" }}}
+
+" YankRing {{{
+" ----------------------------------------------------------------------------------------------------
+let g:yankring_history_dir = expand('$HOME').'/.vim-local'
+let g:yankring_history_file = '.vim-yankring'
+map <Leader>y :YRShow<CR>
 " }}}
