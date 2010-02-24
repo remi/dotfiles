@@ -408,4 +408,6 @@ noremap <silent> Ø <Esc>O<Esc>j
 let g:yankring_history_dir = expand('$HOME').'/.vim-local'
 let g:yankring_history_file = '.vim-yankring'
 map <Leader>y :YRShow<CR>
+autocmd BufEnter \[YankRing\] set scrolloff=0
+autocmd BufLeave \[YankRing\] set scrolloff=4
 " }}}
