@@ -675,7 +675,7 @@ inoremap <buffer> ;le <legend></legend><Esc>F<i
 "----------
 "[label] tag
 nnoremap <buffer> ;la O<label for=""></label><Esc>F"i
-vnoremap <buffer> ;la <Esc>`>a"></label><Esc>`<i<a for="<Esc>l
+vnoremap <buffer> ;la <Esc>`>a</label><Esc>`<i<label for=""><Esc>2F"a
 inoremap <buffer> ;la <label for=""></label><Esc>F"i
 "----------
 "[optgroup] tag
