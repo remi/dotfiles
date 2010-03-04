@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost remi-exomel-com
-" @version      20100213
+" @version      20100304
 " vim: fdm=marker
 "
 " ----------------------------------------------------------------------------------------------------
@@ -243,6 +243,8 @@ let NERDTreeShowHidden=1
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore = ['\~$', '^\._', '^\.git$']
+autocmd BufEnter NERD_tree_* set scrolloff=0 cursorline
+autocmd BufLeave NERD_tree_* set scrolloff=4 nocursorline
 " }}}
 
 " Syntastic settings {{{
@@ -357,8 +359,8 @@ autocmd! BufReadPre * silent call LogEachFile()
 let MRU_File=expand("$HOME")."/.vim-local/.vimmru"
 let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
-autocmd BufEnter __MRU_Files__ set scrolloff=0
-autocmd BufLeave __MRU_Files__ set scrolloff=4
+autocmd BufEnter __MRU_Files__ set scrolloff=0 cursorline
+autocmd BufLeave __MRU_Files__ set scrolloff=4 nocursorline
 " }}}
 
 " Strip HTML tags in selected line {{{
@@ -408,6 +410,6 @@ noremap <silent> Ø <Esc>O<Esc>j
 let g:yankring_history_dir = expand('$HOME').'/.vim-local'
 let g:yankring_history_file = '.vim-yankring'
 map <Leader>y :YRShow<CR>
-autocmd BufEnter \[YankRing\] set scrolloff=0
-autocmd BufLeave \[YankRing\] set scrolloff=4
+autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
+autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " }}}
