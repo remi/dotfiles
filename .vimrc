@@ -3,7 +3,7 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost remi-exomel-com
-" @version      20100304
+" @version      20100305
 " vim: fdm=marker
 "
 " ----------------------------------------------------------------------------------------------------
@@ -413,3 +413,24 @@ map <Leader>y :YRShow<CR>
 autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
 autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " }}}
+
+" Always go to the mark’s line and column {{{
+" ----------------------------------------------------------------------------------------------------
+noremap ' `
+vnoremap ' `
+noremap g' g`
+vnoremap g' g`
+" }}}
+
+" Update file modification tag {{{
+" Looks for '@version 20100305' and replace the date with today’s
+" ----------------------------------------------------------------------------------------------------
+function! UpdateFileDateTag()
+	let myposition = winsaveview()
+	exe ':%s/@version\(\s\+\)[0-9]\{8\}/@version\1'.strftime("%Y%m%d").'/g'
+	call winrestview( myposition )
+endfunction
+
+augroup UpdateFileDateTag
+	autocmd! BufWrite * silent! call UpdateFileDateTag()
+augroup END
