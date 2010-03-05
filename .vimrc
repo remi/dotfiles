@@ -10,7 +10,7 @@
 
 " Change the working path each time we switch buffers {{{
 " ----------------------------------------------------------------------------------------------------
-au BufEnter * cd %:p:h
+au BufEnter * lcd %:p:h
 " }}}
 
 " Define the leader key {{{
