@@ -339,7 +339,7 @@ let g:fuf_infoFile = '~/.vim-local/.vimfuf'
 " Supertab settings {{{
 " ----------------------------------------------------------------------------------------------------
 set ofu=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabDefaultCompletionType = '<c-p>'
 " }}}
 
 " We log each file opening in an external file {{{
