@@ -3,7 +3,6 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost remi-exomel-com
-" @version      20100305
 " vim: fdm=marker
 "
 " ----------------------------------------------------------------------------------------------------
@@ -57,8 +56,9 @@ set laststatus=2 " Always show the status line
 set noautoread " Do not reload the file if it changes
 set title " Display filename in window title
 set showmatch " Show matching parentheses
-set autoindent " Code auto-indent
-set smartindent " Smart code auto-indent
+set noautoindent " Code auto-indent
+set nosmartindent " Smart code auto-indent
+set cindent
 set showtabline=2 " Always display tabs
 set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
@@ -423,7 +423,7 @@ vnoremap g' g`
 " }}}
 
 " Update file modification tag {{{
-" Looks for '@version 20100305' and replace the date with today’s
+" Looks for '@version 20100308' and replace the date with today’s
 " ----------------------------------------------------------------------------------------------------
 function! UpdateFileDateTag()
 	let myposition = winsaveview()
@@ -431,6 +431,6 @@ function! UpdateFileDateTag()
 	call winrestview( myposition )
 endfunction
 
-augroup UpdateFileDateTag
-	autocmd! BufWrite * silent! call UpdateFileDateTag()
-augroup END
+"augroup UpdateFileDateTag
+	"autocmd! BufWrite * silent! call UpdateFileDateTag()
+"augroup END
