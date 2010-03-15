@@ -18,6 +18,17 @@ endif
 au! BufRead,BufNewFile *.php        setfiletype php
 au! BufRead,BufNewFile *.tpl.html   setfiletype php
 
+" Mustache
+" -----------------------------------------------------------------
+runtime! ftdetect/*.vim
+au BufNewFile,BufRead *.mustache        setf html.mustache
+
+" Rack
+" -----------------------------------------------------------------
+augroup rack
+	au! BufRead,BufNewFile *.ru setfiletype ruby
+augroup END
+
 " Markdown
 " -----------------------------------------------------------------
 augroup markdown
