@@ -474,14 +474,8 @@ if has("gui")
 endif
 "----------
 "[input] tag
-nnoremap <buffer> ;in O<input name="" type="" value="" /><Esc>5F"i
-vnoremap <buffer> ;in <Esc>`>a" type="" value="" /><Esc>`<i<a name="<Esc>l
-inoremap <buffer> ;in <input name="" type="" value="" /><Esc>5F"i
-if has("gui")
- nnoremenu XHtml.Form.Input<Tab>;in O<input name="" type="" value="" /><Esc>5F"i
- vnoremenu XHtml.Form.Input<Tab>;in <Esc>`>a" type="" value="" /><Esc>`<i<a name="<Esc>l
- inoremenu XHtml.Form.Input<Tab>;in <input name="" type="" value="" /><Esc>5F"i
-endif
+nnoremap <buffer> ;in O<input name="" id="" type="" value="" /><Esc>7F"i
+inoremap <buffer> ;in <input name="" id="" type="" value="" /><Esc>7F"i
 "----------
 "[textarea] tag
 nnoremap <buffer> ;te O<textarea><CR></textarea><Esc>O
