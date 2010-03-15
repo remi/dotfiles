@@ -12,7 +12,7 @@ set cpo&vim
 " ---------------------------------------------------------------------
 " Public Interface: {{{1
 if !hasmapto('<Plug>ManPageView') && &kp =~ '^man\>'
-  nmap <unique> K <Plug>ManPageView
+  silent! nmap <unique> K <Plug>ManPageView
 endif
 nmap <silent> <script> <Plug>ManPageView	:<c-u>call manpageview#ManPageView(1,v:count,expand("<cword>"))<CR>
 
