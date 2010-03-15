@@ -154,7 +154,7 @@ snippet def
 snippet def?
 	${1}defined('${2}')${3}
 snippet wh
-	while ( ${1:/* condition */} ) {
+	while (${1:/* condition */}) {
 		${2:// code...}
 	}
 # do ... while
@@ -163,11 +163,11 @@ snippet do
 		${2:// code... }
 	} while (${1:/* condition */});
 snippet if
-	if ( ${1:/* condition */} ) {
+	if (${1:/* condition */}) {
 		${2:// code...}
 	}
 snippet ife
-	if ( ${1:/* condition */} ) {
+	if (${1:/* condition */}) {
 		${2:// code...}
 	} else {
 		${3:// code...}
@@ -178,7 +178,7 @@ snippet else
 		${1:// code...}
 	}
 snippet elseif
-	elseif ( ${1:/* condition */} ) {
+	elseif (${1:/* condition */}) {
 		${2:// code...}
 	}
 # Tertiary conditional
@@ -203,7 +203,7 @@ snippet for
 		${4: // code...}
 	}
 snippet foreach
-	foreach ( $${1:variable} as $${2:key} ) {
+	foreach ($${1:variable} as $${2:key}) {
 		${3:// code...}
 	}
 snippet fun

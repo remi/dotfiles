@@ -434,3 +434,10 @@ endfunction
 "augroup UpdateFileDateTag
 	"autocmd! BufWrite * silent! call UpdateFileDateTag()
 "augroup END
+
+" }}}
+
+" Reload snipMate snippet {{{
+" ----------------------------------------------------------------------------------------------------
+nmap ,rr :call ReloadSnippets(&filetype)<CR>
+" }}}
