@@ -687,6 +687,10 @@ inoremap <buffer> ;og <optgroup><CR></optgroup><Esc>O
 nnoremap <buffer> ;ph a<?php  ?><Esc>hh
 inoremap <buffer> ;ph <?php  ?><Esc>hhi
 
+"attributes
+inoremap <buffer> ;cl class=""<Esc>i
+inoremap <buffer> ;id id=""<Esc>i
+
 " Jump to next attribute field
 nnoremap <buffer>	<C-J>	/\M="\\|>/e;/\S/<CR>
 inoremap <buffer>	<C-J>	<C-O>/\M="\\|>/e;/\S/<CR>
