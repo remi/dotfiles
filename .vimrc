@@ -371,18 +371,20 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 " Create a backup file for each save {{{
 " ----------------------------------------------------------------------------------------------------
 function! StampBackup()
-    let bup = globpath(&backupdir, expand('%:t') . &bex)
-    if bup != ""
-        let stamp = ".".strftime("%y.%m.%d_%H.%M.%S")
-        if expand('%:t') =~# '\M.'  " maybe use =~? on windows
-            let stamped = substitute(bup, '\M.\(\[^.]\*\)' . &bex . '$', stamp . '.' . '\1', '')
-        else " file has no suffix
-            let stamped = substitute(bup, '\M' . &bex. '$', stamp, '')
-        endif
-        if rename(bup, stamped)
-            echoerr "failed rename of backup " . bup . " to " .  stamped
-        endif
-    endif
+	if expand('%:t') != ""
+		let bup = globpath(&backupdir, expand('%:t') . &bex)
+		if bup != ""
+			let stamp = ".".strftime("%y.%m.%d_%H.%M.%S")
+			if expand('%:t') =~# '\M.'  " maybe use =~? on windows
+				let stamped = substitute(bup, '\M.\(\[^.]\*\)' . &bex . '$', stamp . '.' . '\1', '')
+			else " file has no suffix
+				let stamped = substitute(bup, '\M' . &bex. '$', stamp, '')
+			endif
+			if rename(bup, stamped)
+				echoerr "failed rename of backup " . bup . " to " .  stamped
+			endif
+		endif
+	endif
 endfunction
 
 augroup StampBackup
