@@ -261,6 +261,7 @@ let Tlist_Close_On_Select = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " }}}
 
 " Fast save {{{
