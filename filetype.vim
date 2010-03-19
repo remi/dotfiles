@@ -1,9 +1,9 @@
 " ----------------------------------------------------------------------------------------------------
 "
 " @file         filetype.vim
-" @description  Fichier de configuration de types de fichiers personnalisés
-" @author       Remi Prevost remi-exomel-com
-" @version      20100119
+" @description  Custom filetypes based on extensions
+" @author       Rémi Prévost (remi, exomel.com)
+" vim: fdm=marker noet ts=4 sts=4 tw=4
 "
 " ----------------------------------------------------------------------------------------------------
 

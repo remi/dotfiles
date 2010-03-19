@@ -2,8 +2,8 @@
 "
 " @file         .vimrc
 " @description  Vim configuration file
-" @author       Rémi Prévost remi-exomel-com
-" vim: fdm=marker
+" @author       Rémi Prévost (remi, exomel.com)
+" vim: fdm=marker noet ts=4 sts=4 tw=4
 "
 " ----------------------------------------------------------------------------------------------------
 
@@ -162,6 +162,9 @@ noremap <F2> :!python %<cr>
 
 " Function keys {{{
 " ----------------------------------------------------------------------------------------------------
+"noremap <F5> ?
+"noremap <F6> ?
+"noremap <F7> ?
 noremap <F9> :set list!<Bar>set list?<CR>
 noremap <F8> :set wrap!<Bar>set wrap?<CR>
 noremap <F10> :set paste!<Bar>set paste?<CR>
@@ -180,8 +183,13 @@ noremap ˇ cw<C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR><Esc>b
 
 " Duplicate line {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <D-d> yyP
-vnoremap <D-d> y'>p
+noremap <D-d> m'yyP`'k
+vnoremap <D-d> m'y'>p`'
+" }}}
+
+" Source the current file {{{
+" ----------------------------------------------------------------------------------------------------
+nmap <Leader>so :source %<CR>
 " }}}
 
 " Select only the text caracters in the current line {{{

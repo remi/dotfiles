@@ -1,10 +1,9 @@
 " ----------------------------------------------------------------------------------------------------
 "
-" @file         .vimrc
-" @description  Fichier de configuration pour gvim
-" @author       Rémi Prévost remi-exomel-com
-" @version      20100208
-" vim: fdm=marker
+" @file         .gvimrc
+" @description  Gvim configuration file
+" @author       Rémi Prévost (remi, exomel.com)
+" vim: fdm=marker noet ts=4 sts=4 tw=4
 "
 " ----------------------------------------------------------------------------------------------------
 

@@ -4,9 +4,10 @@ To use those files with Vim, you’d usually do:
 
 	$ cd ~
 	$ mv .vim .vim-old
+	$ mkdir -p ~/.vim-local/{.vimbackup,.vimswap}/
 	$ git clone git://github.com/remiprev/vimfiles.git .vim
 
-The files `.vimrc` and `.gvimrc` are in the `.vim` folder, but (g)Vim looks for them in the home directory. What I do is I create both `.vimrc` and `.gvimrc` in the home directory, with this content:
+The files `.vimrc` and `.gvimrc` are in the `.vim` folder, but Vim looks for them in the home directory. What I do is I create both `.vimrc` and `.gvimrc` in the home directory, with this content:
 
 	" content of .vimrc
 	source ~/.vim/.vimrc
@@ -18,4 +19,4 @@ and
 	set columns=269
 	source ~/.vim/.gvimrc
 
-It allows us to set custom variables that are not in the main `.vimrc` and `.gvimrc` files (like the size of the window for gvim, if you are using these vimfiles on your Macbook 13" and your iMac 27").
+It allows us to set custom variables that are not in the main `.vimrc` and `.gvimrc` files (ie. the size of the window for gvim, if you are using these vimfiles on your Macbook 13" and your iMac 27").
