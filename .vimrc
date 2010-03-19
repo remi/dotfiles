@@ -150,12 +150,6 @@ noremap <M-D-Right> <Esc>:tabnext<CR>
 noremap <D-r> :e<CR>
 " }}}
 
-" Add pairs of matching curly braces {{{
-" ----------------------------------------------------------------------------------------------------
-inoremap ;{ {<CR><CR>}<Esc>ki<Tab>
-noremap ;{ i{<CR><CR>}<Esc>ki<Tab>
-" }}}
-
 " Select a line until its ending {{{
 " ----------------------------------------------------------------------------------------------------
 vnoremap # $h
@@ -192,7 +186,7 @@ vnoremap <D-d> y'>p
 
 " Select only the text caracters in the current line {{{
 " ----------------------------------------------------------------------------------------------------
-noremap √ ^v$
+noremap √ ^v$h
 " }}}
 
 " Easy indentation in visual mode {{{
@@ -245,11 +239,6 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore = ['\~$', '^\._', '^\.git$']
 autocmd BufEnter NERD_tree_* set scrolloff=0 cursorline
 autocmd BufLeave NERD_tree_* set scrolloff=4 nocursorline
-" }}}
-
-" Syntastic settings {{{
-" ----------------------------------------------------------------------------------------------------
-map <Leader>e :Errors<CR>
 " }}}
 
 " Taglist settings {{{
@@ -406,6 +395,7 @@ noremap <silent> <S-D-Down> zj
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> ø <Esc>o<Esc>k
 noremap <silent> Ø <Esc>O<Esc>j
+
 " }}}
 
 " YankRing {{{
@@ -423,21 +413,6 @@ noremap ' `
 vnoremap ' `
 noremap g' g`
 vnoremap g' g`
-" }}}
-
-" Update file modification tag {{{
-" Looks for '@version 20100308' and replace the date with today’s
-" ----------------------------------------------------------------------------------------------------
-function! UpdateFileDateTag()
-	let myposition = winsaveview()
-	exe ':%s/@version\(\s\+\)[0-9]\{8\}/@version\1'.strftime("%Y%m%d").'/g'
-	call winrestview( myposition )
-endfunction
-
-"augroup UpdateFileDateTag
-	"autocmd! BufWrite * silent! call UpdateFileDateTag()
-"augroup END
-
 " }}}
 
 " Reload snipMate snippet {{{
