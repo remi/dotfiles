@@ -266,6 +266,11 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 nmap <leader>w :w!<cr>
 " }}}
 
+" Trim whitespace {{{
+" ----------------------------------------------------------------------------------------------------
+noremap <Leader>t m':%s!\s*$!!g<CR>:silent noh<Bar>echo<CR>`'
+" }}}
+
 " Insert a new line {{{
 " ----------------------------------------------------------------------------------------------------
 map K <Esc>i<CR><Esc><Esc>
