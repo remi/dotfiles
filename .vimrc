@@ -371,30 +371,6 @@ autocmd BufLeave __MRU_Files__ set scrolloff=4 nocursorline
 vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
 " }}}
 
-" Create a backup file for each save {{{
-" ----------------------------------------------------------------------------------------------------
-function! StampBackup()
-	if expand('%:t') != ""
-		let bup = globpath(&backupdir, expand('%:t') . &bex)
-		if bup != ""
-			let stamp = ".".strftime("%y.%m.%d_%H.%M.%S")
-			if expand('%:t') =~# '\M.'  " maybe use =~? on windows
-				let stamped = substitute(bup, '\M.\(\[^.]\*\)' . &bex . '$', stamp . '.' . '\1', '')
-			else " file has no suffix
-				let stamped = substitute(bup, '\M' . &bex. '$', stamp, '')
-			endif
-			if rename(bup, stamped)
-				echoerr "failed rename of backup " . bup . " to " .  stamped
-			endif
-		endif
-	endif
-endfunction
-
-augroup StampBackup
-    au! BufWritePost,FileWritePost * call StampBackup()
-augroup END
-" }}}
-
 " Easy fold navigation {{{
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <CR> zo
