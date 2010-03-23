@@ -632,11 +632,6 @@ nnoremap <buffer> ;sc O<script type=""></script><Esc>F"i
 vnoremap <buffer> ;sc <Esc>`>a"></script><Esc>`<i<a type="<Esc>l
 inoremap <buffer> ;sc <script type=""></script><Esc>F"i
 "----------
-"[title] tag
-nnoremap <buffer> ;ti O<title></title><Esc>F<i
-vnoremap <buffer> ;ti <Esc>`>a</title><Esc>`<i<title><Esc>l
-inoremap <buffer> ;ti <title></title><Esc>F<i
-"----------
 "amp
 nnoremap <buffer> ;& i&amp;<Esc>l
 vnoremap <buffer> ;& <Esc>`<i&amp;<Esc>
@@ -684,6 +679,7 @@ inoremap <buffer> ;ph <?php  ?><Esc>hhi
 "attributes
 inoremap <buffer> ;cl class=""<Esc>i
 inoremap <buffer> ;id id=""<Esc>i
+inoremap <buffer> ;ti title=""<Esc>i
 
 " Jump to next attribute field
 nnoremap <buffer>	<C-J>	/\M="\\|>/e;/\S/<CR>
