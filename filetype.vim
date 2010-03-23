@@ -3,7 +3,7 @@
 " @file         filetype.vim
 " @description  Custom filetypes based on extensions
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 tw=4
+" vim: fdm=marker noet ts=4 sts=4 sw=4
 "
 " ----------------------------------------------------------------------------------------------------
 
