@@ -5,7 +5,7 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-source settings.vim
-source plugins.vim
-source map.vim
-source autocmd.vim
+source $HOME/.vim/settings.vim
+source $HOME/.vim/plugins.vim
+source $HOME/.vim/map.vim
+source $HOME/.vim/autocmd.vim
