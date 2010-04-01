@@ -195,6 +195,7 @@ nmap <Leader>so :source %<CR>
 " Select only the text caracters in the current line {{{
 " ----------------------------------------------------------------------------------------------------
 noremap √ ^v$h
+noremap <C-V> ^v$h
 " }}}
 
 " Easy indentation in visual mode {{{
