@@ -417,3 +417,11 @@ noremap â ^a
 noremap î ^i
 noremap ô ^o
 " }}}
+
+" Set a few useful motion commands {{{
+" ----------------------------------------------------------------------------------------------------
+noremap ° t;
+noremap   t 
+noremap < t<
+noremap " t"
+" }}}
