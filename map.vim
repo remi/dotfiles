@@ -57,9 +57,10 @@ noremap " t"
 " Add a new '/' text object {{{
 " ----------------------------------------------------------------------------------------------------
 onoremap i/ :normal T/vt/<CR>
-onoremap a/ :normal F/vf/<CR>
 vnoremap i/ t/oT/
+onoremap a/ :normal F/vf/<CR>
 vnoremap a/ f/oF/
+onoremap i; :normal T:lvt;<CR>
 " }}}
 
 " Fast save {{{
