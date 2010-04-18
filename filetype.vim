@@ -34,6 +34,7 @@ augroup END
 " Markdown {{{
 " -----------------------------------------------------------------
 augroup markdown
+	au! BufRead,BufNewFile *.markdown setfiletype mkd
 	au! BufRead,BufNewFile *.mkd setfiletype mkd
 	au! BufRead,BufNewFile *.md setfiletype mkd
 augroup END
@@ -52,4 +53,9 @@ au! BufRead,BufNewFile *.as setfiletype javascript
 " Javascript / jQuery {{{
 " -----------------------------------------------------------------
 au! BufRead,BufNewFile *.js setfiletype javascript.jquery
+" }}}
+
+" Liquid {{{
+" -----------------------------------------------------------------
+au BufNewFile,BufRead *.liquid setfiletype liquid
 " }}}
