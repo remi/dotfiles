@@ -36,6 +36,7 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>d :FufDir<CR>
+map <Leader>bb :FufBuffer<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
