@@ -27,7 +27,7 @@ set guifont=Monaco:h12
 
 " Schéma de couleur {{{
 " ------------------------------------------------------------
-colorscheme twilight3
+colorscheme ir_black
 "}}}
 
 " Options 'fullscreen' {{{

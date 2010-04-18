@@ -76,12 +76,13 @@ hi VertSplit        guifg=#202020     guibg=#202020     gui=NONE      ctermfg=da
 hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
 
-hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Folded           guifg=#88939d     guibg=#1e262e     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Directory        guifg=#96CBFE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
 
-hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-
+hi SpecialKey       guifg=#333333     guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+	"test
 hi WildMenu         guifg=green       guibg=yellow      gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
@@ -210,3 +211,10 @@ hi  link csXmlTag             Keyword
 
 
 " Special for PHP
+hi User1          guifg=#96CBFE     guibg=#202020        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi User2          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User3          guifg=#666666     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User4          guifg=#ffffff     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User5          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User6          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User7          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE

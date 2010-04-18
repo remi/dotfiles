@@ -28,7 +28,8 @@ if !has('gui_running')
 	colorscheme camo
 else
 	syntax on
-	colorscheme twilight3
+	"colorscheme twilight3
+	colorscheme ir_black
 endif
 " }}}
 "
@@ -118,17 +119,17 @@ function! GetName()
 	return expand("%")==''?'<none>':expand("%")
 endfunction
 
-set statusline=%3*[%1*%{GetName()}%3*]%*
-set statusline+=%7*%{&modified?'\ (modified)':'\ '}%*
-set statusline+=%5*%{IsHelp()}%*
-set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%*
-set statusline+=%3*fenc:%*%{strlen(&fenc)?&fenc:'none'}%*\ \ 
-set statusline+=%3*ff:%*%{&ff}%*\ \ 
-set statusline+=%3*ft:%*%{strlen(&ft)?&ft:'<none>'}\ \ 
-set statusline+=%<%3*pwd:%*%{getcwd()}\ \ 
+set statusline=%3*[%1*%{GetName()}%3*]%3*
+set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
+set statusline+=%5*%{IsHelp()}%3*
+set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
+set statusline+=%3*fenc:%4*%{strlen(&fenc)?&fenc:'none'}%*\ \ 
+set statusline+=%3*ff:%4*%{&ff}%*\ \ 
+set statusline+=%3*ft:%4*%{strlen(&ft)?&ft:'<none>'}\ \ 
+set statusline+=%<%3*pwd:%4*%{getcwd()}\ \ 
 set statusline+=%=
-set statusline+=%3*col:%*%c\ \ 
-set statusline+=%3*line:%*%l\ \ 
-set statusline+=%3*total:%*%L\ 
+set statusline+=%3*col:%4*%c\ \ 
+set statusline+=%3*line:%4*%l\ \ 
+set statusline+=%3*total:%4*%L\ 
 " }}}
 
