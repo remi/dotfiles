@@ -25,7 +25,7 @@ filetype plugin on
 " ----------------------------------------------------------------------------------------------------
 if !has('gui_running')
 	syntax on
-	colorscheme camo
+	colorscheme ir_black
 else
 	syntax on
 	"colorscheme twilight3
