@@ -77,12 +77,12 @@ hi StatusLine       guifg=#CCCCCC     guibg=#202020     gui=italic    ctermfg=wh
 hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
 
 hi Folded           guifg=#88939d     guibg=#1e262e     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+"hi Title            guifg=#C6C5FE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Title            guifg=#ffffff     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Directory        guifg=#96CBFE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
 
 hi SpecialKey       guifg=#333333     guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-	"test
 hi WildMenu         guifg=black       guibg=yellow      gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
