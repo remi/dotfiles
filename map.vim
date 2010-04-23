@@ -143,7 +143,7 @@ noremap <D-r> :e<CR>
 " Function keys {{{
 " ----------------------------------------------------------------------------------------------------
 noremap <F9> :set list!<Bar>set list?<CR>
-noremap <F8> :set wrap!<Bar>set wrap?<CR>
+noremap <F8> :set wrap! linebreak! nolist!<Bar>set wrap?<CR>
 noremap <F10> :set paste!<Bar>set paste?<CR>
 noremap <F11> :set expandtab!<Bar>set expandtab?<CR>
 " }}}
