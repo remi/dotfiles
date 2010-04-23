@@ -176,8 +176,8 @@ vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
-nnoremap <Tab> V>
-nnoremap <S-Tab> V<
+nnoremap <Tab> mzV>`zl
+nnoremap <S-Tab> mzV<`zh
 " }}}
 
 " Clear search-highlighted terms {{{
