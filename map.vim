@@ -176,6 +176,8 @@ vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
+nnoremap <Tab> V>
+nnoremap <S-Tab> V<
 " }}}
 
 " Clear search-highlighted terms {{{
