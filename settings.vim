@@ -101,7 +101,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " ----------------------------------------------------------------------------------------------------
 set nowrap
 set sidescroll=4
-set listchars=precedes:←,extends:→,nbsp:◊,trail:⠿,eol:\ ,tab:\|·
+set listchars=precedes:←,extends:→,nbsp:◊,trail:⠿,eol:\ ,tab:●·
 set list
 " }}}
 
