@@ -83,7 +83,7 @@ hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NO
 
 hi SpecialKey       guifg=#333333     guibg=NONE     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 	"test
-hi WildMenu         guifg=green       guibg=yellow      gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
+hi WildMenu         guifg=black       guibg=yellow      gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
 hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
 "hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
@@ -92,7 +92,7 @@ hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=wh
 hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
 
 " Message displayed in lower left, such as --INSERT--
-hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
+hi ModeMsg          guifg=white       guibg=NONE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
   hi CursorLine     guifg=#FF73FD     guibg=#181818     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
@@ -100,7 +100,8 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
+  hi IncSearch      guifg=#000000     guibg=#ffff00     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
+  hi Search         guifg=#ffff00     guibg=NONE     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
 endif
 
 " Syntax highlighting
@@ -209,7 +210,6 @@ hi link javaScriptNumber      Number
 " Special for CSharp
 hi  link csXmlTag             Keyword      
 
-
 " Special for PHP
 hi User1          guifg=#96CBFE     guibg=#202020        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi User2          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
@@ -217,4 +217,4 @@ hi User3          guifg=#666666     guibg=#202020        gui=NONE      ctermfg=c
 hi User4          guifg=#ffffff     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi User5          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi User6          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
-hi User7          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+hi User7          guifg=#A8FF60     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
