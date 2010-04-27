@@ -18,7 +18,7 @@ set t_Co=256
 " Activate filetype plugins {{{
 " ----------------------------------------------------------------------------------------------------
 filetype on
-filetype plugin on
+filetype plugin indent on
 " }}}
 "
 " Different colorschemes if we're running vim or gvim {{{

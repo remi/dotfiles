@@ -5,6 +5,9 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 source $HOME/.vim/settings.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/map.vim
