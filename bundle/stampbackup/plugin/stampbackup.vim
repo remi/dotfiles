@@ -20,5 +20,5 @@ function! StampBackup()
 endfunction
 
 augroup StampBackup
-    au! BufWritePost,FileWritePost * call StampBackup()
+    au! BufWritePost,FileWritePost * silent! call StampBackup()
 augroup END
