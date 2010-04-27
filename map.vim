@@ -31,11 +31,15 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 
 " Easy fold navigation {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> <CR> zo
-noremap <silent> <S-CR> za
-noremap <silent> <S-D-CR> zMzo
-noremap <silent> <S-D-Up> zk
-noremap <silent> <S-D-Down> zj
+"noremap <silent> <CR> zo
+"noremap <silent> <S-CR> za
+"noremap <silent> <S-D-CR> zMzo
+"noremap <silent> <S-D-Up> zk
+"noremap <silent> <S-D-Down> zj
+noremap <silent> <D-J> zj
+noremap <silent> <D-K> zk
+noremap <silent> <D-H> zMzo
+noremap <silent> <D-L> za
 " }}}
 
 " Easy new lines {{{
@@ -118,8 +122,8 @@ vnoremap <BS> hx
 
 " I often wrongly press 'Shift' in visual mode… {{{
 " ----------------------------------------------------------------------------------------------------
-vnoremap <S-Up> k
-vnoremap <S-Down> j
+"vnoremap <S-Up> k
+"vnoremap <S-Down> j
 " }}}
 
 " Easy split navigation {{{
