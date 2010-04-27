@@ -203,3 +203,23 @@ nnoremap <S-Tab> mzV<`zh
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 " }}}
+
+" Toggle between single-line and multiple-line CSS formats {{{
+" ----------------------------------------------------------------------------------------------------
+function! SingleLineCSS()
+	execute "%s/;\\n\\s\\+/; /ge"
+	execute "%s/{\\n\\s\\+/{ /ge"
+	execute "%s/\\n}/ }/g"
+	execute "%s/}\\n\\n/}\\r/g"
+endfunction
+
+function! MultiLineCSS()
+	execute "%s/{\\s/{\\r\\t/g"
+	execute "%s/;\\s/;\\r\\t/g"
+	execute "%s/\\t}/}\\r/g"
+endfunction
+
+"noremap <Leader>sl :silent call SingleLineCSS()<CR>
+"noremap <Leader>ml :silent call MultiLineCSS()<CR>
+
+" }}}
