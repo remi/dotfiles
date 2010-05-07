@@ -74,3 +74,8 @@ let g:do_xhtml_mappings = 'yes'
 let g:no_html_toolbar = 'yes'
 let g:no_html_menu = 'yes'
 " }}}
+
+" Sparkup settings {{{
+" ----------------------------------------------------------------------------------------------------
+let g:sparkupExecuteMapping = '<D-e>'
+" }}}
