@@ -488,13 +488,13 @@ if has("gui")
 endif
 "----------
 "[button] tag
-nnoremap <buffer> ;bu O<button></button><Esc>F<i
-vnoremap <buffer> ;bu <Esc>`>a</button><Esc>`<i<button><Esc>l
-inoremap <buffer> ;bu <button></button><Esc>F<i
+nnoremap <buffer> ;bu O<button type="submit"></button><Esc>F<i
+vnoremap <buffer> ;bu <Esc>`>a</button><Esc>`<i<button type="submit"><Esc>l
+inoremap <buffer> ;bu <button type="submit"></button><Esc>F<i
 if has("gui")
- nnoremenu XHtml.Form.Button<Tab>;bu O<button></button><Esc>F<i
- vnoremenu XHtml.Form.Button<Tab>;bu <Esc>`>a</button><Esc>`<i<button><Esc>l
- inoremenu XHtml.Form.Button<Tab>;bu <button></button><Esc>F<i
+ nnoremenu XHtml.Form.Button<Tab>;bu O<button type="submit"></button><Esc>F<i
+ vnoremenu XHtml.Form.Button<Tab>;bu <Esc>`>a</button><Esc>`<i<button type="submit"><Esc>l
+ inoremenu XHtml.Form.Button<Tab>;bu <button type="submit"></button><Esc>F<i
 endif
 "----------
 "[select] tag
