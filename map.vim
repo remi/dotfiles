@@ -231,3 +231,11 @@ endfunction
 "noremap <Leader>ml :silent call MultiLineCSS()<CR>
 
 " }}}
+
+" Toggle spell-checking {{{
+" ----------------------------------------------------------------------------------------------------
+nmap <silent> <leader>ss :set spell!<CR>
+nmap <silent> <leader>se :set spelllang=en_us<CR>
+nmap <silent> <leader>sf :set spelllang=fr<CR>
+set nospell
+" }}}
