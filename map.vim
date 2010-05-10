@@ -48,8 +48,8 @@ noremap <silent> <D-k> gk
 
 " Easy new lines {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> ø <Esc>o<Esc>k
-noremap <silent> Ø <Esc>O<Esc>j
+noremap <silent> ø mo<Esc>o<Esc>k`o
+noremap <silent> Ø mo<Esc>O<Esc>j`o
 map K <Esc>i<CR><Esc><Esc>
 " }}}
 
