@@ -23,5 +23,5 @@ autocmd FileType qf noremap <CR> <CR>
 
 " CSS {{{
 " ----------------------------------------------------------------------------------------------------
-autocmd FileType css inoremap <buffer> ;; {<CR><CR>}<ESC>ki<TAB>
+"autocmd FileType css inoremap <buffer> ;; {<CR><CR>}<ESC>ki<TAB>
 " }}}
