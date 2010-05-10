@@ -190,16 +190,6 @@ if has("gui")
  inoremenu XHtml.Format.Italic<Tab>;it <i></i><Esc>F<i
 endif
 "----------
-"[kbd] tag
-nnoremap <buffer> ;kb O<kbd></kbd><Esc>F<i
-vnoremap <buffer> ;kb <Esc>`>a</kbd><Esc>`<i<kbd><Esc>l
-inoremap <buffer> ;kb <kbd></kbd><Esc>F<i
-if has("gui")
- nnoremenu XHtml.Format.Keyboard<Tab>;kb O<kbd></kbd><Esc>F<i
- vnoremenu XHtml.Format.Keyboard<Tab>;kb <Esc>`>a</kbd><Esc>`<i<kbd><Esc>l
- inoremenu XHtml.Format.Keyboard<Tab>;kb <kbd></kbd><Esc>F<i
-endif
-"----------
 "[p] tag
 nnoremap <buffer> ;pp O<p></p><Esc>F<i
 vnoremap <buffer> ;pp <Esc>`>a</p><Esc>`<i<p><Esc>l
