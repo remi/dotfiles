@@ -20,7 +20,7 @@ set t_Co=256
 filetype on
 filetype plugin indent on
 " }}}
-"
+
 " Different colorschemes if we're running vim or gvim {{{
 " ----------------------------------------------------------------------------------------------------
 if !has('gui_running')
@@ -32,7 +32,7 @@ else
 	colorscheme ir_black
 endif
 " }}}
-"
+
 " Define the leader key {{{
 " ----------------------------------------------------------------------------------------------------
 let mapleader = ","
