@@ -5,7 +5,7 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-" OK, let’s try this once again {{{
+" Remove support for regular arrow keys {{{
 " ----------------------------------------------------------------------------------------------------
 nnoremap <Up> <Esc>
 vnoremap <Up> <NOP>
@@ -19,9 +19,6 @@ inoremap <Left> <NOP>
 nnoremap <Right> <Esc>
 vnoremap <Right> <NOP>
 inoremap <Right> <NOP>
-
-"inoremap kj <Esc>
-
 " }}}
 
 " Strip HTML tags in selected line {{{
@@ -34,10 +31,8 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 noremap <silent> <CR> zo
 noremap <silent> <S-CR> za
 noremap <silent> <S-D-CR> zMzo
-noremap <silent> <S-D-Up> zk
-noremap <silent> <S-D-Down> zj
-"noremap <silent> <D-H> zMzo
-"noremap <silent> <D-L> za
+noremap <silent> <D-K> zk
+noremap <silent> <D-J> zj
 " }}}
 
 " Easy lines navigation {{{
