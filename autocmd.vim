@@ -7,7 +7,7 @@
 
 " Change the working path each time we switch buffers {{{
 " ----------------------------------------------------------------------------------------------------
-au BufEnter * lcd %:p:h
+au! BufEnter * silent! lcd %:p:h
 " }}}
 
 " Move the cursor to its last location in the file {{{
