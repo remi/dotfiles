@@ -15,12 +15,13 @@
 'delimitMate_visual_leader'	delimitMate.txt	/*'delimitMate_visual_leader'*
 'loaded_delimitMate'	delimitMate.txt	/*'loaded_delimitMate'*
 :DelimitMateReload	delimitMate.txt	/*:DelimitMateReload*
+:DelimitMateSwitch	delimitMate.txt	/*:DelimitMateSwitch*
 :DelimitMateTest	delimitMate.txt	/*:DelimitMateTest*
-DelimitMate_ExpandReturn()	delimitMate.txt	/*DelimitMate_ExpandReturn()*
-DelimitMate_ExpandSpace()	delimitMate.txt	/*DelimitMate_ExpandSpace()*
-DelimitMate_JumpAny()	delimitMate.txt	/*DelimitMate_JumpAny()*
-DelimitMate_ShouldJump()	delimitMate.txt	/*DelimitMate_ShouldJump()*
 delimitMate	delimitMate.txt	/*delimitMate*
+delimitMate#ExpandReturn()	delimitMate.txt	/*delimitMate#ExpandReturn()*
+delimitMate#ExpandSpace()	delimitMate.txt	/*delimitMate#ExpandSpace()*
+delimitMate#JumpAny()	delimitMate.txt	/*delimitMate#JumpAny()*
+delimitMate#ShouldJump()	delimitMate.txt	/*delimitMate#ShouldJump()*
 delimitMate-contents	delimitMate.txt	/*delimitMate-contents*
 delimitMate.txt	delimitMate.txt	/*delimitMate.txt*
 delimitMateAutoClose	delimitMate.txt	/*delimitMateAutoClose*
@@ -28,6 +29,7 @@ delimitMateBackspace	delimitMate.txt	/*delimitMateBackspace*
 delimitMateCommands	delimitMate.txt	/*delimitMateCommands*
 delimitMateCredits	delimitMate.txt	/*delimitMateCredits*
 delimitMateExpansion	delimitMate.txt	/*delimitMateExpansion*
+delimitMateFileType	delimitMate.txt	/*delimitMateFileType*
 delimitMateFunctionality	delimitMate.txt	/*delimitMateFunctionality*
 delimitMateFunctions	delimitMate.txt	/*delimitMateFunctions*
 delimitMateHistory	delimitMate.txt	/*delimitMateHistory*
