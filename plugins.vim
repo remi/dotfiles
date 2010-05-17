@@ -326,7 +326,7 @@ let g:user_zen_settings = {
 \            'bga': 'background-attachment: |;',
 \            'bga:f': 'background-attachment: fixed;',
 \            'bga:s': 'background-attachment: scroll;',
-\            'bgp': 'background-position: 0 0;',
+\            'bgp': 'background-position: |;',
 \            'bgpx': 'background-position-x: |;',
 \            'bgpy': 'background-position-y: |;',
 \            'bgbk': 'background-break: |;',
