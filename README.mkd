@@ -1,4 +1,8 @@
-[![Screenshot of MacVim.app using these files](http://farm5.static.flickr.com/4036/4307009402_73a5931df3.jpg)](http://www.flickr.com/photos/remiprev/4307009402/)
+## Screenshot
+
+This is probably what your `MacVim.app` window will look like after installing these files:
+
+[![Screenshot of MacVim.app using these files](http://remiprevost.com/images/remiprev-vimfiles-2-thumb.jpg)](http://remiprevost.com/images/remiprev-vimfiles-2.jpg)
 
 ## Instructions
 
