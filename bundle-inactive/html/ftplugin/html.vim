@@ -81,6 +81,9 @@ vnoremap <buffer> ;aa <Esc>`>a</a><Esc>`<i<a href=""><Esc>2F"a
 inoremap <buffer> ;aa <a href=""></a><Esc>F<i
 "----------
 "[a] tag
+vnoremap <buffer> ;ap <Esc>`>a</a><Esc>`<i<a href=""><Esc>2F"p
+"----------
+"[a] tag
 nnoremap <buffer> ;ah O<a href=""></a><Esc>F"i
 vnoremap <buffer> ;ah <Esc>`>a"></a><Esc>`<i<a href="<Esc>l
 inoremap <buffer> ;ah <a href=""></a><Esc>F"i
