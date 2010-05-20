@@ -46,6 +46,7 @@ noremap <silent> <D-k> gk
 noremap <silent> ø mo<Esc>o<Esc>k`o
 noremap <silent> Ø mo<Esc>O<Esc>j`o
 map K <Esc>i<CR><Esc><Esc>
+nmap D cc<Esc>
 " }}}
 
 " Always go to the mark’s line and column {{{
