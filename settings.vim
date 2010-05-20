@@ -56,6 +56,7 @@ set number " Show line numbers
 set ts=4 " A tab = 4 spaces
 set sw=4
 set sts=4
+set noet
 set whichwrap=h,l,~,[,],<,> " Which caracters to wrap
 set scrolloff=4 " Scroll offset
 set laststatus=2 " Always show the status line
