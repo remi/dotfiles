@@ -211,6 +211,15 @@ hi link javaScriptNumber      Number
 hi  link csXmlTag             Keyword      
 
 " Special for PHP
+hi phpSuperglobal guifg=#96CBFE     guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+hi link phpFunctions Function
+hi link phpQuoteSingle StringDelimiter
+hi link phpQuoteDouble StringDelimiter
+hi link phpBoolean Constant
+hi link phpNull Constant
+hi link phpArrayPair Operator
+
+" User styles
 hi User1          guifg=#96CBFE     guibg=#202020        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
 hi User2          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi User3          guifg=#666666     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
