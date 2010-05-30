@@ -76,6 +76,7 @@ set wildmenu
 set wildmode=full
 set switchbuf=useopen
 set backspace=indent,eol,start
+set tabpagemax=50
 " }}}
 
 " Always use UTF-8 {{{
@@ -102,6 +103,7 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 " ----------------------------------------------------------------------------------------------------
 set nowrap
 set sidescroll=4
+set sidescrolloff=14
 set listchars=precedes:←,extends:→,nbsp:◊,trail:⠿,eol:\ ,tab:●·
 set list
 " }}}
