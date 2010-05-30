@@ -19,11 +19,20 @@ xmap ;st ststrong<CR>f>l
 imap ;st <strong></strong><Esc>F<i
 
 xmap ;span stspan<CR>f>l
-imap ;sp <span></span><Esc>F<i
+imap ;sn <span></span><Esc>F<i
 
 xmap ;small stsmall<CR>f>l
 imap ;sm <small></small><Esc>F<i
 
+xmap ;sp stsup<CR>f>l
+imap ;sp <sup></sup><Esc>F<i
+
+imap ;br <br />
+
 xmap ;aa sta href=""<CR>f"a
 imap ;aa <a href=""></a><Esc>F<i
 xmap ;ap sta href=""<CR>f"pf>l
+
+imap ;ph <?php  ?><Esc>hhi
+
+imap ;cl class=""<Esc>i
