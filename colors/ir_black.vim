@@ -78,7 +78,8 @@ hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=bl
 
 hi Folded           guifg=#88939d     guibg=#1e262e     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 "hi Title            guifg=#C6C5FE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Title            guifg=#ffffff     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+"hi Title            guifg=#ffffff     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Title            guifg=#d5d5bd     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Directory        guifg=#96CBFE     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
 
@@ -197,7 +198,6 @@ hi link xmlEndTag       Identifier
 hi link htmlTag         Keyword 
 hi link htmlTagName     Conditional 
 hi link htmlEndTag      Identifier 
-
 
 " Special for Javascript
 hi link javaScriptNumber      Number 
