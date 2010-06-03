@@ -57,24 +57,11 @@ noremap g' g`
 vnoremap g' g`
 " }}}
 
-" Reload snipMate snippet {{{
-" ----------------------------------------------------------------------------------------------------
-nmap ,rr :call ReloadSnippets(&filetype)<CR>
-" }}}
-
 " Remap ^ caracters {{{
 " ----------------------------------------------------------------------------------------------------
 noremap â ^a
 noremap î ^i
 noremap ô ^o
-" }}}
-
-" Set a few useful motion commands {{{
-" ----------------------------------------------------------------------------------------------------
-noremap ° t;
-noremap   t 
-noremap < t<
-noremap " t"
 " }}}
 
 " Add a new '/' text object {{{
@@ -116,14 +103,8 @@ sunmap e
 
 " Let's remap Enter and Backspace {{{
 " ----------------------------------------------------------------------------------------------------
-vnoremap  <silent>
-vnoremap <BS> hx
-" }}}
-
-" I often wrongly press 'Shift' in visual mode… {{{
-" ----------------------------------------------------------------------------------------------------
-"vnoremap <S-Up> k
-"vnoremap <S-Down> j
+vnoremap  <NOP>
+vnoremap <BS> dk$
 " }}}
 
 " Easy split navigation {{{
@@ -199,6 +180,7 @@ vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
+nnoremap <C-l> <C-i>
 nnoremap <Tab> mzV>`zl
 nnoremap <S-Tab> mzV<`zh
 " }}}
@@ -206,32 +188,4 @@ nnoremap <S-Tab> mzV<`zh
 " Clear search-highlighted terms {{{
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
-" }}}
-
-" Toggle between single-line and multiple-line CSS formats {{{
-" ----------------------------------------------------------------------------------------------------
-function! SingleLineCSS()
-	execute "%s/;\\n\\s\\+/; /ge"
-	execute "%s/{\\n\\s\\+/{ /ge"
-	execute "%s/\\n}/ }/g"
-	execute "%s/}\\n\\n/}\\r/g"
-endfunction
-
-function! MultiLineCSS()
-	execute "%s/{\\s/{\\r\\t/g"
-	execute "%s/;\\s/;\\r\\t/g"
-	execute "%s/\\t}/}\\r/g"
-endfunction
-
-"noremap <Leader>sl :silent call SingleLineCSS()<CR>
-"noremap <Leader>ml :silent call MultiLineCSS()<CR>
-
-" }}}
-
-" Toggle spell-checking {{{
-" ----------------------------------------------------------------------------------------------------
-nmap <silent> <leader>ss :set spell!<CR>
-nmap <silent> <leader>se :set spelllang=en_us<CR>
-nmap <silent> <leader>sf :set spelllang=fr<CR>
-set nospell
 " }}}
