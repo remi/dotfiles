@@ -77,6 +77,7 @@ set wildmode=full
 set switchbuf=useopen
 set backspace=indent,eol,start
 set tabpagemax=50
+set isk+=- " Treat “-” like a word separator (for auto-completion!)
 " }}}
 
 " Always use UTF-8 {{{
