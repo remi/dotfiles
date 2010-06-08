@@ -78,11 +78,6 @@ onoremap i; :normal T:lvt;<CR>
 nmap <leader>w :w!<cr>
 " }}}
 
-" Trim whitespace {{{
-" ----------------------------------------------------------------------------------------------------
-noremap <Leader>t m':%s!\s*$!!g<CR>:silent noh<Bar>echo<CR>`'
-" }}}
-
 " We often press 'Shift' when we should not {{{
 " ----------------------------------------------------------------------------------------------------
 command! Q q
