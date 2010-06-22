@@ -7,15 +7,15 @@
 
 " NERDTree settings {{{
 " ----------------------------------------------------------------------------------------------------
-map <Leader>, :NERDTreeToggle %:p:h<cr>
-map <Leader>f :NERDTreeFind<cr>
-map <Leader>v :NERDTree /Volumes/<cr>
-map <Leader>c :NERDTree
+"map <Leader>, :NERDTreeToggle %:p:h<cr>
+"map <Leader>f :NERDTreeFind<cr>
+"map <Leader>c :NERDTree
 let NERDTreeBookmarksFile=expand('$HOME').'/.vim-local/.NERDTreeBookmarks'
 let NERDTreeShowHidden=1
-let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore = ['\~$', '^\._', '^\.git$']
+let NERDTreeMapOpenInTab=''
+let NERDTreeMapOpenInTabSilent=''
 autocmd BufEnter NERD_tree_* set scrolloff=0 cursorline
 autocmd BufLeave NERD_tree_* set scrolloff=4 nocursorline
 " }}}
@@ -36,12 +36,16 @@ let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
 " FuzzyFinder settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
+"map <Leader>d :FufDir<CR>
+map <Leader>b :FufBuffer<CR>
 map <Leader>d :FufDir<CR>
-map <Leader>bb :FufBuffer<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
 let g:fuf_infoFile = '~/.vim-local/.vimfuf'
+let g:fuf_file_prompt = 'f→ '
+let g:fuf_buffer_prompt = 'b→ '
+let g:fuf_previewHeight = 0
 " }}}
 
 " Supertab settings {{{
@@ -78,6 +82,30 @@ let g:no_html_menu = 'yes'
 " Sparkup settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:sparkupExecuteMapping = '<D-e>'
+" }}}
+
+" Command-T settings {{{
+" ----------------------------------------------------------------------------------------------------
+let g:CommandTMaxHeight=20
+let g:CommandTScanDotDirectories=0
+let g:CommandTAlwaysShowDotFiles=1
+" }}}
+
+" BufExplorer settings {{{
+" ----------------------------------------------------------------------------------------------------
+let g:bufExplorerSortBy='number'
+nmap <script> <silent> <Leader>" :BufExplorer<CR>
+" }}}
+
+" Rails.vim settings {{{
+" ----------------------------------------------------------------------------------------------------
+nmap <Leader>rc :Rcontroller<CR>
+nmap <Leader>rv :Rview<CR>
+nmap <Leader>rm :Rmodel<CR>
+nmap <D-1> :Rmodel<CR>
+nmap <D-2> :Rview<CR>
+nmap <D-3> :Rcontroller<CR>
+let g:rails_statusline=0
 " }}}
 
 source $HOME/.vim/plugins-zencoding.vim
