@@ -155,7 +155,7 @@ function! s:CreateMotionMappings()
     " endif
 
     for l:mode in ['n', 'o', 'v']
-	for l:motion in ['w', 'b', 'e']
+	for l:motion in ['w', 'b', 'e', 'c']
 	    let l:targetMapping = '<Plug>CamelCaseMotion_' . l:motion
 	    execute l:mode . 'noremap ' . l:targetMapping . ' :<C-U>call camelcasemotion#Motion(''' . l:motion . ''',v:count1,''' . l:mode . ''')<CR>'
 	    if ! hasmapto(l:targetMapping, l:mode)
