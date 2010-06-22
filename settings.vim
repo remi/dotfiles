@@ -53,10 +53,10 @@ set smartcase " Smart-case search mode
 set incsearch " Start to search as soon as we type
 set mouse=a " Use the mouse in all modes
 set number " Show line numbers
-set ts=4 " A tab = 4 spaces
-set sw=4
-set sts=4
-set noet
+set ts=2 " A tab = 4 spaces
+set sw=2
+set sts=2
+set et
 set whichwrap=h,l,~,[,],<,> " Which caracters to wrap
 set scrolloff=4 " Scroll offset
 set laststatus=2 " Always show the status line
@@ -78,6 +78,7 @@ set switchbuf=useopen
 set backspace=indent,eol,start
 set tabpagemax=50
 set isk+=- " Treat “-” like a word separator (for auto-completion!)
+set hidden
 " }}}
 
 " Always use UTF-8 {{{
@@ -120,7 +121,7 @@ function! IsHelp()
 endfunction
 
 function! GetName()
-	return expand("%")==''?'<none>':expand("%")
+	return expand("%:t")==''?'<none>':expand("%:t")
 endfunction
 
 set statusline=%3*[%1*%{GetName()}%3*]%3*
