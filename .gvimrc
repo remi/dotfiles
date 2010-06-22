@@ -41,3 +41,9 @@ set guioptions+=R
 set guioptions-=r 
 set guioptions-=T
 "}}}
+
+macmenu File.Close key=<nop>
+macmenu File.New\ Tab key=<nop>
+noremap <D-w> :bdelete<CR>
+noremap <D-t> :CommandT<CR>
+set showtabline=1
