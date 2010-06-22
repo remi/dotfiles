@@ -73,27 +73,12 @@ vnoremap a/ f/oF/
 onoremap i; :normal T:lvt;<CR>
 " }}}
 
-" Fast save {{{
-" ----------------------------------------------------------------------------------------------------
-nmap <leader>w :w!<cr>
-" }}}
-
 " We often press 'Shift' when we should not {{{
 " ----------------------------------------------------------------------------------------------------
 command! Q q
 command! W w
 command! Wq wq
 command! WQ wq
-" }}}
-
-" CamelCaseMotion settings {{{
-" ----------------------------------------------------------------------------------------------------
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
 " }}}
 
 " Let's remap Enter and Backspace {{{
@@ -123,15 +108,24 @@ noremap <C-Down> ddp
 
 " Easy tab navigation {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <S-C-Tab> :tabprevious<CR>
-inoremap <S-C-Tab> <Esc>:tabprevious<CR>
-vnoremap <S-C-Tab> <Esc>:tabprevious<CR>
-noremap <C-Tab> :tabnext<CR>
-inoremap <C-Tab> <Esc>:tabnext<CR>
-vnoremap <C-Tab> <Esc>:tabnext<CR>
+"noremap <S-C-Tab> :tabprevious<CR>
+"inoremap <S-C-Tab> <Esc>:tabprevious<CR>
+"vnoremap <S-C-Tab> <Esc>:tabprevious<CR>
+"noremap <C-Tab> :tabnext<CR>
+"inoremap <C-Tab> <Esc>:tabnext<CR>
+"vnoremap <C-Tab> <Esc>:tabnext<CR>
+"noremap <M-D-Left> <Esc>:tabprevious<CR>
+"noremap <M-D-Right> <Esc>:tabnext<CR>
 
-noremap <M-D-Left> <Esc>:tabprevious<CR>
-noremap <M-D-Right> <Esc>:tabnext<CR>
+noremap <S-C-Tab> :bprevious<CR>
+inoremap <S-C-Tab> <Esc>:bprevious<CR>
+vnoremap <S-C-Tab> <Esc>:bprevious<CR>
+noremap <C-Tab> :bnext<CR>
+inoremap <C-Tab> <Esc>:bnext<CR>
+vnoremap <C-Tab> <Esc>:bnext<CR>
+noremap <M-D-Left> <Esc>:bnext<CR>
+noremap <M-D-Right> <Esc>:bnext<CR>
+
 " }}}
 
 " Reload the current file {{{
@@ -166,7 +160,6 @@ vnoremap <D-d> m'y'>p`'
 " Select only the text caracters in the current line {{{
 " ----------------------------------------------------------------------------------------------------
 noremap √ ^v$h
-noremap <C-V> ^v$h
 " }}}
 
 " Easy indentation in visual mode {{{
