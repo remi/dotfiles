@@ -7,6 +7,7 @@
 
 let g:user_zen_leader_key = ';'
 let g:user_zen_settings = {
+\    'indentation': "  ",
 \    'html' : {
 \        'default_attributes' : {
 \            'button' : { 'type': 'submit' }
