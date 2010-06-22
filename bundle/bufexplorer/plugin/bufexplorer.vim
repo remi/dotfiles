@@ -59,9 +59,9 @@ if maparg("<Leader>bv") =~ 'BufExplorerVerticalSplit'
   nunmap <Leader>bv
 endif
 
-nmap <script> <silent> <unique> <Leader>be :BufExplorer<CR>
-nmap <script> <silent> <unique> <Leader>bs :BufExplorerHorizontalSplit<CR>
-nmap <script> <silent> <unique> <Leader>bv :BufExplorerVerticalSplit<CR>
+"nmap <script> <silent> <unique> <Leader>be :BufExplorer<CR>
+"nmap <script> <silent> <unique> <Leader>bs :BufExplorerHorizontalSplit<CR>
+"nmap <script> <silent> <unique> <Leader>bv :BufExplorerVerticalSplit<CR>
 
 " Create commands {{{1
 command! BufExplorer :call StartBufExplorer(has ("gui") ? "drop" : "hide edit")
@@ -434,10 +434,10 @@ function! s:BEMapKeys()
   nnoremap <buffer> <silent> t             :call <SID>BESelectBuffer("tab")<cr>
   nnoremap <buffer> <silent> <s-cr>        :call <SID>BESelectBuffer("tab")<cr>
 
-  nnoremap <buffer> <silent> d             :call <SID>BERemoveBuffer("delete", "n")<cr>
-  xnoremap <buffer> <silent> d             :call <SID>BERemoveBuffer("delete", "v")<cr>
-  nnoremap <buffer> <silent> D             :call <SID>BERemoveBuffer("wipe", "n")<cr>
-  xnoremap <buffer> <silent> D             :call <SID>BERemoveBuffer("wipe", "v")<cr>
+  nnoremap <buffer> <silent> d             :call <SID>BERemoveBuffer("wipe", "n")<cr>
+  xnoremap <buffer> <silent> d             :call <SID>BERemoveBuffer("wipe", "v")<cr>
+  nnoremap <buffer> <silent> D             :call <SID>BERemoveBuffer("delete", "n")<cr>
+  xnoremap <buffer> <silent> D             :call <SID>BERemoveBuffer("delete", "v")<cr>
 
   nnoremap <buffer> <silent> m             :call <SID>BEMRUListShow()<cr>
   nnoremap <buffer> <silent> p             :call <SID>BEToggleSplitOutPathName()<cr>
