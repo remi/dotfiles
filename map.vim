@@ -130,7 +130,7 @@ noremap <M-D-Right> <Esc>:bnext<CR>
 
 " Reload the current file {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <D-r> :e<CR>
+"noremap <D-r> :e<CR>
 " }}}
 
 " Function keys {{{
@@ -168,7 +168,7 @@ vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
-nnoremap <C-l> <C-i>
+nnoremap  <C-i>
 nnoremap <Tab> mzV>`zl
 nnoremap <S-Tab> mzV<`zh
 " }}}
