@@ -484,6 +484,7 @@ let g:user_zen_settings = {
 \            'orp': 'orphans: |;',
 \            'wid': 'widows:|;',
 \
+\            'd:i': 'display: inline;',
 \            'h:1': 'height: 1%;',
 \            'fs': 'font-size: |%;',
 \            'di' : 'display: |;',
