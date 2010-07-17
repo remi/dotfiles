@@ -15,6 +15,7 @@ autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
 
 " Ruby {{{
 " ----------------------------------------------------------------------------------------------------
+autocmd FileType ruby noremap <D-r> :!/Users/remi/.rvm/rubies/ruby-1.8.7-p174/bin/ruby %<CR>
 autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby inoremap ;er <%  %><Esc>hhi
