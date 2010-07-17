@@ -86,6 +86,7 @@ let g:sparkupExecuteMapping = '<D-e>'
 
 " Command-T settings {{{
 " ----------------------------------------------------------------------------------------------------
+nmap <D-T> :CommandTFlush<CR>
 let g:CommandTMaxHeight=20
 let g:CommandTScanDotDirectories=0
 let g:CommandTAlwaysShowDotFiles=1
