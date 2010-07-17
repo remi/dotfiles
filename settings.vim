@@ -141,3 +141,8 @@ set statusline+=%3*col:%4*%c\ \
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\ 
 " }}}
+
+" Mark trailing whitespace {{{
+" ----------------------------------------------------------------------------------------------------
+match Todo /\s\+$/
+" }}}
