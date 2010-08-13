@@ -46,7 +46,6 @@ noremap <silent> <D-k> gk
 noremap <silent> ø mo<Esc>o<Esc>k`o
 noremap <silent> Ø mo<Esc>O<Esc>j`o
 map K <Esc>i<CR><Esc><Esc>
-nmap D cc<Esc>
 " }}}
 
 " Always go to the mark’s line and column {{{
@@ -177,3 +176,6 @@ nnoremap <S-Tab> mzV<`zh
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 " }}}
+
+inoremap ;zo {{{<Esc>
+inoremap ;zc }}}<Esc>
