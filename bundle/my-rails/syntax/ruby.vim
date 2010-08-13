@@ -1,0 +1,1 @@
+syn keyword rubyRailsARAssociationMethod acts_as_cached define_index
