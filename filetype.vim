@@ -59,3 +59,8 @@ au! BufRead,BufNewFile *.js setfiletype javascript.jquery
 " -----------------------------------------------------------------
 au BufNewFile,BufRead *.liquid setfiletype liquid
 " }}}
+
+" tmux {{{
+" -----------------------------------------------------------------
+au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
+" }}}
