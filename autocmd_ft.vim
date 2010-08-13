@@ -32,3 +32,8 @@ autocmd FileType ruby-sinatra setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType qf setl scrolloff=0 cursorline
 autocmd FileType qf noremap <CR> <CR>
 " }}}
+
+" Git {{{
+" ----------------------------------------------------------------------------------------------------
+au BufReadPost COMMIT_EDITMSG exe "normal gg"
+" }}}
