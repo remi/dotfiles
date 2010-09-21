@@ -5,7 +5,7 @@
 " The local configuration file is expected to have commands affecting
 " only the current buffer.
 
-function SetLocalOptions(fname)
+function! SetLocalOptions(fname)
 	let dirname = fnamemodify(a:fname, ":p:h")
 	while "/" != dirname
 		let lvimrc  = dirname . "/.lvimrc"
@@ -17,5 +17,6 @@ function SetLocalOptions(fname)
 	endwhile
 endfunction
 
-au BufNewFile,BufRead * call SetLocalOptions(bufname("%"))
-
+augroup localrc
+	au BufNewFile,BufRead * call SetLocalOptions(bufname("%"))
+augroup END
