@@ -6,7 +6,7 @@
 " ----------------------------------------------------------------------------------------------------
 
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#helptags()
 
 source $HOME/.vim/settings.vim
 source $HOME/.vim/plugins.vim
