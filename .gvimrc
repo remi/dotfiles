@@ -45,6 +45,7 @@ set guioptions-=T
 macmenu File.Open\ Tab\.\.\. key=<nop>
 macmenu File.Close key=<nop>
 macmenu File.New\ Tab key=<nop>
-noremap <D-w> :bdelete<CR>
+"noremap <D-w> :bdelete<CR>
+nmap <D-w> <Plug>Kwbd
 noremap <D-t> :CommandT<CR>
 set showtabline=1
