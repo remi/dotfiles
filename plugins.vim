@@ -5,21 +5,6 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-" NERDTree settings {{{
-" ----------------------------------------------------------------------------------------------------
-"map <Leader>, :NERDTreeToggle %:p:h<cr>
-"map <Leader>f :NERDTreeFind<cr>
-"map <Leader>c :NERDTree
-let NERDTreeBookmarksFile=expand('$HOME').'/.vim-local/.NERDTreeBookmarks'
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-let NERDTreeIgnore = ['\~$', '^\._', '^\.git$']
-let NERDTreeMapOpenInTab=''
-let NERDTreeMapOpenInTabSilent=''
-autocmd BufEnter NERD_tree_* set scrolloff=0 cursorline
-autocmd BufLeave NERD_tree_* set scrolloff=4 nocursorline
-" }}}
-
 " Taglist settings {{{
 " ----------------------------------------------------------------------------------------------------
 map éé :TlistToggle<cr>
@@ -59,6 +44,7 @@ let g:SuperTabDefaultCompletionType = '<c-p>'
 let MRU_File=expand("$HOME")."/.vim-local/.vimmru"
 let MRU_Window_Height = 15
 map <Leader>m :MRU<CR>
+map <Leader>. :MRU<CR>/
 autocmd BufEnter __MRU_Files__ set scrolloff=0 cursorline
 autocmd BufLeave __MRU_Files__ set scrolloff=4 nocursorline
 " }}}
@@ -90,12 +76,14 @@ nmap <D-T> :CommandTFlush<CR>
 let g:CommandTMaxHeight=20
 let g:CommandTScanDotDirectories=0
 let g:CommandTAlwaysShowDotFiles=1
+set wildignore+=vendor/rails/**
 " }}}
 
 " BufExplorer settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
 nmap <script> <silent> <Leader>" :BufExplorer<CR>
+"map <Leader>, :BufExplorer<CR>/
 " }}}
 
 " Rails.vim settings {{{
