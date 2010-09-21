@@ -179,3 +179,21 @@ noremap <silent> <Space> :silent noh<Bar>echo<CR>
 
 inoremap ;zo {{{<Esc>
 inoremap ;zc }}}<Esc>
+
+" Always use magic regexes {{{
+" ----------------------------------------------------------------------------------------------------
+nnoremap / /\v
+vnoremap / /\v
+" }}}
+
+" Prevent accidental uses of <F1> {{{
+" ----------------------------------------------------------------------------------------------------
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+" }}}
+
+" Re-select pasted text {{{
+" ----------------------------------------------------------------------------------------------------
+nnoremap <leader>v V`]
+" }}}
