@@ -79,6 +79,7 @@ set backspace=indent,eol,start
 set tabpagemax=50
 set isk+=- " Treat “-” like a word separator (for auto-completion!)
 set hidden
+set gdefault " Always search/replace globally
 " }}}
 
 " Always use UTF-8 {{{
