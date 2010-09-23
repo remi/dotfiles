@@ -202,4 +202,13 @@ nnoremap <leader>v V`]
 " ----------------------------------------------------------------------------------------------------
 nnoremap <leader>s :vsplit<CR>
 nnoremap <leader>q <C-W>c<CR>
+nnoremap <C-c> <C-W>c<CR>
+" }}}
+
+" Get help with zero-width {{{
+" ----------------------------------------------------------------------------------------------------
+function! ZeroWidth_help()
+  split ~/.vim/doc/zero_width.mkd
+endfunction
+command! ZeroWidth call ZeroWidth_help()
 " }}}
