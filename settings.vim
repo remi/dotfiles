@@ -100,8 +100,10 @@ set swapfile
 set backupdir=$HOME/.vim-local/.vimbackup
 set directory=$HOME/.vim-local/.vimswap
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
-set undofile
-set undodir=~/.vim-local/.undo
+if exists("+undofile")
+	set undofile
+	set undodir=~/.vim-local/.undo
+endif
 " }}}
 
 " No automatic word-wrap! {{{
