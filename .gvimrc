@@ -48,4 +48,4 @@ macmenu File.New\ Tab key=<nop>
 "noremap <D-w> :bdelete<CR>
 nmap <D-w> <Plug>Kwbd
 noremap <D-t> :CommandT<CR>
-set showtabline=1
+set showtabline=0
