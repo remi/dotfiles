@@ -6,10 +6,10 @@
 
     \v,([a-z])@!
 
-## Positive lookbehind — Matches all commas that are preceded by a letter
+## Positive lookbehind — Matches all commas that are preceded by a latter
 
     \v([0-9])@<=,
 
-## Negative lookbehind — Matches all commas that are not preceded by a letter
+## Negative lookbehind — Matches all commas that are not preceded by a latter
 
     \v([a-z])@<!,
