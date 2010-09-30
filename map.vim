@@ -212,3 +212,13 @@ function! ZeroWidth_help()
 endfunction
 command! ZeroWidth call ZeroWidth_help()
 " }}}
+
+" Show syntax highlighting groups for word under cursor {{{
+nmap <D-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+" }}}
