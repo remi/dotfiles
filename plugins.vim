@@ -84,7 +84,7 @@ set wildignore+=vendor/rails/**
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
 nmap <script> <silent> <Leader>" :BufExplorer<CR>
-"map <Leader>, :BufExplorer<CR>/
+map <Leader>e :BufExplorer<CR>
 " }}}
 
 " Rails.vim settings {{{
