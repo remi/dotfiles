@@ -21,17 +21,18 @@ let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
 " FuzzyFinder settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
-"map <Leader>d :FufDir<CR>
+map <Leader>f :FufFile<CR>
 map <Leader>b :FufBuffer<CR>
 map <Leader>, :FufBuffer<CR>
-map <Leader>t :FufFile<CR>
+map <Leader>l :FufFile<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
 let g:fuf_infoFile = '~/.vim-local/.vimfuf'
-let g:fuf_file_prompt = 'f→ '
-let g:fuf_buffer_prompt = 'b→ '
-let g:fuf_previewHeight = 0
+let g:fuf_file_prompt = 'file→ '
+let g:fuf_buffer_prompt = 'buffer→ '
+let g:fuf_lines_prompt = 'line→ '
+let g:fuf_previewHeight = 20
 " }}}
 
 " Supertab settings {{{
