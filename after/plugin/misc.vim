@@ -24,7 +24,12 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 nmap <leader>w :w!<cr>
 " }}}
 
-" FuF settings {{{
+" FuF maps {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>b :FufBuffer<CR>
+" }}}
+
+" BufExplorer maps {{{
+" ----------------------------------------------------------------------------------------------------
+nmap <script> <silent> <Leader>e :BufExplorer<CR>
 " }}}

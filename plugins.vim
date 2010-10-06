@@ -24,7 +24,7 @@ map <Leader>o :FufFileWithCurrentBufferDir<CR>
 "map <Leader>d :FufDir<CR>
 map <Leader>b :FufBuffer<CR>
 map <Leader>, :FufBuffer<CR>
-map <Leader>d :FufDir<CR>
+map <Leader>t :FufFile<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
@@ -73,18 +73,17 @@ let g:sparkupExecuteMapping = '<D-e>'
 
 " Command-T settings {{{
 " ----------------------------------------------------------------------------------------------------
-nmap <D-T> :CommandTFlush<CR>
-let g:CommandTMaxHeight=20
-let g:CommandTScanDotDirectories=0
-let g:CommandTAlwaysShowDotFiles=1
-set wildignore+=vendor/rails/**
+"nmap <D-T> :CommandTFlush<CR>
+"noremap <D-t> <NOP>
+"let g:CommandTMaxHeight=20
+"let g:CommandTScanDotDirectories=0
+"let g:CommandTAlwaysShowDotFiles=1
+"set wildignore+=vendor/rails/**
 " }}}
 
 " BufExplorer settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
-nmap <script> <silent> <Leader>" :BufExplorer<CR>
-map <Leader>e :BufExplorer<CR>
 " }}}
 
 " Rails.vim settings {{{
