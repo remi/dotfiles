@@ -24,10 +24,11 @@ runtime! ftdetect/*.vim
 au BufNewFile,BufRead *.mustache setfiletype html.mustache
 " }}}
 
-" Rack {{{
+" Ruby {{{
 " -----------------------------------------------------------------
 augroup rack
 	au! BufRead,BufNewFile *.ru setfiletype ruby
+	au! BufRead,BufNewFile Gemfile setfiletype ruby
 augroup END
 " }}}
 
