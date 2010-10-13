@@ -151,17 +151,17 @@ endfunction
 
 "
 function fuf#openFile(path, mode, reuse)
-  let bufNr = bufnr('^' . a:path . '$')
-  if bufNr > -1
-    call fuf#openBuffer(bufNr, a:mode, a:reuse)
-  else
+  "let bufNr = bufnr('^' . a:path . '$')
+  "if bufNr > -1
+    "call fuf#openBuffer(bufNr, a:mode, a:reuse)
+  "else
     execute {
           \   s:OPEN_TYPE_CURRENT : 'edit '   ,
           \   s:OPEN_TYPE_SPLIT   : 'split '  ,
           \   s:OPEN_TYPE_VSPLIT  : 'vsplit ' ,
           \   s:OPEN_TYPE_TAB     : 'tabedit ',
           \ }[a:mode] . fnameescape(fnamemodify(a:path, ':~:.'))
-  endif
+  "endif
 endfunction
 
 "

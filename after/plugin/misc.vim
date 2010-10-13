@@ -27,6 +27,7 @@ nmap <leader>w :w!<cr>
 " FuF maps {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>b :FufBuffer<CR>
+map <D-t> :FufFile<CR>
 " }}}
 
 " BufExplorer maps {{{
