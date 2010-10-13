@@ -42,11 +42,19 @@ set guioptions-=r
 set guioptions-=T
 "}}}
 
+" Override MacVim.app commands {{{
+" ------------------------------------------------------------
 macmenu File.Open\ Tab\.\.\. key=<nop>
 macmenu File.Close key=<nop>
 macmenu File.New\ Tab key=<nop>
-noremap <D-w> :bwipe<CR>
-"noremap <D-w> :bdelete<CR>
-"nmap <D-w> <Plug>Kwbd
-"noremap <D-t> :CommandT<CR>
+noremap <D-w> :bdelete<CR>
+" }}}
+
+map <F12> :botright copen<CR>
+
+" Misc settings {{{
+" ------------------------------------------------------------
+set columns=149
+set lines=36
 set showtabline=0
+" }}}
