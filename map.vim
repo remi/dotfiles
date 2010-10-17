@@ -122,8 +122,6 @@ vnoremap <S-C-Tab> <Esc>:bprevious<CR>
 noremap <C-Tab> :bnext<CR>
 inoremap <C-Tab> <Esc>:bnext<CR>
 vnoremap <C-Tab> <Esc>:bnext<CR>
-noremap <M-D-Left> <Esc>:bnext<CR>
-noremap <M-D-Right> <Esc>:bnext<CR>
 
 " }}}
 
