@@ -220,3 +220,7 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 " }}}
+
+" Change the working directory to the current file directory {{{
+noremap èè :lcd %:p:h<CR>
+" }}}
