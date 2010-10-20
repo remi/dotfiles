@@ -48,6 +48,7 @@ macmenu File.Open\ Tab\.\.\. key=<nop>
 macmenu File.Close key=<nop>
 macmenu File.New\ Tab key=<nop>
 noremap <D-w> :bdelete<CR>
+noremap <D-t> :echo "Not anymore! Use “\<Leader\>t”."<CR>
 " }}}
 
 map <F12> :botright copen<CR>

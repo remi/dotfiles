@@ -22,10 +22,11 @@ let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
 map <Leader>f :FufFile<CR>
+map <Leader>t :FufFile<CR>
 map <Leader>a :FufFile<CR>
 map <Leader>b :FufBuffer<CR>
 map <Leader>, :FufBuffer<CR>
-map <Leader>l :FufFile<CR>
+map <Leader>l :FufLine<CR>
 map <D-T> :FufRenewCache<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
