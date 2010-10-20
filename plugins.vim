@@ -70,21 +70,6 @@ let g:no_html_toolbar = 'yes'
 let g:no_html_menu = 'yes'
 " }}}
 
-" Sparkup settings {{{
-" ----------------------------------------------------------------------------------------------------
-let g:sparkupExecuteMapping = '<D-e>'
-" }}}
-
-" Command-T settings {{{
-" ----------------------------------------------------------------------------------------------------
-"nmap <D-T> :CommandTFlush<CR>
-"noremap <D-t> <NOP>
-"let g:CommandTMaxHeight=20
-"let g:CommandTScanDotDirectories=0
-"let g:CommandTAlwaysShowDotFiles=1
-"set wildignore+=vendor/rails/**
-" }}}
-
 " BufExplorer settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
