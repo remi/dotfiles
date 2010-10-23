@@ -86,4 +86,9 @@ nmap <D-3> :Rcontroller<CR>
 let g:rails_statusline=0
 " }}}
 
+" Gungo.vim settings {{{
+" ----------------------------------------------------------------------------------------------------
+nnoremap <Leader>u :GundoToggle<CR>
+" }}}
+
 source $HOME/.vim/plugins-zencoding.vim
