@@ -28,11 +28,13 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 
 " Easy fold navigation {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> <CR> zo
-noremap <silent> <S-CR> za
-noremap <silent> <S-D-CR> zMzo
-noremap <silent> <D-K> zk
-noremap <silent> <D-J> zj
+if &buftype != "gundo"
+	noremap <silent> <CR> zo
+	noremap <silent> <S-CR> za
+	noremap <silent> <S-D-CR> zMzo
+	noremap <silent> <D-K> zk
+	noremap <silent> <D-J> zj
+end
 " }}}
 
 " Easy lines navigation {{{
