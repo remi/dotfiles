@@ -27,7 +27,7 @@ map <Leader>a :FufFile<CR>
 map <Leader>b :FufBuffer<CR>
 map <Leader>, :FufBuffer<CR>
 map <Leader>l :FufLine<CR>
-map <D-T> :FufRenewCache<CR>
+map <Leader>T :FufRenewCache<CR>
 let g:fuf_keyPreview = '<C-k>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
