@@ -18,10 +18,10 @@ imap ;em <em></em><Esc>F<i
 xmap ;st ststrong<CR>f>l
 imap ;st <strong></strong><Esc>F<i
 
-xmap ;span stspan<CR>f>l
+xmap ;sn stspan<CR>f>l
 imap ;sn <span></span><Esc>F<i
 
-xmap ;small stsmall<CR>f>l
+xmap ;sm stsmall<CR>f>l
 imap ;sm <small></small><Esc>F<i
 
 xmap ;sp stsup<CR>f>l
@@ -36,3 +36,5 @@ xmap ;ap sta href=""<CR>f"pf>l
 imap ;ph <?php  ?><Esc>hhi
 
 imap ;cl class=""<Esc>i
+
+imap ;& &amp;
