@@ -12,10 +12,7 @@ set nocursorline
 
 " Transparence {{{
 " ------------------------------------------------------------
-set transp=20
-set transp=10
-set transp=5
-"set transp=2
+set transp=4
 "}}}
 
 " Police {{{
@@ -25,7 +22,7 @@ set guifont=Monaco:h12
 
 " Schéma de couleur {{{
 " ------------------------------------------------------------
-colorscheme ir_black
+colorscheme twilight3
 "}}}
 
 " Options 'fullscreen' {{{

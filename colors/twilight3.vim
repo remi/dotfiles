@@ -59,7 +59,7 @@ exe 'hi Folded         guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  
 exe 'hi FoldColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
 exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
 
-exe 'hi Comment        guifg='.s:mid_grey_blue     .' guibg='.s:darkgrey        .' gui=italic'
+exe 'hi Comment        guifg=#555555 guibg='.s:darkgrey        .' gui=italic'
 exe 'hi TODO           guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=italic,bold'
 
 exe 'hi Title          guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
@@ -98,9 +98,18 @@ hi link treeClosable Type
 hi link treeDir Directory
 hi link treeLink Function
 
+" Ruby
+exe 'hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE'
+exe 'hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE'
+exe 'hi rubyEscape                  guifg=white        guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE'
+exe 'hi rubyInterpolationDelimiter  guifg='.s:violet.' guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE'
+exe 'hi rubyControl                 guifg='.s:beige.'  guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE'
+exe 'hi rubyStringDelimiter         guifg='.s:violet.' guibg=NONE      gui=NONE      ctermfg=lightgreen     ctermbg=NONE      cterm=NONE'
+
 " Custom (for statusline)
 exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
 exe 'hi User3          guibg='.s:grey.'               guifg='.s:midgrey
+exe 'hi User4          guibg='.s:grey.'               guifg='.s:white
 exe 'hi User5          guibg='.s:grey.'               guifg='.s:violet
 exe 'hi User6          guibg='.s:grey.'               guifg='.s:red
 exe 'hi User7          guibg='.s:grey.'               guifg='.s:light_orange
