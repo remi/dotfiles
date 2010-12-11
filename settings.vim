@@ -66,7 +66,7 @@ set showmatch " Show matching parentheses
 set noautoindent " Code auto-indent
 set nosmartindent " Smart code auto-indent
 set cindent
-set showtabline=2 " Always display tabs
+set showtabline=0 " Always display tabs
 set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
 set viminfo='50,<1000,s100,h,n~/.vim-local/.viminfo " Viminfo settings
