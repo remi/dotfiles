@@ -60,7 +60,7 @@ exe 'hi FoldColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  
 exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
 
 exe 'hi Comment        guifg=#555555 guibg='.s:darkgrey        .' gui=italic'
-exe 'hi TODO           guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=italic,bold'
+exe 'hi TODO           guifg='.s:white         .' guibg='.s:red        .' gui=italic,bold'
 
 exe 'hi Title          guifg='.s:grey_blue         .' guibg='.s:darkgrey        .' gui=none'
 
