@@ -65,3 +65,9 @@ au BufNewFile,BufRead *.liquid setfiletype liquid
 " -----------------------------------------------------------------
 au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
 " }}}
+
+" SASS {{{
+" -----------------------------------------------------------------
+au BufRead,BufNewFile *.sass setf sass
+au BufRead,BufNewFile *.scss setf scss
+" }}}
