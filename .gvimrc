@@ -12,7 +12,7 @@ set nocursorline
 
 " Transparence {{{
 " ------------------------------------------------------------
-set transp=4
+set transp=1
 "}}}
 
 " Police {{{
@@ -44,6 +44,9 @@ set guioptions-=T
 macmenu File.Open\ Tab\.\.\. key=<nop>
 macmenu File.Close key=<nop>
 macmenu File.New\ Tab key=<nop>
+macmenu File.Save key=<nop>
+macmenu File.Save\ As\.\.\. key=<nop>
+noremap <D-s> <NOP>
 noremap <D-w> :bdelete<CR>
 noremap <D-t> :echo "Not anymore! Use “\<Leader\>t”."<CR>
 " }}}
