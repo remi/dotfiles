@@ -10,3 +10,6 @@
 [submodule "bundle/vim-todo"]
 	path = bundle/vim-todo
 	url = https://github.com/svenfuchs/vim-todo.git
+[submodule "bundle/vim-layout"]
+	path = bundle/vim-layout
+	url = https://github.com/svenfuchs/vim-layout.git
