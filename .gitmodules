@@ -7,3 +7,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/vim-todo"]
+	path = bundle/vim-todo
+	url = https://github.com/svenfuchs/vim-todo.git
