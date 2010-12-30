@@ -80,9 +80,9 @@ let g:bufExplorerSortBy='number'
 nmap <Leader>rc :Rcontroller<CR>
 nmap <Leader>rv :Rview<CR>
 nmap <Leader>rm :Rmodel<CR>
-nmap <D-1> :Rmodel<CR>
-nmap <D-2> :Rview<CR>
-nmap <D-3> :Rcontroller<CR>
+nmap <Leader>1 :Rmodel<CR>
+nmap <Leader>2 :Rview<CR>
+nmap <Leader>3 :Rcontroller<CR>
 let g:rails_statusline=0
 " }}}
 

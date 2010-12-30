@@ -193,15 +193,8 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 " }}}
 
-" Re-select pasted text {{{
-" ----------------------------------------------------------------------------------------------------
-nnoremap <leader>v V`]
-" }}}
-
 " Splits! {{{
 " ----------------------------------------------------------------------------------------------------
-nnoremap <leader>s :vsplit<CR>
-nnoremap <leader>q <C-W>c<CR>
 nnoremap <C-c> <C-W>c<CR>
 " }}}
 
