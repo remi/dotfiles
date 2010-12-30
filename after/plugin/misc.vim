@@ -24,7 +24,8 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 nmap <leader>w :w!<cr>
 " }}}
 
-" BufExplorer maps {{{
+" Quickly change directory or edit file {{{
 " ----------------------------------------------------------------------------------------------------
-nmap <script> <silent> <Leader>e :BufExplorer<CR>
+noremap ,d :cd 
+noremap ,e :e 
 " }}}

@@ -5,7 +5,7 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-" Remove support for regular arrow keys {{{
+" Remove support for regular system-wide bindings {{{
 " ----------------------------------------------------------------------------------------------------
 nnoremap <Up> <Esc>
 vnoremap <Up> <NOP>
