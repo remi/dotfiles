@@ -28,6 +28,8 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 
 " Easy fold navigation {{{
 " ----------------------------------------------------------------------------------------------------
+noremap <silent> <D-J> <Nop>
+noremap <silent> <D-K> <Nop>
 noremap <silent> ∆ zj
 noremap <silent> ˚ zk
 noremap <silent>  za
