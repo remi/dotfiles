@@ -218,3 +218,16 @@ endfunc
 " Change the working directory to the current file directory {{{
 noremap èè :lcd %:p:h<CR>
 " }}}
+
+" Toggle Scratch buffer {{{
+" Credit: http://weblog.jamisbuck.org/2008/11/17/vim-follow-up
+function! ToggleScratch()
+  if expand('%') == g:ScratchBufferName
+    quit
+  else
+    Sscratch
+  endif
+endfunction
+
+map <leader>x :call ToggleScratch()<CR>
+" }}}
