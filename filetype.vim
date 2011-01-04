@@ -26,9 +26,10 @@ au BufNewFile,BufRead *.mustache setfiletype html.mustache
 
 " Ruby {{{
 " -----------------------------------------------------------------
-augroup rack
+augroup userruby
 	au! BufRead,BufNewFile *.ru setfiletype ruby
 	au! BufRead,BufNewFile Gemfile setfiletype ruby
+	au! BufRead,BufNewFile Capfile setfiletype ruby
 augroup END
 " }}}
 
