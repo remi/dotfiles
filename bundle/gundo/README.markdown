@@ -3,48 +3,32 @@
 
 Gundo.vim is Vim plugin to visualize your Vim undo tree.
 
-Current status: Beta. It might eat your data. Be careful.
-=========================================================
-
 Preview
 -------
 
+Screencast:
+
+### [http://screenr.com/M9l](http://screenr.com/M9l)
 
 Screenshot:
 
 <a href="http://www.flickr.com/photos/sjl7678/5093114605/" title="gundo by stevelosh, on Flickr"><img src="http://farm5.static.flickr.com/4113/5093114605_ebc46d6494.jpg" width="487" height="500" alt="gundo" /></a>
 
-Screencast: [http://screenr.com/M9l](http://screenr.com/M9l)
-
-
 Requirements
 ------------
 
 * Vim 7.3+
-* Python support for Vim.
-* Python 2.5+.
+* Python support for Vim
+* Python 2.4+
 
-Installation
-------------
+Installation and Usage
+----------------------
 
-Use [Pathogen][]. Don't use pathogen? Start.
+Check out the [project site][] for installation instructions.
 
-Add a mapping to your `~/.vimrc` (change the key to suit your taste):
+[project site]: http://sjl.bitbucket.org/gundo.vim/
 
-    nnoremap <F5> :GundoToggle<CR>
+License
+-------
 
-[Pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
-
-Usage
------
-
-When you're editing a file you can bring up the undo graph for that file with
-`<F5>` (or whatever key you mapped it to).
-
-Press `<F5>` again to close the undo graph and return to your file.
-
-Use `j` and `k` to move up and down the graph. The preview pane will update with
-a diff of the change made by the undo state you're currently on.
-
-Press return to revert the file's contents to that undo state and return to the
-file.
+GPLv2+, just like Mercurial.
