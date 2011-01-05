@@ -86,9 +86,12 @@ nmap <Leader>3 :Rcontroller<CR>
 let g:rails_statusline=0
 " }}}
 
-" Gungo.vim settings {{{
+" Gundo.vim settings {{{
 " ----------------------------------------------------------------------------------------------------
 nnoremap <Leader>u :GundoToggle<CR>
+if !has('python')
+	let g:gundo_disable=0
+endif
 " }}}
 
 source $HOME/.vim/plugins-zencoding.vim
