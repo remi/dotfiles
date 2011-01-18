@@ -22,6 +22,7 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 " Misc leader mappings {{{
 " ----------------------------------------------------------------------------------------------------
 noremap <Leader>d :bdelete<CR>
+noremap <Leader>D :bufdo bdelete<CR>
 noremap <Leader>w :w!<cr>
 noremap <Leader>cd :cd 
 noremap <Leader>e :e 
