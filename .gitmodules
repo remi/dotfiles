@@ -19,3 +19,6 @@
 [submodule "bundle/localrc"]
 	path = bundle/localrc
 	url = https://github.com/thinca/vim-localrc.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

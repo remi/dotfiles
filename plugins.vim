@@ -21,7 +21,6 @@ let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
 " FuzzyFinder settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
-map <Leader>f :FufFile<CR>
 map <Leader>t :FufFile<CR>
 map <Leader>a :FufFile<CR>
 map <Leader>b :FufBuffer<CR>
@@ -92,6 +91,11 @@ nnoremap <Leader>u :GundoToggle<CR>
 if !has('python')
 	let g:gundo_disable=0
 endif
+" }}}
+
+" Tabular settings {{{
+" ----------------------------------------------------------------------------------------------------
+vnoremap <Leader>f :Tab /
 " }}}
 
 source $HOME/.vim/plugins-zencoding.vim
