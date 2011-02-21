@@ -235,3 +235,8 @@ map <leader>x :call ToggleScratch()<CR>
 " Use Alt-4 to go to the end of the line, but not totally.{{{
 noremap € $h
 " }}}
+
+" Let’s try not to use ESC anymore {{{
+inoremap jj <Esc>
+inoremap jk <Esc>
+" }}}
