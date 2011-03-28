@@ -18,6 +18,14 @@ let Tlist_Sort_Type = "name"
 let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
 " }}}
 
+" CommandT settings {{{
+" ----------------------------------------------------------------------------------------------------
+"map <Leader>o :CommandT<CR>
+"map <Leader>t :CommandT<CR>
+"map <Leader>, :CommandTBuffer<CR>
+"map <Leader>T :CommandTFlush<CR>:CommandT<CR>
+" }}}
+
 " FuzzyFinder settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>
