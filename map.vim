@@ -75,10 +75,13 @@ onoremap i; :normal T:lvt;<CR>
 
 " We often press 'Shift' when we should not {{{
 " ----------------------------------------------------------------------------------------------------
-command! Q q
-command! W w
-command! Wq wq
-command! WQ wq
+command! -nargs=* -complete=file Q q <args>
+command! -nargs=* -complete=file W w <args>
+command! -nargs=* -complete=file Wq wq <args>
+command! -nargs=* -complete=file WQ wq <args>
+command! -nargs=* -complete=file E e <args>
+command! -nargs=* -complete=file Cd cd <args>
+command! -nargs=* -complete=file CD cd <args>
 " }}}
 
 " Let's remap Enter and Backspace {{{
