@@ -1,0 +1,17 @@
+before	solarized.txt	/*before*
+solarized	solarized.txt	/*solarized*
+solarized-colors	solarized.txt	/*solarized-colors*
+solarized-colorscheme	solarized.txt	/*solarized-colorscheme*
+solarized-help	solarized.txt	/*solarized-help*
+solarized-install	solarized.txt	/*solarized-install*
+solarized-menu	solarized.txt	/*solarized-menu*
+solarized-options	solarized.txt	/*solarized-options*
+solarized-term	solarized.txt	/*solarized-term*
+solarized-togglebg	solarized.txt	/*solarized-togglebg*
+solarized.vim	solarized.txt	/*solarized.vim*
+toggle-background	solarized.txt	/*toggle-background*
+toggle-bg	solarized.txt	/*toggle-bg*
+togglebg	solarized.txt	/*togglebg*
+urxvt	solarized.txt	/*urxvt*
+vim-colors-solarized	solarized.txt	/*vim-colors-solarized*
+without	solarized.txt	/*without*

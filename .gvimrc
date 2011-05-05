@@ -12,7 +12,7 @@ set nocursorline
 
 " Transparence {{{
 " ------------------------------------------------------------
-set transp=1
+set transp=0
 "}}}
 
 " Police {{{
@@ -22,7 +22,9 @@ set guifont=Monaco:h12
 
 " Schéma de couleur {{{
 " ------------------------------------------------------------
-colorscheme twilight3
+colorscheme solarized
+let g:solarized_contrast="normal"    "default value is normal
+source $HOME/.vim/colors.vim
 "}}}
 
 " Options 'fullscreen' {{{
@@ -55,7 +57,7 @@ map <F12> :botright copen<CR>
 
 " Misc settings {{{
 " ------------------------------------------------------------
-set columns=149
-set lines=36
+"set columns=149
+"set lines=36
 set showtabline=0
 " }}}
