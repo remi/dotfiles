@@ -106,4 +106,9 @@ endif
 vnoremap <Leader>f :Tab /
 " }}}
 
+" SyntaxAttr settings {{{
+" ----------------------------------------------------------------------------------------------------
+map <Leader>a :call SyntaxAttr()<CR>
+" }}}
+
 source $HOME/.vim/plugins-zencoding.vim
