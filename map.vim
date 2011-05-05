@@ -82,6 +82,7 @@ command! -nargs=* -complete=file WQ wq <args>
 command! -nargs=* -complete=file E e <args>
 command! -nargs=* -complete=file Cd cd <args>
 command! -nargs=* -complete=file CD cd <args>
+command! -nargs=* -complete=option Set set <args>
 " }}}
 
 " Let's remap Enter and Backspace {{{
