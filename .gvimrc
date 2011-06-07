@@ -22,9 +22,10 @@ set guifont=Monaco:h12
 
 " Schéma de couleur {{{
 " ------------------------------------------------------------
-colorscheme solarized
-let g:solarized_contrast="normal"    "default value is normal
-source $HOME/.vim/colors.vim
+colorscheme twilight3
+"colorscheme solarized
+"let g:solarized_contrast="normal"    "default value is normal
+"source $HOME/.vim/colors.vim
 "}}}
 
 " Options 'fullscreen' {{{

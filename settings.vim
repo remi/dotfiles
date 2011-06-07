@@ -25,11 +25,9 @@ filetype plugin indent on
 " ----------------------------------------------------------------------------------------------------
 if !has('gui_running')
 	syntax on
-	colorscheme ir_black
+	colorscheme twilight3
 else
 	syntax on
-	"colorscheme twilight3
-	colorscheme ir_black
 endif
 " }}}
 
