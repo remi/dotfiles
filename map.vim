@@ -253,3 +253,7 @@ noremap <C-A>l <C-W>l
 noremap <C-A>k <C-W>k
 noremap <C-A>j <C-W>j
 " }}}
+
+let g:surround_45 = "#{\r}"
+let g:surround_61 = "\"#{\r}\""
+inoremap ## #{}<Esc>i
