@@ -31,3 +31,6 @@
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = https://github.com/skammer/vim-css-color.git
+[submodule "bundle/rubytest"]
+	path = bundle/rubytest
+	url = https://github.com/janx/vim-rubytest.git
