@@ -254,6 +254,8 @@ noremap <C-A>k <C-W>k
 noremap <C-A>j <C-W>j
 " }}}
 
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
+
 let g:surround_45 = "#{\r}"
 let g:surround_61 = "\"#{\r}\""
 inoremap ## #{}<Esc>i
