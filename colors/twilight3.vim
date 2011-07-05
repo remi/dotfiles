@@ -113,3 +113,4 @@ exe 'hi User4          guibg='.s:grey.'               guifg='.s:white
 exe 'hi User5          guibg='.s:grey.'               guifg='.s:violet
 exe 'hi User6          guibg='.s:grey.'               guifg='.s:red
 exe 'hi User7          guibg='.s:grey.'               guifg='.s:light_orange
+exe 'hi User8          guibg='.s:violet.'               guifg='.s:white
