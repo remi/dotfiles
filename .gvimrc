@@ -12,7 +12,7 @@ set nocursorline
 
 " Transparence {{{
 " ------------------------------------------------------------
-set transp=0
+set transp=5
 "}}}
 
 " Police {{{
