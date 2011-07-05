@@ -35,14 +35,19 @@ map <Leader>b :FufBuffer<CR>
 map <Leader>, :FufBuffer<CR>
 map <Leader>l :FufLine<CR>
 map <Leader>T :FufRenewCache<CR>:FufFile<CR>
+map <Leader>m :FufMruFile<CR>
+let g:fuf_modesDisable = []
 let g:fuf_keyPreview = '<C-k>'
+let g:fuf_buffer_keyDelete = '<C-d>'
 let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
 let g:fuf_infoFile = '~/.vim-local/.vimfuf'
-let g:fuf_file_prompt = 'file→ '
-let g:fuf_buffer_prompt = 'buffer→ '
-let g:fuf_lines_prompt = 'line→ '
+let g:fuf_file_prompt = ' file→  '
+let g:fuf_buffer_prompt = 'buffer→  '
+let g:fuf_line_prompt = 'line→  '
+let g:fuf_mrufile_prompt = 'mru→  '
 let g:fuf_previewHeight = 0
+let g:fuf_promptHighlight = "User8"
 " }}}
 
 " Supertab settings {{{
