@@ -106,8 +106,13 @@ vnoremap <Leader>f :Tab /
 map <Leader>a :call SyntaxAttr()<CR>
 " }}}
 
+" ZenCoding settings {{{
+" ----------------------------------------------------------------------------------------------------
 source $HOME/.vim/plugins-zencoding.vim
+" }}}
 
+" RubyTest settings {{{
+" ----------------------------------------------------------------------------------------------------
 map <Leader>p <Plug>RubyTestRun
 map <Leader>P <Plug>RubyFileRun
 let g:rubytest_cmd_test = "rvm-auto-ruby %p"
@@ -116,3 +121,4 @@ let g:rubytest_cmd_spec = "spec -f specdoc %p"
 let g:rubytest_cmd_example = "spec -f specdoc %p -e '%c'"
 let g:rubytest_cmd_feature = "cucumber %p"
 let g:rubytest_cmd_story = "cucumber %p -n '%c'"
+" }}}
