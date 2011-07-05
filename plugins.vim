@@ -51,16 +51,6 @@ set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = '<c-p>'
 " }}}
 
-" MRU settings {{{
-" ----------------------------------------------------------------------------------------------------
-let MRU_File=expand("$HOME")."/.vim-local/.vimmru"
-let MRU_Window_Height = 15
-map <Leader>m :MRU<CR>
-map <Leader>. :MRU<CR>/
-autocmd BufEnter __MRU_Files__ set scrolloff=0 cursorline
-autocmd BufLeave __MRU_Files__ set scrolloff=4 nocursorline
-" }}}
-
 " YankRing {{{
 " ----------------------------------------------------------------------------------------------------
 let g:yankring_history_dir = expand('$HOME').'/.vim-local'
