@@ -34,3 +34,6 @@
 [submodule "bundle/rubytest"]
 	path = bundle/rubytest
 	url = https://github.com/janx/vim-rubytest.git
+[submodule "bundle-inactive/lusty"]
+	path = bundle/lusty
+	url = https://github.com/sjbach/lusty.git
