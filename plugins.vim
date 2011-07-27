@@ -115,6 +115,7 @@ source $HOME/.vim/plugins-zencoding.vim
 " ----------------------------------------------------------------------------------------------------
 map <Leader>p <Plug>RubyTestRun
 map <Leader>P <Plug>RubyFileRun
+map <Leader>” <Plug>RubyTestRunLast
 let g:rubytest_cmd_test = "rvm-auto-ruby %p"
 let g:rubytest_cmd_testcase = "rvm-auto-ruby %p -n '/%c/'"
 let g:rubytest_cmd_spec = "spec -f specdoc %p"
