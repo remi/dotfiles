@@ -1,5 +1,4 @@
 " original http://www.vim.org/scripts/script.php?script_id=1677
-
 set background=dark
 
 hi clear
@@ -30,7 +29,7 @@ let s:midgrey = '#888888'
 let s:white = '#fffedc'
 
 if version >= 700
-	exe 'hi CursorLine guibg=#262626'
+	exe 'hi CursorLine guibg=#181818'
 	exe 'hi CursorColumn guibg=#262626'
 	exe 'hi MatchParen guifg=white guibg=#80a090 gui=bold'
 
