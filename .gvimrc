@@ -22,7 +22,7 @@ set guifont=Monaco:h12
 
 " Schéma de couleur {{{
 " ------------------------------------------------------------
-colorscheme twilight3
+colorscheme tomorrow-night
 "colorscheme solarized
 "let g:solarized_contrast="normal"    "default value is normal
 "source $HOME/.vim/colors.vim
