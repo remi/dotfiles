@@ -40,8 +40,3 @@ function! SummarizeTabs()
   endtry
 endfunction
 " }}}
-
-" Highlight the cursor line in insert mode {{{
-au InsertEnter * set cursorline
-au InsertLeave * set nocursorline
-" }}}
