@@ -8,21 +8,23 @@ This is probably what your `MacVim.app` window will look like after installing t
 
 To use those files with Vim, you’d usually do:
 
-	$ cd ~
-	$ mv .vim .vim-old
-	$ mkdir -p ~/.vim-local/{.vimbackup,.vimswap}/
-	$ git clone git://github.com/remiprev/vimfiles.git .vim
+    $ cd ~
+    $ mv .vim .vim-old
+    $ mkdir -p ~/.vim-local/{.vimbackup,.vimswap}/
+    $ git clone git://github.com/remiprev/vimfiles.git .vim
+    $ git submodule update --init
+
 
 The files `.vimrc` and `.gvimrc` are in the `.vim` folder, but Vim looks for them in the home directory. What I do is I create both `.vimrc` and `.gvimrc` in the home directory, with this content:
 
-	" content of .vimrc
-	source ~/.vim/.vimrc
+    " content of .vimrc
+    source ~/.vim/.vimrc
 
 and
 
-	" content of .gvimrc
-	set lines=65
-	set columns=269
-	source ~/.vim/.gvimrc
+    " content of .gvimrc
+    set lines=65
+    set columns=269
+    source ~/.vim/.gvimrc
 
 It allows us to set custom variables that are not in the main `.vimrc` and `.gvimrc` files (ie. the size of the window for gvim, if you are using these vimfiles on your Macbook 13" and your iMac 27").
