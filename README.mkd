@@ -1,9 +1,3 @@
-## Screenshot
-
-This is probably what your `MacVim.app` window will look like after installing these files:
-
-[![Screenshot of MacVim.app using these files](http://remiprevost.com/images/remiprev-vimfiles-3-thumb.png)](http://remiprevost.com/images/remiprev-vimfiles-3.png)
-
 ## Instructions
 
 To use those files with Vim, you’d usually do:
