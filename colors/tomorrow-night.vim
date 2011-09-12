@@ -31,7 +31,7 @@ syntax reset
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
-	fun <SID>grey_number(x)
+	fun! <SID>grey_number(x)
 		if &t_Co == 88
 			if a:x < 23
 				return 0
@@ -70,7 +70,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the actual grey level represented by the grey index
-	fun <SID>grey_level(n)
+	fun! <SID>grey_level(n)
 		if &t_Co == 88
 			if a:n == 0
 				return 0
@@ -103,7 +103,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the palette index for the given grey index
-	fun <SID>grey_colour(n)
+	fun! <SID>grey_colour(n)
 		if &t_Co == 88
 			if a:n == 0
 				return 16
@@ -124,7 +124,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns an approximate colour index for the given colour level
-	fun <SID>rgb_number(x)
+	fun! <SID>rgb_number(x)
 		if &t_Co == 88
 			if a:x < 69
 				return 0
@@ -151,7 +151,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the actual colour level for the given colour index
-	fun <SID>rgb_level(n)
+	fun! <SID>rgb_level(n)
 		if &t_Co == 88
 			if a:n == 0
 				return 0
@@ -172,7 +172,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the palette index for the given R/G/B colour indices
-	fun <SID>rgb_colour(x, y, z)
+	fun! <SID>rgb_colour(x, y, z)
 		if &t_Co == 88
 			return 16 + (a:x * 16) + (a:y * 4) + a:z
 		else
@@ -181,7 +181,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the palette index to approximate the given R/G/B colour levels
-	fun <SID>colour(r, g, b)
+	fun! <SID>colour(r, g, b)
 		" Get the closest grey
 		let l:gx = <SID>grey_number(a:r)
 		let l:gy = <SID>grey_number(a:g)
@@ -216,7 +216,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Returns the palette index to approximate the 'rrggbb' hex string
-	fun <SID>rgb(rgb)
+	fun! <SID>rgb(rgb)
 		let l:r = ("0x" . strpart(a:rgb, 0, 2)) + 0
 		let l:g = ("0x" . strpart(a:rgb, 2, 2)) + 0
 		let l:b = ("0x" . strpart(a:rgb, 4, 2)) + 0
@@ -225,7 +225,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	endfun
 
 	" Sets the highlighting for the given group
-	fun <SID>X(group, fg, bg, attr)
+	fun! <SID>X(group, fg, bg, attr)
 		if a:fg != ""
 			exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
 		endif
@@ -254,8 +254,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
-		call <SID>X("PMenu", s:foreground, s:selection, "none")
-		call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
+		call <SID>X("PMenu", s:background, s:foreground, "none")
+		call <SID>X("PMenuSel", s:background, s:yellow, "none")
 	end
 
 	" Standard Highlighting
@@ -270,7 +270,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Function", s:blue, "", "")
 	call <SID>X("Constant", s:orange, "", "")
 	call <SID>X("String", s:green, "", "")
-	call <SID>X("Special", s:foreground, "", "")
+	call <SID>X("Special", s:blue, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
 	call <SID>X("Operator", s:foreground, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
@@ -294,12 +294,22 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("phpMemberSelector", s:foreground, "", "")
 	
 	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
+	call <SID>X("rubySymbol", s:orange, "", "")
 	call <SID>X("rubyConstant", s:yellow, "", "")
 	call <SID>X("rubyAttribute", s:blue, "", "")
 	call <SID>X("rubyInclude", s:blue, "", "")
 	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
 	call <SID>X("rubyCurlyBlock", s:orange, "", "")
+	call <SID>X("rubyRegexp", s:orange, "", "")
+	call <SID>X("rubyRegexpDelimiter", s:orange, "", "")
+	call <SID>X("rubyEscape", s:orange, "", "")
+	call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
+	call <SID>X("rubyControl", s:purple, "", "")
+	call <SID>X("rubyStringDelimiter", s:green, "", "")
+	call <SID>X("rubyConditional", s:purple, "", "")
+
+	call <SID>X("Conditional", s:purple, "", "")
+	call <SID>X("Repeat", s:purple, "", "")
 
 	" Delete Functions
 	delf <SID>X
@@ -319,11 +329,9 @@ let s:dark_grey_blue = '#34383c'
 let s:mid_grey_blue = '#64686c'
 let s:beige = '#ceb67f'
 let s:light_orange = '#ebc471'
-let s:yellow = '#e3d796'
 let s:violet = '#a999ac'
-let s:green = '#a2a96f'
 let s:lightgreen = '#c2c98f'
-let s:red = '#d08356'
+let s:twilight_red = '#d08356'
 let s:cyan = '#74dad9'
 let s:darkgrey = '#202020'
 let s:grey = '#303030'
@@ -335,10 +343,15 @@ exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
 exe 'hi User3          guibg='.s:grey.'               guifg='.s:midgrey
 exe 'hi User4          guibg='.s:grey.'               guifg='.s:white
 exe 'hi User5          guibg='.s:grey.'               guifg='.s:violet
-exe 'hi User6          guibg='.s:grey.'               guifg='.s:red
+exe 'hi User6          guibg='.s:grey.'               guifg='.s:twilight_red
 exe 'hi User7          guibg='.s:grey.'               guifg='.s:light_orange
-exe 'hi User8          guibg='.s:violet.'               guifg='.s:white
+exe 'hi User8          guibg='.s:violet.'             guifg='.s:white
+exe 'hi User9          guibg='.s:grey.'               guifg='.s:grey
+
+exe 'hi Error          guifg='.s:white             .' guibg='.s:twilight_red
 
 exe 'hi Folded         guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
 exe 'hi FoldColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
 exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
+
+exe 'hi TODO           guifg='.s:white         .' guibg=#cc6666    gui=italic,bold'
