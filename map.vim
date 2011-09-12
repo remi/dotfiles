@@ -241,8 +241,8 @@ noremap € $h
 " }}}
 
 " Let’s try not to use ESC anymore {{{
-inoremap jj <Esc>
-inoremap jk <Esc>
+"inoremap jj <Esc>
+"inoremap jk <Esc>
 " }}}
 
 " Tmux-like split panes navigation {{{
