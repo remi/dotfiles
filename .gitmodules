@@ -18,7 +18,7 @@
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
 [submodule "bundle/localrc"]
 	path = bundle/localrc
-	url = https://github.com/thinca/vim-localrc.git
+	url = git://github.com/remiprev/vim-localrc.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
