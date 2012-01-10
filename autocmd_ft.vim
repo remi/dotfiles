@@ -11,6 +11,15 @@ autocmd FileType html setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css inoremap !! !important
 autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
+augroup json_autocmd
+  autocmd!
+  autocmd FileType json set autoindent
+  autocmd FileType json set formatoptions=tcq2l
+  autocmd FileType json set textwidth=78 shiftwidth=2
+  autocmd FileType json set softtabstop=2 tabstop=8
+  autocmd FileType json set expandtab
+  autocmd FileType json set foldmethod=syntax
+augroup END
 " }}}
 
 " Ruby {{{
