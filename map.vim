@@ -258,7 +258,6 @@ command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | d
 
 let g:surround_45 = "#{\r}"
 let g:surround_61 = "\"#{\r}\""
-inoremap ## #{}<Esc>i
 
 function! CallInterpreter()
   if match(getline(1), '^\#!') == 0
