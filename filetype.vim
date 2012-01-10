@@ -55,6 +55,7 @@ au! BufRead,BufNewFile *.as setfiletype javascript
 " Javascript / jQuery {{{
 " -----------------------------------------------------------------
 au! BufRead,BufNewFile *.js setfiletype javascript.jquery
+au! BufRead,BufNewFile *.json set filetype=json
 " }}}
 
 " Liquid {{{
