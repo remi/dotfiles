@@ -263,9 +263,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Todo", s:comment, "", "")
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:red, "", "none")
-	call <SID>X("Statement", s:foreground, "", "")
-	call <SID>X("Conditional", s:foreground, "", "")
-	call <SID>X("Repeat", s:foreground, "", "")
+	call <SID>X("Statement", s:purple, "", "")
+	call <SID>X("Conditional", s:purple, "", "")
+	call <SID>X("Repeat", s:purple, "", "")
 	call <SID>X("Structure", s:purple, "", "")
 	call <SID>X("Function", s:blue, "", "")
 	call <SID>X("Constant", s:orange, "", "")
@@ -299,6 +299,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("rubyAttribute", s:blue, "", "")
 	call <SID>X("rubyInclude", s:blue, "", "")
 	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
+	call <SID>X("rubyBlock", s:blue, "", "")
 	call <SID>X("rubyCurlyBlock", s:orange, "", "")
 	call <SID>X("rubyRegexp", s:orange, "", "")
 	call <SID>X("rubyRegexpDelimiter", s:orange, "", "")
@@ -323,35 +324,35 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	delf <SID>grey_number
 endif
 
-let s:grey_blue = '#8a9597'
-let s:light_grey_blue = '#a0a8b0'
-let s:dark_grey_blue = '#34383c'
-let s:mid_grey_blue = '#64686c'
-let s:beige = '#ceb67f'
-let s:light_orange = '#ebc471'
-let s:violet = '#a999ac'
-let s:lightgreen = '#c2c98f'
-let s:twilight_red = '#d08356'
-let s:cyan = '#74dad9'
-let s:darkgrey = '#202020'
-let s:grey = '#303030'
-let s:lightgrey = '#605958'
-let s:midgrey = '#888888'
-let s:white = '#fffedc'
+let s:remi_grey_blue = '#8a9597'
+let s:remi_light_grey_blue = '#a0a8b0'
+let s:remi_dark_grey_blue = '#34383c'
+let s:remi_mid_grey_blue = '#64686c'
+let s:remi_beige = '#ceb67f'
+let s:remi_light_orange = '#ebc471'
+let s:remi_violet = '#a999ac'
+let s:remi_lightgreen = '#c2c98f'
+let s:remi_twilight_red = '#d08356'
+let s:remi_cyan = '#74dad9'
+let s:remi_darkgrey = '#202020'
+let s:remi_grey = '#303030'
+let s:remi_lightgrey = '#605958'
+let s:remi_midgrey = '#888888'
+let s:remi_white = '#fffedc'
 
-exe 'hi User1          guibg='.s:grey.'               guifg='.s:white
-exe 'hi User3          guibg='.s:grey.'               guifg='.s:midgrey
-exe 'hi User4          guibg='.s:grey.'               guifg='.s:white
-exe 'hi User5          guibg='.s:grey.'               guifg='.s:violet
-exe 'hi User6          guibg='.s:grey.'               guifg='.s:twilight_red
-exe 'hi User7          guibg='.s:grey.'               guifg='.s:light_orange
-exe 'hi User8          guibg='.s:violet.'             guifg='.s:white
-exe 'hi User9          guibg='.s:grey.'               guifg='.s:grey
+exe 'hi User1          guibg='.s:remi_grey.'               guifg='.s:remi_white
+exe 'hi User3          guibg='.s:remi_grey.'               guifg='.s:remi_midgrey
+exe 'hi User4          guibg='.s:remi_grey.'               guifg='.s:remi_white
+exe 'hi User5          guibg='.s:remi_grey.'               guifg='.s:remi_violet
+exe 'hi User6          guibg='.s:remi_grey.'               guifg='.s:remi_twilight_red
+exe 'hi User7          guibg='.s:remi_grey.'               guifg='.s:remi_light_orange
+exe 'hi User8          guibg='.s:remi_violet.'             guifg='.s:remi_white
+exe 'hi User9          guibg='.s:remi_grey.'               guifg='.s:remi_grey
 
-exe 'hi Error          guifg='.s:white             .' guibg='.s:twilight_red
+exe 'hi Error          guifg='.s:remi_white             .' guibg='.s:remi_twilight_red
 
-exe 'hi Folded         guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
-exe 'hi FoldColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
-exe 'hi SignColumn     guifg='.s:grey_blue         .' guibg='.s:dark_grey_blue  .' gui=none'
+exe 'hi Folded         guifg='.s:remi_grey_blue         .' guibg='.s:remi_dark_grey_blue  .' gui=none'
+exe 'hi FoldColumn     guifg='.s:remi_grey_blue         .' guibg='.s:remi_dark_grey_blue  .' gui=none'
+exe 'hi SignColumn     guifg='.s:remi_grey_blue         .' guibg='.s:remi_dark_grey_blue  .' gui=none'
 
-exe 'hi TODO           guifg='.s:white         .' guibg=#cc6666    gui=italic,bold'
+exe 'hi TODO           guifg='.s:remi_white         .' guibg=#cc6666    gui=italic,bold'
