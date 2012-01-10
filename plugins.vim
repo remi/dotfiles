@@ -123,3 +123,11 @@ let g:rubytest_cmd_example = "spec -f specdoc %p -e '%c'"
 let g:rubytest_cmd_feature = "cucumber %p"
 let g:rubytest_cmd_story = "cucumber %p -n '%c'"
 " }}}
+
+" vim-git-branch-info settings {{{
+" ----------------------------------------------------------------------------------------------------
+let g:git_branch_status_head_current=1
+let g:git_branch_status_text=""
+let g:git_branch_status_around=""
+let g:git_branch_status_nogit=""
+" }}}
