@@ -139,7 +139,8 @@ set statusline+=%3*,%4*%{&sts}
 set statusline+=%3*,%4*%{&sw}
 set statusline+=%3*,%4*%{&et?'et':'noet'}\ \ 
 set statusline+=%<%3*pwd:%4*%{getcwd()}\ \ 
-set statusline+=%9*%=
+set statusline+=%3*%=
+set statusline+=%3*git:%4*%{GitBranchInfoString()}\ \ 
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\ 
