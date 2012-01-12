@@ -1,9 +1,6 @@
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = http://github.com/tpope/vim-rails.git
-[submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
