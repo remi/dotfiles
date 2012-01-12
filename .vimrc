@@ -2,6 +2,7 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 call pathogen#runtime_append_all_bundles()

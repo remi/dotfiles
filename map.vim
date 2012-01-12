@@ -2,6 +2,7 @@
 " @file         map.vim
 " @description  Keyboard mappings
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " Remove support for regular system-wide bindings {{{

@@ -2,6 +2,7 @@
 " @file         .gvimrc
 " @description  Gvim configuration file
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " Highlight cursor line {{{

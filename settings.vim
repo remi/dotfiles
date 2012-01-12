@@ -2,6 +2,7 @@
 " @file         settings.vim
 " @description  Global settings
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " Activate syntax highlithing {{{

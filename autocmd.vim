@@ -2,6 +2,7 @@
 " @file         autocmd.vim
 " @description  Auto-commands
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " Move the cursor to its last location in the file {{{

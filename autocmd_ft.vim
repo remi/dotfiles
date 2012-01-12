@@ -2,6 +2,7 @@
 " @file         autocmd.vim
 " @description  Auto-commands for specific filetypes
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " HTML, CSS & Javascript {{{

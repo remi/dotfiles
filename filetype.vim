@@ -2,6 +2,7 @@
 " @file         filetype.vim
 " @description  Custom filetypes based on extensions
 " @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
 " ----------------------------------------------------------------------------------------------------
 
 " Load this file only once {{{
