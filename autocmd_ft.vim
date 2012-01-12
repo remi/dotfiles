@@ -29,6 +29,15 @@ autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby inoremap ;er <%  %><Esc>hhi
 autocmd FileType eruby inoremap ;ee <%=  %><Esc>hhi
+autocmd FileType haml  inoremap ## #{}<Esc>hhi
+" }}}
+
+" JavaScript {{{
+" ----------------------------------------------------------------------------------------------------
+autocmd FileType javascript inoremap <buffer> ;fu function() {<CR>}<Esc>V<<Esc>O
+autocmd FileType javascript inoremap <buffer> ;cl console.log();<Esc>hi
+autocmd FileType javascript inoremap <buffer> ;al alert();<Esc>hi
+autocmd FileType javascript inoremap <buffer> ;rf return false;<Esc>
 " }}}
 
 " Ruby/Sinatra {{{
