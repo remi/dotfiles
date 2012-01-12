@@ -2,7 +2,6 @@
 " @file         autocmd.vim
 " @description  Auto-commands
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
 " Move the cursor to its last location in the file {{{

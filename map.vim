@@ -2,7 +2,6 @@
 " @file         map.vim
 " @description  Keyboard mappings
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
 " Remove support for regular system-wide bindings {{{

@@ -2,7 +2,6 @@
 " @file         .gvimrc
 " @description  Gvim configuration file
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
 " On met la ligne du curseur en surbrillance {{{
@@ -23,9 +22,6 @@ set guifont=Monaco:h12
 " Schéma de couleur {{{
 " ------------------------------------------------------------
 colorscheme tomorrow-night
-"colorscheme solarized
-"let g:solarized_contrast="normal"    "default value is normal
-"source $HOME/.vim/colors.vim
 "}}}
 
 " Options 'fullscreen' {{{
@@ -54,11 +50,7 @@ noremap <D-w> <Nop>
 noremap <D-t> <Nop>
 " }}}
 
-map <F12> :botright copen<CR>
-
 " Misc settings {{{
 " ------------------------------------------------------------
-"set columns=149
-"set lines=36
 set showtabline=0
 " }}}

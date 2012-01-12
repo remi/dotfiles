@@ -2,7 +2,6 @@
 " @file         settings.vim
 " @description  Global settings
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
 " Activate syntax highlithing {{{

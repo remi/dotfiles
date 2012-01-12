@@ -2,11 +2,9 @@
 " @file         .vimrc
 " @description  Vim configuration file
 " @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
 call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
 
 runtime macros/matchit.vim
 
