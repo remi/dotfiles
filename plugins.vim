@@ -44,13 +44,6 @@ autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
 autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " }}}
 
-" html.vim settings {{{
-" ----------------------------------------------------------------------------------------------------
-let g:do_xhtml_mappings = 'yes'
-let g:no_html_toolbar = 'yes'
-let g:no_html_menu = 'yes'
-" }}}
-
 " BufExplorer settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
