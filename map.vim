@@ -21,11 +21,6 @@ vnoremap <Right> <NOP>
 inoremap <Right> <NOP>
 " }}}
 
-" Strip HTML tags in selected line {{{
-" ----------------------------------------------------------------------------------------------------
-vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
-" }}}
-
 " Easy fold navigation {{{
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> <D-J> <Nop>
@@ -112,15 +107,6 @@ noremap <C-Down> ddp
 
 " Easy tab navigation {{{
 " ----------------------------------------------------------------------------------------------------
-"noremap <S-C-Tab> :tabprevious<CR>
-"inoremap <S-C-Tab> <Esc>:tabprevious<CR>
-"vnoremap <S-C-Tab> <Esc>:tabprevious<CR>
-"noremap <C-Tab> :tabnext<CR>
-"inoremap <C-Tab> <Esc>:tabnext<CR>
-"vnoremap <C-Tab> <Esc>:tabnext<CR>
-"noremap <M-D-Left> <Esc>:tabprevious<CR>
-"noremap <M-D-Right> <Esc>:tabnext<CR>
-
 noremap <S-C-Tab> :bprevious<CR>
 inoremap <S-C-Tab> <Esc>:bprevious<CR>
 vnoremap <S-C-Tab> <Esc>:bprevious<CR>
@@ -128,11 +114,6 @@ noremap <C-Tab> :bnext<CR>
 inoremap <C-Tab> <Esc>:bnext<CR>
 vnoremap <C-Tab> <Esc>:bnext<CR>
 
-" }}}
-
-" Reload the current file {{{
-" ----------------------------------------------------------------------------------------------------
-"noremap <D-r> :e<CR>
 " }}}
 
 " Function keys {{{
@@ -180,8 +161,10 @@ nnoremap <S-Tab> mzV<`zh
 noremap <silent> <Space> :silent noh<Bar>echo<CR>
 " }}}
 
+" Easy Vim folds insert {{{
 inoremap ;zo {{{<Esc>
 inoremap ;zc }}}<Esc>
+" }}}
 
 " Always use magic regexes {{{
 " ----------------------------------------------------------------------------------------------------
@@ -254,11 +237,7 @@ noremap <C-A>k <C-W>k
 noremap <C-A>j <C-W>j
 " }}}
 
-command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
-
-let g:surround_45 = "#{\r}"
-let g:surround_61 = "\"#{\r}\""
-
+" Execute the current file {{{
 function! CallInterpreter()
   if match(getline(1), '^\#!') == 0
     let l:interpreter = getline(1)[2:]
@@ -271,3 +250,4 @@ unmap <Leader>rm
 unmap <Leader>rv
 unmap <Leader>rc
 map <Leader>r :call CallInterpreter()<CR>
+" }}}
