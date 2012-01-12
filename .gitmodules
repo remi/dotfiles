@@ -7,12 +7,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle-inactive/vim-todo"]
-	path = bundle-inactive/vim-todo
-	url = https://github.com/svenfuchs/vim-todo.git
-[submodule "bundle-inactive/vim-layout"]
-	path = bundle-inactive/vim-layout
-	url = https://github.com/svenfuchs/vim-layout.git
 [submodule "bundle/vim-textobj-rubyblock"]
 	path = bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
@@ -28,12 +22,6 @@
 [submodule "bundle/css-color"]
 	path = bundle/css-color
 	url = https://github.com/skammer/vim-css-color.git
-[submodule "bundle/rubytest"]
-	path = bundle/rubytest
-	url = https://github.com/janx/vim-rubytest.git
-[submodule "bundle-inactive/lusty"]
-	path = bundle-inactive/lusty
-	url = https://github.com/sjbach/lusty.git
 [submodule "bundle/vim-bundler"]
 	path = bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
