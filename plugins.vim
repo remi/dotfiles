@@ -106,11 +106,6 @@ vnoremap <Leader>f :Tab /
 map <Leader>a :call SyntaxAttr()<CR>
 " }}}
 
-" ZenCoding settings {{{
-" ----------------------------------------------------------------------------------------------------
-source $HOME/.vim/plugins-zencoding.vim
-" }}}
-
 " RubyTest settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>p <Plug>RubyTestRun
