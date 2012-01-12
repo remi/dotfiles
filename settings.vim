@@ -21,16 +21,6 @@ filetype on
 filetype plugin indent on
 " }}}
 
-" Different colorschemes if we're running vim or gvim {{{
-" ----------------------------------------------------------------------------------------------------
-if !has('gui_running')
-	syntax on
-	colorscheme twilight3
-else
-	syntax on
-endif
-" }}}
-
 " Define the leader key {{{
 " ----------------------------------------------------------------------------------------------------
 let mapleader = ","
@@ -84,11 +74,6 @@ set gdefault " Always search/replace globally
 " ----------------------------------------------------------------------------------------------------
 set encoding=utf-8
 set fileencoding=utf-8
-" }}}
-
-" Do not highlight special PHP functions (to ensure compatibility with most color schemes) {{{
-" ----------------------------------------------------------------------------------------------------
-let php_special_functions = 0
 " }}}
 
 " Backups {{{
