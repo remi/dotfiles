@@ -4,32 +4,32 @@
 " @author       Rémi Prévost (remi, exomel.com)
 " ----------------------------------------------------------------------------------------------------
 
-" On met la ligne du curseur en surbrillance {{{
+" Highlight cursor line {{{
 " ------------------------------------------------------------
 set nocursorline
 "}}}
 
-" Transparence {{{
+" Transparency {{{
 " ------------------------------------------------------------
 set transp=0
 "}}}
 
-" Police {{{
+" Font {{{
 " ------------------------------------------------------------
 set guifont=Monaco:h12
 "}}}
 
-" Schéma de couleur {{{
+" Colorscheme {{{
 " ------------------------------------------------------------
 colorscheme tomorrow-night
 "}}}
 
-" Options 'fullscreen' {{{
+" Fullscreen options {{{
 " ------------------------------------------------------------
 set fuoptions=maxvert,maxhorz
 "}}}
 
-" Options de l’interface {{{
+" GUI options {{{
 " ------------------------------------------------------------
 set guioptions-=L
 set guioptions-=l
