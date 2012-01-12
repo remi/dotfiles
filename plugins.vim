@@ -5,14 +5,6 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-" CommandT settings {{{
-" ----------------------------------------------------------------------------------------------------
-"map <Leader>o :CommandT<CR>
-"map <Leader>t :CommandT<CR>
-"map <Leader>, :CommandTBuffer<CR>
-"map <Leader>T :CommandTFlush<CR>:CommandT<CR>
-" }}}
-
 " FuzzyFinder settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
