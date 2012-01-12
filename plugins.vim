@@ -5,19 +5,6 @@
 " vim: fdm=marker noet ts=4 sts=4 sw=4
 " ----------------------------------------------------------------------------------------------------
 
-" Taglist settings {{{
-" ----------------------------------------------------------------------------------------------------
-map éé :TlistToggle<cr>
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Close_On_Select = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Show_One_File = 1
-let Tlist_Sort_Type = "name"
-"let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-let Tlist_Ctags_Cmd = '/Users/remi/Local/homebrew/bin/ctags'
-" }}}
-
 " CommandT settings {{{
 " ----------------------------------------------------------------------------------------------------
 "map <Leader>o :CommandT<CR>
