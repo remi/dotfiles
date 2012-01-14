@@ -1,3 +1,10 @@
+" ----------------------------------------------------------------------------------------------------
+" @file         misc.vim
+" @description  Misc mappings loaded after everything else
+" @author       Rémi Prévost (remi, exomel.com)
+" vim: set fdm=marker:
+" ----------------------------------------------------------------------------------------------------
+
 " CamelCaseMotion settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <silent> w <Plug>CamelCaseMotion_w
