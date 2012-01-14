@@ -80,8 +80,8 @@ set backupdir=$HOME/.vim-local/.vimbackup
 set directory=$HOME/.vim-local/.vimswap
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 if exists("+undofile")
-	set undofile
-	set undodir=~/.vim-local/.undo
+  set undofile
+  set undodir=~/.vim-local/.undo
 endif
 " }}}
 
@@ -97,15 +97,15 @@ set list
 " Statusline {{{
 " ----------------------------------------------------------------------------------------------------
 function! GetCWD()
-	return expand(":pwd")
+  return expand(":pwd")
 endfunction
 
 function! IsHelp()
-	return &buftype=='help'?' (help) ':''
+  return &buftype=='help'?' (help) ':''
 endfunction
 
 function! GetName()
-	return expand("%:t")==''?'<none>':expand("%:t")
+  return expand("%:t")==''?'<none>':expand("%:t")
 endfunction
 
 set statusline=%3*[%1*%{GetName()}%3*]%3*

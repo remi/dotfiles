@@ -8,7 +8,7 @@
 " Load this file only once {{{
 " ----------------------------------------------------------------------------------------------------
 if exists("did\_load\_filetypes")
-	finish
+  finish
 endif
 " }}}
 
@@ -27,18 +27,18 @@ au BufNewFile,BufRead *.mustache setfiletype html.mustache
 " Ruby {{{
 " -----------------------------------------------------------------
 augroup userruby
-	au! BufRead,BufNewFile *.ru setfiletype ruby
-	au! BufRead,BufNewFile Gemfile setfiletype ruby
-	au! BufRead,BufNewFile Capfile setfiletype ruby
+  au! BufRead,BufNewFile *.ru setfiletype ruby
+  au! BufRead,BufNewFile Gemfile setfiletype ruby
+  au! BufRead,BufNewFile Capfile setfiletype ruby
 augroup END
 " }}}
 
 " Markdown {{{
 " -----------------------------------------------------------------
 augroup markdown
-	au! BufRead,BufNewFile *.markdown setfiletype mkd
-	au! BufRead,BufNewFile *.mkd setfiletype mkd
-	au! BufRead,BufNewFile *.md setfiletype mkd
+  au! BufRead,BufNewFile *.markdown setfiletype mkd
+  au! BufRead,BufNewFile *.mkd setfiletype mkd
+  au! BufRead,BufNewFile *.md setfiletype mkd
 augroup END
 " }}}
 
