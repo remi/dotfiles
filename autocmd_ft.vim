@@ -35,9 +35,16 @@ autocmd FileType haml  inoremap ## #{}<Esc>hhi
 " JavaScript {{{
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType javascript inoremap <buffer> ;fu function() {<CR>}<Esc>V<<Esc>O
+autocmd FileType javascript.jquery inoremap <buffer> ;fu function() {<CR>}<Esc>V<<Esc>O
+
 autocmd FileType javascript inoremap <buffer> ;cl console.log();<Esc>hi
+autocmd FileType javascript.jquery inoremap <buffer> ;cl console.log();<Esc>hi
+
 autocmd FileType javascript inoremap <buffer> ;al alert();<Esc>hi
+autocmd FileType javascript.jquery inoremap <buffer> ;al alert();<Esc>hi
+
 autocmd FileType javascript inoremap <buffer> ;rf return false;<Esc>
+autocmd FileType javascript.jquery inoremap <buffer> ;rf return false;<Esc>
 " }}}
 
 " Ruby/Sinatra {{{
