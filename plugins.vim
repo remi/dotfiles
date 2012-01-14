@@ -60,19 +60,6 @@ nmap <Leader>3 :Rcontroller<CR>
 let g:rails_statusline=0
 " }}}
 
-" Gundo.vim settings {{{
-" ----------------------------------------------------------------------------------------------------
-nnoremap <Leader>u :GundoToggle<CR>
-if !has('python')
-	let g:gundo_disable=0
-endif
-" }}}
-
-" Tabular settings {{{
-" ----------------------------------------------------------------------------------------------------
-vnoremap <Leader>f :Tab /
-" }}}
-
 " SyntaxAttr settings {{{
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call SyntaxAttr()<CR>
