@@ -4,9 +4,6 @@
 [submodule "bundle/localrc"]
 	path = bundle/localrc
 	url = git://github.com/remiprev/vim-localrc.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
