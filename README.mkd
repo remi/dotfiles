@@ -1,3 +1,9 @@
+## Usage
+
+Even if this repository is designed so that you can use it as a complete Vim configuration directory, a better way to use it would be to clone it in a separate directory and browse its content for settings, mappings and plugins that you think might be interesting to you.
+
+A good piece of advice if you are starting to customize your Vim experience is to never add something you do not understand in your .vimrc.
+
 ## Instructions
 
 To use those files with Vim, you’d usually do:
