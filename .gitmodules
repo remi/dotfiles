@@ -16,3 +16,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-localrc"]
+	path = bundle/vim-localrc
+	url = https://github.com/remiprev/vim-localrc.git
