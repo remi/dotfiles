@@ -254,8 +254,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	if version >= 700
 		call <SID>X("CursorLine", "", s:line, "none")
 		call <SID>X("CursorColumn", "", s:line, "none")
-		call <SID>X("PMenu", s:background, s:foreground, "none")
-		call <SID>X("PMenuSel", s:background, s:yellow, "none")
+		call <SID>X("PMenu", s:background, 'd3d3d3', "none")
+		call <SID>X("PMenuSel", 'ffffff', s:blue, "none")
 	end
 
 	" Standard Highlighting
