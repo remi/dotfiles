@@ -19,8 +19,8 @@ autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
 autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
-autocmd FileType haml  inoremap <buffer> ## #{}<Esc>hhi
-autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>hhi
+autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
+autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
 autocmd FileType ruby  inoremap <buffer> ;ll Rails.logger.info ""<Esc>ha
 " }}}
 
