@@ -9,6 +9,7 @@
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
 map <Leader>t :FufFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
+map <Leader>p :FufCoverageFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
 map <Leader>a :FufFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
 map <Leader>b :FufBuffer<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
 map <Leader>, :FufBuffer<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
@@ -22,6 +23,8 @@ let g:fuf_keyOpenTabpage = '<S-CR>'
 let g:fuf_keyOpenVsplit = ''
 let g:fuf_infoFile = '~/.vim-local/.vimfuf'
 let g:fuf_file_prompt = ' file →  '
+let g:fuf_coveragefile_prompt = ' cfile →  '
+let g:fuf_buffer_prompt = 'buffer →  '
 let g:fuf_buffer_prompt = 'buffer →  '
 let g:fuf_line_prompt = 'line →  '
 let g:fuf_mrufile_prompt = 'mru →  '
