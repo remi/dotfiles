@@ -62,6 +62,7 @@ set switchbuf=useopen
 set backspace=indent,eol,start
 set tabpagemax=50
 set isk+=- " Treat “-” like a word separator (for auto-completion!)
+set isk+=? " Treat “?” like a word separator (for auto-completion!)
 set hidden " Allow hidden buffers
 set gdefault " Always search/replace globally
 " }}}
