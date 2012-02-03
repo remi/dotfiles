@@ -75,3 +75,57 @@ let g:git_branch_status_text=""
 let g:git_branch_status_around=""
 let g:git_branch_status_nogit=""
 " }}}
+
+" zencoding settings {{{
+" ----------------------------------------------------------------------------------------------------
+let g:user_zen_leader_key = ';'
+let g:user_zen_settings = {
+\  'indentation': "  ",
+\  'css' : {
+\    'snippets' : {
+\      'd:i': 'display:inline;',
+\      'h:1': 'height:1%;',
+\      'fs': 'font-size:|%;',
+\      'fy': 'font-style:|;',
+\      'di' : 'display:|;',
+\      'bo' : 'border:|;',
+\      'bo:n' : 'border:none;',
+\      'bot' : 'border-top:|;',
+\      'bob' : 'border-bottom:|;',
+\      'bor' : 'border-right:|;',
+\      'bol' : 'border-left:|;',
+\      'ba' : 'background:#|;',
+\      'bu' : 'background:url("|") no-repeat top left;',
+\      'pa' : 'padding:|;',
+\      'ma' : 'margin:|;',
+\      'he' : 'height:|;',
+\      'wi' : 'width:|;',
+\      'co' : 'color:#|;'
+\    },
+\  },
+\  'javascript' : {
+\    'snippets' : {
+\      'fu' : "function() {\n\t|\n}",
+\      'fe' : "function(e) {\n\t|\n}",
+\      'cl' : "console.log(|);",
+\      'al' : "alert(|);",
+\      'rf' : "return false;",
+\    },
+\  },
+\  'javascript.jquery' : {
+\    'extends' : 'javascript',
+\  },
+\  'ruby' : {
+\    'snippets' : {
+\      'l' : "Rails.logger.info |",
+\      'e' : "#{|}",
+\    },
+\  },
+\  'haml' : {
+\    'extends' : 'ruby',
+\  },
+\  'eruby' : {
+\    'extends' : 'ruby',
+\  },
+\}
+" }}}
