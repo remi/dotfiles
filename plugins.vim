@@ -80,7 +80,7 @@ let g:git_branch_status_nogit=""
 " ----------------------------------------------------------------------------------------------------
 let g:user_zen_leader_key = ';'
 let g:user_zen_settings = {
-\  'indentation': "  ",
+\  'indentation': '  ',
 \  'css' : {
 \    'snippets' : {
 \      'd:i': 'display:inline;',
@@ -105,11 +105,11 @@ let g:user_zen_settings = {
 \  },
 \  'javascript' : {
 \    'snippets' : {
-\      'fu' : "function() {\n\t|\n}",
-\      'fe' : "function(e) {\n\t|\n}",
-\      'cl' : "console.log(|);",
-\      'al' : "alert(|);",
-\      'rf' : "return false;",
+\      'fu' : 'function() {\n\t|\n}',
+\      'fe' : 'function(e) {\n\t|\n}',
+\      'cl' : 'console.log(|);',
+\      'al' : 'alert(|);',
+\      'rf' : 'return false;',
 \    },
 \  },
 \  'javascript.jquery' : {
@@ -117,8 +117,8 @@ let g:user_zen_settings = {
 \  },
 \  'ruby' : {
 \    'snippets' : {
-\      'l' : "Rails.logger.info |",
-\      'e' : "#{|}",
+\      'l' : 'Rails.logger.info |',
+\      'e' : '#{|}',
 \    },
 \  },
 \  'haml' : {
