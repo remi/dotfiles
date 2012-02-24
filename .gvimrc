@@ -22,6 +22,7 @@ set guifont=Monaco:h12
 
 " Colorscheme {{{
 " ------------------------------------------------------------
+set background=dark
 colorscheme tomorrow-night
 "}}}
 
