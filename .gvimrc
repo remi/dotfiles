@@ -12,7 +12,7 @@ set nocursorline
 
 " Transparency {{{
 " ------------------------------------------------------------
-set transp=0
+set transp=2
 "}}}
 
 " Font {{{
