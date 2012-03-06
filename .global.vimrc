@@ -43,6 +43,14 @@ if expand("%:t") == "config.ru"
 endif
 " }}}
 
+" Sinatra {{{
+" -----------------------------------------------------------------------
+if expand("%:t") == "app.rb"
+  syn keyword rubySinatraCustom deliver bail helpers configure status header params
+  hi def link rubySinatraCustom Function
+endif
+" }}}
+
 " RSpec {{{
 " -----------------------------------------------------------------------
 if expand('%') =~# '_spec\.rb$'
@@ -53,7 +61,7 @@ endif
 
 " Bundler {{{
 " -----------------------------------------------------------------------
-if expand('%') =~# '^Gemfile'
+if expand('%:t') =~# '^Gemfile'
   syn keyword rubyBundler gem source gemspec group
   hi def link rubyBundler Function
 endif
@@ -61,7 +69,7 @@ endif
 
 " Rake {{{
 " -----------------------------------------------------------------------
-if expand('%') =~# '^Rakefile$'
+if expand('%:t') =~# '^Rakefile$'
   syn keyword rubyRake task desc
   hi def link rubyRake Function
 endif
