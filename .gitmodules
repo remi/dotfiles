@@ -28,3 +28,6 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "bundle/vim-css3"]
+	path = bundle/vim-css3
+	url = git://github.com/hail2u/vim-css3-syntax.git
