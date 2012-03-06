@@ -7,7 +7,7 @@ let g:colors_name = "Tomorrow-Night"
 
 " Default GUI Colours
 let s:foreground = "c5c8c6"
-let s:background = "1d1f21"
+let s:background = "151617"
 let s:selection = "373b41"
 let s:line = "282a2e"
 let s:comment = "6A6C6B"
