@@ -31,3 +31,6 @@
 [submodule "bundle/vim-css3"]
 	path = bundle/vim-css3
 	url = git://github.com/hail2u/vim-css3-syntax.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
