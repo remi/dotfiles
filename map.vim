@@ -118,10 +118,10 @@ vnoremap <C-Tab> <Esc>:bnext<CR>
 
 " Function keys {{{
 " ----------------------------------------------------------------------------------------------------
-noremap <F9> :set list!<Bar>set list?<CR>
-noremap <F8> :set wrap! linebreak! nolist!<Bar>set wrap?<CR>
-noremap <F10> :set paste!<Bar>set paste?<CR>
-noremap <F11> :set expandtab!<Bar>set expandtab?<CR>
+noremap <F9> :setl list!<Bar>setl list?<CR>
+noremap <F8> :setl wrap! linebreak! nolist!<Bar>setl wrap?<CR>
+noremap <F10> :setl paste!<Bar>setl paste?<CR>
+noremap <F11> :setl expandtab!<Bar>setl expandtab?<CR>
 " }}}
 
 " Insert current date {{{
