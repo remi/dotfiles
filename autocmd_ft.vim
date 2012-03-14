@@ -23,6 +23,12 @@ autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
 autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
 " }}}
 
+" CoffeeScript {{{
+" ----------------------------------------------------------------------------------------------------
+autocmd FileType coffee setl expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType coffee  inoremap <buffer> ## #{}<Esc>i
+" }}}
+
 " JavaScript {{{
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
