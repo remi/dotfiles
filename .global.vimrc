@@ -75,6 +75,14 @@ if expand('%:t') =~# '^Rakefile$'
 endif
 " }}}
 
+" Guard {{{
+" -----------------------------------------------------------------------
+if expand('%:t') =~# '^Guardfile$'
+  syn keyword rubyGuard watch guard
+  hi def link rubyGuard Function
+endif
+" }}}
+
 " Capistrano {{{
 " -----------------------------------------------------------------------
 if expand('%:p') =~# 'config/deploy.rb$'

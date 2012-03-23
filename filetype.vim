@@ -30,6 +30,7 @@ augroup userruby
   au! BufRead,BufNewFile *.ru setfiletype ruby
   au! BufRead,BufNewFile Gemfile setfiletype ruby
   au! BufRead,BufNewFile Capfile setfiletype ruby
+  au! BufRead,BufNewFile Guardfile setfiletype ruby
   au! BufRead,BufNewFile *.watchr setfiletype ruby
 augroup END
 " }}}
