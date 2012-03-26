@@ -28,6 +28,7 @@ au BufNewFile,BufRead *.mustache setfiletype html.mustache
 " -----------------------------------------------------------------
 augroup userruby
   au! BufRead,BufNewFile *.ru setfiletype ruby
+  au! BufRead,BufNewFile *.rabl setfiletype ruby
   au! BufRead,BufNewFile Gemfile setfiletype ruby
   au! BufRead,BufNewFile Capfile setfiletype ruby
   au! BufRead,BufNewFile Guardfile setfiletype ruby

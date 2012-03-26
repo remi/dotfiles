@@ -1,5 +1,5 @@
 " ----------------------------------------------------------------------------------------------------
-" @file         autocmd.vim
+" @file         autocmd_ft.vim
 " @description  Auto-commands for specific filetypes
 " @author       Rémi Prévost (remi, exomel.com)
 " vim: set fdm=marker:
@@ -11,16 +11,6 @@ autocmd FileType html setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css inoremap <buffer> !! !important
 autocmd FileType scss inoremap <buffer> !! !important
-" }}}
-
-" Ruby {{{
-" ----------------------------------------------------------------------------------------------------
-autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
-autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
-autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
-autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
-autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
-autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
 " }}}
 
 " CoffeeScript {{{
