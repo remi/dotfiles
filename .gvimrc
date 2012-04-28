@@ -12,7 +12,7 @@ set nocursorline
 
 " Transparency {{{
 " ------------------------------------------------------------
-set transp=2
+set transparency=2
 "}}}
 
 " Font {{{
@@ -23,7 +23,10 @@ set guifont=Monaco:h12
 " Colorscheme {{{
 " ------------------------------------------------------------
 set background=dark
-colorscheme tomorrow-night
+let g:solarized_bold=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="low"
+colorscheme solarized
 "}}}
 
 " Fullscreen options {{{
