@@ -34,3 +34,6 @@
 [submodule "bundle/vim-ruby-minitest"]
 	path = bundle/vim-ruby-minitest
 	url = git://github.com/remiprev/vim-ruby-minitest.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/remiprev/vim-colors-solarized.git
