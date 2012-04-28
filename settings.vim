@@ -114,7 +114,7 @@ function! GetName()
   return expand("%:t")==''?'<none>':expand("%:t")
 endfunction
 
-set statusline=%3*[%1*%{GetName()}%3*]%3*
+set statusline=%1*\ %{GetName()}\ %3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
 set statusline+=%5*%{IsHelp()}%3*
 set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
