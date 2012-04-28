@@ -61,7 +61,7 @@ auto BufNewFile,BufReadPost config.ru call RubyRack()
 " -----------------------------------------------------------------------
 function! RubySinatra()
   if expand("%:t") == "app.rb"
-    syn keyword rubySinatraCustom deliver bail helpers configure status header params
+    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put
     hi def link rubySinatraCustom Function
   endif
 endfunction
