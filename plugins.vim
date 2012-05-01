@@ -129,3 +129,33 @@ let g:user_zen_settings = {
 \  },
 \}
 " }}}
+
+" CtrlP settings {{{
+"map <Leader>o :CtrlP<CR>
+"map <Leader>t :CtrlPCurWD<CR>
+"map <Leader>T ::CtrlPClearCache<CR>:CtrlPCurWD<CR>
+"map <Leader>, :CtrlPBuffer<CR>
+"map <Leader>m :CtrlPMRUFiles<CR>
+
+let g:ctrlp_by_filename = 0
+let g:ctrlp_match_window_reversed = 1
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_working_path_mode = 1
+let g:ctrlp_status_func = { 'main': 'Function_Name' }
+let g:ctrlp_extensions = []
+let g:ctrlp_regexp = 0
+
+function! Function_Name(focus, byfname, regex, prev, item, next, marked)
+  return "%1* CtrlP (".a:item.") %2*"
+endfunction
+
+hi link CtrlPMatch Identifier
+hi link CtrlPLinePre Comment
+hi link CtrlPPrtBase Comment
+hi link CtrlPPrtText Identifier
+hi link CtrlPPrtCursor Comment
+hi link CtrlPTabExtra User1
+hi link CtrlPMode1 User1
+hi link CtrlPMode2 User1
+hi link CtrlPStats User1
+" }}}
