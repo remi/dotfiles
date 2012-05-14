@@ -40,3 +40,9 @@ autocmd FileType qf noremap <buffer> <CR> <CR>
 " ----------------------------------------------------------------------------------------------------
 au BufReadPost COMMIT_EDITMSG exe "normal gg"
 " }}}
+
+" PHP {{{
+" ----------------------------------------------------------------------------------------------------
+autocmd FileType php inoremap <buffer> ;er <?php  ?><Esc>hhi
+autocmd FileType php inoremap <buffer> ;ee <?php echo  ?><Esc>hhi
+" }}}
