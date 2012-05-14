@@ -10,69 +10,81 @@
 if exists("did\_load\_filetypes")
   finish
 endif
+runtime! ftdetect/*.vim
 " }}}
 
 " PHP (+HTML) {{{
 " -----------------------------------------------------------------
-au! BufRead,BufNewFile *.php setfiletype php
-au! BufRead,BufNewFile *.tpl.html setfiletype php
+augroup phpfiletype
+  au BufRead,BufNewFile *.php setfiletype php
+  au BufRead,BufNewFile *.tpl.html setfiletype php
+augroup END
 " }}}
 
 " Mustache {{{
 " -----------------------------------------------------------------
-runtime! ftdetect/*.vim
-au BufNewFile,BufRead *.mustache setfiletype html.mustache
+augroup mustachefiletype
+  au BufNewFile,BufRead *.mustache setfiletype html.mustache
+  au BufNewFile,BufRead *.handlebars setfiletype html.mustache
+  au BufNewFile,BufRead *.hbs setfiletype html.mustache
+augroup END
 " }}}
 
 " Ruby {{{
 " -----------------------------------------------------------------
-augroup userruby
-  au! BufRead,BufNewFile *.ru setfiletype ruby
-  au! BufRead,BufNewFile *.rabl setfiletype ruby
-  au! BufRead,BufNewFile Gemfile setfiletype ruby
-  au! BufRead,BufNewFile Capfile setfiletype ruby
-  au! BufRead,BufNewFile Guardfile setfiletype ruby
-  au! BufRead,BufNewFile *.watchr setfiletype ruby
+augroup rubyfiletype
+  au BufRead,BufNewFile *.ru setfiletype ruby
+  au BufRead,BufNewFile *.rabl setfiletype ruby
+  au BufRead,BufNewFile Gemfile setfiletype ruby
+  au BufRead,BufNewFile Capfile setfiletype ruby
+  au BufRead,BufNewFile Guardfile setfiletype ruby
+  au BufRead,BufNewFile *.watchr setfiletype ruby
 augroup END
 " }}}
 
 " Markdown {{{
 " -----------------------------------------------------------------
-augroup markdown
-  au! BufRead,BufNewFile *.markdown setfiletype mkd
-  au! BufRead,BufNewFile *.mkd setfiletype mkd
-  au! BufRead,BufNewFile *.md setfiletype mkd
+augroup markdownfiletype
+  au BufRead,BufNewFile *.markdown setfiletype mkd
+  au BufRead,BufNewFile *.mkd setfiletype mkd
+  au BufRead,BufNewFile *.md setfiletype mkd
 augroup END
 " }}}
 
 " Apache configuration files {{{
 " -----------------------------------------------------------------
-au! BufRead,BufNewFile *.conf setfiletype apache
+augroup apachefiletype
+  au BufRead,BufNewFile *.conf setfiletype apache
+augroup END
 " }}}
 
-" ActionScript (Javascript) {{{
+" ActionScript / Javascript / jQuery {{{
 " -----------------------------------------------------------------
-au! BufRead,BufNewFile *.as setfiletype javascript
-" }}}
-
-" Javascript / jQuery {{{
-" -----------------------------------------------------------------
-au! BufRead,BufNewFile *.js setfiletype javascript.jquery
-au! BufRead,BufNewFile *.json set filetype=json
+augroup javascriptfiletype
+  au BufRead,BufNewFile *.as setfiletype javascript
+  au BufRead,BufNewFile *.js setfiletype javascript.jquery
+  au BufRead,BufNewFile *.json set filetype=json
+augroup END
 " }}}
 
 " Liquid {{{
 " -----------------------------------------------------------------
-au BufNewFile,BufRead *.liquid setfiletype liquid
+augroup liquidfiletype
+  au BufNewFile,BufRead *.liquid setfiletype liquid
+augroup END
 " }}}
 
 " tmux {{{
 " -----------------------------------------------------------------
-au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
+augroup tmuxfiletype
+  au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
+augroup END
 " }}}
 
 " SASS {{{
 " -----------------------------------------------------------------
-au BufRead,BufNewFile *.sass setf sass
-au BufRead,BufNewFile *.scss setf scss
+augroup sassfiletype
+  au BufRead,BufNewFile *.sass setf sass
+  au BufRead,BufNewFile *.scss setf scss
+augroup END
 " }}}
