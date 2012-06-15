@@ -26,6 +26,10 @@ function! RubyRails()
       syn keyword rubyRailsCustom params
       syn keyword rubyRailsCustom before_filter after_filter around_filter skip_before_filter skip_after_filter skip_around_filter rescue_from
     endif
+
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom has_secure_password
+    endif
     " }}}
 
     " gem: acts_as_tree_on_steroids {{{
@@ -37,6 +41,12 @@ function! RubyRails()
     " gem: currency_magic {{{
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom currency_magic
+    endif
+    " }}}
+
+    " gem: money_rails {{{
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom monetize
     endif
     " }}}
 
