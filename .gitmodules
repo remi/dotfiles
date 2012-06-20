@@ -37,3 +37,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/remiprev/vim-colors-solarized.git
+[submodule "bundle/vim-padrino"]
+	path = bundle/vim-padrino
+	url = git://github.com/remiprev/vim-padrino.git
