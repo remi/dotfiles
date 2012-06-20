@@ -159,3 +159,7 @@ hi link CtrlPMode1 User1
 hi link CtrlPMode2 User1
 hi link CtrlPStats User1
 " }}}
+
+" vim-padrino settings {{{
+let g:padrino_statusline=0
+" }}}
