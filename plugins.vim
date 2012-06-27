@@ -80,6 +80,7 @@ let g:git_branch_status_nogit=""
 " zencoding settings {{{
 " ----------------------------------------------------------------------------------------------------
 let g:user_zen_leader_key = ';'
+let g:user_zen_expandabbr_key = ';;'
 let g:user_zen_settings = {
 \  'indentation': '  ',
 \  'css' : {
