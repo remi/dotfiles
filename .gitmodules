@@ -40,3 +40,6 @@
 [submodule "bundle/vim-padrino"]
 	path = bundle/vim-padrino
 	url = git://github.com/remiprev/vim-padrino.git
+[submodule "bundle/vim-handlebars"]
+	path = bundle/vim-handlebars
+	url = git://github.com/remiprev/vim-handlebars.git
