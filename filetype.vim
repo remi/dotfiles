@@ -25,8 +25,6 @@ augroup END
 " -----------------------------------------------------------------
 augroup mustachefiletype
   au BufNewFile,BufRead *.mustache setfiletype html.mustache
-  au BufNewFile,BufRead *.handlebars setfiletype html.mustache
-  au BufNewFile,BufRead *.hbs setfiletype html.mustache
 augroup END
 " }}}
 
