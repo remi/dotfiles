@@ -50,6 +50,12 @@ function! RubyRails()
     endif
     " }}}
 
+    " gem: paperclip {{{
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom has_attached_file
+    endif
+    " }}}
+
     " Link it!
     hi def link rubyRailsCustom Function
     hi def link rubyRailsCustomAlt rubyControl
@@ -126,7 +132,7 @@ auto BufNewFile,BufReadPost */config/deploy.rb call RubyCapistrano()
 " RABL {{{
 " -----------------------------------------------------------------------
 function! RubyRabl()
-  syn keyword rubyRabl node attribute object child collection
+  syn keyword rubyRabl node attribute object child collection attributes glue extends
   hi def link rubyRabl Function
 endfunction
 auto BufNewFile,BufReadPost *.rabl call RubyRabl()
