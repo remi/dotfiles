@@ -84,6 +84,17 @@ endfunction
 auto BufNewFile,BufReadPost *.rb call RubySinatra()
 " }}}
 
+" Grape {{{
+" -----------------------------------------------------------------------
+function! RubyGrape()
+  if expand("%:t") == "app.rb"
+    syn keyword rubyGrape resource rescue_from format rack_response
+    hi def link rubyGrape Function
+  endif
+endfunction
+auto BufNewFile,BufReadPost *.rb call RubyGrape()
+" }}}
+
 " RSpec {{{
 " -----------------------------------------------------------------------
 function! RubyRSpec()
