@@ -1,11 +1,4 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         misc.vim
-" @description  Misc mappings loaded after everything else
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" CamelCaseMotion settings {{{
+" CamelCaseMotion settings
 " ----------------------------------------------------------------------------------------------------
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
@@ -24,9 +17,8 @@ omap <silent> ib <Plug>CamelCaseMotion_ib
 xmap <silent> ib <Plug>CamelCaseMotion_ib
 omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
-" }}}
 
-" Misc leader mappings {{{
+" Misc leader mappings
 " ----------------------------------------------------------------------------------------------------
 noremap <Leader>!d :bdelete!<CR>
 noremap <Leader>d :bdelete<CR>
@@ -37,4 +29,3 @@ noremap <Leader>e :e
 noremap <Leader>v V`]
 noremap <Leader>s :vsplit<CR>
 noremap <Leader>q <C-W>c<CR>
-" }}}

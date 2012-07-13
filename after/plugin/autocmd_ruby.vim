@@ -1,11 +1,4 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         autocmd_ruby.vim
-" @description  Auto-commands for Ruby files
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" Ruby {{{
+" Ruby
 " -----------------------------------------------------------------------
 autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
@@ -13,14 +6,13 @@ autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
 autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
 autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
 autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
-" }}}
 
-" Rails {{{
+" Rails
 " -----------------------------------------------------------------------
 function! RubyRails()
   if exists("b:rails_root")
 
-    " gem: rails {{{
+    " gem: rails
     syn keyword rubyRailsCustom request
     if RailsFileType() =~ 'controller'
       syn keyword rubyRailsCustom params
@@ -30,31 +22,26 @@ function! RubyRails()
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_secure_password
     endif
-    " }}}
 
-    " gem: acts_as_tree_on_steroids {{{
+    " gem: acts_as_tree_on_steroids
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom acts_as_tree_on_steroids
     endif
-    " }}}
 
-    " gem: currency_magic {{{
+    " gem: currency_magic
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom currency_magic
     endif
-    " }}}
 
-    " gem: money_rails {{{
+    " gem: money_rails
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom monetize
     endif
-    " }}}
 
-    " gem: paperclip {{{
+    " gem: paperclip
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_attached_file
     endif
-    " }}}
 
     " Link it!
     hi def link rubyRailsCustom Function
@@ -62,18 +49,16 @@ function! RubyRails()
   endif
 endfunction
 auto BufNewFile,BufReadPost * call RubyRails()
-" }}}
 
-" Rack {{{
+" Rack
 " -----------------------------------------------------------------------
 function! RubyRack()
   syn keyword configRuCustom run
   hi def link configRuCustom Function
 endfunction
 auto BufNewFile,BufReadPost config.ru call RubyRack()
-" }}}
 
-" Sinatra {{{
+" Sinatra
 " -----------------------------------------------------------------------
 function! RubySinatra()
   if expand("%:t") == "app.rb"
@@ -82,9 +67,8 @@ function! RubySinatra()
   endif
 endfunction
 auto BufNewFile,BufReadPost *.rb call RubySinatra()
-" }}}
 
-" Grape {{{
+" Grape
 " -----------------------------------------------------------------------
 function! RubyGrape()
   if expand("%:t") == "app.rb"
@@ -93,58 +77,51 @@ function! RubyGrape()
   endif
 endfunction
 auto BufNewFile,BufReadPost *.rb call RubyGrape()
-" }}}
 
-" RSpec {{{
+" RSpec
 " -----------------------------------------------------------------------
 function! RubyRSpec()
   syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject
   hi def link rubyRspec Function
 endfunction
 auto BufNewFile,BufReadPost *.spec_rb call RubyRSpec()
-" }}}
 
-" Bundler {{{
+" Bundler
 " -----------------------------------------------------------------------
 function! RubyBundler()
   syn keyword rubyBundler gem source gemspec group
   hi def link rubyBundler Function
 endfunction
 auto BufNewFile,BufReadPost Gemfile call RubyBundler()
-" }}}
 
-" Rake {{{
+" Rake
 " -----------------------------------------------------------------------
 function! RubyRake()
   syn keyword rubyRake task desc
   hi def link rubyRake Function
 endfunction
 auto BufNewFile,BufReadPost Rakefile call RubyRake()
-" }}}
 
-" Guard {{{
+" Guard
 " -----------------------------------------------------------------------
-function! RemiGuardfile()
+function! RubyGuard()
   syn keyword rubyGuard watch guard
   hi def link rubyGuard Function
 endfunction
-au BufNewFile,BufRead Guardfile call RemiGuardfile()
-" }}}
+au BufNewFile,BufRead Guardfile call RubyGuard()
 
-" Capistrano {{{
+" Capistrano
 " -----------------------------------------------------------------------
 function! RubyCapistrano()
   syn keyword rubyCapistrano set namespace role task desc run ssh_options default_run_options
   hi def link rubyCapistrano Function
 endfunction
 auto BufNewFile,BufReadPost */config/deploy.rb call RubyCapistrano()
-" }}}
 
-" RABL {{{
+" RABL
 " -----------------------------------------------------------------------
 function! RubyRabl()
   syn keyword rubyRabl node attribute object child collection attributes glue extends
   hi def link rubyRabl Function
 endfunction
 auto BufNewFile,BufReadPost *.rabl call RubyRabl()
-" }}}

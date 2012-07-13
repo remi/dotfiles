@@ -1,49 +1,28 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         .gvimrc
-" @description  Gvim configuration file
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" Highlight cursor line {{{
+" Misc settings
 " ------------------------------------------------------------
+set showtabline=0
 set nocursorline
-"}}}
-
-" Transparency {{{
-" ------------------------------------------------------------
 set transparency=0
-"}}}
-
-" Font {{{
-" ------------------------------------------------------------
 set guifont=Monaco:h12
-"}}}
+set fuoptions=maxvert,maxhorz
 
-" Colorscheme {{{
+" Colorscheme
 " ------------------------------------------------------------
 set background=dark
 let g:solarized_bold=1
 let g:solarized_contrast="high"
 let g:solarized_visibility="low"
 colorscheme solarized
-"}}}
 
-" Fullscreen options {{{
-" ------------------------------------------------------------
-set fuoptions=maxvert,maxhorz
-"}}}
-
-" GUI options {{{
+" GUI options
 " ------------------------------------------------------------
 set guioptions-=L
 set guioptions-=l
 set guioptions-=R
 set guioptions+=r
 set guioptions-=T
-"}}}
 
-" Override MacVim.app commands {{{
+" Override MacVim.app commands
 " ------------------------------------------------------------
 macmenu File.Open\ Tab\.\.\. key=<nop>
 macmenu File.Close key=<nop>
@@ -53,9 +32,4 @@ macmenu File.Save\ As\.\.\. key=<nop>
 noremap <D-s> <Nop>
 noremap <D-w> <Nop>
 noremap <D-t> <Nop>
-" }}}
-
-" Misc settings {{{
-" ------------------------------------------------------------
-set showtabline=0
 " }}}

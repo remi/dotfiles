@@ -1,11 +1,4 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         plugins.vim
-" @description  Plugins settings
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: fdm=marker noet ts=4 sts=4 sw=4
-" ----------------------------------------------------------------------------------------------------
-
-" FuzzyFinder settings {{{
+" FuzzyFinder settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>o :FufFileWithCurrentBufferDir<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
 map <Leader>t :FufFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
@@ -31,29 +24,25 @@ let g:fuf_mrufile_prompt = 'mru → '
 let g:fuf_previewHeight = 0
 let g:fuf_promptHighlight = "User8"
 let g:fuf_file_exclude = '\v\~$|.sass-cache|Gemfile\.lock|.DS_Store|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-" }}}
 
-" Supertab settings {{{
+" Supertab settings
 " ----------------------------------------------------------------------------------------------------
 set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = '<c-p>'
-" }}}
 
-" YankRing {{{
+" YankRing
 " ----------------------------------------------------------------------------------------------------
 let g:yankring_history_dir = expand('$HOME').'/.vim-local'
 let g:yankring_history_file = '.vim-yankring'
 map <Leader>y :YRShow<CR>
 autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
 autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
-" }}}
 
-" BufExplorer settings {{{
+" BufExplorer settings
 " ----------------------------------------------------------------------------------------------------
 let g:bufExplorerSortBy='number'
-" }}}
 
-" Rails.vim settings {{{
+" Rails.vim settings
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>rc :Rcontroller<CR>
 nmap <Leader>rv :Rview<CR>
@@ -62,22 +51,19 @@ nmap <Leader>1 :Rmodel<CR>
 nmap <Leader>2 :Rview<CR>
 nmap <Leader>3 :Rcontroller<CR>
 let g:rails_statusline=0
-" }}}
 
-" SyntaxAttr settings {{{
+" SyntaxAttr settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call SyntaxAttr()<CR>
-" }}}
 
-" vim-git-branch-info settings {{{
+" vim-git-branch-info settings
 " ----------------------------------------------------------------------------------------------------
 let g:git_branch_status_head_current=1
 let g:git_branch_status_text=""
 let g:git_branch_status_around=""
 let g:git_branch_status_nogit=""
-" }}}
 
-" zencoding settings {{{
+" zencoding settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_zen_leader_key = ';'
 let g:user_zen_expandabbr_key = ';;'
@@ -130,38 +116,7 @@ let g:user_zen_settings = {
 \    'extends' : 'ruby',
 \  },
 \}
-" }}}
 
-" CtrlP settings {{{
-"map <Leader>o :CtrlP<CR>
-"map <Leader>t :CtrlPCurWD<CR>
-"map <Leader>T ::CtrlPClearCache<CR>:CtrlPCurWD<CR>
-"map <Leader>, :CtrlPBuffer<CR>
-"map <Leader>m :CtrlPMRUFiles<CR>
-
-let g:ctrlp_by_filename = 0
-let g:ctrlp_match_window_reversed = 1
-let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_working_path_mode = 1
-let g:ctrlp_status_func = { 'main': 'Function_Name' }
-let g:ctrlp_extensions = []
-let g:ctrlp_regexp = 0
-
-function! Function_Name(focus, byfname, regex, prev, item, next, marked)
-  return "%1* CtrlP (".a:item.") %2*"
-endfunction
-
-hi link CtrlPMatch Identifier
-hi link CtrlPLinePre Comment
-hi link CtrlPPrtBase Comment
-hi link CtrlPPrtText Identifier
-hi link CtrlPPrtCursor Comment
-hi link CtrlPTabExtra User1
-hi link CtrlPMode1 User1
-hi link CtrlPMode2 User1
-hi link CtrlPStats User1
-" }}}
-
-" vim-padrino settings {{{
+" vim-padrino settings
+" ----------------------------------------------------------------------------------------------------
 let g:padrino_statusline=0
-" }}}

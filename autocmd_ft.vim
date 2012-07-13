@@ -1,48 +1,34 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         autocmd_ft.vim
-" @description  Auto-commands for specific filetypes
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" HTML, CSS & Javascript {{{
+" HTML, CSS & Javascript
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType html setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css inoremap <buffer> !! !important
 autocmd FileType scss inoremap <buffer> !! !important
-" }}}
 
-" CoffeeScript {{{
+" CoffeeScript
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType coffee setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType coffee  inoremap <buffer> ## #{}<Esc>i
-" }}}
 
-" JavaScript {{{
+" JavaScript
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript.jquery setl expandtab ts=2 shiftwidth=2 softtabstop=2
-" }}}
 
-" Ruby/Sinatra {{{
+" Ruby/Sinatra
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType ruby-sinatra setl expandtab ts=2 shiftwidth=2 softtabstop=2
-" }}}
 
-" QuickFix {{{
+" QuickFix
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType qf setl scrolloff=0 cursorline
 autocmd FileType qf noremap <buffer> <CR> <CR>
-" }}}
 
-" Git {{{
+" Git
 " ----------------------------------------------------------------------------------------------------
 au BufReadPost COMMIT_EDITMSG exe "normal gg"
-" }}}
 
-" PHP {{{
+" PHP
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType php inoremap <buffer> ;er <?php  ?><Esc>hhi
 autocmd FileType php inoremap <buffer> ;ee <?php echo  ?><Esc>hhi
-" }}}

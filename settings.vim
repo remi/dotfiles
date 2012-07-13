@@ -1,39 +1,27 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         settings.vim
-" @description  Global settings
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" Activate syntax highlithing {{{
+" Activate syntax highlithing
 " ----------------------------------------------------------------------------------------------------
 syntax on
-" }}}
 
-" Activate 256 colors mode (to use in terminal mode) {{{
+" Activate 256 colors mode (to use in terminal mode)
 " ----------------------------------------------------------------------------------------------------
 set t_Co=256
-" }}}
 
-" Activate filetype plugins {{{
+" Activate filetype plugins
 " ----------------------------------------------------------------------------------------------------
 filetype on
 filetype plugin indent on
 filetype indent on
-" }}}
 
-" Activate folds {{{
+" Activate folds
 " ----------------------------------------------------------------------------------------------------
 set foldmethod=marker
-" }}}
 
-" Define the leader key {{{
+" Define the leader key
 " ----------------------------------------------------------------------------------------------------
 let mapleader = ","
 let g:mapleader = ","
-" }}}
 
-" Misc. options {{{
+" Misc. options
 " ----------------------------------------------------------------------------------------------------
 set showcmd " Display the command as we type it
 set showmode " Display the current mode
@@ -43,8 +31,8 @@ set incsearch " Start to search as soon as we type
 set mouse=a " Use the mouse in all modes
 set number " Show line numbers
 set ts=2 " A tab = 4 spaces
-set sw=2
-set sts=2
+set sw=2 " Shift width
+set sts=2 " Short tab stop
 set et " Use spaces instead of tabs
 set whichwrap=h,l,~,[,],<,> " Which caracters to wrap
 set scrolloff=4 " Scroll offset
@@ -71,15 +59,13 @@ set isk+=? " Treat “?” like a word separator (for auto-completion!)
 set hidden " Allow hidden buffers
 set gdefault " Always search/replace globally
 set shell=bash
-" }}}
 
-" Always use UTF-8 {{{
+" Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
 set encoding=utf-8
 set fileencoding=utf-8
-" }}}
 
-" Backups {{{
+" Backups
 " ----------------------------------------------------------------------------------------------------
 set backup
 set swapfile
@@ -90,18 +76,16 @@ if exists("+undofile")
   set undofile
   set undodir=~/.vim-local/.undo
 endif
-" }}}
 
-" No automatic word-wrap! {{{
+" No automatic word-wrap!
 " ----------------------------------------------------------------------------------------------------
 set nowrap
 set sidescroll=4
 set sidescrolloff=14
 set listchars=precedes:←,extends:→,nbsp:◊,trail:⠿,eol:\ ,tab:●·
 set list
-" }}}
 
-" Statusline {{{
+" Statusline
 " ----------------------------------------------------------------------------------------------------
 function! GetCWD()
   return expand(":pwd")
@@ -132,9 +116,7 @@ set statusline+=%3*git:%4*%{GitBranchInfoString()}\ \
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\ 
-" }}}
 
-" Mark trailing whitespace {{{
+" Mark trailing whitespace
 " ----------------------------------------------------------------------------------------------------
-match Todo /\(\t\|\s\)\+$/
-" }}}
+match Todo /\([N]OCOMMIT\)\|\(\(\t\|\s\)\+$\)/

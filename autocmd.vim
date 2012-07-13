@@ -1,16 +1,8 @@
-" ----------------------------------------------------------------------------------------------------
-" @file         autocmd.vim
-" @description  Auto-commands
-" @author       Rémi Prévost (remi, exomel.com)
-" vim: set fdm=marker:
-" ----------------------------------------------------------------------------------------------------
-
-" Move the cursor to its last location in the file {{{
+" Move the cursor to its last location in the file
 " ----------------------------------------------------------------------------------------------------
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-" }}}
 
-" Set tabstop, softtabstop and shiftwidth to the same value {{{
+" Set tabstop, softtabstop and shiftwidth to the same value
 " Stolen from http://vimcasts.org/episodes/tabs-and-spaces/
 " ----------------------------------------------------------------------------------------------------
 command! -nargs=* Stab call Stab()
@@ -23,7 +15,7 @@ function! Stab()
   endif
   call SummarizeTabs()
 endfunction
- 
+
 function! SummarizeTabs()
   try
     echohl ModeMsg
@@ -39,4 +31,3 @@ function! SummarizeTabs()
     echohl None
   endtry
 endfunction
-" }}}
