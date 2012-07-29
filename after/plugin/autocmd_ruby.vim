@@ -127,6 +127,7 @@ function! RubyCapistrano()
   hi def link rubyCapistrano Function
 endfunction
 auto BufNewFile,BufReadPost */config/deploy.rb call RubyCapistrano()
+auto BufNewFile,BufReadPost */config/deploy/*.rb call RubyCapistrano()
 
 " RABL
 " -----------------------------------------------------------------------
