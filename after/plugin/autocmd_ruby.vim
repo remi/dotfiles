@@ -43,6 +43,16 @@ function! RubyRails()
       syn keyword rubyRailsCustom has_attached_file
     endif
 
+    " gem: ancestry
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom has_ancestry
+    endif
+
+    " custom stuff
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom has_i18n_fields
+    endif
+
     " Link it!
     hi def link rubyRailsCustom Function
     hi def link rubyRailsCustomAlt rubyControl
