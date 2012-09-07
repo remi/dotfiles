@@ -84,7 +84,7 @@ let g:user_zen_settings = {
 \      'bor' : 'border-right:|;',
 \      'bol' : 'border-left:|;',
 \      'ba' : 'background:#|;',
-\      'bu' : 'background:url("|") no-repeat top left;',
+\      'bu' : 'background:url("|") no-repeat 0 0;',
 \      'pa' : 'padding:|;',
 \      'ma' : 'margin:|;',
 \      'he' : 'height:|;',
