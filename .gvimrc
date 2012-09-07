@@ -11,7 +11,7 @@ set fuoptions=maxvert,maxhorz
 set background=dark
 let g:solarized_bold=1
 let g:solarized_contrast="high"
-let g:solarized_visibility="low"
+let g:solarized_visibility="normal"
 colorscheme solarized
 
 " GUI options
