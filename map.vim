@@ -198,7 +198,19 @@ function! CallInterpreter()
     echohl ErrorMsg | echo "Err: No shebang present in file, canceling execution" | echohl None
   endif
 endfunction
-unmap <Leader>rm
-unmap <Leader>rv
-unmap <Leader>rc
+silent! unmap <Leader>rm
+silent! unmap <Leader>rv
+silent! unmap <Leader>rc
 map <Leader>r :call CallInterpreter()<CR>
+
+" Toggle
+" ----------------------------------------------------------------------------------------------------
+function! g:ToggleNuMode()
+  if(&rnu == 1)
+    set nu
+  else
+    set rnu
+  endif
+endfunc
+
+nnoremap <C-L> :call g:ToggleNuMode()<cr>

@@ -2,7 +2,7 @@
 " ------------------------------------------------------------
 set showtabline=0
 set nocursorline
-set transparency=0
+set transparency=5
 set guifont=Monaco:h12
 set fuoptions=maxvert,maxhorz
 

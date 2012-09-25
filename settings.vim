@@ -59,6 +59,7 @@ set isk+=? " Treat “?” like a word separator (for auto-completion!)
 set hidden " Allow hidden buffers
 set gdefault " Always search/replace globally
 set shell=bash
+set nu
 
 " Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
