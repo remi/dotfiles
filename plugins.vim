@@ -92,6 +92,9 @@ let g:user_zen_settings = {
 \      'co' : 'color:#|;'
 \    },
 \  },
+\  'less' : {
+\    'extends' : 'css',
+\  },
 \  'javascript' : {
 \    'snippets' : {
 \      'fu' : "function() {\n\t|\n}",
