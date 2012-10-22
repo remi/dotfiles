@@ -203,14 +203,20 @@ silent! unmap <Leader>rv
 silent! unmap <Leader>rc
 map <Leader>r :call CallInterpreter()<CR>
 
-" Toggle
+" Clear trailing whitespace
 " ----------------------------------------------------------------------------------------------------
-function! g:ToggleNuMode()
-  if(&rnu == 1)
-    set nu
-  else
-    set rnu
-  endif
+function! g:ClearTrailingWhitespace()
+  %s/\s\+$//e
 endfunc
 
-nnoremap <C-L> :call g:ToggleNuMode()<cr>
+nnoremap <C-L> :call g:ClearTrailingWhitespace()<cr>
+
+" Ruby block conversion
+" ----------------------------------------------------------------------------------------------------
+let @j='J%ce{lx$bC}'
+vnoremap <Leader>j @j
+
+let @k='cs{-llxKk$%hxKl%'
+nnoremap <Leader>j @k
+
+let g:surround_45 = "do \r end"
