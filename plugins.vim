@@ -23,7 +23,7 @@ let g:fuf_line_prompt = 'line → '
 let g:fuf_mrufile_prompt = 'mru → '
 let g:fuf_previewHeight = 0
 let g:fuf_promptHighlight = "User8"
-let g:fuf_file_exclude = '\v\~$|.sass-cache|Gemfile\.lock|.DS_Store|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+let g:fuf_file_exclude = '\v\~$|.sass-cache|Capfile|Gemfile\.lock|.DS_Store|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
