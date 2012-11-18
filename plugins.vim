@@ -38,10 +38,6 @@ map <Leader>y :YRShow<CR>
 autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
 autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 
-" BufExplorer settings
-" ----------------------------------------------------------------------------------------------------
-let g:bufExplorerSortBy='number'
-
 " Rails.vim settings
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>rc :Rcontroller<CR>
