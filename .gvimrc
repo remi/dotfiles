@@ -32,4 +32,3 @@ macmenu File.Save\ As\.\.\. key=<nop>
 noremap <D-s> <Nop>
 noremap <D-w> <Nop>
 noremap <D-t> <Nop>
-" }}}
