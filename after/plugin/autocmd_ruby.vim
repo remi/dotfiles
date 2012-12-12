@@ -48,6 +48,11 @@ function! RubyRails()
       syn keyword rubyRailsCustom has_ancestry
     endif
 
+    " gem: audited
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom audited
+    endif
+
     " custom stuff
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_i18n_fields
