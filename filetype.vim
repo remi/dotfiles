@@ -35,6 +35,13 @@ augroup markdownfiletype
   au BufRead,BufNewFile *.md setfiletype mkd
 augroup END
 
+" tmux
+" -----------------------------------------------------------------
+augroup tmuxfiletype
+  au BufNewFile,BufRead tmux.conf* setfiletype tmux
+  au BufNewFile,BufRead .tmux.conf setfiletype tmux
+augroup END
+
 " Apache configuration files
 " -----------------------------------------------------------------
 augroup apachefiletype
@@ -53,12 +60,6 @@ augroup END
 " -----------------------------------------------------------------
 augroup liquidfiletype
   au BufNewFile,BufRead *.liquid setfiletype liquid
-augroup END
-
-" tmux
-" -----------------------------------------------------------------
-augroup tmuxfiletype
-  au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
 augroup END
 
 " SASS
