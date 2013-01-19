@@ -77,7 +77,7 @@ auto BufNewFile,BufReadPost config.ru call RubyRack()
 " -----------------------------------------------------------------------
 function! RubySinatra()
   if expand("%:t") == "app.rb" || expand("%:p") =~ "config/application.rb$"
-    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put before after enable helpers set
+    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put before after enable helpers set error
     syn keyword rubySinatraCustom use register
     hi def link rubySinatraCustom Function
   endif
@@ -100,7 +100,7 @@ function! RubyRSpec()
   syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject
   hi def link rubyRspec Function
 endfunction
-auto BufNewFile,BufReadPost *.spec_rb call RubyRSpec()
+auto BufNewFile,BufReadPost *_spec.rb call RubyRSpec()
 
 " Bundler
 " -----------------------------------------------------------------------
