@@ -114,10 +114,11 @@ auto BufNewFile,BufReadPost Gemfile call RubyBundler()
 " Rake
 " -----------------------------------------------------------------------
 function! RubyRake()
-  syn keyword rubyRake task desc
+  syn keyword rubyRake task desc namespace
   hi def link rubyRake Function
 endfunction
 auto BufNewFile,BufReadPost Rakefile call RubyRake()
+auto BufNewFile,BufReadPost tasks.rb call RubyRake()
 
 " Guard
 " -----------------------------------------------------------------------
