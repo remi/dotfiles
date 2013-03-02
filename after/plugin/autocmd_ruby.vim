@@ -6,6 +6,7 @@ autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
 autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
 autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
 autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
+autocmd FileType ruby  inoremap <buffer> ;; <Space>{  }<Esc>hi
 
 " Rails
 " -----------------------------------------------------------------------
