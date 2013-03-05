@@ -128,3 +128,7 @@ vnoremap <Leader>f :Tabularize /
 " gist-vim settings
 " ----------------------------------------------------------------------------------------------------
 let g:gist_get_multiplefile = 1
+
+" vim-gitgutter settings
+" ----------------------------------------------------------------------------------------------------
+let g:gitgutter_highlights = 0
