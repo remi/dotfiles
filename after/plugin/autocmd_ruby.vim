@@ -119,6 +119,7 @@ function! RubyRake()
 endfunction
 auto BufNewFile,BufReadPost Rakefile call RubyRake()
 auto BufNewFile,BufReadPost tasks.rb call RubyRake()
+auto BufNewFile,BufReadPost *.rake call RubyRake()
 
 " Guard
 " -----------------------------------------------------------------------
