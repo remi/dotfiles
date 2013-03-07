@@ -98,7 +98,7 @@ auto BufNewFile,BufReadPost *.rb call RubyGrape()
 " RSpec
 " -----------------------------------------------------------------------
 function! RubyRSpec()
-  syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject
+  syn keyword rubyRspec describe context it specify before after setup subject its let let!
   hi def link rubyRspec Function
 endfunction
 auto BufNewFile,BufReadPost *_spec.rb call RubyRSpec()
