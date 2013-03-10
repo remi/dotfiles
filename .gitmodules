@@ -37,12 +37,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/remiprev/vim-colors-solarized.git
-[submodule "bundle/vim-textobj-user"]
-	path = bundle/vim-textobj-user
-	url = git://github.com/kana/vim-textobj-user.git
-[submodule "bundle/vim-textobj-rubyblock"]
-	path = bundle/vim-textobj-rubyblock
-	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
