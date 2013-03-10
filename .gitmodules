@@ -37,15 +37,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/remiprev/vim-colors-solarized.git
-[submodule "bundle/vim-padrino"]
-	path = bundle/vim-padrino
-	url = git://github.com/remiprev/vim-padrino.git
-[submodule "bundle/vim-handlebars"]
-	path = bundle/vim-handlebars
-	url = git://github.com/remiprev/vim-handlebars.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-textobj-user"]
 	path = bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
