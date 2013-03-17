@@ -54,6 +54,16 @@ function! RubyRails()
       syn keyword rubyRailsCustom audited
     endif
 
+    " gem: acts-as-taggable-on
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_taggable
+    endif
+
+    " gem: acts-as-paranoid
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_paranoid
+    endif
+
     " custom stuff
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_i18n_fields
