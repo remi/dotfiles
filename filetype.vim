@@ -67,4 +67,11 @@ augroup END
 augroup sassfiletype
   au BufRead,BufNewFile *.sass setf sass
   au BufRead,BufNewFile *.scss setf scss
+  au BufRead,BufNewFile *.scss.erb setf scss
+augroup END
+
+" CSS
+" -----------------------------------------------------------------
+augroup cssfiletype
+  au BufRead,BufNewFile *.css.erb setf css
 augroup END
