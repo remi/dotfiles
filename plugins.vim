@@ -205,7 +205,3 @@ let g:user_zen_settings = {
 \    'extends': 'ruby',
 \  },
 \}
-
-" vim-gitgutter settings
-" ----------------------------------------------------------------------------------------------------
-let g:gitgutter_highlights = 0

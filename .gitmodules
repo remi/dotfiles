@@ -40,9 +40,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
