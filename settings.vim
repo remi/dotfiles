@@ -24,6 +24,11 @@ filetype on
 filetype plugin indent on
 filetype indent on
 
+" Disable netrw
+" ----------------------------------------------------------------------------------------------------
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 " Activate folds
 " ----------------------------------------------------------------------------------------------------
 set foldmethod=marker
