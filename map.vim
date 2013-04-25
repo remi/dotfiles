@@ -74,16 +74,6 @@ noremap <C-T> <C-]>
 " ----------------------------------------------------------------------------------------------------
 noremap <C-Up> ddkkp
 noremap <C-Down> ddp
-" }}}
-
-" Easy tab navigation
-" ----------------------------------------------------------------------------------------------------
-noremap <S-C-Tab> :bprevious<CR>
-inoremap <S-C-Tab> <Esc>:bprevious<CR>
-vnoremap <S-C-Tab> <Esc>:bprevious<CR>
-noremap <C-Tab> :bnext<CR>
-inoremap <C-Tab> <Esc>:bnext<CR>
-vnoremap <C-Tab> <Esc>:bnext<CR>
 
 " Function keys
 " ----------------------------------------------------------------------------------------------------
