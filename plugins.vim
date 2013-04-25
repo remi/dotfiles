@@ -60,6 +60,10 @@ let g:git_branch_status_text=""
 let g:git_branch_status_around=""
 let g:git_branch_status_nogit=""
 
+" Ack.vim settings
+" ----------------------------------------------------------------------------------------------------
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " zencoding settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_zen_leader_key = ';'
