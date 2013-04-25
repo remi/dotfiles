@@ -1,17 +1,3 @@
-" Easy fold navigation
-" ----------------------------------------------------------------------------------------------------
-noremap <silent> <D-J> <Nop>
-noremap <silent> <D-K> <Nop>
-noremap <silent> ∆ zj
-noremap <silent> ˚ zk
-noremap <silent>  za
-noremap <silent> <S-CR> zMzo
-
-" Easy lines navigation
-" ----------------------------------------------------------------------------------------------------
-noremap <silent> <D-j> gj
-noremap <silent> <D-k> gk
-
 " Easy new lines
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> ø mo<Esc>o<Esc>k`o
@@ -70,10 +56,12 @@ nnoremap <C-c> <C-W>c<CR>
 " ----------------------------------------------------------------------------------------------------
 noremap <C-T> <C-]>
 
-" Easy line moving
+" Easy fold navigation
 " ----------------------------------------------------------------------------------------------------
-noremap <C-Up> ddkkp
-noremap <C-Down> ddp
+noremap <silent> ∆ ddp
+noremap <silent> ˚ ddkkp
+vnoremap <silent> ∆ djPV`]
+vnoremap <silent> ˚ dkPV`]
 
 " Function keys
 " ----------------------------------------------------------------------------------------------------
@@ -85,16 +73,14 @@ noremap <F11> :setl expandtab!<Bar>setl expandtab?<CR>
 " Insert current date
 " ----------------------------------------------------------------------------------------------------
 " format YYYYMMDD (eg. 20100105)
-inoremap <D-d> <C-R>=strftime("%Y%m%d")<CR>
-noremap ª cw<C-R>=strftime("%Y%m%d")<CR><Esc>b
+inoremap ª <C-R>=strftime("%Y%m%d")<CR>
 " format ISO 8601 (eg. 2010-01-05T20:51:15-0500)
-inoremap <D-D> <C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>
-noremap ˇ cw<C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR><Esc>b
+inoremap ˇ <C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>
 
 " Duplicate line
 " ----------------------------------------------------------------------------------------------------
-noremap <D-d> m'yyP`'k
-vnoremap <D-d> m'y'>p`'
+noremap ª m'yyP`'k
+vnoremap ª m'y'>p`'
 
 " Select only the text caracters in the current line
 " ----------------------------------------------------------------------------------------------------
@@ -123,16 +109,6 @@ inoremap ;zc }}}<Esc>
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-
-" Show syntax highlighting groups for word under cursor
-" ----------------------------------------------------------------------------------------------------
-nmap <D-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 " Change the working directory to the current file directory
 " ----------------------------------------------------------------------------------------------------
