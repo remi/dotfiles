@@ -13,6 +13,11 @@ let g:solarized_hitrail = 1
 let g:solarized_menu = 0
 colorscheme solarized
 
+" Window title
+" ----------------------------------------------------------------------------------------------------
+let &titlestring = hostname()
+set title
+
 " Activate filetype plugins
 " ----------------------------------------------------------------------------------------------------
 filetype on
