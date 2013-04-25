@@ -5,6 +5,13 @@ syntax on
 " Activate 256 colors mode (to use in terminal mode)
 " ----------------------------------------------------------------------------------------------------
 set t_Co=256
+set background=dark
+let g:solarized_bold=1
+let g:solarized_contrast="low"
+let g:solarized_visibility="low"
+let g:solarized_hitrail = 1
+let g:solarized_menu = 0
+colorscheme solarized
 
 " Activate filetype plugins
 " ----------------------------------------------------------------------------------------------------
