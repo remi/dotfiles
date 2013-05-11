@@ -62,7 +62,7 @@ let g:git_branch_status_nogit=""
 " Ack.vim settings
 " ----------------------------------------------------------------------------------------------------
 let &shellpipe='2>/dev/null>'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ack --nogroup --nocolor --column'
 
 " zencoding settings
 " ----------------------------------------------------------------------------------------------------
