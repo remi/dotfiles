@@ -64,6 +64,10 @@ let g:git_branch_status_nogit=""
 let &shellpipe='2>/dev/null>'
 let g:ackprg = 'ack --nogroup --nocolor --column'
 
+" vim-markdown settings
+" ----------------------------------------------------------------------------------------------------
+let g:vim_markdown_folding_disabled=1
+
 " zencoding settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_zen_leader_key = ';'
