@@ -88,7 +88,7 @@ auto BufNewFile,BufReadPost config.ru call RubyRack()
 " -----------------------------------------------------------------------
 function! RubySinatra()
   if expand("%:t") == "app.rb" || expand("%:p") =~ "config/application.rb$"
-    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put before after enable helpers set error
+    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put before after enable helpers set error not_found
     syn keyword rubySinatraCustom use register
     hi def link rubySinatraCustom Function
   endif
