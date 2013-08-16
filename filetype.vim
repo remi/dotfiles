@@ -56,12 +56,6 @@ augroup javascriptfiletype
   au BufRead,BufNewFile *.json set filetype=json
 augroup END
 
-" Liquid
-" -----------------------------------------------------------------
-augroup liquidfiletype
-  au BufNewFile,BufRead *.liquid setfiletype liquid
-augroup END
-
 " SASS
 " -----------------------------------------------------------------
 augroup sassfiletype
