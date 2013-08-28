@@ -78,6 +78,7 @@ set gdefault " Always search/replace globally
 set shell=bash
 set nu
 set clipboard+=unnamed
+set nostartofline
 
 " Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
