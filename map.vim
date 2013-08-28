@@ -176,3 +176,7 @@ let @k='cs{-llxKk$%hxKl%'
 nnoremap <Leader>j @k
 
 let g:surround_45 = "do \r end"
+
+" Disable ex mode, damnit
+" ----------------------------------------------------------------------------------------------------
+nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
