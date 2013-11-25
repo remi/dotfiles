@@ -59,9 +59,24 @@ function! RubyRails()
       syn keyword rubyRailsCustom acts_as_taggable
     endif
 
-    " gem: acts-as-paranoid
+    " gem: acts-as-paranoid + paranoia
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom acts_as_paranoid
+    endif
+
+    " gem: friendly_id
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom friendly_id
+    endif
+
+    " gem: paper_trail
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom has_paper_trail
+    endif
+
+    " gem: ranked-model
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom ranks
     endif
 
     " custom stuff
