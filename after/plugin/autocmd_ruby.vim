@@ -81,7 +81,7 @@ function! RubyRails()
 
     " custom stuff
     if RailsFileType() =~ 'model'
-      syn keyword rubyRailsCustom has_i18n_fields
+      syn keyword rubyRailsCustom has_i18n_fields bool_attr_accessor
     endif
 
     " Link it!
