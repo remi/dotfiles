@@ -21,7 +21,7 @@ colorscheme solarized
 set guioptions-=L
 set guioptions-=l
 set guioptions-=R
-set guioptions+=r
+set guioptions-=r
 set guioptions-=T
 
 " Override MacVim.app commands
