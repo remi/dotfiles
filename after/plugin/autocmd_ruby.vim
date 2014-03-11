@@ -79,6 +79,51 @@ function! RubyRails()
       syn keyword rubyRailsCustom ranks
     endif
 
+    " gem: camaraderie
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_user acts_as_organization acts_as_membership
+    endif
+
+    " gem: microscope
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_microscope
+    endif
+
+    " gem: parole
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_comment acts_as_commentable
+    endif
+
+    " gem: emotions
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_emotional acts_as_emotive
+    endif
+
+    " gem: awesome_nested_set
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_nested_set
+    endif
+
+    " gem: devise
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom devise
+    endif
+
+    " gem: make_flaggable
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom make_flaggable make_flagger
+    endif
+
+    " gem: acts_as_taggable
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom acts_as_taggable_on
+    endif
+
+    " gem: carrierwave
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom mount_uploader
+    endif
+
     " custom stuff
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_i18n_fields bool_attr_accessor
