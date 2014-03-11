@@ -51,6 +51,7 @@ augroup END
 " ActionScript / Javascript / jQuery
 " -----------------------------------------------------------------
 augroup javascriptfiletype
+  au BufRead,BufNewFile *.js.es6 setfiletype javascript
   au BufRead,BufNewFile *.as setfiletype javascript
   au BufRead,BufNewFile *.js setfiletype javascript.jquery
   au BufRead,BufNewFile *.json set filetype=json
