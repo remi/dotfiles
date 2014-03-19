@@ -1,28 +1,14 @@
-" FuzzyFinder settings
+" ctrlp.vim settings
 " ----------------------------------------------------------------------------------------------------
-map <Leader>o :FufFileWithCurrentBufferDir<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>t :FufFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>p :FufCoverageFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>b :FufBuffer<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>, :FufBuffer<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>l :FufLine<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>T :FufRenewCache<CR>:FufFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-map <Leader>m :FufMruFile<CR>:call histdel(":", '\(^Fuf\\|call\shistdel\)')<CR>
-let g:fuf_modesDisable = []
-let g:fuf_keyPreview = '<C-k>'
-let g:fuf_buffer_keyDelete = '<C-d>'
-let g:fuf_keyOpenTabpage = '<S-CR>'
-let g:fuf_keyOpenVsplit = ''
-let g:fuf_infoFile = '~/.vim-local/.vimfuf'
-let g:fuf_file_prompt = ' file → '
-let g:fuf_coveragefile_prompt = ' cfile → '
-let g:fuf_buffer_prompt = 'buffer → '
-let g:fuf_buffer_prompt = 'buffer → '
-let g:fuf_line_prompt = 'line → '
-let g:fuf_mrufile_prompt = 'mru → '
-let g:fuf_previewHeight = 0
-let g:fuf_promptHighlight = "User8"
-let g:fuf_file_exclude = '\v\~$|.sass-cache|Capfile|Gemfile\.lock|.DS_Store|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+map <Leader>t :CtrlP $(pwd)<CR>
+map <Leader>o :CtrlP %:p:h<CR>
+map <Leader>, :CtrlPBuffer<CR>
+map <Leader>m :CtrlPMRU<CR>
+map <Leader>T :CtrlPClearCache<CR>:CtrlP $(pwd)<CR>
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+let g:ctrlp_status_func = { 'main': '', 'prog': '' }
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_show_hidden = 1
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
