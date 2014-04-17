@@ -1,3 +1,15 @@
+" vim-easymotion settings
+" ----------------------------------------------------------------------------------------------------
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+nmap s <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 " ctrlp.vim settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>t :CtrlP $(pwd)<CR>
