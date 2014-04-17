@@ -124,6 +124,11 @@ function! RubyRails()
       syn keyword rubyRailsCustom mount_uploader
     endif
 
+    " gem: activerecord_strict
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom validates_strict_columns
+    endif
+
     " custom stuff
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_i18n_fields bool_attr_accessor
