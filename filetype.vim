@@ -70,3 +70,9 @@ augroup END
 augroup cssfiletype
   au BufRead,BufNewFile *.css.erb setf css
 augroup END
+
+" Elixir
+" -----------------------------------------------------------------
+augroup elixirfiletype
+  au BufRead,BufNewFile *.eex setf html
+augroup END
