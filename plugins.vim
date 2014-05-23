@@ -20,6 +20,7 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_status_func = { 'main': '', 'prog': '' }
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = { 'dir':  '\v(deps|\.bower-.+|vendor\/assets\/components|tmp|_build|[\/]\.(git|hg|svn))$' }
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
