@@ -76,3 +76,11 @@ augroup END
 augroup elixirfiletype
   au BufRead,BufNewFile *.eex setf html
 augroup END
+
+" Foreman
+" -----------------------------------------------------------------
+augroup foremanfiletype
+  au BufRead,BufNewFile Procfile setf yaml
+  au BufRead,BufNewFile .env setf sh
+  au BufRead,BufNewFile .env.* setf sh
+augroup END
