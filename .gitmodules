@@ -31,9 +31,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "bundle/vim-liquid"]
-	path = bundle/vim-liquid
-	url = git@github.com:tpope/vim-liquid.git
 [submodule "bundle/vim-easymotion"]
 	path = bundle/vim-easymotion
 	url = git@github.com:Lokaltog/vim-easymotion.git
