@@ -71,9 +71,9 @@ let g:vim_markdown_folding_disabled=1
 
 " zencoding settings
 " ----------------------------------------------------------------------------------------------------
-let g:user_zen_leader_key = ';'
-let g:user_zen_expandabbr_key = ';;'
-let g:user_zen_settings = {
+let g:user_emmet_leader_key = ';'
+let g:user_emmet_expandabbr_key = ';;'
+let g:user_emmet_settings = {
 \  'indentation': '  ',
 \  'css': {
 \    'snippets': {
