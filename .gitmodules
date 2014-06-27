@@ -13,9 +13,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
