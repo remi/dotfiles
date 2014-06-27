@@ -34,9 +34,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/remiprev/vim-colors-solarized.git
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
