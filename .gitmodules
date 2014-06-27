@@ -52,9 +52,6 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
-[submodule "bundle/vim-elixir"]
-	path = bundle/vim-elixir
-	url = git@github.com:elixir-lang/vim-elixir.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
