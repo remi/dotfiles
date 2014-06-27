@@ -4,9 +4,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/vim-git-branch-info"]
-	path = bundle/vim-git-branch-info
-	url = https://github.com/taq/vim-git-branch-info.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
