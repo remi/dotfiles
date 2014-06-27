@@ -28,7 +28,7 @@ let g:ctrlp_custom_ignore = {
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
 set ofu=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = '<c-p>'
+let g:SuperTabDefaultCompletionType = 'context'
 
 " YankRing
 " ----------------------------------------------------------------------------------------------------
@@ -40,25 +40,7 @@ autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 
 " Rails.vim settings
 " ----------------------------------------------------------------------------------------------------
-nmap <Leader>rc :Rcontroller<CR>
-nmap <Leader>rv :Rview<CR>
-nmap <Leader>rm :Rmodel<CR>
-nmap <Leader>1 :Rmodel<CR>
-nmap <Leader>2 :Rview<CR>
-nmap <Leader>3 :Rcontroller<CR>
-nmap <Leader>4 :A<CR>
 let g:rails_statusline=0
-
-" SyntaxAttr settings
-" ----------------------------------------------------------------------------------------------------
-map <Leader>a :call SyntaxAttr()<CR>
-
-" vim-git-branch-info settings
-" ----------------------------------------------------------------------------------------------------
-let g:git_branch_status_head_current=1
-let g:git_branch_status_text=""
-let g:git_branch_status_around=""
-let g:git_branch_status_nogit=""
 
 " Ack.vim settings
 " ----------------------------------------------------------------------------------------------------
@@ -69,7 +51,7 @@ let g:ackprg = 'ack --nogroup --nocolor --column'
 " ----------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
 
-" zencoding settings
+" emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'
 let g:user_emmet_expandabbr_key = ';;'
