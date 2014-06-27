@@ -64,3 +64,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git@github.com:tmhedberg/matchit.git
+[submodule "bundle/vim-web-indent"]
+	path = bundle/vim-web-indent
+	url = git@github.com:lukaszb/vim-web-indent.git
