@@ -129,6 +129,11 @@ function! RubyRails()
       syn keyword rubyRailsCustom validates_strict_columns
     endif
 
+    " gem: her
+    if RailsFileType() =~ 'model'
+      syn keyword rubyRailsCustom parse_root_in_json include_root_in_json resource_path collection_path use_api
+    endif
+
     " custom stuff
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_i18n_fields bool_attr_accessor
