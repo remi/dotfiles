@@ -27,8 +27,11 @@ let g:ctrlp_custom_ignore = {
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
-set ofu=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabContextDefaultCompletionType = '<c-x><c-n>'
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextTextOmniPrecedence = ['&completefunc']
+let g:SuperTabContextDiscoverDiscovery =["&completefunc:<c-x><c-u>"]
 
 " YankRing
 " ----------------------------------------------------------------------------------------------------
