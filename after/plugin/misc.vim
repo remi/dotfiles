@@ -22,10 +22,8 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 " ----------------------------------------------------------------------------------------------------
 noremap <Leader>!d :bdelete!<CR>
 noremap <Leader>d :bdelete<CR>
-noremap <Leader>D :bufdo bdelete<CR>
+noremap <Leader>D :bufdo bdelete!<CR>
 noremap <Leader>w :w!<cr>
 noremap <Leader>cd :cd ~/
 noremap <Leader>e :e ~/
 noremap <Leader>v V`]
-noremap <Leader>s :vsplit<CR>
-noremap <Leader>q <C-W>c<CR>
