@@ -33,7 +33,7 @@ let g:rails_statusline=0
 " Ack.vim settings
 " ----------------------------------------------------------------------------------------------------
 let &shellpipe='2>/dev/null>'
-let g:ackprg = 'ack --nogroup --nocolor --column'
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " vim-markdown settings
 " ----------------------------------------------------------------------------------------------------
