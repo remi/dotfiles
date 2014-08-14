@@ -28,9 +28,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = git@github.com:kien/ctrlp.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git@github.com:tmhedberg/matchit.git
