@@ -131,7 +131,7 @@ function! RubyRails()
 
     " gem: her
     if RailsFileType() =~ 'model'
-      syn keyword rubyRailsCustom parse_root_in_json include_root_in_json resource_path collection_path use_api
+      syn keyword rubyRailsCustom parse_root_in_json include_root_in_json resource_path collection_path use_api primary_key
     endif
 
     " custom stuff
