@@ -13,6 +13,9 @@ let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v(^|\/)(deps|log|vendor|tmp|_build|node_modules|\..+)$',
 \ 'file':  '\v(^|\/)(\.DS_Store)$',
 \}
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
