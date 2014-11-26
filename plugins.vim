@@ -10,12 +10,9 @@ let g:ctrlp_status_func = { 'main': '', 'prog': '' }
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v(^|\/)(deps|log|vendor|tmp|_build|node_modules|\..+)$',
+\ 'dir':  '\v(^|\/)(deps|log|vendor\/assets|tmp|_build|node_modules|\..+)$',
 \ 'file':  '\v(^|\/)(\.DS_Store)$',
 \}
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 " Supertab settings
 " ----------------------------------------------------------------------------------------------------
