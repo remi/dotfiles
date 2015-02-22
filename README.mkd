@@ -37,11 +37,13 @@ $ mkdir -p ~/.vim-local/.vimbackup
 $ mkdir -p ~/.vim-local/.vimswap
 $ mkdir -p ~/.vim-local/.undo
 
-# Close the repository and initialize submodules
+# Clone the repository and initialize submodules
 $ git clone git://github.com/remiprev/vimfiles.git .vim
-$ cd ~/.vim && git submodule update --init
 
 # Create symlinks for .vimrc and .gvimrc files
 $ ln -s ~/.vimrc ~/.vim/.vimrc
 $ ln -s ~/.gvimrc ~/.vim/.gvimrc
+
+# Install vim-plug plugins
+$ vim -c "PlugInstall"
 ```
