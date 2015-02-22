@@ -33,13 +33,14 @@ vnoremap a\| f\|oF\|
 vnoremap  <NOP>
 vnoremap <BS> dk$
 
-" Easy split navigation
+" Split navigation
 " ----------------------------------------------------------------------------------------------------
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
-noremap <C-K> <C-W>k
-noremap <C-J> <C-W>j
 nnoremap <C-c> <C-W>c<CR>
+
+" Error list navigation
+" ----------------------------------------------------------------------------------------------------
+noremap <C-K> :cprev<CR>
+noremap <C-J> :cnext<CR>
 
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
@@ -114,16 +115,7 @@ noremap èè :lcd %:p:h<CR>
 
 " Use Alt-4 to go to the end of the line, but not totally.
 " ----------------------------------------------------------------------------------------------------
-noremap € $h
-
-" Tmux-like split panes navigation
-" ----------------------------------------------------------------------------------------------------
-noremap <C-A>% :vsplit<CR><C-W>l
-noremap <C-A>s :split<CR><C-W>j
-noremap <C-A>h <C-W>h
-noremap <C-A>l <C-W>l
-noremap <C-A>k <C-W>k
-noremap <C-A>j <C-W>j
+vnoremap € $h
 
 " Execute the current file
 " ----------------------------------------------------------------------------------------------------
