@@ -143,3 +143,7 @@ nnoremap <C-L> :call g:ClearTrailingWhitespace()<cr>
 " Disable ex mode, damnit
 " ----------------------------------------------------------------------------------------------------
 nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
+
+" Toggle Ruby code file and spec file
+" ----------------------------------------------------------------------------------------------------
+map <Leader>l :call SpecToggle()<cr>
