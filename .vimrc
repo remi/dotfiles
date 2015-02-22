@@ -10,7 +10,6 @@ Plug 'vim-scripts/camelcasemotion'
 Plug 'Raimondi/delimitMate'
 Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdcommenter'
-Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 
 " Filetype-specific plugins

@@ -147,3 +147,7 @@ nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
 map <Leader>l :call SpecToggle()<cr>
+
+" Toggle Ruby code file and spec file
+" ----------------------------------------------------------------------------------------------------
+inoremap <Tab> <C-X><C-N>
