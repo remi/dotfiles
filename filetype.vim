@@ -54,7 +54,8 @@ augroup javascriptfiletype
   au BufRead,BufNewFile *.js.es6 setfiletype javascript
   au BufRead,BufNewFile *.as setfiletype javascript
   au BufRead,BufNewFile *.js setfiletype javascript.jquery
-  au BufRead,BufNewFile *.json set filetype=json
+  au BufRead,BufNewFile *.json set filetype=javascript
+  au BufRead,BufNewFile .bowerrc set filetype=javascript
 augroup END
 
 " SASS
