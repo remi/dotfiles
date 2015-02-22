@@ -107,16 +107,12 @@ set list
 
 " Statusline
 " ----------------------------------------------------------------------------------------------------
-function! GetCWD()
-  return expand(":pwd")
-endfunction
-
 function! IsHelp()
   return &buftype=='help'?' (help) ':''
 endfunction
 
 function! GetName()
-  return expand("%:t")==''?'<none>':expand("%:t")
+  return expand("%:t")==''?'<none>':substitute(expand("%:p"), getcwd() . "/", "", "g")
 endfunction
 
 set statusline=%1*\ %{GetName()}\ %3*
