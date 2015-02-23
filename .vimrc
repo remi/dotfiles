@@ -11,7 +11,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/YankRing.vim'
 
 " Filetype-specific plugins
