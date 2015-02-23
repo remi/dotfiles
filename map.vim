@@ -41,8 +41,7 @@ noremap <C-J> <C-W><C-J>
 
 " Error list navigation
 " ----------------------------------------------------------------------------------------------------
-noremap <C-M> :cprev<CR>
-noremap <C-N> :cnext<CR>
+nmap <C-N> :cnext<CR>
 
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
@@ -135,6 +134,6 @@ nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " ----------------------------------------------------------------------------------------------------
 noremap <Leader>l :call SpecToggle()<cr>
 
-" Toggle Ruby code file and spec file
+" Auto-complete with Tab
 " ----------------------------------------------------------------------------------------------------
 inoremap <Tab> <C-X><C-N>

@@ -1,25 +1,12 @@
 if exists("did\_load\_filetypes")
   finish
 endif
-runtime! ftdetect/*.vim
 
 " Ruby
 " -----------------------------------------------------------------
 augroup rubyfiletype
   au BufRead,BufNewFile *.ru setfiletype ruby
-  au BufRead,BufNewFile *.rabl setfiletype ruby
   au BufRead,BufNewFile Gemfile setfiletype ruby
-  au BufRead,BufNewFile Capfile setfiletype ruby
-  au BufRead,BufNewFile Guardfile setfiletype ruby
-  au BufRead,BufNewFile *.watchr setfiletype ruby
-augroup END
-
-" Markdown
-" -----------------------------------------------------------------
-augroup markdownfiletype
-  au BufRead,BufNewFile *.markdown setfiletype markdown
-  au BufRead,BufNewFile *.mkd setfiletype markdown
-  au BufRead,BufNewFile *.md setfiletype markdown
 augroup END
 
 " tmux
@@ -40,15 +27,7 @@ augroup END
 " SASS
 " -----------------------------------------------------------------
 augroup sassfiletype
-  au BufRead,BufNewFile *.sass setf sass
   au BufRead,BufNewFile *.scss setf scss
-  au BufRead,BufNewFile *.scss.erb setf scss
-augroup END
-
-" CSS
-" -----------------------------------------------------------------
-augroup cssfiletype
-  au BufRead,BufNewFile *.css.erb setf css
 augroup END
 
 " Elixir

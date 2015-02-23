@@ -28,16 +28,8 @@ command! -nargs=* -complete=option Set set <args>
 
 " Rename current file
 " ----------------------------------------------------------------------------------------------------
-" Rename.vim  -  Rename a buffer within Vim and on the disk
-"
 " Copyright June 2007-2011 by Christian J. Robinson <heptite@gmail.com>
-"
 " Distributed under the terms of the Vim license.  See ":help license".
-"
-" Usage:
-"
-" :Rename[!] {newname}
-
 command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 command! -nargs=* -complete=file -bang RenameFile call Rename(expand('%:p:h') . '/' . <q-args>, '<bang>')
 
