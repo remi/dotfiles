@@ -2,7 +2,7 @@
 " ----------------------------------------------------------------------------------------------------
 noremap <silent> ø mo<Esc>o<Esc>k`o
 noremap <silent> Ø mo<Esc>O<Esc>j`o
-map K <Esc>i<CR><Esc><Esc>
+noremap K <Esc>i<CR><Esc><Esc>
 
 " Always go to the mark’s line and column
 " ----------------------------------------------------------------------------------------------------
@@ -36,11 +36,13 @@ vnoremap <BS> dk$
 " Split navigation
 " ----------------------------------------------------------------------------------------------------
 nnoremap <C-c> <C-W>c<CR>
+noremap <C-K> <C-W><C-K>
+noremap <C-J> <C-W><C-J>
 
 " Error list navigation
 " ----------------------------------------------------------------------------------------------------
-noremap <C-K> :cprev<CR>
-noremap <C-J> :cnext<CR>
+noremap <C-M> :cprev<CR>
+noremap <C-N> :cnext<CR>
 
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
@@ -93,7 +95,7 @@ nnoremap <S-Tab> mzV<`zh
 
 " Print current file full path
 " ----------------------------------------------------------------------------------------------------
-map <Leader>p :echo expand('%:p')<CR>
+noremap <Leader>p :echo expand('%:p')<CR>
 
 " Clear search-highlighted terms
 " ----------------------------------------------------------------------------------------------------
@@ -119,25 +121,10 @@ vnoremap € $h
 
 " Execute the current file
 " ----------------------------------------------------------------------------------------------------
-function! CallInterpreter()
-  if match(getline(1), '^\#!') == 0
-    let l:interpreter = getline(1)[2:]
-    exec ("!".l:interpreter." %:p")
-  else
-    echohl ErrorMsg | echo "Err: No shebang present in file, canceling execution" | echohl None
-  endif
-endfunction
-silent! unmap <Leader>rm
-silent! unmap <Leader>rv
-silent! unmap <Leader>rc
-map <Leader>r :call CallInterpreter()<CR>
+noremap <Leader>r :call CallInterpreter()<CR>
 
 " Clear trailing whitespace
 " ----------------------------------------------------------------------------------------------------
-function! g:ClearTrailingWhitespace()
-  %s/\s\+$//e
-endfunc
-
 nnoremap <C-L> :call g:ClearTrailingWhitespace()<cr>
 
 " Disable ex mode, damnit
@@ -146,7 +133,7 @@ nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
 
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
-map <Leader>l :call SpecToggle()<cr>
+noremap <Leader>l :call SpecToggle()<cr>
 
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------

@@ -3,19 +3,6 @@ if exists("did\_load\_filetypes")
 endif
 runtime! ftdetect/*.vim
 
-" PHP (+HTML)
-" -----------------------------------------------------------------
-augroup phpfiletype
-  au BufRead,BufNewFile *.php setfiletype php
-  au BufRead,BufNewFile *.tpl.html setfiletype php
-augroup END
-
-" Mustache
-" -----------------------------------------------------------------
-augroup mustachefiletype
-  au BufNewFile,BufRead *.mustache setfiletype html.mustache
-augroup END
-
 " Ruby
 " -----------------------------------------------------------------
 augroup rubyfiletype
@@ -42,18 +29,10 @@ augroup tmuxfiletype
   au BufNewFile,BufRead .tmux.conf setfiletype tmux
 augroup END
 
-" Apache configuration files
-" -----------------------------------------------------------------
-augroup apachefiletype
-  au BufRead,BufNewFile *.conf setfiletype apache
-augroup END
-
-" ActionScript / Javascript / jQuery
+" JavaScript
 " -----------------------------------------------------------------
 augroup javascriptfiletype
   au BufRead,BufNewFile *.js.es6 setfiletype javascript
-  au BufRead,BufNewFile *.as setfiletype javascript
-  au BufRead,BufNewFile *.js setfiletype javascript.jquery
   au BufRead,BufNewFile *.json set filetype=javascript
   au BufRead,BufNewFile .bowerrc set filetype=javascript
 augroup END

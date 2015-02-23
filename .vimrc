@@ -25,11 +25,20 @@ Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 
 call plug#end()
 
-" Load configuration files
+" Configuration files
 " ----------------------------------------------------------------------------------------------------
+
+" Settings
 source $HOME/.vim/settings.vim
+
+" Plugin-specific settings
 source $HOME/.vim/plugins.vim
-source $HOME/.vim/map.vim
+
+" Custom functions
 source $HOME/.vim/functions.vim
+
+" Custom mappings
+source $HOME/.vim/map.vim
+
+" Events
 source $HOME/.vim/autocmd.vim
-source $HOME/.vim/autocmd_ft.vim

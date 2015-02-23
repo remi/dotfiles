@@ -93,3 +93,20 @@ function! Rename(name, bang)
 
   return l:status
 endfunction
+
+" Execute the current file
+" ----------------------------------------------------------------------------------------------------
+function! CallInterpreter()
+  if match(getline(1), '^\#!') == 0
+    let l:interpreter = getline(1)[2:]
+    exec ("!".l:interpreter." %:p")
+  else
+    echohl ErrorMsg | echo "Err: No shebang present in file, canceling execution" | echohl None
+  endif
+endfunction
+
+" Clear trailing whitespace
+" ----------------------------------------------------------------------------------------------------
+function! g:ClearTrailingWhitespace()
+  %s/\s\+$//e
+endfunc
