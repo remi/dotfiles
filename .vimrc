@@ -21,6 +21,7 @@ Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir'] }
 Plug 'lukaszb/vim-web-indent', { 'for': ['html', 'javascript'] }
 Plug 'plasticboy/vim-markdown', { 'for': ['mkd'] }
+Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 
 call plug#end()
 
