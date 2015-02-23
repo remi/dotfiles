@@ -1,43 +1,43 @@
 " Easy new lines
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> ø mo<Esc>o<Esc>k`o
-noremap <silent> Ø mo<Esc>O<Esc>j`o
-noremap K <Esc>i<CR><Esc><Esc>
+nmap <silent> ø mo<Esc>o<Esc>k`o
+nmap <silent> Ø mo<Esc>O<Esc>j`o
+nmap K <Esc>i<CR><Esc><Esc>
 
 " Always go to the mark’s line and column
 " ----------------------------------------------------------------------------------------------------
-noremap ' `
-vnoremap ' `
+nmap ' `
+vmap ' `
 noremap g' g`
 vnoremap g' g`
 
 " Remap ^ caracters
 " ----------------------------------------------------------------------------------------------------
-noremap â ^a
-noremap î ^i
-noremap ô ^o
+nmap â ^a
+nmap î ^i
+nmap ô ^o
 
 " Add a new Text Objects
 " ----------------------------------------------------------------------------------------------------
-onoremap i/ :normal T/vt/<CR>
-vnoremap i/ t/oT/
-onoremap a/ :normal F/vf/<CR>
-vnoremap a/ f/oF/
-onoremap i\| :normal T\|vt\|<CR>
-vnoremap i\| t\|oT\|
-onoremap a\| :normal F\|vf\|<CR>
-vnoremap a\| f\|oF\|
+omap i/ :normal T/vt/<CR>
+vmap i/ t/oT/
+omap a/ :normal F/vf/<CR>
+vmap a/ f/oF/
+omap i\| :normal T\|vt\|<CR>
+vmap i\| t\|oT\|
+omap a\| :normal F\|vf\|<CR>
+vmap a\| f\|oF\|
 
 " Remap Enter and Backspace
 " ----------------------------------------------------------------------------------------------------
-vnoremap  <NOP>
-vnoremap <BS> dk$
+vmap  <NOP>
+vmap <BS> dk$
 
 " Split navigation
 " ----------------------------------------------------------------------------------------------------
-nnoremap <C-c> <C-W>c<CR>
-noremap <C-K> <C-W><C-K>
-noremap <C-J> <C-W><C-J>
+nmap <C-c> <C-W>c<CR>
+nmap <C-K> <C-W><C-K>
+nmap <C-J> <C-W><C-J>
 
 " Error list navigation
 " ----------------------------------------------------------------------------------------------------
@@ -45,95 +45,93 @@ nmap <C-N> :cnext<CR>
 
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
-noremap <C-T> <C-]>
+nmap <C-T> <C-]>
 
 " Easy line moving
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> ∆ ddp
-noremap <silent> ˚ ddkkp
-vnoremap <silent> ∆ djPV`]
-vnoremap <silent> ˚ dkPV`]
+nmap <silent> ∆ ddp
+nmap <silent> ˚ ddkkp
+vmap <silent> ∆ djPV`]
+vmap <silent> ˚ dkPV`]
 
 " Easy buffer navigation
 " ----------------------------------------------------------------------------------------------------
-nnoremap > :bnext<CR>
-nnoremap < :bprevious<CR>
+nmap > :bnext<CR>
+nmap < :bprevious<CR>
 
 " Function keys
 " ----------------------------------------------------------------------------------------------------
-noremap <F9> :setl list!<Bar>setl list?<CR>
-noremap <F8> :setl wrap! linebreak! nolist!<Bar>setl wrap?<CR>
-noremap <F10> :setl paste!<Bar>setl paste?<CR>
-noremap <F11> :setl expandtab!<Bar>setl expandtab?<CR>
+nmap <F9> :setl list!<Bar>setl list?<CR>
+nmap <F8> :setl wrap! linebreak! nolist!<Bar>setl wrap?<CR>
+nmap <F10> :setl paste!<Bar>setl paste?<CR>
+nmap <F11> :setl expandtab!<Bar>setl expandtab?<CR>
 
 " Insert current date
 " ----------------------------------------------------------------------------------------------------
 " format YYYYMMDD (eg. 20100105)
-inoremap ª <C-R>=strftime("%Y%m%d")<CR>
+imap ª <C-R>=strftime("%Y%m%d")<CR>
 " format ISO 8601 (eg. 2010-01-05T20:51:15-0500)
-inoremap ˇ <C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>
+imap ˇ <C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>
 
 " Duplicate line
 " ----------------------------------------------------------------------------------------------------
-noremap ª m'yyP`'k
-vnoremap ª m'y'>p`'
+nmap ª m'yyP`'k
+vmap ª m'y'>p`'
 
 " Select only the text caracters in the current line
 " ----------------------------------------------------------------------------------------------------
-noremap √ ^v$h
+nmap √ ^v$h
 
 " Easy indentation in visual mode
 " ----------------------------------------------------------------------------------------------------
 vnoremap < <gv
 vnoremap > >gv|
-vnoremap <Tab> >gv|
-vnoremap <S-Tab> <gv
-nnoremap  <C-i>
-nnoremap <Tab> mzV>`zl
-nnoremap <S-Tab> mzV<`zh
+vmap <Tab> >gv|
+vmap <S-Tab> <gv
+nmap  <C-i>
+nmap <Tab> mzV>`zl
+nmap <S-Tab> mzV<`zh
 
 " Print current file full path
 " ----------------------------------------------------------------------------------------------------
-noremap <Leader>p :echo expand('%:p')<CR>
+nmap <Leader>p :echo expand('%:p')<CR>
 
 " Clear search-highlighted terms
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> <Space> :silent noh<Bar>echo<CR>
+nmap <silent> <Space> :silent noh<Bar>echo<CR>
 
 " Easy Vim folds insert
-inoremap ;zo {{{<Esc>
-inoremap ;zc }}}<Esc>
+imap ;zo {{{<Esc>
+imap ;zc }}}<Esc>
 
 " Prevent accidental uses of <F1>
 " ----------------------------------------------------------------------------------------------------
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+map <F1> <ESC>
 
 " Change the working directory to the current file directory
 " ----------------------------------------------------------------------------------------------------
-noremap èè :lcd %:p:h<CR>
+nmap èè :lcd %:p:h<CR>
 
 " Use Alt-4 to go to the end of the line, but not totally.
 " ----------------------------------------------------------------------------------------------------
-vnoremap € $h
+vmap € $h
 
 " Execute the current file
 " ----------------------------------------------------------------------------------------------------
-noremap <Leader>r :call CallInterpreter()<CR>
+nmap <Leader>r :call CallInterpreter()<CR>
 
 " Clear trailing whitespace
 " ----------------------------------------------------------------------------------------------------
-nnoremap <C-L> :call g:ClearTrailingWhitespace()<cr>
+nmap <C-L> :call g:ClearTrailingWhitespace()<cr>
 
 " Disable ex mode, damnit
 " ----------------------------------------------------------------------------------------------------
-nnoremap Q :echo "BOOYA! Ex mode is disabled."<cr>
+nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
-noremap <Leader>l :call SpecToggle()<cr>
+nmap <Leader>l :call SpecToggle()<cr>
 
 " Auto-complete with Tab
 " ----------------------------------------------------------------------------------------------------
-inoremap <Tab> <C-X><C-N>
+imap <Tab> <C-X><C-N>

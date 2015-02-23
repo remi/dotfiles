@@ -15,7 +15,7 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/YankRing.vim'
 
 " Filetype-specific plugins
-Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir'] }

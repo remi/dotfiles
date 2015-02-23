@@ -1,11 +1,3 @@
-" Ruby
-" -----------------------------------------------------------------------
-autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
-autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
-autocmd FileType haml inoremap <buffer> ## #{}<Esc>i
-autocmd FileType ruby inoremap <buffer> ## #{}<Esc>i
-autocmd FileType ruby inoremap <buffer> ;; <Space>{  }<Esc>hi
-
 " Rails
 " -----------------------------------------------------------------------
 function! RubyRails()
@@ -144,7 +136,7 @@ function! RubyRails()
     hi def link rubyRailsCustomAlt rubyControl
   endif
 endfunction
-auto BufNewFile,BufReadPost *.rb call RubyRails()
+autocmd BufNewFile,BufReadPost *.rb call RubyRails()
 
 " Rack
 " -----------------------------------------------------------------------
@@ -152,7 +144,7 @@ function! RubyRack()
   syn keyword configRuCustom run
   hi def link configRuCustom Function
 endfunction
-auto BufNewFile,BufReadPost config.ru call RubyRack()
+autocmd BufNewFile,BufReadPost config.ru call RubyRack()
 
 " Sinatra
 " -----------------------------------------------------------------------
@@ -163,7 +155,7 @@ function! RubySinatra()
     hi def link rubySinatraCustom Function
   endif
 endfunction
-auto BufNewFile,BufReadPost *.rb call RubySinatra()
+autocmd BufNewFile,BufReadPost *.rb call RubySinatra()
 
 " RSpec
 " -----------------------------------------------------------------------
@@ -171,7 +163,7 @@ function! RubyRSpec()
   syn keyword rubyRspec describe context it specify before after setup subject its let let! pending expect allow
   hi def link rubyRspec Function
 endfunction
-auto BufNewFile,BufReadPost *_spec.rb call RubyRSpec()
+autocmd BufNewFile,BufReadPost *_spec.rb call RubyRSpec()
 
 " Bundler
 " -----------------------------------------------------------------------
@@ -179,7 +171,7 @@ function! RubyBundler()
   syn keyword rubyBundler gem source gemspec group
   hi def link rubyBundler Function
 endfunction
-auto BufNewFile,BufReadPost Gemfile call RubyBundler()
+autocmd BufNewFile,BufReadPost Gemfile call RubyBundler()
 
 " Rake
 " -----------------------------------------------------------------------
@@ -187,6 +179,6 @@ function! RubyRake()
   syn keyword rubyRake task desc namespace
   hi def link rubyRake Function
 endfunction
-auto BufNewFile,BufReadPost Rakefile call RubyRake()
-auto BufNewFile,BufReadPost tasks.rb call RubyRake()
-auto BufNewFile,BufReadPost *.rake call RubyRake()
+autocmd BufNewFile,BufReadPost Rakefile call RubyRake()
+autocmd BufNewFile,BufReadPost tasks.rb call RubyRake()
+autocmd BufNewFile,BufReadPost *.rake call RubyRake()

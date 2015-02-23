@@ -1,11 +1,8 @@
 " CamelCaseMotion settings
 " ----------------------------------------------------------------------------------------------------
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
+nmap <silent> w <Plug>CamelCaseMotion_w
+nmap <silent> b <Plug>CamelCaseMotion_b
+nmap <silent> e <Plug>CamelCaseMotion_e
 
 omap <silent> w <Plug>CamelCaseMotion_w
 omap <silent> b <Plug>CamelCaseMotion_b
@@ -20,7 +17,7 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 
 " Misc leader mappings
 " ----------------------------------------------------------------------------------------------------
-noremap <Leader>!d :bdelete!<CR>
-noremap <Leader>d :bdelete<CR>
-noremap <Leader>D :bufdo bdelete!<CR>
-noremap <Leader>w :w!<cr>
+nmap <Leader>!d :bdelete!<CR>
+nmap <Leader>d :bdelete<CR>
+nmap <Leader>D :bufdo bdelete!<CR>
+nmap <Leader>w :w!<cr>

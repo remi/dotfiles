@@ -108,9 +108,6 @@ let g:user_emmet_settings = {
 \      'cur': 'cursor:|;',
 \    },
 \  },
-\  'less': {
-\    'extends': 'css',
-\  },
 \  'javascript': {
 \    'snippets': {
 \      'fu': "function() {\n\t|\n}",
@@ -120,19 +117,19 @@ let g:user_emmet_settings = {
 \      'rf': 'return false;',
 \    },
 \  },
-\  'javascript.jquery': {
-\    'extends': 'javascript',
-\  },
 \  'ruby': {
 \    'snippets': {
-\      'l': 'Rails.logger.info |',
-\      'e': '#{|}',
+\      'log': 'Rails.logger.info |',
+\      '#': '#{|}',
+\      'des': 'describe :| do${newline}end${newline}',
+\      'def': 'def |${newline}end${newline}',
 \    },
 \  },
-\  'haml': {
-\    'extends': 'ruby',
-\  },
 \  'eruby': {
-\    'extends': 'ruby',
+\    'extends': 'html',
+\    'snippets': {
+\      'er': '<% | %>',
+\      'ee': '<%= | %>',
+\    },
 \  },
 \}
