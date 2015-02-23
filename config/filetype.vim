@@ -1,7 +1,3 @@
-if exists("did\_load\_filetypes")
-  finish
-endif
-
 " Ruby
 " -----------------------------------------------------------------
 augroup rubyfiletype

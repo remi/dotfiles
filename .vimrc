@@ -28,6 +28,9 @@ call plug#end()
 " Configuration files
 " ----------------------------------------------------------------------------------------------------
 
+" File types
+source $HOME/.vim/config/filetype.vim
+
 " Settings
 source $HOME/.vim/config/global-settings.vim
 
