@@ -63,7 +63,7 @@ set cindent " Use C-style indent
 set showtabline=0 " Always hide tabs
 set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
-set viminfo='50,<1000,s100,h,n~/.vim-local/.viminfo " Viminfo settings
+set viminfo='50,<1000,s100,h,n~/.vim-local/info " Viminfo settings
 set mls=10 " Check for modelines in the first and last 10 lines
 set noeol
 set wildmenu
@@ -89,12 +89,11 @@ set fileencoding=utf-8
 " ----------------------------------------------------------------------------------------------------
 set backup
 set swapfile
-set backupdir=$HOME/.vim-local/.vimbackup
-set directory=$HOME/.vim-local/.vimswap
-au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+set backupdir=$HOME/.vim-local/backup
+set directory=$HOME/.vim-local/swap
 if exists("+undofile")
   set undofile
-  set undodir=~/.vim-local/.undo
+  set undodir=~/.vim-local/undo
 endif
 
 " No automatic word-wrap!
