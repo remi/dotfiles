@@ -39,10 +39,6 @@ nmap <C-c> <C-W>c<CR>
 nmap <C-K> <C-W><C-K>
 nmap <C-J> <C-W><C-J>
 
-" Error list navigation
-" ----------------------------------------------------------------------------------------------------
-nmap <C-N> :cnext<CR>
-
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
 nmap <C-T> <C-]>
@@ -86,11 +82,11 @@ nmap √ ^v$h
 " ----------------------------------------------------------------------------------------------------
 vnoremap < <gv
 vnoremap > >gv|
-vmap <Tab> >gv|
-vmap <S-Tab> <gv
-nmap  <C-i>
-nmap <Tab> mzV>`zl
-nmap <S-Tab> mzV<`zh
+vnoremap <Tab> >gv|
+vnoremap <S-Tab> <gv
+nnoremap  <C-i>
+nnoremap <Tab> mzV>`zl
+nnoremap <S-Tab> mzV<`zh
 
 " Print current file full path
 " ----------------------------------------------------------------------------------------------------
