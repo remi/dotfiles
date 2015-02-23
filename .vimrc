@@ -40,6 +40,9 @@ source $HOME/.vim/config/plugin-settings.vim
 " Custom functions
 source $HOME/.vim/config/functions.vim
 
+" Custom commands
+source $HOME/.vim/config/commands.vim
+
 " Custom mappings
 source $HOME/.vim/config/mappings.vim
 
