@@ -8,7 +8,7 @@ Even if this repository is designed so that you can use it as a complete Vim con
 
 ```shell
 $ git clone git://github.com/remiprev/vimfiles.git ~/.vim-remiprev
-$ cd ~/.vim-remiprev && git submodule update --init
+$ cd ~/.vim-remiprev && vim -c "PlugInstall"
 ```
 
 A good piece of advice if you are starting to customize your Vim experience is to never add something you do not understand in your `.vimrc`.
