@@ -12,6 +12,7 @@ Plug 'tmhedberg/matchit'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
+Plug 'ervandew/supertab'
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby'] }

@@ -131,7 +131,3 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>l :call SpecToggle()<cr>
-
-" Auto-complete with Tab
-" ----------------------------------------------------------------------------------------------------
-imap <Tab> <C-X><C-N>
