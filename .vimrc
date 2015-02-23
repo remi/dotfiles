@@ -18,6 +18,7 @@ Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'lukaszb/vim-web-indent', { 'for': ['html', 'javascript'] }
+Plug 'plasticboy/vim-markdown', { 'for': ['mkd'] }
 Plug 'vim-scripts/YankRing.vim'
 
 call plug#end()
