@@ -1,12 +1,10 @@
 " Ruby
 " -----------------------------------------------------------------------
-autocmd FileType ruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
-autocmd FileType eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType eruby inoremap <buffer> ;er <%  %><Esc>hhi
 autocmd FileType eruby inoremap <buffer> ;ee <%=  %><Esc>hhi
-autocmd FileType haml  inoremap <buffer> ## #{}<Esc>i
-autocmd FileType ruby  inoremap <buffer> ## #{}<Esc>i
-autocmd FileType ruby  inoremap <buffer> ;; <Space>{  }<Esc>hi
+autocmd FileType haml inoremap <buffer> ## #{}<Esc>i
+autocmd FileType ruby inoremap <buffer> ## #{}<Esc>i
+autocmd FileType ruby inoremap <buffer> ;; <Space>{  }<Esc>hi
 
 " Rails
 " -----------------------------------------------------------------------
@@ -15,6 +13,8 @@ function! RubyRails()
 
     " gem: rails
     syn keyword rubyRailsCustom request
+    syn keyword rubyRailsMethod alias_method
+
     if RailsFileType() =~ 'controller'
       syn keyword rubyRailsCustom params
       syn keyword rubyRailsCustom before_filter after_filter around_filter skip_before_filter skip_after_filter skip_around_filter rescue_from
@@ -144,7 +144,7 @@ function! RubyRails()
     hi def link rubyRailsCustomAlt rubyControl
   endif
 endfunction
-auto BufNewFile,BufReadPost * call RubyRails()
+auto BufNewFile,BufReadPost *.rb call RubyRails()
 
 " Rack
 " -----------------------------------------------------------------------
@@ -164,16 +164,6 @@ function! RubySinatra()
   endif
 endfunction
 auto BufNewFile,BufReadPost *.rb call RubySinatra()
-
-" Grape
-" -----------------------------------------------------------------------
-function! RubyGrape()
-  if expand("%:t") == "app.rb"
-    syn keyword rubyGrape resource rescue_from format rack_response
-    hi def link rubyGrape Function
-  endif
-endfunction
-auto BufNewFile,BufReadPost *.rb call RubyGrape()
 
 " RSpec
 " -----------------------------------------------------------------------
@@ -200,28 +190,3 @@ endfunction
 auto BufNewFile,BufReadPost Rakefile call RubyRake()
 auto BufNewFile,BufReadPost tasks.rb call RubyRake()
 auto BufNewFile,BufReadPost *.rake call RubyRake()
-
-" Guard
-" -----------------------------------------------------------------------
-function! RubyGuard()
-  syn keyword rubyGuard watch guard
-  hi def link rubyGuard Function
-endfunction
-au BufNewFile,BufRead Guardfile call RubyGuard()
-
-" Capistrano
-" -----------------------------------------------------------------------
-function! RubyCapistrano()
-  syn keyword rubyCapistrano set namespace role task desc run ssh_options default_run_options
-  hi def link rubyCapistrano Function
-endfunction
-auto BufNewFile,BufReadPost */config/deploy.rb call RubyCapistrano()
-auto BufNewFile,BufReadPost */config/deploy/*.rb call RubyCapistrano()
-
-" RABL
-" -----------------------------------------------------------------------
-function! RubyRabl()
-  syn keyword rubyRabl node attribute object child collection attributes glue extends
-  hi def link rubyRabl Function
-endfunction
-auto BufNewFile,BufReadPost *.rabl call RubyRabl()
