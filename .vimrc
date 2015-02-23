@@ -29,16 +29,16 @@ call plug#end()
 " ----------------------------------------------------------------------------------------------------
 
 " Settings
-source $HOME/.vim/settings.vim
+source $HOME/.vim/config/global-settings.vim
 
 " Plugin-specific settings
-source $HOME/.vim/plugins.vim
+source $HOME/.vim/config/plugin-settings.vim
 
 " Custom functions
-source $HOME/.vim/functions.vim
+source $HOME/.vim/config/functions.vim
 
 " Custom mappings
-source $HOME/.vim/map.vim
+source $HOME/.vim/config/mappings.vim
 
 " Events
-source $HOME/.vim/autocmd.vim
+source $HOME/.vim/config/events.vim
