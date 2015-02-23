@@ -87,4 +87,4 @@ endfunction
 " ----------------------------------------------------------------------------------------------------
 function! g:ClearTrailingWhitespace()
   %s/\s\+$//e
-endfunc
+endfunction
