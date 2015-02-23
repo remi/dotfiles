@@ -127,10 +127,3 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>l :call SpecToggle()<cr>
-
-" Misc leader mappings
-" ----------------------------------------------------------------------------------------------------
-nmap <Leader>!d :bdelete!<CR>
-nmap <Leader>d :bdelete<CR>
-nmap <Leader>D :bufdo bdelete!<CR>
-nmap <Leader>w :w!<cr>
