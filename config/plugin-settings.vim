@@ -117,19 +117,4 @@ let g:user_emmet_settings = {
 \      'rf': 'return false;',
 \    },
 \  },
-\  'ruby': {
-\    'snippets': {
-\      'log': 'Rails.logger.info |',
-\      '#': '#{|}',
-\      'des': 'describe :| do${newline}end${newline}',
-\      'def': 'def |${newline}end${newline}',
-\    },
-\  },
-\  'eruby': {
-\    'extends': 'html',
-\    'snippets': {
-\      'er': '<% | %>',
-\      'ee': '<%= | %>',
-\    },
-\  },
 \}
