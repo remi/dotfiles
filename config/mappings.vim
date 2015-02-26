@@ -127,3 +127,9 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " Toggle Ruby code file and spec file
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>l :call SpecToggle()<cr>
+
+" Useful Ruby ERB mappings
+" ----------------------------------------------------------------------------------------------------
+imap ;ee <%= %><Esc>hhi<Space>
+imap ;er <% %><Esc>hhi<Space>
+imap #;; #{}<Esc>i
