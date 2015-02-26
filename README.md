@@ -1,6 +1,6 @@
-## Hello
+# ![](http://i.imgur.com/gbGMgsi.gif)
 
-Welcome to my Vim configuration files.
+*(I always wanted to use a GIF as a `README.md`’s title)*
 
 ## Usage
 
