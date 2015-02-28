@@ -1,6 +1,6 @@
 # ![](http://i.imgur.com/gbGMgsi.gif)
 
-*(I always wanted to use a GIF as a `README.md`’s title)*
+*(I’ve always wanted to use a GIF as a `README.md`’s title)*
 
 ## Usage
 
