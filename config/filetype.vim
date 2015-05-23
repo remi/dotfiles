@@ -19,6 +19,12 @@ augroup javascriptfiletype
   autocmd BufRead,BufNewFile .bowerrc set filetype=javascript
 augroup END
 
+" CoffeeScript
+" -----------------------------------------------------------------
+augroup coffeefiletype
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+augroup end
+
 " SASS
 " -----------------------------------------------------------------
 augroup sassfiletype

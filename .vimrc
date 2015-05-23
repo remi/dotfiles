@@ -22,6 +22,7 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir'] }
 Plug 'lukaszb/vim-web-indent', { 'for': ['html', 'javascript'] }
 Plug 'plasticboy/vim-markdown', { 'for': ['mkd'] }
 Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
 
 call plug#end()
 
