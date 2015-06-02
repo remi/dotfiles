@@ -39,6 +39,23 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " ----------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
 
+" vim-javascript settings
+" ----------------------------------------------------------------------------------------------------
+let b:javascript_fold=0
+let g:javascript_ignore_javaScriptdoc=1
+hi! def link jsGlobalObjects Conditional
+hi! def link jsStatement Statement
+hi! def link jsConditional Statement
+hi! def link jsRepeat Statement
+hi! def link jsLabel Statement
+hi! def link jsKeyword Statement
+hi! def link jsClass Statement
+hi! def link jsException Statement
+hi! def link jsSuper Statement
+hi! def link jsStorageClass Statement
+hi! def link jsPrototype Statement
+hi! def link jsThis Identifier
+
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'
