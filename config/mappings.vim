@@ -58,7 +58,7 @@ nmap < :bprevious<CR>
 " Function keys
 " ----------------------------------------------------------------------------------------------------
 nmap <F9> :setl list!<Bar>setl list?<CR>
-nmap <F8> :setl wrap! linebreak! nolist!<Bar>setl wrap?<CR>
+nmap <F8> :setl wrap!<Bar>setl wrap?<CR>
 nmap <F10> :setl paste!<Bar>setl paste?<CR>
 nmap <F11> :setl expandtab!<Bar>setl expandtab?<CR>
 
