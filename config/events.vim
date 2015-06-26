@@ -195,3 +195,10 @@ endfunction
 autocmd BufNewFile,BufReadPost Rakefile call RubyRake()
 autocmd BufNewFile,BufReadPost tasks.rb call RubyRake()
 autocmd BufNewFile,BufReadPost *.rake call RubyRake()
+
+" JavaScript
+" -----------------------------------------------------------------------
+function! JavaScript()
+  syntax keyword jsStatement event
+endfunction
+autocmd FileType javascript call JavaScript()
