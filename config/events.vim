@@ -207,7 +207,7 @@ function! JavaScript()
   hi link jsClassName jsGlobalObjects
 
   " Highlight constants (eg. `FOO_BAR`)
-  syntax match jsConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([^a-z]\)\@="
+  syntax match jsConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([A-Z_]\)"
   syntax cluster jsAll add=jsConstant
   hi link jsConstant jsFunction
 
