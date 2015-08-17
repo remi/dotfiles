@@ -45,3 +45,8 @@ augroup foremanfiletype
   autocmd BufRead,BufNewFile .env setfiletype sh
   autocmd BufRead,BufNewFile .env.* setfiletype sh
 augroup END
+
+" Handlebars
+augroup handlebarsfiletype
+  au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} setfiletype html
+augroup END
