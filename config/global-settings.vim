@@ -77,8 +77,9 @@ set isk+=! " Treat “!” like a word separator (for auto-completion!)
 set hidden " Allow hidden buffers
 set gdefault " Always search/replace globally
 set shell=zsh
-set clipboard+=unnamed
+set clipboard+=unnamed " Make sure we can copy-paste into the system clipboard
 set nostartofline
+set lazyredraw " Do not redraw screen in non-essential situations
 
 " Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
