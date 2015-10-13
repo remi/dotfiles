@@ -30,10 +30,11 @@ autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " ----------------------------------------------------------------------------------------------------
 let g:rails_statusline=0
 
-" Ack.vim settings
+" Ag.vim settings
 " ----------------------------------------------------------------------------------------------------
 let &shellpipe='2>/dev/null>'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ag_working_path_mode="r"
+let g:ag_mapping_message=0
 
 " vim-markdown settings
 " ----------------------------------------------------------------------------------------------------

@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 " Global plugins
 Plug 'remiprev/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'Raimondi/delimitMate'
 Plug 'tmhedberg/matchit'
