@@ -47,6 +47,7 @@ augroup foremanfiletype
 augroup END
 
 " Handlebars
+" -----------------------------------------------------------------
 augroup handlebarsfiletype
   au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} setfiletype html
 augroup END
