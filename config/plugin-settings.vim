@@ -126,11 +126,6 @@ let g:user_emmet_settings = {
 \      'cur': 'cursor:|;',
 \    },
 \  },
-\  'handlebars': {
-\    'extends': 'html',
-\    'profile': 'xml',
-\    'filters': 'html'
-\  },
 \  'javascript': {
 \    'snippets': {
 \      'fu': "function() {\n\t|\n}",
