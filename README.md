@@ -17,6 +17,9 @@ $ ln -s tmux/tmux.conf ~/.tmux.conf
 $ ln -s git/gitignore_global ~/.gitignore_global
 $ ln -s git/gitconfig ~/.gitconfig
 
+# tig
+$ ln -s tig/tigrc ~/.tigrc
+
 # irb
 $ ln -s irb/irbrc ~/.irbrc
 
