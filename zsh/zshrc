@@ -1,8 +1,9 @@
 # zplug
 # --------------------------------------
-source $HOME/.zplug/zplug
+export ZPLUG_HOME="$HOME/.zsh/zplug"
+source $HOME/.zsh/zplug/zplug
 zplug "zsh-users/zsh-syntax-highlighting"
-zplug load --verbose
+zplug load
 
 # Configuration
 # --------------------------------------
