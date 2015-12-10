@@ -1,0 +1,34 @@
+# OS X
+.DS_Store?
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+# Vim
+.local.vimrc
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# Ruby
+.sass-cache
+.rbenv-vars
+.rvmrc
+.ruby-version
+
+# Ctags?
+tags
+tags-ja
+
+# Ack
+.agignore
+
+# Node
+node_modules

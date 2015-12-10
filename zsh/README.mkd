@@ -1,0 +1,12 @@
+#Instructions
+
+I don’t recommend that you replace your `.zshrc` file with mine. Instead, extracts lines and bits from them and see how they work and what they do.
+
+However, if you wish to use the whole setup, you’d usually do:
+
+```shell
+$ cd /path/to/somewhere
+$ git clone --recursive git://github.com/remiprev/zshfiles.git zshfiles-remiprev
+$ ln -s /path/to/somewhere/zshfiles-remiprev/.zsh ~/.zsh
+$ ln -s ~/.zsh/.zshrc ~/.zshrc
+```

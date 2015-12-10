@@ -1,0 +1,41 @@
+# zplug
+# --------------------------------------
+source $HOME/.zplug/zplug
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug load --verbose
+
+# Configuration
+# --------------------------------------
+source $HOME/.zsh/config/options.zsh
+source $HOME/.zsh/config/completion.zsh
+source $HOME/.zsh/config/functions.zsh
+source $HOME/.zsh/config/variables.zsh
+source $HOME/.zsh/config/aliases.zsh
+source $HOME/.zsh/config/bindings.zsh
+source $HOME/.zsh/config/hooks.zsh
+source $HOME/.zsh/config/syntax-highlighting.zsh
+
+# zsh modules autoloading
+# --------------------------------------
+zmodload -a zsh/stat stat
+zmodload -a zsh/zpty zpty
+zmodload -a zsh/zprof zprof
+zmodload -a zsh/mapfile mapfile
+
+# npm
+# --------------------------------------
+export PATH="./node_modules/.bin:$PATH"
+
+# rbenv
+# --------------------------------------
+export PATH="$HOME/.rbenv/shims:$PATH"
+source "$HOME/.rbenv/libexec/../completions/rbenv.zsh"
+
+# Final PATH adjustments
+# --------------------------------------
+
+# Make sure our own custom binaries are always picked up first
+export PATH="$HOME/Dropbox/Bin:$PATH"
+
+# Added by @remi
+export PATH="./bin:$PATH"

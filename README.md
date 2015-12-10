@@ -1,18 +1,25 @@
-# ![](http://i.imgur.com/gbGMgsi.gif)
+# dotfiles
 
-*(I’ve always wanted to use a GIF as a `README.md`’s title)*
 
-## Usage
+```bash
+# zsh
+$ ln -s zsh ~/.zsh
+$ ln -s zsh/zshrc ~/.zshrc
 
-Even if this repository is designed so that you can use it as a complete Vim
-configuration directory, a better way to use it would be to clone it in a
-separate directory and browse its content for settings, key mappings and
-plugins that you think might be interesting to you.
+# vim
+$ ln -s vim ~/.vim
+$ ln -s vim/vimrc ~/.vimrc
 
-```shell
-# Clone the repository
-$ git clone git://github.com/remiprev/vimfiles.git ~/.vim-remiprev
+# tmux
+$ ln -s tmux/tmux.conf ~/.tmux.conf
 
-# Start exploring!
-$ vim ~/.vim-remiprev/.vimrc
+# git
+$ ln -s git/gitignore_global ~/.gitignore_global
+$ ln -s git/gitconfig ~/.gitconfig
+
+# irb
+$ ln -s irb/irbrc ~/.irbrc
+
+# misc
+$ ln -s misc/inputrc ~/.inputrc
 ```

@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+def git_repo_path
+  @git_repo_path ||= `git rev-parse --git-dir 2>/dev/null`.strip
+end
+
+def path
+  @path ||= File.join(git_repo_path, '..')
+end
+
+def in_ruby_git_repo?
+  !git_repo_path.empty? &&
+  File.exists?(File.join(path, 'Gemfile')) &&
+  git_repo_path != '~' &&
+  git_repo_path != "#{ENV['HOME']}/.git"
+end
+
+exit unless in_ruby_git_repo?
+
+version_file = File.join(path, '.ruby-version')
+
+if File.exists?(version_file)
+  version = File.read(version_file)
+else
+  version = `rbenv global`
+end
+
+puts "#{ENV["XPR_LIGHT_MAGENTA"]} #{version}"
