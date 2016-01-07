@@ -32,6 +32,12 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 source "$HOME/.rbenv/libexec/../completions/rbenv.zsh"
 
+# exenv
+# --------------------------------------
+export PATH="$HOME/.exenv/bin:$PATH"
+export PATH="$HOME/.exenv/shims:$PATH"
+source "$HOME/.exenv/libexec/../completions/exenv.zsh"
+
 # Final PATH adjustments
 # --------------------------------------
 

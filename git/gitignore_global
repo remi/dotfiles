@@ -22,6 +22,7 @@ Session.vim
 .rbenv-vars
 .rvmrc
 .ruby-version
+.exenv-version
 
 # Ctags?
 tags

@@ -23,6 +23,9 @@ $ ln -s tig/tigrc ~/.tigrc
 # irb
 $ ln -s irb/irbrc ~/.irbrc
 
+# iex
+$ ln -s iex/iex.exs ~/.iex.exs
+
 # misc
 $ ln -s misc/inputrc ~/.inputrc
 ```
