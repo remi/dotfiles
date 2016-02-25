@@ -33,3 +33,6 @@ tags-ja
 
 # Node
 node_modules
+
+# Environment
+.env
