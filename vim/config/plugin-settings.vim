@@ -15,7 +15,7 @@ let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\v(^|\/)(deps|log|vendor\/assets|tmp|_build|node_modules|\.git|bower_components|\.bower-cache|dist)$',
-\ 'file':  '\v(^|\/)(\.DS_Store)$',
+\ 'file':  '\v(^|\/)(\.DS_Store|.*\.js\.map)$',
 \}
 
 " YankRing

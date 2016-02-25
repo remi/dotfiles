@@ -24,6 +24,7 @@ Plug 'plasticboy/vim-markdown', { 'for': ['mkd'] }
 Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript'] }
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 
 call plug#end()
 

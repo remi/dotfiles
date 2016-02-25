@@ -217,3 +217,12 @@ function! JavaScript()
   hi link jsClass Function
 endfunction
 autocmd FileType javascript call JavaScript()
+
+" TypeScript
+" -----------------------------------------------------------------------
+function! TypeScript()
+  set sts=4
+  set sw=4
+  set ts=4
+endfunction
+autocmd FileType typescript call TypeScript()

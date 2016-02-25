@@ -51,3 +51,9 @@ augroup END
 augroup handlebarsfiletype
   au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} setfiletype html
 augroup END
+
+" TypeScript
+" -----------------------------------------------------------------
+augroup typescriptfiletype
+  au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
+augroup END
