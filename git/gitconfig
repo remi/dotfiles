@@ -1,0 +1,52 @@
+[user]
+  name = Rémi Prévost
+  email = remi@exomel.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  sh = auto
+  ui = true
+[alias]
+  a = add -A
+  c = commit -m
+  st = status --untracked-files=all
+  ci = commit -v
+  ic = commit -v
+  br = branch -vv
+  bro = browse
+  co = checkout
+  df = diff
+  cp = cherry-pick
+  dc = diff --cached
+  ap = add --patch
+  unstage = reset HEAD
+  rollback = reset --soft HEAD^1
+  rc = rebase --continue
+  rs = rebase --skip
+  ra = rebase --abort
+  pp = push
+  b = for-each-ref --sort=committerdate refs/heads/ --format='%(color:reset)%(refname:short) %(color:green)%(committerdate:relative)%(color:reset)'
+[branch]
+  autosetupmerge = true
+[core]
+  autocrlf = input
+  excludesfile = /Users/remi/.gitignore
+  trustctime = false
+[merge]
+  verbosity = 5
+  tool = diffmerge
+[diff]
+  verbosity = 5
+  tool = changes
+[push]
+  default = tracking
+[log]
+  date = local
+[pull]
+  rebase = true
+[credential]
+  helper = osxkeychain
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RX
+  show = diff-so-fancy | less --tabs=1,5 -RX
