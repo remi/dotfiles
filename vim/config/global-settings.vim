@@ -1,17 +1,17 @@
-" Activate syntax highlithing
+" Activate syntax highlighting
 " ----------------------------------------------------------------------------------------------------
-syntax on
 
-" Activate 256 colors mode (to use in terminal mode)
-" ----------------------------------------------------------------------------------------------------
-set t_Co=256
-set background=dark
-let g:solarized_bold=1
-let g:solarized_contrast="low"
-let g:solarized_visibility="low"
-let g:solarized_hitrail = 1
-let g:solarized_menu = 0
-colorscheme solarized
+if has('nvim')
+  syntax on
+  colorscheme solarized
+endif
+
+if !has('nvim')
+  syntax on
+  set t_Co=256
+  colorscheme solarized
+  set background=dark
+endif
 
 " Window title
 " ----------------------------------------------------------------------------------------------------
