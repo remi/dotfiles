@@ -15,9 +15,9 @@ alias ack="ag"
 alias ..='cd ..'
 alias ~='cd ~'
 
-# Editor
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias vi='vim'
+# Editor (always forward to Neovim!)
+alias vi='nvim'
+alias vim='nvim'
 
 # Ruby
 alias b="bundle"

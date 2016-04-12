@@ -47,8 +47,8 @@ export SAVEHIST=1000
 
 # Utilities
 export PAGER='less'
-export EDITOR='vim'
-export GIT_EDITOR='vim'
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 export BROWSER='open'
 export LESS="-+e -+f -R -+c -X -M -S -r"
 
