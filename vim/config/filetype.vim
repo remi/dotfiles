@@ -57,3 +57,9 @@ augroup END
 augroup typescriptfiletype
   au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 augroup END
+
+" LESS
+" -----------------------------------------------------------------
+augroup lessfiletype
+  au BufNewFile,BufRead *.less setlocal filetype=scss
+augroup END
