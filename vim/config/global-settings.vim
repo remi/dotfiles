@@ -63,7 +63,6 @@ set cindent " Use C-style indent
 set showtabline=0 " Always hide tabs
 set hlsearch " Highlight matching search result
 set vb t_vb= " No visual bell
-set viminfo='50,<1000,s100,h,n~/.vim-local/info " Viminfo settings
 set mls=10 " Check for modelines in the first and last 10 lines
 set noeol
 set wildmenu
@@ -81,20 +80,42 @@ set clipboard+=unnamed " Make sure we can copy-paste into the system clipboard
 set nostartofline
 set lazyredraw " Do not redraw screen in non-essential situations
 
+if !has('nvim')
+  set viminfo='50,<1000,s100,h,n~/.vim-local/info " Viminfo settings
+endif
+
+if has('nvim')
+  set viminfo='50,<1000,s100,h,n~/.nvim-local/info " Viminfo settings
+endif
+
 " Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
-set encoding=utf-8
-set fileencoding=utf-8
+if !has('nvim')
+  set encoding=utf-8
+  set fileencoding=utf-8
+end
 
 " Backups
 " ----------------------------------------------------------------------------------------------------
 set backup
 set swapfile
-set backupdir=$HOME/.vim-local/backup
-set directory=$HOME/.vim-local/swap
-if exists("+undofile")
-  set undofile
-  set undodir=~/.vim-local/undo
+
+if !has('nvim')
+  set backupdir=$HOME/.vim-local/backup
+  set directory=$HOME/.vim-local/swap
+  if exists("+undofile")
+    set undofile
+    set undodir=~/.vim-local/undo
+  endif
+endif
+
+if has('nvim')
+  set backupdir=$HOME/.nvim-local/backup
+  set directory=$HOME/.nvim-local/swap
+  if exists("+undofile")
+    set undofile
+    set undodir=~/.nvim-local/undo
+  endif
 endif
 
 " No automatic word-wrap!
