@@ -1,6 +1,7 @@
 [user]
 	name = Rémi Prévost
 	email = remi@exomel.com
+	signingkey = 558841E3
 [color]
 	diff = auto
 	status = auto
@@ -52,3 +53,5 @@
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RX
 	show = diff-so-fancy | less --tabs=1,5 -RX
+[commit]
+	gpgsign = true
