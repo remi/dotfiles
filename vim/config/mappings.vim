@@ -137,17 +137,3 @@ imap #;; #{}<Esc>i
 " Show highlight group under the cursor
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>
-
-" Show highlight group under the cursor
-" ----------------------------------------------------------------------------------------------------
-function! ClipboardYank()
-  call system('pbcopy', @@)
-endfunction
-
-function! ClipboardPaste()
-  let @@ = system('pbpaste')
-endfunction
-
-vnoremap <silent> y y:call ClipboardYank()<cr>
-vnoremap <silent> d d:call ClipboardYank()<cr>
-nnoremap <silent> p :call ClipboardPaste()<cr>
