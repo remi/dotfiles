@@ -1,17 +1,17 @@
-" Activate syntax highlighting
+" Set local directory based on Neovim presence
 " ----------------------------------------------------------------------------------------------------
 
 if has('nvim')
-  syntax on
-  colorscheme solarized
+  let s:vimlocal=$HOME.'/.nvim-local'
+else
+  let s:vimlocal=$HOME.'/.vim-local'
 endif
 
-if !has('nvim')
-  syntax on
-  set t_Co=256
-  colorscheme solarized
-  set background=dark
-endif
+" Activate syntax highlighting
+" ----------------------------------------------------------------------------------------------------
+
+syntax on
+colorscheme solarized
 
 " Window title
 " ----------------------------------------------------------------------------------------------------
@@ -80,13 +80,9 @@ set clipboard=unnamed " Make sure we can copy-paste into the system clipboard
 set nostartofline
 set lazyredraw " Do not redraw screen in non-essential situations
 
-if !has('nvim')
-  set viminfo='50,<1000,s100,h,n~/.vim-local/info " Viminfo settings
-endif
-
-if has('nvim')
-  set viminfo='50,<1000,s100,h,n~/.nvim-local/info " Viminfo settings
-endif
+" Viminfo
+" ----------------------------------------------------------------------------------------------------
+execute "set viminfo=".'''50,<1000,s100,h,n'.s:vimlocal.'/info'
 
 " Always use UTF-8
 " ----------------------------------------------------------------------------------------------------
@@ -100,22 +96,12 @@ end
 set backup
 set swapfile
 
-if !has('nvim')
-  set backupdir=$HOME/.vim-local/backup
-  set directory=$HOME/.vim-local/swap
-  if exists("+undofile")
-    set undofile
-    set undodir=~/.vim-local/undo
-  endif
-endif
+execute "set backupdir=".s:vimlocal.'/backup'
+execute "set directory=".s:vimlocal.'/swap'
 
-if has('nvim')
-  set backupdir=$HOME/.nvim-local/backup
-  set directory=$HOME/.nvim-local/swap
-  if exists("+undofile")
-    set undofile
-    set undodir=~/.nvim-local/undo
-  endif
+if exists("+undofile")
+  set undofile
+  execute "set undodir=".s:vimlocal.'/undo'
 endif
 
 " No automatic word-wrap!
