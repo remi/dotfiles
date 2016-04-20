@@ -3,31 +3,31 @@
 
 ```bash
 # zsh
-$ ln -s zsh ~/.zsh
-$ ln -s zsh/zshrc ~/.zshrc
+$ ln -s /path/to/dotfiles/zsh ~/.zsh
+$ ln -s /path/to/dotfiles/zsh/zshrc ~/.zshrc
 
 # vim
-$ ln -s vim ~/.vim
-$ ln -s vim ~/.vim/.vim
-$ ln -s vim/vimrc ~/.vimrc
-$ ln -s vim/vimrc ~/.vim/init.vim
+$ ln -s /path/to/dotfiles/vim ~/.vim
+$ ln -s /path/to/dotfiles/vim ~/.vim/.vim
+$ ln -s /path/to/dotfiles/vim/vimrc ~/.vimrc
+$ ln -s /path/to/dotfiles/vim/vimrc ~/.vim/init.vim
 
 # tmux
-$ ln -s tmux/tmux.conf ~/.tmux.conf
+$ ln -s /path/to/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # git
-$ ln -s git/gitignore_global ~/.gitignore_global
-$ ln -s git/gitconfig ~/.gitconfig
+$ ln -s /path/to/dotfiles/git/gitignore_global ~/.gitignore_global
+$ ln -s /path/to/dotfiles/git/gitconfig ~/.gitconfig
 
 # tig
-$ ln -s tig/tigrc ~/.tigrc
+$ ln -s /path/to/dotfiles/tig/tigrc ~/.tigrc
 
 # irb
-$ ln -s irb/irbrc ~/.irbrc
+$ ln -s /path/to/dotfiles/irb/irbrc ~/.irbrc
 
 # iex
-$ ln -s iex/iex.exs ~/.iex.exs
+$ ln -s /path/to/dotfiles/iex/iex.exs ~/.iex.exs
 
 # misc
-$ ln -s misc/inputrc ~/.inputrc
+$ ln -s /path/to/dotfiles/misc/inputrc ~/.inputrc
 ```
