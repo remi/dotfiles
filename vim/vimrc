@@ -1,4 +1,4 @@
-" vim-plugin plugins
+" vim-plugged plugins
 " ----------------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
