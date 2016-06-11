@@ -18,16 +18,6 @@ export PATH="$HOME/.zsh/bin:$PATH"
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-# Python
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
-export PYTHON_PATH=$PYTHONPATH
-export PYTHON_BIN="/usr/local/bin/python"
-
-# Node.js
-export NODE_PATH="$(brew --prefix)/lib/node_modules:$(brew --prefix)/share/npm/lib/node_modules/"
-export PATH="$PATH:$(brew --prefix)/share/npm/bin"
 
 # Fun
 export DEBUG=true

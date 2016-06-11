@@ -23,25 +23,9 @@ zmodload -a zsh/zpty zpty
 zmodload -a zsh/zprof zprof
 zmodload -a zsh/mapfile mapfile
 
-# npm
+# ASDF version manager
 # --------------------------------------
-export PATH="./node_modules/.bin:$PATH"
-
-# rbenv
-# --------------------------------------
-export PATH="$HOME/.rbenv/shims:$PATH"
-source "$HOME/.rbenv/libexec/../completions/rbenv.zsh"
-
-# exenv
-# --------------------------------------
-export PATH="$HOME/.exenv/bin:$PATH"
-export PATH="$HOME/.exenv/shims:$PATH"
-source "$HOME/.exenv/libexec/../completions/exenv.zsh"
-
-# nvm
-# --------------------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+. $HOME/.asdf/asdf.sh
 
 # Final PATH adjustments
 # --------------------------------------
@@ -49,5 +33,8 @@ export NVM_DIR="$HOME/.nvm"
 # Make sure our own custom binaries are always picked up first
 export PATH="$HOME/Dropbox/Bin:$PATH"
 
-# Added by @remi
+# Make sure we can run NPM modules “binaries” from the project directory
+export PATH="./node_modules/.bin:$PATH"
+
+# Make sure we can run Rails “binaries” from the project directory
 export PATH="./bin:$PATH"
