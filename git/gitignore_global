@@ -38,3 +38,6 @@ node_modules
 .env
 .env.development
 .env.test
+
+# ASDF
+.tool-versions
