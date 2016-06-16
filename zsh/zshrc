@@ -25,7 +25,7 @@ zmodload -a zsh/mapfile mapfile
 
 # ASDF version manager
 # --------------------------------------
-. $HOME/.asdf/asdf.sh
+source $HOME/.asdf/asdf.sh
 
 # Final PATH adjustments
 # --------------------------------------
