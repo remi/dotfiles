@@ -63,3 +63,9 @@ augroup END
 augroup lessfiletype
   au BufNewFile,BufRead *.less setlocal filetype=scss
 augroup END
+
+" Blade
+" -----------------------------------------------------------------
+augroup bladefiletype
+  autocmd BufNewFile,BufRead *.blade.php set filetype=blade
+augroup END

@@ -128,12 +128,6 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>l :call SpecToggle()<cr>
 
-" Useful Ruby ERB mappings
-" ----------------------------------------------------------------------------------------------------
-imap ;ee <%= %><Esc>hhi<Space>
-imap ;er <% %><Esc>hhi<Space>
-imap #;; #{}<Esc>i
-
 " Show highlight group under the cursor
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>

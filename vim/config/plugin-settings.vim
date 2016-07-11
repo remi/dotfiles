@@ -135,4 +135,10 @@ let g:user_emmet_settings = {
 \      'rf': 'return false;',
 \    },
 \  },
+\  'blade': {
+\    'extends': 'html',
+\    'snippets': {
+\      'php': "<?php | ?>",
+\    },
+\  },
 \}
