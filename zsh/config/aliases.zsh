@@ -35,6 +35,7 @@ alias redis-daemon="redis-server /usr/local/etc/redis.conf"
 alias elasticsearch-daemon="elasticsearch -d es.config=`brew --prefix elasticsearch`/config/elasticsearch.yml"
 alias pg-daemon="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias memcached-daemon="memcached -d -m 64 -p 11211 -u memcache -l 127.0.0.1"
+alias php-daemon="/usr/local/opt/php56/sbin/php-fpm --fpm-config /usr/local/etc/php/5.6/php-fpm.conf"
 
 # Global aliases
 # --------------------------------------
