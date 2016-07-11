@@ -69,3 +69,9 @@ augroup END
 augroup bladefiletype
   autocmd BufNewFile,BufRead *.blade.php set filetype=blade
 augroup END
+
+" Configuration
+" -----------------------------------------------------------------
+augroup conf
+  autocmd BufNewFile,BufRead *.conf set filetype=conf
+augroup END
