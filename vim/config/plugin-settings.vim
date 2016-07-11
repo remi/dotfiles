@@ -57,6 +57,10 @@ hi! def link jsStorageClass Statement
 hi! def link jsPrototype Statement
 hi! def link jsThis Identifier
 
+" vim-jsx settings
+" ----------------------------------------------------------------------------------------------------
+let g:jsx_ext_required = 0
+
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'
