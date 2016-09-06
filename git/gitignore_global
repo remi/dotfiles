@@ -12,6 +12,7 @@ Thumbs.db
 
 # Vim
 .local.vimrc
+.lvimrc
 .*.sw[a-z]
 *.un~
 Session.vim
@@ -42,3 +43,4 @@ npm-debug.log
 
 # ASDF
 .tool-versions
+.tool-versions-e
