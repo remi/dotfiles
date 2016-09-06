@@ -61,6 +61,16 @@ hi! def link jsThis Identifier
 " ----------------------------------------------------------------------------------------------------
 let g:jsx_ext_required = 0
 
+" Neomake settings
+" ----------------------------------------------------------------------------------------------------
+let g:neomake_open_list=2
+let g:neomake_list_height=4
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_scss_enabled_makers = ['stylelint']
+let g:neomake_ruby_enabled_makers = ['rubocop']
+let g:neomake_scss_stylelint_maker = { 'args': ['--no-color'], 'errorformat': '%+P%f,%*\s%l:%c  %t  %m,%-Q' }
+autocmd! BufWritePost * Neomake
+
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'

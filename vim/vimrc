@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'ervandew/supertab'
 Plug 'embear/vim-localvimrc'
+Plug 'neomake/neomake'
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'blade'] }
