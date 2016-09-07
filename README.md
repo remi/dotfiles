@@ -1,5 +1,13 @@
 # dotfiles
 
+The _recommended_ way to use these files is to take a look at their content and
+copy/paste only what you need into _your_ dotfiles. This will allow you to
+truly master your dotfiles, as you’ll know what is the purpose of each
+individual line.
+
+However, if you’d like to blindly use my files, here’s how you’d do it. Please
+note that stuff might not work 100% since they might reference some local
+files and/or directories on my machine.
 
 ```bash
 # zsh
