@@ -11,6 +11,7 @@
 [alias]
 	a = add -A
 	c = commit -m
+	ca = commit --amend --no-edit
 	st = status --untracked-files=all
 	ci = commit -v
 	ic = commit -v
