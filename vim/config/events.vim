@@ -15,132 +15,89 @@ autocmd BufReadPost COMMIT_EDITMSG exe "normal gg"
 " -----------------------------------------------------------------------
 function! RubyRails()
   if exists("b:rails_root")
-
     " gem: rails
     syn keyword rubyRailsCustom request
     syn keyword rubyRailsMethod alias_method
 
     if RailsFileType() =~ 'controller'
       syn keyword rubyRailsCustom params
-      syn keyword rubyRailsCustom before_filter after_filter around_filter skip_before_filter skip_after_filter skip_around_filter rescue_from
+      syn keyword rubyRailsCustom before_filter after_filter around_filter skip_before_filter skip_after_filter skip_around_filter
+      syn keyword rubyRailsCustom before_action after_action around_action skip_before_action skip_after_action skip_around_action
     endif
 
     if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_secure_password
     endif
 
-    " gem: acts_as_tree_on_steroids
+    " Other gems
     if RailsFileType() =~ 'model'
+      " gem: acts_as_tree_on_steroids
       syn keyword rubyRailsCustom acts_as_tree_on_steroids
-    endif
 
-    " gem: currency_magic
-    if RailsFileType() =~ 'model'
+      " gem: currency_magic
       syn keyword rubyRailsCustom currency_magic
-    endif
 
-    " gem: money_rails
-    if RailsFileType() =~ 'model'
+      " gem: money_rails
       syn keyword rubyRailsCustom monetize
-    endif
 
-    " gem: paperclip
-    if RailsFileType() =~ 'model'
+      " gem: paperclip
       syn keyword rubyRailsCustom has_attached_file
-    endif
 
     " gem: ancestry
-    if RailsFileType() =~ 'model'
       syn keyword rubyRailsCustom has_ancestry
-    endif
 
-    " gem: audited
-    if RailsFileType() =~ 'model'
+      " gem: audited
       syn keyword rubyRailsCustom audited
-    endif
 
-    " gem: acts-as-taggable-on
-    if RailsFileType() =~ 'model'
+      " gem: acts-as-taggable-on
       syn keyword rubyRailsCustom acts_as_taggable
-    endif
 
-    " gem: acts-as-paranoid + paranoia
-    if RailsFileType() =~ 'model'
+      " gem: acts-as-paranoid + paranoia
       syn keyword rubyRailsCustom acts_as_paranoid
-    endif
 
-    " gem: friendly_id
-    if RailsFileType() =~ 'model'
+      " gem: friendly_id
       syn keyword rubyRailsCustom friendly_id
-    endif
 
-    " gem: paper_trail
-    if RailsFileType() =~ 'model'
+      " gem: paper_trail
       syn keyword rubyRailsCustom has_paper_trail
-    endif
 
-    " gem: ranked-model
-    if RailsFileType() =~ 'model'
+      " gem: ranked-model
       syn keyword rubyRailsCustom ranks
-    endif
 
-    " gem: camaraderie
-    if RailsFileType() =~ 'model'
+      " gem: camaraderie
       syn keyword rubyRailsCustom acts_as_user acts_as_organization acts_as_membership
-    endif
 
-    " gem: microscope
-    if RailsFileType() =~ 'model'
+      " gem: microscope
       syn keyword rubyRailsCustom acts_as_microscope
-    endif
 
-    " gem: parole
-    if RailsFileType() =~ 'model'
+      " gem: parole
       syn keyword rubyRailsCustom acts_as_comment acts_as_commentable
-    endif
 
-    " gem: emotions
-    if RailsFileType() =~ 'model'
+      " gem: emotions
       syn keyword rubyRailsCustom acts_as_emotional acts_as_emotive
-    endif
 
-    " gem: awesome_nested_set
-    if RailsFileType() =~ 'model'
+      " gem: awesome_nested_set
       syn keyword rubyRailsCustom acts_as_nested_set
-    endif
 
-    " gem: devise
-    if RailsFileType() =~ 'model'
+      " gem: devise
       syn keyword rubyRailsCustom devise
-    endif
 
-    " gem: make_flaggable
-    if RailsFileType() =~ 'model'
+      " gem: make_flaggable
       syn keyword rubyRailsCustom make_flaggable make_flagger
-    endif
 
-    " gem: acts_as_taggable
-    if RailsFileType() =~ 'model'
+      " gem: acts_as_taggable
       syn keyword rubyRailsCustom acts_as_taggable_on
-    endif
 
-    " gem: carrierwave
-    if RailsFileType() =~ 'model'
+      " gem: carrierwave
       syn keyword rubyRailsCustom mount_uploader
-    endif
 
-    " gem: activerecord_strict
-    if RailsFileType() =~ 'model'
+      " gem: activerecord_strict
       syn keyword rubyRailsCustom validates_strict_columns
-    endif
 
-    " gem: her
-    if RailsFileType() =~ 'model'
+      " gem: her
       syn keyword rubyRailsCustom parse_root_in_json include_root_in_json resource_path collection_path use_api primary_key
-    endif
 
-    " custom stuff
-    if RailsFileType() =~ 'model'
+      " custom stuff
       syn keyword rubyRailsCustom has_i18n_fields bool_attr_accessor
     endif
 
@@ -150,25 +107,6 @@ function! RubyRails()
   endif
 endfunction
 autocmd BufNewFile,BufReadPost *.rb call RubyRails()
-
-" Rack
-" -----------------------------------------------------------------------
-function! RubyRack()
-  syn keyword configRuCustom run
-  hi def link configRuCustom Function
-endfunction
-autocmd BufNewFile,BufReadPost config.ru call RubyRack()
-
-" Sinatra
-" -----------------------------------------------------------------------
-function! RubySinatra()
-  if expand("%:t") == "app.rb" || expand("%:p") =~ "config/application.rb$"
-    syn keyword rubySinatraCustom deliver bail helpers configure status header params get post delete put before after enable helpers set error not_found
-    syn keyword rubySinatraCustom use register
-    hi def link rubySinatraCustom Function
-  endif
-endfunction
-autocmd BufNewFile,BufReadPost *.rb call RubySinatra()
 
 " RSpec
 " -----------------------------------------------------------------------
@@ -193,7 +131,6 @@ function! RubyRake()
   hi def link rubyRake Function
 endfunction
 autocmd BufNewFile,BufReadPost Rakefile call RubyRake()
-autocmd BufNewFile,BufReadPost tasks.rb call RubyRake()
 autocmd BufNewFile,BufReadPost *.rake call RubyRake()
 
 " JavaScript
@@ -202,7 +139,7 @@ function! JavaScript()
   syntax keyword jsStatement event
 
   " Highlight constants (eg. `FOO_BAR`)
-  syntax match jsConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([A-Z_]\)"
+  syntax match jsConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([A-Z_\.]\)"
   syntax cluster jsAll add=jsConstant
   hi link jsConstant jsFunction
 
@@ -217,42 +154,4 @@ function! JavaScript()
   hi link jsClass Function
 endfunction
 autocmd FileType javascript call JavaScript()
-
-" TypeScript
-" -----------------------------------------------------------------------
-function! TypeScript()
-  set sts=4
-  set sw=4
-  set ts=4
-
-  syntax keyword typescriptStatement event
-
-  " Highlight constants (eg. `FOO_BAR`)
-  syntax match typescriptConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([A-Z_]\)"
-  syntax cluster typescriptAll add=typescriptConstant
-  hi link typescriptConstant typescriptType
-
-  " Highlight class names (eg. `FooBar`)
-  syntax match typescriptClassName "\([a-z]\)\@<!\([A-Z][a-zA-Z_]\+\)"
-  syntax cluster typescriptAll add=typescriptClassName
-  hi link typescriptClassName typescriptType
-
-  " Highlight special variables (eg. `$foo`)
-  syntax match typescriptSpecialVariable "\$\([a-zA-Z0-9]\+\)"
-  syntax cluster typescriptSpecialVariable add=typescriptClassName
-  hi link typescriptSpecialVariable Identifier
-
-  " Apply new colors to a few keywords
-  hi link typescriptStorageClass Function
-  hi link typescriptOperator Function
-  hi link typescriptClass Function
-endfunction
-autocmd FileType typescript call TypeScript()
-
-" PHP
-" -----------------------------------------------------------------------
-function! PHP()
-  imap ;ee {{ }}<Esc>hhi<Space>
-  imap ;er <?php ?><Esc>hhi<Space>
-endfunction
-autocmd BufNewFile,BufReadPost *.php call PHP()
+autocmd FileType javascript.jsx call JavaScript()

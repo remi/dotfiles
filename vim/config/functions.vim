@@ -1,20 +1,3 @@
-" Toggle Ruby code file and spec file
-" ----------------------------------------------------------------------------------------------------
-function! SpecToggle()
-  let l:current_file = expand('%:p:t')
-
-  if match(l:current_file, '_spec.rb') != -1
-    let l:alternate_file = substitute(l:current_file, "_spec.rb", ".rb", "g")
-  else
-    let l:alternate_file = substitute(l:current_file, ".rb", "_spec.rb", "g")
-  endif
-
-  let l:cmd = "find . -iname " . l:alternate_file
-  let l:file = system(l:cmd)
-
-  exe 'e' expand(l:file)
-endfunction
-
 " Rename current file
 " ----------------------------------------------------------------------------------------------------
 " Copyright June 2007-2011 by Christian J. Robinson <heptite@gmail.com>
