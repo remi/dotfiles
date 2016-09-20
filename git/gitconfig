@@ -43,7 +43,7 @@
 [diff]
 	verbosity = 5
 	tool = changes
-    compactionHeuristic = true
+	compactionHeuristic = true
 [push]
 	default = tracking
 [log]
