@@ -132,26 +132,3 @@ function! RubyRake()
 endfunction
 autocmd BufNewFile,BufReadPost Rakefile call RubyRake()
 autocmd BufNewFile,BufReadPost *.rake call RubyRake()
-
-" JavaScript
-" -----------------------------------------------------------------------
-function! JavaScript()
-  syntax keyword jsStatement event
-
-  " Highlight constants (eg. `FOO_BAR`)
-  syntax match jsConstant "\([a-z]\)\@<!\([A-Z_]\+\)\([A-Z_\.]\)"
-  syntax cluster jsAll add=jsConstant
-  hi link jsConstant jsFunction
-
-  " Highlight class names (eg. `FooBar`)
-  syntax match jsClassName "\([a-z]\)\@<!\([A-Z][a-zA-Z_]\+\)"
-  syntax cluster jsAll add=jsClassName
-  hi link jsClassName jsGlobalObjects
-
-  " Apply new colors to a few keywords
-  hi link jsStorageClass Function
-  hi link jsOperator Function
-  hi link jsClass Function
-endfunction
-autocmd FileType javascript call JavaScript()
-autocmd FileType javascript.jsx call JavaScript()
