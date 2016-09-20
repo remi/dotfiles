@@ -18,7 +18,7 @@ Plug 'neomake/neomake'
 Plug 'jszakmeister/vim-togglecursor'
 
 " Filetype-specific plugins
-Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'blade'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'blade', 'javascript', 'javascript.jsx'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
@@ -28,8 +28,11 @@ Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 Plug 'kchmck/vim-coffee-script', { 'for': ['coffee'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'jwalton512/vim-blade', { 'for': ['blade'] }
-Plug 'pangloss/vim-javascript' " For some reason, we cannot use `'for': 'javascript'` here because it breaks indent
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 call plug#end()
 

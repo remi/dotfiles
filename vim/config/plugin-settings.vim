@@ -143,15 +143,6 @@ let g:user_emmet_settings = {
 \      'cur': 'cursor:|;',
 \    },
 \  },
-\  'javascript': {
-\    'snippets': {
-\      'fu': "function() {\n\t|\n}",
-\      'fe': "function(e) {\n\t|\n}",
-\      'cl': 'console.log(|);',
-\      'al': 'alert(|);',
-\      'rf': 'return false;',
-\    },
-\  },
 \  'blade': {
 \    'extends': 'html',
 \    'snippets': {
