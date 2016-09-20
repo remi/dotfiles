@@ -1,40 +1,63 @@
 # zplug
 # --------------------------------------
+echo -n '.'
 export ZPLUG_HOME="$HOME/.zsh/zplug"
+echo -n '.'
 source $HOME/.zsh/zplug/zplug
+echo -n '.'
 zplug "zsh-users/zsh-syntax-highlighting"
+echo -n '.'
 zplug load
 
 # Configuration
 # --------------------------------------
+echo -n '.'
 source $HOME/.zsh/config/options.zsh
+echo -n '.'
 source $HOME/.zsh/config/completion.zsh
+echo -n '.'
 source $HOME/.zsh/config/functions.zsh
+echo -n '.'
 source $HOME/.zsh/config/variables.zsh
+echo -n '.'
 source $HOME/.zsh/config/aliases.zsh
+echo -n '.'
 source $HOME/.zsh/config/bindings.zsh
+echo -n '.'
 source $HOME/.zsh/config/hooks.zsh
+echo -n '.'
 source $HOME/.zsh/config/syntax-highlighting.zsh
 
 # zsh modules autoloading
 # --------------------------------------
+echo -n '.'
 zmodload -a zsh/stat stat
+echo -n '.'
 zmodload -a zsh/zpty zpty
+echo -n '.'
 zmodload -a zsh/zprof zprof
+echo -n '.'
 zmodload -a zsh/mapfile mapfile
 
 # ASDF version manager
 # --------------------------------------
+echo -n '.'
 source $HOME/.asdf/asdf.sh
 
 # Final PATH adjustments
 # --------------------------------------
 
 # Make sure our own custom binaries are always picked up first
+echo -n '.'
 export PATH="$HOME/Dropbox/Bin:$PATH"
 
 # Make sure we can run NPM modules “binaries” from the project directory
+echo -n '.'
 export PATH="./node_modules/.bin:$PATH"
 
 # Make sure we can run Rails “binaries” from the project directory
+echo -n '.'
 export PATH="./bin:$PATH"
+
+# Clear all the dots we just printed
+clear
