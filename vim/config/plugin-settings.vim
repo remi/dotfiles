@@ -146,6 +146,8 @@ let g:user_emmet_settings = {
 \  'blade': {
 \    'extends': 'html',
 \    'snippets': {
+\      'ee': "{{ | }}",
+\      'er': "{!! | !!}",
 \      'php': "<?php | ?>",
 \    },
 \  },
