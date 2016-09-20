@@ -11,12 +11,6 @@ autocmd FileType qf noremap <buffer> <CR> <CR>
 " ----------------------------------------------------------------------------------------------------
 autocmd BufReadPost COMMIT_EDITMSG exe "normal gg"
 
-" Ruby
-" ----------------------------------------------------------------------------------------------------
-autocmd FileType ruby imap ;ee <%= %><Esc>hhi<Space>
-autocmd FileType ruby imap ;er <% %><Esc>hhi<Space>
-autocmd FileType ruby imap #;; #{}<Esc>i
-
 " Rails
 " -----------------------------------------------------------------------
 function! RubyRails()

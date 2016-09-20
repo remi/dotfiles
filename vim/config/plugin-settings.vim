@@ -143,6 +143,12 @@ let g:user_emmet_settings = {
 \      'cur': 'cursor:|;',
 \    },
 \  },
+\  'eruby': {
+\    'snippets': {
+\      'ee': "<%= | %>",
+\      'er': "<% | %>",
+\    },
+\  },
 \  'blade': {
 \    'extends': 'html',
 \    'snippets': {
