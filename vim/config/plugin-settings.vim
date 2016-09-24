@@ -43,7 +43,7 @@ let g:vim_markdown_folding_disabled=1
 " vim-javascript settings
 " ----------------------------------------------------------------------------------------------------
 let b:javascript_fold=0
-let g:javascript_ignore_javaScriptdoc=1
+let g:javascript_plugin_flow=1
 hi! def link jsGlobalObjects Conditional
 hi! def link jsStatement Statement
 hi! def link jsConditional Statement
