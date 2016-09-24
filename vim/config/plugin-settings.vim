@@ -30,11 +30,11 @@ autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " ----------------------------------------------------------------------------------------------------
 let g:rails_statusline=0
 
-" Ag.vim settings
+" Ack.vim settings
 " ----------------------------------------------------------------------------------------------------
-let &shellpipe='2>/dev/null>'
-let g:ag_working_path_mode="r"
-let g:ag_mapping_message=0
+" Wait for https://github.com/BurntSushi/ripgrep/issues/35 to be fixed
+" let g:ackprg = 'rg --no-heading --color=never --column --line-number'
+let g:ackprg = 'ag --vimgrep'
 
 " vim-markdown settings
 " ----------------------------------------------------------------------------------------------------

@@ -14,3 +14,7 @@ command! -nargs=* -complete=file So so <args>
 " ----------------------------------------------------------------------------------------------------
 command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 command! -nargs=* -complete=file -bang RenameFile call Rename(expand('%:p:h') . '/' . <q-args>, '<bang>')
+
+" Legacy!
+" ----------------------------------------------------------------------------------------------------
+command! -nargs=* -complete=file Ag Ack <args>
