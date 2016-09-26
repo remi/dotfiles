@@ -32,9 +32,7 @@ let g:rails_statusline=0
 
 " Ack.vim settings
 " ----------------------------------------------------------------------------------------------------
-" Wait for https://github.com/BurntSushi/ripgrep/issues/35 to be fixed
-" let g:ackprg = 'rg --no-heading --color=never --column --line-number'
-let g:ackprg = 'ag --vimgrep'
+let g:ackprg = 'rg --no-heading --color=never --column --line-number'
 
 " vim-markdown settings
 " ----------------------------------------------------------------------------------------------------
