@@ -4,7 +4,7 @@ alias ls="ls -hFG --color=always --group-directories-first"
 alias ll='ls -la'
 alias l='ls -l'
 alias rm='rm -i'
-alias p='ps -ef | ack -i '
+alias p='ps -ef | rg -i '
 alias listen="sudo lsof -i -P"
 alias h="heroku"
 alias ..='cd ..'
@@ -13,6 +13,10 @@ alias ~='cd ~'
 # Editor (always forward to Neovim!)
 alias vi='nvim'
 alias vim='nvim'
+
+# Ripgrep
+alias ag="rg"
+alias ack="rg"
 
 # Ruby
 alias b="bundle"
