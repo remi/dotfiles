@@ -61,3 +61,6 @@ export PATH="./bin:$PATH"
 
 # Clear all the dots we just printed
 clear
+
+# Add FzF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
