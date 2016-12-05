@@ -1,8 +1,8 @@
 " Easy new lines
 " ----------------------------------------------------------------------------------------------------
-nmap <silent> ø mo<Esc>o<Esc>k`o
-nmap <silent> Ø mo<Esc>O<Esc>j`o
-nmap K <Esc>i<CR><Esc><Esc>
+noremap <silent> ø mo<Esc>o<Esc>k`o
+noremap <silent> Ø mo<Esc>O<Esc>j`o
+noremap K <Esc>i<CR><Esc><Esc>
 
 " Always go to the mark’s line and column
 " ----------------------------------------------------------------------------------------------------
@@ -131,3 +131,19 @@ nmap <Leader>l :call SpecToggle()<cr>
 " Show highlight group under the cursor
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>
+
+" Disable Escape! OMG!
+" ----------------------------------------------------------------------------------------------------
+inoremap jk <Esc>
+inoremap jj <Esc>
+inoremap ;jj ;<Esc>
+inoremap ;l ;
+inoremap <esc> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
