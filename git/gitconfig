@@ -29,7 +29,7 @@
 	ra = rebase --abort
 	pp = push
 	ph = push -u origin HEAD
-	pf = push -f origin HEAD
+	pf = push --force-with-lease origin HEAD
 	b = for-each-ref --sort=committerdate refs/heads/ --format='%(color:reset)%(refname:short) %(color:green)%(committerdate:relative)%(color:reset)'
 [branch]
 	autosetupmerge = true
