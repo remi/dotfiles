@@ -96,10 +96,6 @@ nmap <Leader>p :echo expand('%:p')<CR>
 " ----------------------------------------------------------------------------------------------------
 nmap <silent> <Space> :silent noh<Bar>echo<CR>
 
-" Easy Vim folds insert
-imap ;zo {{{<Esc>
-imap ;zc }}}<Esc>
-
 " Prevent accidental uses of <F1>
 " ----------------------------------------------------------------------------------------------------
 map <F1> <ESC>
@@ -124,10 +120,6 @@ nmap <C-L> :call g:ClearTrailingWhitespace()<cr>
 " ----------------------------------------------------------------------------------------------------
 nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 
-" Toggle Ruby code file and spec file
-" ----------------------------------------------------------------------------------------------------
-nmap <Leader>l :call SpecToggle()<cr>
-
 " Show highlight group under the cursor
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>
@@ -136,6 +128,7 @@ map <Leader>a :call ShowHighlightGroup()<CR>
 " ----------------------------------------------------------------------------------------------------
 inoremap jk <Esc>
 inoremap jj <Esc>
+inoremap ,, <Esc>
 inoremap ;jj ;<Esc>
 inoremap ;l ;
 inoremap <esc> <NOP>

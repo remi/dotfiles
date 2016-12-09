@@ -70,7 +70,11 @@ let g:neomake_html_enabled_makers = ['tidy']
 let g:neomake_elixir_enabled_makers = []
 let g:neomake_scss_stylelint_maker = { 'args': ['--no-color'], 'errorformat': '%+P%f,%*\s%l:%c  %t  %m,%-Q' }
 let g:neomake_html_tidy_maker = { 'args': ['-e', '-q'], 'errorformat': 'line %l column %c - %m' }
-autocmd! BufWritePost * Neomake
+
+" Wrap BufWritePost event in a group so we can disable it in `.lvimrc` files
+augroup NeoMake
+  autocmd BufWritePost * Neomake
+augroup END
 
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
@@ -145,14 +149,6 @@ let g:user_emmet_settings = {
 \    'snippets': {
 \      'ee': "<%= | %>",
 \      'er': "<% | %>",
-\    },
-\  },
-\  'blade': {
-\    'extends': 'html',
-\    'snippets': {
-\      'ee': "{{ | }}",
-\      'er': "{!! | !!}",
-\      'php': "<?php | ?>",
 \    },
 \  },
 \}
