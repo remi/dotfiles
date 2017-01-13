@@ -67,9 +67,10 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_scss_enabled_makers = ['stylelint']
 let g:neomake_ruby_enabled_makers = ['rubocop']
 let g:neomake_html_enabled_makers = ['tidy']
-let g:neomake_elixir_enabled_makers = []
+let g:neomake_elixir_enabled_makers = ['credo']
 let g:neomake_scss_stylelint_maker = { 'args': ['--no-color'], 'errorformat': '%+P%f,%*\s%l:%c  %t  %m,%-Q' }
 let g:neomake_html_tidy_maker = { 'args': ['-e', '-q'], 'errorformat': 'line %l column %c - %m' }
+let g:neomake_elixir_credo_maker = { 'exe': 'mix', 'args': ['credo', '%:p', '--format=oneline', '--strict'], 'errorformat': '[%t] %. %f:%l %m' }
 
 " Wrap BufWritePost event in a group so we can disable it in `.lvimrc` files
 augroup NeoMake
