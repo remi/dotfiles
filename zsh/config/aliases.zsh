@@ -31,4 +31,3 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 alias redis-daemon="redis-server `brew --prefix`/etc/redis.conf"
 alias elasticsearch-daemon="elasticsearch -d es.config=`brew --prefix elasticsearch`/config/elasticsearch.yml"
 alias pg-daemon="pg_ctl -D `brew --prefix`/var/postgres -l `brew --prefix`/var/postgres/server.log start"
-alias php-daemon="`brew --prefix php56`/sbin/php-fpm --fpm-config `brew --prefix`/etc/php/5.6/php-fpm.conf"
