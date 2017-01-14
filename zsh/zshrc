@@ -1,12 +1,9 @@
 # zplug
 # --------------------------------------
-echo -n '.'
-export ZPLUG_HOME="$HOME/.zsh/zplug"
-echo -n '.'
-source $HOME/.zsh/zplug/zplug
-echo -n '.'
-zplug "zsh-users/zsh-syntax-highlighting"
-echo -n '.'
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load
 
 # Configuration
