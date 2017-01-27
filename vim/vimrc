@@ -13,7 +13,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'ervandew/supertab'
-Plug 'embear/vim-localvimrc'
 Plug 'neomake/neomake'
 Plug 'jszakmeister/vim-togglecursor'
 
