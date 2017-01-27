@@ -78,6 +78,10 @@ augroup NeoMake
   autocmd BufWritePost * Neomake
 augroup END
 
+" vim-commentary settings
+" ----------------------------------------------------------------------------------------------------
+xmap <Leader>cc <Plug>Commentary
+
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'
