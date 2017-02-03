@@ -80,6 +80,7 @@ augroup END
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
+nmap <Leader>cc <Plug>CommentaryLine
 xmap <Leader>cc <Plug>Commentary
 
 " emmet settings
