@@ -39,6 +39,12 @@ let g:ackprg = 'rg --no-heading --color=never --column --line-number'
 " ----------------------------------------------------------------------------------------------------
 let g:vim_markdown_folding_disabled=1
 
+" vim-localvimrc settings
+" ----------------------------------------------------------------------------------------------------
+let g:localvimrc_name = [".local.vimrc"]
+let g:localvimrc_persistent = 1
+let g:localvimrc_persistence_file = expand('$HOME').'/.vim-local/vim-localvimrc'
+
 " vim-javascript settings
 " ----------------------------------------------------------------------------------------------------
 let b:javascript_fold=0
