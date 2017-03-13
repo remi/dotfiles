@@ -48,7 +48,8 @@ augroup END
 " Handlebars
 " -----------------------------------------------------------------
 augroup handlebarsfiletype
-  au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} setfiletype html
+  au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} setfiletype handlebars.html
+  au BufNewFile,BufRead *.{handlebars,hb,hbs,hbt}{,.erb} set syntax=mustache
 augroup END
 
 " TypeScript
@@ -74,3 +75,4 @@ augroup END
 augroup conf
   autocmd BufNewFile,BufRead *.conf set filetype=conf
 augroup END
+
