@@ -3,6 +3,7 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load
 
@@ -24,6 +25,8 @@ echo -n '.'
 source $HOME/.zsh/config/hooks.zsh
 echo -n '.'
 source $HOME/.zsh/config/syntax-highlighting.zsh
+echo -n '.'
+source $HOME/.zsh/config/suggestions.zsh
 
 # zsh modules autoloading
 # --------------------------------------
