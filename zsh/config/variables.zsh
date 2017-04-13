@@ -32,8 +32,8 @@ export TZ="America/Montreal"
 
 # History limits
 export HISTFILE=$HOME/.zhistory
-export HISTSIZE=1000
-export SAVEHIST=1000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # Utilities
 export PAGER='less'
