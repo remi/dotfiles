@@ -49,6 +49,10 @@ source $HOME/.asdf/asdf.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Yarn package manager
+# --------------------------------------
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # Final PATH adjustments
 # --------------------------------------
 
