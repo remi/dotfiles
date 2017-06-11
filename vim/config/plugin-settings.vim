@@ -164,4 +164,10 @@ let g:user_emmet_settings = {
 \      'er': "<% | %>",
 \    },
 \  },
+\  'eelixir': {
+\    'snippets': {
+\      'ee': "<%= | %>",
+\      'er': "<% | %>",
+\    },
+\  },
 \}
