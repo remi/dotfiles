@@ -76,3 +76,8 @@ augroup conf
   autocmd BufNewFile,BufRead *.conf set filetype=conf
 augroup END
 
+" Solidity
+" -----------------------------------------------------------------
+augroup solidity
+  autocmd BufNewFile,BufRead *.sol set filetype=solidity
+augroup END

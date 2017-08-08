@@ -28,6 +28,8 @@ Plug 'pangloss/vim-javascript', { 'branch': 'develop', 'for': ['javascript', 'ja
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars'] }
+Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
+Plug 'tomlion/vim-solidity', { 'for': ['solidity'] }
 
 call plug#end()
 
