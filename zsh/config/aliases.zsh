@@ -9,6 +9,7 @@ alias listen="sudo lsof -i -P"
 alias h="heroku"
 alias ..='cd ..'
 alias ~='cd ~'
+alias pr='open-pr'
 
 # Editor (always forward to Neovim!)
 alias vi='nvim'
