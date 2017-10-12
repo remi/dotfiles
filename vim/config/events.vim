@@ -19,18 +19,19 @@ function! RubyRails()
     syn keyword rubyRailsCustom request
     syn keyword rubyRailsMethod alias_method
 
-    if RailsFileType() =~ 'controller'
+    if !empty(matchstr(expand("%:p"), 'app/controllers/[^.]\+.rb$'))
       syn keyword rubyRailsCustom params
       syn keyword rubyRailsCustom before_filter after_filter around_filter skip_before_filter skip_after_filter skip_around_filter
       syn keyword rubyRailsCustom before_action after_action around_action skip_before_action skip_after_action skip_around_action
     endif
 
-    if RailsFileType() =~ 'model'
+    if !empty(matchstr(expand("%:p"), 'app/models/[^.]\+.rb$'))
+      " gem: rails
       syn keyword rubyRailsCustom has_secure_password
-    endif
 
-    " Other gems
-    if RailsFileType() =~ 'model'
+      " gem: elasticsearch-rails
+      syn keyword rubyRailsCustom settings indexes index_name mapping
+
       " gem: acts_as_tree_on_steroids
       syn keyword rubyRailsCustom acts_as_tree_on_steroids
 
