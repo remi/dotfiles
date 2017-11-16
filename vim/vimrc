@@ -13,9 +13,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'ervandew/supertab'
-Plug 'neomake/neomake'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'embear/vim-localvimrc'
+Plug 'fvictorio/vim-extract-variable'
+Plug 'w0rp/ale'
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'javascript', 'javascript.jsx', 'eelixir', 'html.handlebars'] }
