@@ -57,3 +57,5 @@ export LC_ALL=$LANG
 export PR_NO_COLOR="%{$terminfo[sgr0]%}"
 export PROMPT='$(generate_prompt)'
 export RPROMPT=''
+
+export ERL_AFLAGS="-kernel shell_history enabled"
