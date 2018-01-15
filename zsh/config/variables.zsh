@@ -59,3 +59,6 @@ export PROMPT='$(generate_prompt)'
 export RPROMPT=''
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export GOPATH="/usr/local/share/go"
+export PATH="$PATH:$GOPATH/bin"
