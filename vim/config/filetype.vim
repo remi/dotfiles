@@ -22,7 +22,7 @@ augroup END
 " CoffeeScript
 " -----------------------------------------------------------------
 augroup coffeefiletype
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+  autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 augroup end
 
 " SASS
