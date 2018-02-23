@@ -76,7 +76,7 @@ let g:ale_sign_warning = '→'
 let g:ale_linters = {
 \   'elixir': ['credo'],
 \   'javascript': ['eslint'],
-\   'rubo': ['rubocop'],
+\   'ruby': ['rubocop'],
 \   'scss': ['stylelint'],
 \}
 
