@@ -132,14 +132,8 @@ nmap <leader>yf :let @+=expand('%')<CR>
 " ----------------------------------------------------------------------------------------------------
 nmap <leader>f :silent !mix format %<CR>:e!<CR>
 
-" Disable Escape! OMG!
+" Disable arrow keys
 " ----------------------------------------------------------------------------------------------------
-inoremap jk <Esc>
-inoremap jj <Esc>
-inoremap ,, <Esc>
-inoremap ;jj ;<Esc>
-inoremap ;l ;
-inoremap <esc> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 inoremap <Up> <NOP>
