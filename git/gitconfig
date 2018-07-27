@@ -31,6 +31,7 @@
 	ph = push -u origin HEAD
 	pf = push --force-with-lease origin HEAD
 	pt = push --tags
+	ppp = push -u origin HEAD --tags
 	b = for-each-ref --sort=committerdate refs/heads/ --format='%(color:reset)%(refname:short) %(color:green)%(committerdate:relative)%(color:reset)'
 	cf = !branch="$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/') && git checkout ${branch%--*}"
 	rh = reset --hard
