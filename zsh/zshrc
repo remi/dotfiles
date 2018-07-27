@@ -78,3 +78,6 @@ echo -n '.'
 
 # Clear all the dots we just printed
 clear
+
+# Run neofetch
+neofetch
