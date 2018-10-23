@@ -72,6 +72,10 @@ export PATH="./bin:$PATH"
 echo -n '.'
 source $HOME/.travis/travis.sh
 
+# Add Heroku autocomplete
+echo -n '.'
+source $HOME/Library/Caches/heroku/autocomplete/zsh_setup
+
 # Clear all the dots we just printed
 clear
 
