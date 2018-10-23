@@ -68,9 +68,6 @@ export PATH="./node_modules/.bin:$PATH"
 echo -n '.'
 export PATH="./bin:$PATH"
 
-# Add FzF
-echo -n '.'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add Travis
 echo -n '.'
