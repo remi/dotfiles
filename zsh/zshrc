@@ -68,10 +68,9 @@ export PATH="./node_modules/.bin:$PATH"
 echo -n '.'
 export PATH="./bin:$PATH"
 
-
 # Add Travis
 echo -n '.'
-[ -f /Users/remi/.travis/travis.sh ] && source /Users/remi/.travis/travis.sh
+source $HOME/.travis/travis.sh
 
 # Clear all the dots we just printed
 clear
