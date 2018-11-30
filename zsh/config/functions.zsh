@@ -9,7 +9,7 @@ function collapse_pwd() {
 # Print the prompt
 # `git-prompt` is in ../bin/
 function generate_prompt() {
-  echo "$PR_NO_COLOR$PR_LIGHT_YELLOW$(collapse_pwd)$PR_NO_COLOR$PR_LIGHT_WHITE$(git-prompt)$PR_NO_COLOR\n$PR_GREEN|>$PR_NO_COLOR "
+  echo "$PR_NO_COLOR$PR_LIGHT_YELLOW$(collapse_pwd)$PR_NO_COLOR$PR_LIGHT_WHITE$(git-prompt)$PR_NO_COLOR\n$PR_GREEN\$$PR_NO_COLOR "
 }
 
 # Kill via grep
