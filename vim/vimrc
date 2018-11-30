@@ -24,7 +24,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml'
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
-Plug 'plasticboy/vim-markdown', { 'for': ['mkd'] }
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
 Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
@@ -32,6 +32,7 @@ Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars'] }
 Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
 Plug 'tomlion/vim-solidity', { 'for': ['solidity'] }
+Plug 'junegunn/vim-easy-align', { 'for': ['markdown'] }
 
 call plug#end()
 
