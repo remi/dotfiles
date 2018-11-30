@@ -78,6 +78,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \   'scss': ['stylelint'],
+\   'php': [],
 \}
 
 " vim-commentary settings
