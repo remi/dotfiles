@@ -33,6 +33,7 @@ Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars'] }
 Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
 Plug 'tomlion/vim-solidity', { 'for': ['solidity'] }
 Plug 'junegunn/vim-easy-align', { 'for': ['markdown'] }
+Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
 
 call plug#end()
 

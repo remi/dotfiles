@@ -55,7 +55,8 @@ augroup END
 " TypeScript
 " -----------------------------------------------------------------
 augroup typescriptfiletype
-  au BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
+  au BufNewFile,BufRead *.ts setlocal filetype=typescript
+  au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 augroup END
 
 " LESS
