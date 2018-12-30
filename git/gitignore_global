@@ -38,8 +38,6 @@ npm-debug.log
 
 # Environment
 .env
-.env.development
-.env.test
 
 # ASDF
 .tool-versions
