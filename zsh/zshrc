@@ -1,8 +1,27 @@
+# Boot time helper functions
+# --------------------------------------
+function get_unix_time() {
+  echo $(/usr/local/opt/coreutils/libexec/gnubin/date +%s%N | cut -b1-13)
+}
+
+function print_boot_time() {
+  echo -n "\n→ ${XPR_YELLOW}zsh${XPR_NO_COLOR} boot time was ${XPR_LIGHT_GREEN}"
+  echo $2 - $1 | bc | tr -d '\n'
+  echo "${XPR_NO_COLOR}ms"
+}
+
+# Start!
+# --------------------------------------
+echo -n '.'
+local start_time=$(get_unix_time)
+
 # zplug
 # --------------------------------------
+echo -n '.'
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+echo -n '.'
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug load
@@ -44,15 +63,6 @@ zmodload -a zsh/mapfile mapfile
 echo -n '.'
 source $HOME/.asdf/asdf.sh
 
-# Rbenv version manager
-# --------------------------------------
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Yarn package manager
-# --------------------------------------
-export PATH="$HOME/.yarn/bin:$PATH"
-
 # Final PATH adjustments
 # --------------------------------------
 
@@ -68,16 +78,17 @@ export PATH="./node_modules/.bin:$PATH"
 echo -n '.'
 export PATH="./bin:$PATH"
 
-# Add Travis
-echo -n '.'
-source $HOME/.travis/travis.sh
-
-# Add Heroku autocomplete
-echo -n '.'
-source $HOME/Library/Caches/heroku/autocomplete/zsh_setup
-
 # Clear all the dots we just printed
-clear
+# --------------------------------------
+# clear
 
-# Run neofetch
-neofetch
+# Output boot time and current date
+# --------------------------------------
+local end_time=$(get_unix_time)
+print_boot_time $start_time $end_time
+echo "→ $(date)"
+echo ""
+
+# Cleanup functions
+# --------------------------------------
+unfunction get_unix_time print_boot_time

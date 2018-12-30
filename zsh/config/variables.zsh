@@ -55,6 +55,7 @@ export LC_ALL=$LANG
 
 # Prompt
 export PR_NO_COLOR="%{$terminfo[sgr0]%}"
+export XPR_NO_COLOR="$terminfo[sgr0]"
 export PROMPT='$(generate_prompt)'
 export RPROMPT=''
 

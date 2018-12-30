@@ -29,6 +29,6 @@ alias t="teamocil"
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 # Daemons
-alias redis-daemon="redis-server `brew --prefix`/etc/redis.conf"
+alias redis-daemon="redis-server /usr/local/etc/redis.conf"
 alias elasticsearch-daemon="elasticsearch -d"
-alias pg-daemon="pg_ctl -D `brew --prefix`/var/postgres -l `brew --prefix`/var/postgres/server.log start"
+alias pg-daemon="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
