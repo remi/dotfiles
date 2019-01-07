@@ -93,6 +93,7 @@ let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \   'scss': ['stylelint'],
 \   'php': [],
+\   'typescript.tsx': ['tslint'],
 \}
 
 " vim-commentary settings
