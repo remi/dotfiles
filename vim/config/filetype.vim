@@ -16,7 +16,7 @@ augroup END
 augroup javascriptfiletype
   autocmd BufRead,BufNewFile *.es6 setfiletype javascript
   autocmd BufRead,BufNewFile *.js.es6 setfiletype javascript
-  autocmd BufRead,BufNewFile *.json set filetype=javascript
+  autocmd BufRead,BufNewFile *.json set filetype=json
 augroup END
 
 " CoffeeScript
