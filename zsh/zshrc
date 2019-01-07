@@ -4,7 +4,7 @@ function progress() { echo -n "${XPR_LIGHT_BLUE}••${XPR_NO_COLOR}" }
 function get_unix_time() { echo $(/usr/local/opt/coreutils/libexec/gnubin/date +%s%3N) }
 function print_startup_time() { print_banner_line "shell startup time" "was $(echo $2 - $1 | bc | tr -d '\n') ms" }
 function print_current_time() { print_banner_line "current time" "is $(date | sed -e "s/\s\s\+/ /g")" }
-function print_uptime() { print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]\+up\s\([^,]\+\),.\+$/\1/")" }
+function print_uptime() { print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]\+up\s\([^,]\+\),.\+$/\1/" | sed -e "s/\s\s\+/ /g")" }
 
 function print_banner_line() {
   echo -n "${XPR_GREEN}• ${XPR_YELLOW}$1${XPR_NO_COLOR} "
