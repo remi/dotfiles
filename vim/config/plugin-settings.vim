@@ -87,13 +87,18 @@ let g:ale_sign_warning = '→'
 
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 let g:ale_fixers.elixir = ['mix_format']
+let g:ale_fixers.javascript = ['prettier']
+let g:ale_fixers.typescript = ['prettier']
+let g:ale_fixers.php = ['phpcbf']
+let g:ale_fixers.scss = ['prettier']
 
+let g:ale_linters_explicit = 1
 let g:ale_linters = {}
 let g:ale_linters.elixir = ['credo', 'elixir-ls']
-let g:ale_linters.javascript = ['eslint', 'prettier']
+let g:ale_linters.javascript = ['eslint']
+let g:ale_linters.php = ['phpcs']
 let g:ale_linters.ruby = ['rubocop']
-let g:ale_linters.scss = ['stylelint', 'prettier']
-let g:ale_linters.php = []
+let g:ale_linters.scss = ['stylelint']
 let g:ale_linters.typescript = ['tslint', 'tsserver']
 
 let g:ale_fix_on_save = 1
@@ -101,6 +106,7 @@ let g:ale_echo_delay = 0
 let g:ale_lint_delay = 10
 
 let g:ale_elixir_elixir_ls_release = $HOME.'/Code/elixir-ls/rel'
+let g:ale_php_phpcs_options = '--warning-severity=0'
 
 nmap <Leader>ad :ALEGoToDefinition<CR>
 nmap <Leader>ah :ALEHover<CR>
