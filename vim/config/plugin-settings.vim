@@ -4,8 +4,8 @@ let g:plug_window = 'topleft new'
 
 " ctrlp.vim settings
 " ----------------------------------------------------------------------------------------------------
-map <Leader>p :CtrlP $(pwd)<CR>
-map <Leader>P :CtrlPClearCache<CR>:CtrlP $(pwd)<CR>
+map <Leader>t :CtrlP $(pwd)<CR>
+map <Leader>T :CtrlPClearCache<CR>:CtrlP $(pwd)<CR>
 map <Leader>o :CtrlP %:p:h<CR>
 map <Leader>, :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRU<CR>
@@ -94,7 +94,7 @@ let g:ale_linters.javascript = ['eslint', 'prettier']
 let g:ale_linters.ruby = ['rubocop']
 let g:ale_linters.scss = ['stylelint', 'prettier']
 let g:ale_linters.php = []
-let g:ale_linters.typescript = ['tslint']
+let g:ale_linters.typescript = ['tslint', 'tsserver']
 
 let g:ale_fix_on_save = 1
 let g:ale_echo_delay = 0
@@ -113,10 +113,6 @@ highlight ALEWarningSign ctermfg=3
 " TypeScript settings
 " ----------------------------------------------------------------------------------------------------
 let g:tsuquyomi_disable_default_mappings = 1
-nmap <Leader>td :TsuDefinition<CR>
-nmap <Leader>tt :TsuTypeDefinition<CR>
-nmap <Leader>tr :TsuReferences<CR>
-nmap <Leader>th :<C-u>echo tsuquyomi#hint()<CR>
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
