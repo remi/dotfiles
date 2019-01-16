@@ -18,6 +18,7 @@ Plug 'jszakmeister/vim-togglecursor'
 Plug 'embear/vim-localvimrc'
 Plug 'fvictorio/vim-extract-variable'
 Plug 'w0rp/ale'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'javascript', 'javascript.jsx', 'eelixir', 'html.handlebars'] }
@@ -34,6 +35,7 @@ Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
 Plug 'tomlion/vim-solidity', { 'for': ['solidity'] }
 Plug 'junegunn/vim-easy-align', { 'for': ['markdown'] }
 Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
+Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.tsx'] }
 
 call plug#end()
 

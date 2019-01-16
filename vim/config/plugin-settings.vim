@@ -93,8 +93,16 @@ let g:ale_linters = {
 \   'ruby': ['rubocop'],
 \   'scss': ['stylelint'],
 \   'php': [],
-\   'typescript.tsx': ['tslint'],
+\   'typescript': ['tslint'],
 \}
+
+" TypeScript settings
+" ----------------------------------------------------------------------------------------------------
+let g:tsuquyomi_disable_default_mappings = 1
+nmap <Leader>td :TsuDefinition<CR>
+nmap <Leader>tt :TsuTypeDefinition<CR>
+nmap <Leader>tr :TsuReferences<CR>
+nmap <Leader>th :<C-u>echo tsuquyomi#hint()<CR>
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
