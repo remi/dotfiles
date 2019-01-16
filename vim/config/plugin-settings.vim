@@ -82,9 +82,7 @@ let g:easy_align_delimiters = {
 
 " ALE settings
 " ----------------------------------------------------------------------------------------------------
-let g:ale_sign_error = '→'
-let g:ale_sign_warning = '→'
-
+" Fixers
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
 let g:ale_fixers.elixir = g:ale_fixers['*'] + ['mix_format']
 let g:ale_fixers.javascript = g:ale_fixers['*'] + ['prettier']
@@ -92,6 +90,7 @@ let g:ale_fixers.typescript = g:ale_fixers['*'] + ['prettier']
 let g:ale_fixers.php = g:ale_fixers['*'] + ['phpcbf']
 let g:ale_fixers.scss = g:ale_fixers['*'] + ['prettier']
 
+" Linters
 let g:ale_linters_explicit = 1
 let g:ale_linters = {}
 let g:ale_linters.elixir = ['credo', 'elixir-ls']
@@ -101,17 +100,25 @@ let g:ale_linters.ruby = ['rubocop']
 let g:ale_linters.scss = ['stylelint']
 let g:ale_linters.typescript = ['tslint', 'tsserver']
 
-let g:ale_fix_on_save = 1
+" Global
 let g:ale_echo_delay = 0
+let g:ale_fix_on_save = 1
 let g:ale_lint_delay = 10
+let g:ale_open_list = 1
+let g:ale_set_quickfix = 1
+let g:ale_sign_error = '→'
+let g:ale_sign_warning = '→'
 
+" Tool-specific
 let g:ale_elixir_elixir_ls_release = $HOME.'/Code/elixir-ls/rel'
 let g:ale_php_phpcs_options = '--warning-severity=0'
 
+" Mappings
 nmap <Leader>ad :ALEGoToDefinition<CR>
 nmap <Leader>ah :ALEHover<CR>
 nmap <Leader>ar :ALEFindReferences<CR>
 
+" Highlights
 highlight clear ALEWarning
 highlight ALEErrorSign ctermfg=1
 highlight ALEWarningSign ctermfg=3
