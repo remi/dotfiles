@@ -116,10 +116,6 @@ highlight clear ALEWarning
 highlight ALEErrorSign ctermfg=1
 highlight ALEWarningSign ctermfg=3
 
-" TypeScript settings
-" ----------------------------------------------------------------------------------------------------
-let g:tsuquyomi_disable_default_mappings = 1
-
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine
