@@ -5,10 +5,10 @@ let g:plug_window = 'topleft new'
 " ctrlp.vim settings
 " ----------------------------------------------------------------------------------------------------
 map <Leader>p :CtrlP $(pwd)<CR>
+map <Leader>P :CtrlPClearCache<CR>:CtrlP $(pwd)<CR>
 map <Leader>o :CtrlP %:p:h<CR>
 map <Leader>, :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRU<CR>
-map <Leader>T :CtrlPClearCache<CR>:CtrlP $(pwd)<CR>
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_status_func = { 'main': '', 'prog': '' }
 let g:ctrlp_open_new_file = 'r'
