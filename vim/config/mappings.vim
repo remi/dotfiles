@@ -88,10 +88,6 @@ nnoremap  <C-i>
 nnoremap <Tab> mzV>`zl
 nnoremap <S-Tab> mzV<`zh
 
-" Print current file full path
-" ----------------------------------------------------------------------------------------------------
-nmap <Leader>p :echo expand('%:p')<CR>
-
 " Clear search-highlighted terms
 " ----------------------------------------------------------------------------------------------------
 nmap <silent> <Space> :silent noh<Bar>echo<CR>

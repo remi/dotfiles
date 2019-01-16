@@ -4,7 +4,7 @@ let g:plug_window = 'topleft new'
 
 " ctrlp.vim settings
 " ----------------------------------------------------------------------------------------------------
-map <Leader>t :CtrlP $(pwd)<CR>
+map <Leader>p :CtrlP $(pwd)<CR>
 map <Leader>o :CtrlP %:p:h<CR>
 map <Leader>, :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRU<CR>
