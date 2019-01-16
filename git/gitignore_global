@@ -36,6 +36,9 @@ tags-ja
 node_modules
 npm-debug.log
 
+# Elixir
+.elixir_ls
+
 # Environment
 .env
 .env.dev.local
