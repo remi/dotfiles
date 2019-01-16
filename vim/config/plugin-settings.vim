@@ -86,11 +86,11 @@ let g:ale_sign_error = '→'
 let g:ale_sign_warning = '→'
 
 let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
-let g:ale_fixers.elixir = ['mix_format']
-let g:ale_fixers.javascript = ['prettier']
-let g:ale_fixers.typescript = ['prettier']
-let g:ale_fixers.php = ['phpcbf']
-let g:ale_fixers.scss = ['prettier']
+let g:ale_fixers.elixir = g:ale_fixers['*'] + ['mix_format']
+let g:ale_fixers.javascript = g:ale_fixers['*'] + ['prettier']
+let g:ale_fixers.typescript = g:ale_fixers['*'] + ['prettier']
+let g:ale_fixers.php = g:ale_fixers['*'] + ['phpcbf']
+let g:ale_fixers.scss = g:ale_fixers['*'] + ['prettier']
 
 let g:ale_linters_explicit = 1
 let g:ale_linters = {}
