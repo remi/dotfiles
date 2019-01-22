@@ -111,7 +111,7 @@ let g:ale_sign_error = '→'
 let g:ale_sign_warning = '→'
 
 " Tool-specific
-let g:ale_elixir_elixir_ls_release = $HOME.'/Code/elixir-ls/rel'
+let g:ale_elixir_elixir_ls_release = expand('$HOME').'/Code/elixir-ls/rel'
 let g:ale_php_phpcs_options = '--warning-severity=0'
 
 " Mappings
