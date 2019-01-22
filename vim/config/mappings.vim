@@ -104,14 +104,6 @@ nmap èè :lcd %:p:h<CR>
 " ----------------------------------------------------------------------------------------------------
 vmap € $h
 
-" Execute the current file
-" ----------------------------------------------------------------------------------------------------
-nmap <Leader>r :call CallInterpreter()<CR>
-
-" Clear trailing whitespace
-" ----------------------------------------------------------------------------------------------------
-nmap <C-L> :call g:ClearTrailingWhitespace()<cr>
-
 " Disable ex mode, damnit
 " ----------------------------------------------------------------------------------------------------
 nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
@@ -119,14 +111,6 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " Show highlight group under the cursor
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>
-
-" Copy file path to clipboard
-" ----------------------------------------------------------------------------------------------------
-nmap <leader>yf :let @+=expand('%')<CR>
-
-" Run mix format and reload the current file
-" ----------------------------------------------------------------------------------------------------
-nmap <leader>f :silent !mix format %<CR>:e!<CR>
 
 " Disable arrow keys
 " ----------------------------------------------------------------------------------------------------
