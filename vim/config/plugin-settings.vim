@@ -22,10 +22,12 @@ let g:ctrlp_custom_ignore = {
 " ----------------------------------------------------------------------------------------------------
 let g:yankring_history_dir = expand('$HOME').'/.vim-local'
 let g:yankring_history_file = '.vim-yankring'
+let g:yankring_clipboard_monitor=0
+
 map <Leader>y :YRShow<CR>
+
 autocmd BufEnter \[YankRing\] set scrolloff=0 cursorline
 autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
-let g:yankring_clipboard_monitor=0
 
 " Rails.vim settings
 " ----------------------------------------------------------------------------------------------------
