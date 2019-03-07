@@ -108,6 +108,7 @@ let g:ale_fixers.javascript = g:ale_fixers['*'] + ['prettier']
 let g:ale_fixers.typescript = g:ale_fixers['*'] + ['prettier']
 let g:ale_fixers.php = g:ale_fixers['*'] + ['phpcbf']
 let g:ale_fixers.scss = g:ale_fixers['*'] + ['prettier']
+let g:ale_fixers.markdown = g:ale_fixers['*'] + ['prettier']
 
 " Linters
 let g:ale_linters_explicit = 1
