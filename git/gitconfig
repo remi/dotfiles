@@ -35,6 +35,7 @@
 	b = for-each-ref --sort=committerdate refs/heads/ --format='%(color:reset)%(refname:short) %(color:green)%(committerdate:relative)%(color:reset)'
 	cf = !branch="$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/') && git checkout ${branch%--*}"
 	rh = reset --hard
+	verbs = !git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr
 [branch]
 	autosetupmerge = true
 [core]
