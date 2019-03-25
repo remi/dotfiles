@@ -122,10 +122,10 @@ function! GetName()
   return expand("%:t")==''?'<none>':substitute(expand("%:p"), getcwd() . "/", "", "g")
 endfunction
 
-set statusline=%1*\ %{GetName()}\ %3*
-set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
+set statusline=%1* %{GetName()} %3*
+set statusline+=%7*%{&modified?' (modified)':' '}%3*
 set statusline+=%5*%{IsHelp()}%3*
-set statusline+=%6*%{&readonly?'\ (read-only)\ ':'\ '}%3*
+set statusline+=%6*%{&readonly?' (read-only) ':' '}%3*
 set statusline+=%3*fenc:%4*%{strlen(&fenc)?&fenc:'none'}%3*  
 set statusline+=%3*ff:%4*%{&ff}%3*  
 set statusline+=%3*ft:%4*%{strlen(&ft)?&ft:'<none>'}  
