@@ -63,10 +63,10 @@ unstaged_prompt = working_tree.map { |kv|
 untracked_count = _working_tree.count { |x| x == '?' }
 untracked_prompt = "#{untracked_count} untracked"
 
-prompt = "#{ENV["XPR_LIGHT_CYAN"]} #{`git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'`.chomp}"
+prompt = "#{ENV["XPR_LIGHT_CYAN"]}  #{`git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'`.chomp} "
 prompt += rebasing_etc
-prompt += "#{ENV["XPR_LIGHT_GREEN"]} (#{staged_prompt})" if staged_count > 0
-prompt += "#{ENV["XPR_GREEN"]} (#{unstaged_prompt})" if unstaged_count > 0
-prompt += "#{ENV["XPR_GREEN"]} (#{untracked_prompt})" if untracked_count > 0
+prompt += "#{ENV["XPR_LIGHT_GREEN"]}  #{staged_prompt}" if staged_count > 0
+prompt += "#{ENV["XPR_GREEN"]}  #{unstaged_prompt}" if unstaged_count > 0
+prompt += "#{ENV["XPR_GREEN"]}  #{untracked_prompt}" if untracked_count > 0
 
 puts prompt
