@@ -1,6 +1,6 @@
 # Local aliases
 # --------------------------------------
-alias ls="ls -hFG --color=always --group-directories-first"
+alias ls="lsd -hF --color=always"
 alias ll='ls -la'
 alias l='ls -l'
 alias rm='rm -i'
