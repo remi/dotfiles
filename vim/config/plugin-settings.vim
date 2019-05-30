@@ -113,7 +113,7 @@ let g:ale_fixers.markdown = g:ale_fixers['*'] + ['prettier']
 " Linters
 let g:ale_linters_explicit = 1
 let g:ale_linters = {}
-let g:ale_linters.elixir = ['credo', 'mix']
+let g:ale_linters.elixir = ['credo']
 let g:ale_linters.javascript = ['eslint']
 let g:ale_linters.php = ['phpcs']
 let g:ale_linters.ruby = ['rubocop']
