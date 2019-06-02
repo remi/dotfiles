@@ -109,6 +109,7 @@ let g:ale_fixers.typescript = g:ale_fixers['*'] + ['prettier']
 let g:ale_fixers.php = g:ale_fixers['*'] + ['phpcbf']
 let g:ale_fixers.scss = g:ale_fixers['*'] + ['prettier']
 let g:ale_fixers.markdown = g:ale_fixers['*'] + ['prettier']
+let g:ale_fixers.terraform = g:ale_fixers['*'] + ['terraform']
 
 " Linters
 let g:ale_linters_explicit = 1
@@ -119,6 +120,7 @@ let g:ale_linters.php = ['phpcs']
 let g:ale_linters.ruby = ['rubocop']
 let g:ale_linters.scss = ['stylelint']
 let g:ale_linters.typescript = ['tslint', 'tsserver']
+let g:ale_linters.terraform = ['tflint']
 
 " Global
 let g:ale_echo_delay = 10
@@ -146,6 +148,10 @@ highlight ALEWarningSign ctermfg=3
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine
 xmap <Leader>cc <Plug>Commentary
+
+" vim-terraform settings
+" ----------------------------------------------------------------------------------------------------
+let g:terraform_align=1
 
 " emmet settings
 " ----------------------------------------------------------------------------------------------------

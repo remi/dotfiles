@@ -82,3 +82,10 @@ augroup END
 augroup solidity
   autocmd BufNewFile,BufRead *.sol set filetype=solidity
 augroup END
+
+" Terraform
+" -----------------------------------------------------------------
+augroup terraform
+  autocmd BufNewFile,BufRead *.tf set filetype=terraform
+  autocmd BufNewFile,BufRead *.tfvars set filetype=terraform
+augroup END
