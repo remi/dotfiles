@@ -28,6 +28,9 @@ alias tmux="TMPDIR=$HOME/.tmux tmux"
 alias t="teamocil"
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
+# cURL
+alias curl-headers="curl -s -D - -o"
+
 # Daemons
 alias redis-daemon="redis-server /usr/local/etc/redis.conf"
 alias elasticsearch-daemon="elasticsearch -d"
