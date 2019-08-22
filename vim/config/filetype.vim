@@ -35,6 +35,8 @@ augroup END
 " -----------------------------------------------------------------
 augroup elixirfiletype
   autocmd BufRead,BufNewFile *.eex setfiletype html
+  autocmd BufRead,BufNewFile mix.lock setfiletype elixir
+  autocmd BufRead,BufNewFile .sobelow-conf setfiletype elixir
 augroup END
 
 " Foreman

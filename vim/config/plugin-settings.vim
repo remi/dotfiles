@@ -157,6 +157,18 @@ let g:terraform_align=1
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>u :UndotreeToggle<CR>
 
+let g:ascii = [
+      \ '     ____  ___  ____ _   __(_)___ ___',
+      \ '    / __ \/ _ \/ __ \ | / / / __ `__ \',
+      \ '   / / / /  __/ /_/ / |/ / / / / / / /',
+      \ '  /_/ /_/\___/\____/|___/_/_/ /_/ /_/',
+      \ '  ',
+      \]
+
+let g:startify_custom_header = g:ascii
+let g:startify_change_to_dir = 0
+let g:startify_enable_unsafe = 1
+
 " emmet settings
 " ----------------------------------------------------------------------------------------------------
 let g:user_emmet_leader_key = ';'

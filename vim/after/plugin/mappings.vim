@@ -22,5 +22,5 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>!d :bdelete!<CR>
 nmap <Leader>d :bdelete<CR>
-nmap <Leader>D :bufdo bdelete!<CR>
+nmap <Leader>D :bufdo bdelete!<CR>:Startify<CR>
 nmap <Leader>w :w!<cr>
