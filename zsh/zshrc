@@ -43,8 +43,6 @@ source $HOME/.zsh/config/aliases.zsh
 progress
 source $HOME/.zsh/config/bindings.zsh
 progress
-source $HOME/.zsh/config/hooks.zsh
-progress
 source $HOME/.zsh/config/syntax-highlighting.zsh
 progress
 source $HOME/.zsh/config/suggestions.zsh
