@@ -1,6 +1,6 @@
 # Local aliases
 # --------------------------------------
-alias ls="lsd -hF --color=always"
+alias ls="exa --long --time-style=long-iso --git --group-directories-first"
 alias ll='ls -la'
 alias l='ls -l'
 alias rm='rm -i'
