@@ -18,6 +18,7 @@ export PATH="$HOME/.zsh/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/Users/remi/Library/Python/2.7/bin"
 
 # Fun
 export DEBUG=true
