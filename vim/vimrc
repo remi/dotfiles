@@ -20,7 +20,6 @@ Plug 'fvictorio/vim-extract-variable'
 Plug 'w0rp/ale'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mbbill/undotree'
-Plug 'mhinz/vim-startify'
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'javascript', 'javascript.jsx', 'eelixir', 'html.handlebars'] }
