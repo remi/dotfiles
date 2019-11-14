@@ -114,7 +114,7 @@ let g:ale_fixers.terraform = g:ale_fixers['*'] + ['terraform']
 " Linters
 let g:ale_linters_explicit = 1
 let g:ale_linters = {}
-let g:ale_linters.elixir = ['credo']
+let g:ale_linters.elixir = ['credo', 'mix', 'elixir-ls']
 let g:ale_linters.javascript = ['eslint']
 let g:ale_linters.php = ['phpcs']
 let g:ale_linters.ruby = ['rubocop']
@@ -133,6 +133,7 @@ let g:ale_open_list = 0
 
 " Tool-specific
 let g:ale_php_phpcs_options = '--warning-severity=0'
+let g:ale_elixir_elixir_ls_release = expand('$HOME').'/Code/elixir-ls/release'
 
 " Mappings
 nmap <Leader>ad :ALEGoToDefinition<CR>
