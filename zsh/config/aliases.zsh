@@ -31,6 +31,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 # cURL
 alias curl-headers="curl -s -D - -o"
 
+# Kubernetes
+alias k="kubectl"
+
 # Daemons
 alias redis-daemon="redis-server /usr/local/etc/redis.conf"
 alias elasticsearch-daemon="elasticsearch -d"
