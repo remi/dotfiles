@@ -10,6 +10,7 @@ alias h="heroku"
 alias ..='cd ..'
 alias ~='cd ~'
 alias pr='open-pr'
+alias tree='exa -T'
 
 # Editor (always forward to Neovim!)
 alias vi='nvim'
