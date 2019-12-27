@@ -99,51 +99,16 @@ let g:easy_align_delimiters = {
 \  }
 \}
 
-" ALE settings
+" coc.vim settings
 " ----------------------------------------------------------------------------------------------------
-" Fixers
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace']}
-let g:ale_fixers.elixir = g:ale_fixers['*'] + ['mix_format']
-let g:ale_fixers.javascript = g:ale_fixers['*'] + ['prettier']
-let g:ale_fixers.typescript = g:ale_fixers['*'] + ['prettier']
-let g:ale_fixers.php = g:ale_fixers['*'] + ['phpcbf']
-let g:ale_fixers.scss = g:ale_fixers['*'] + ['prettier']
-let g:ale_fixers.markdown = g:ale_fixers['*'] + ['prettier']
-let g:ale_fixers.terraform = g:ale_fixers['*'] + ['terraform']
+set nobackup
+set nowritebackup
+set updatetime=300
+set shortmess+=c
 
-" Linters
-let g:ale_linters_explicit = 1
-let g:ale_linters = {}
-let g:ale_linters.elixir = ['credo', 'mix', 'elixir-ls']
-let g:ale_linters.javascript = ['eslint']
-let g:ale_linters.php = ['phpcs']
-let g:ale_linters.ruby = ['rubocop']
-let g:ale_linters.scss = ['stylelint']
-let g:ale_linters.typescript = ['tslint', 'tsserver']
-let g:ale_linters.terraform = ['tflint']
-
-" Global
-let g:ale_echo_delay = 10
-let g:ale_fix_on_save = 1
-let g:ale_lint_delay = 100
-let g:ale_sign_error = '→'
-let g:ale_sign_warning = '→'
-let g:ale_keep_list_window_open = 1
-let g:ale_open_list = 0
-
-" Tool-specific
-let g:ale_php_phpcs_options = '--warning-severity=0'
-let g:ale_elixir_elixir_ls_release = expand('$HOME').'/Code/elixir-ls/release'
-
-" Mappings
-nmap <Leader>ad :ALEGoToDefinition<CR>
-nmap <Leader>ah :ALEHover<CR>
-nmap <Leader>ar :ALEFindReferences<CR>
-
-" Highlights
-highlight clear ALEWarning
-highlight ALEErrorSign ctermfg=1
-highlight ALEWarningSign ctermfg=3
+nmap <Leader>ad <Plug>(coc-definition)
+nmap <Leader>ah <Plug>(coc-type-definition)
+nmap <Leader>ar <Plug>(coc-references)
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------

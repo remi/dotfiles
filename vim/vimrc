@@ -17,8 +17,8 @@ Plug 'ervandew/supertab'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'embear/vim-localvimrc'
 Plug 'fvictorio/vim-extract-variable'
-Plug 'w0rp/ale'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'mbbill/undotree'
 
 " Filetype-specific plugins
