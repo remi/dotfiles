@@ -1,7 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "diagnostic-languageserver.filetypes": {
-    "vim": "vint",
     "elixir": ["mix_credo"],
     "eelixir": ["mix_credo"]
   },
