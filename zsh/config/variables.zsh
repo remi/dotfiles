@@ -20,9 +20,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/Users/remi/Library/Python/2.7/bin"
 
-# Fun
-export DEBUG=true
-
 # Terminal config
 export DISPLAY
 export WORDCHARS='*?_[]~=&;!#$%^(){}'
