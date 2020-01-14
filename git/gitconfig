@@ -1,7 +1,7 @@
 [user]
 	name = Rémi Prévost
 	email = remi@exomel.com
-	signingkey = 558841E3
+	signingkey = 4816EB98558841E3
 [color]
 	diff = auto
 	status = auto
