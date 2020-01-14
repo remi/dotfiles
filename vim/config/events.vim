@@ -2,6 +2,10 @@
 " ----------------------------------------------------------------------------------------------------
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
+" Strip trailing whitespace on save
+" ----------------------------------------------------------------------------------------------------
+autocmd FileType * autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+
 " QuickFix
 " ----------------------------------------------------------------------------------------------------
 autocmd FileType qf setl scrolloff=0 cursorline

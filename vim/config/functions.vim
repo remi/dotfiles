@@ -62,3 +62,12 @@ function! ShowHighlightGroup()
     \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
     \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"
 endfunction
+
+" Strip trailing whitespace
+" ----------------------------------------------------------------------------------------------------
+fun! StripTrailingWhitespace()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
