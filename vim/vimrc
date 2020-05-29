@@ -20,6 +20,7 @@ Plug 'fvictorio/vim-extract-variable'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'mbbill/undotree'
+Plug 'sheerun/vim-polyglot'
 
 " Filetype-specific plugins
 Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'javascript', 'javascript.jsx', 'eelixir', 'html.handlebars'] }
