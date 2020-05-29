@@ -3,41 +3,28 @@
 call plug#begin('~/.vim/plugged')
 
 " Global plugins
-Plug 'remiprev/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
-Plug 'vim-scripts/camelcasemotion'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tmhedberg/matchit'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-abolish'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'ervandew/supertab'
-Plug 'jszakmeister/vim-togglecursor'
 Plug 'embear/vim-localvimrc'
+Plug 'ervandew/supertab'
 Plug 'fvictorio/vim-extract-variable'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'jiangmiao/auto-pairs'
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'junegunn/vim-easy-align'
+Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'mileszs/ack.vim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'remi/vim-colors-solarized'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'sheerun/vim-polyglot'
-
-" Filetype-specific plugins
-Plug 'mattn/emmet-vim', { 'for': ['html', 'eruby', 'ruby', 'scss', 'css', 'yaml', 'haml', 'less', 'javascript', 'javascript.jsx', 'eelixir', 'html.handlebars'] }
-Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
-Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
-Plug 'othree/html5.vim', { 'for': ['html', 'eruby'] }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
-Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars'] }
-Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
-Plug 'tomlion/vim-solidity', { 'for': ['solidity'] }
-Plug 'junegunn/vim-easy-align', { 'for': ['markdown'] }
-Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
-Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'vim-scripts/camelcasemotion'
 
 call plug#end()
 

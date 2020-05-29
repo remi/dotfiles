@@ -15,7 +15,7 @@ let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_show_hidden = 1
 
 let g:ctrlp_custom_ignore = {}
-let g:ctrlp_custom_ignore.dir = '\v(^|\/)(deps|doc|log|vendor|tmp|_build|node_modules|\.git|bower_components|\.bower-cache|dist|\.elixir_ls)$'
+let g:ctrlp_custom_ignore.dir = '\v(^|\/)(deps|doc|log|vendor|tmp|_build|node_modules|\.git|bower_components|\.bower-cache|dist|\.elixir_ls|obj|bin\/Debug)$'
 let g:ctrlp_custom_ignore.file = '\v(^|\/)(\.DS_Store|.*\.js\.map)$'
 
 let g:ctrlp_status_func = {}
@@ -109,6 +109,7 @@ set shortmess+=c
 nmap <Leader>ad <Plug>(coc-definition)
 nmap <Leader>ah <Plug>(coc-type-definition)
 nmap <Leader>ar <Plug>(coc-references)
+nmap <Leader>ai <Plug>(coc-implementation)
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
@@ -119,6 +120,12 @@ xmap <Leader>cc <Plug>Commentary
 " ----------------------------------------------------------------------------------------------------
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" OmniSharp settings
+" ----------------------------------------------------------------------------------------------------
+let g:OmniSharp_server_stdio = 1
+let g:OmniSharp_server_type = 'roslyn'
+let g:OmniSharp_prefer_global_sln = 1
 
 " UndoTree settings
 " ----------------------------------------------------------------------------------------------------
