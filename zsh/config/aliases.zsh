@@ -34,6 +34,8 @@ alias curl-headers="curl -s -D - -o"
 
 # Kubernetes
 alias k="kubectl"
+alias kc="kubectx"
+alias kn="kubens"
 
 # Daemons
 alias redis-daemon="redis-server /usr/local/etc/redis.conf"
