@@ -25,6 +25,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
+Plug 'stefandtw/quickfix-reflector.vim'
 
 call plug#end()
 
