@@ -77,6 +77,9 @@ export PATH="./node_modules/.bin:$PATH"
 progress
 export PATH="./bin:$PATH"
 
+# Startship
+eval "$(starship init zsh)"
+
 # Output startup time and current date
 # --------------------------------------
 echo ""

@@ -1,0 +1,36 @@
+add_newline = false
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
+vicmd_symbol = "[V](bold red)"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = false
+style = "yellow"
+
+[elixir]
+format = '[$symbol$version \(OTP $otp_version\)]($style) '
+style = "purple"
+symbol = "🔮 "
+
+[gcloud]
+disabled = true
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "cyan"
+
+[git_status]
+format = '($staged$modified$untracked($style))'
+untracked = '[$count untracked](bold green) '
+modified = '[$count modified](bold green) '
+staged = '[$count modified](green) '
+
+[nodejs]
+format = "[$symbol$version]($style) "
+
+[package]
+disabled = false
