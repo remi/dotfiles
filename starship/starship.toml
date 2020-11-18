@@ -1,41 +1,53 @@
 add_newline = false
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$elixir\
+$nodejs\
+$cmd_duration\
+$line_break\
+$status\
+$character"""
 
 [character]
-success_symbol = "[\\$](bold green)"
-error_symbol = "[\\$](bold red)"
-vicmd_symbol = "[V](bold red)"
+success_symbol = '[\$](bold green)'
+error_symbol = '[\$](bold red)'
+vicmd_symbol = '[\$](blue)'
 
 [directory]
 truncation_length = 0
-truncation_symbol = " "
+truncation_symbol = ' '
 truncate_to_repo = true
-style = "yellow"
+style = 'yellow'
 
 [cmd_duration]
 min_time = 500
-format = "[ $duration](bold yellow)"
+format = '[ $duration](bold yellow)'
 show_milliseconds = true
 
 [elixir]
 format = '[$symbol$version \(OTP $otp_version\)]($style) '
-style = "purple"
-symbol = " "
+style = 'purple'
+symbol = ' '
 
 [gcloud]
 disabled = true
 
 [git_branch]
-format = "[$symbol$branch]($style) "
-style = "cyan"
+format = '[$symbol$branch]($style) '
+style = 'cyan'
 
 [git_status]
-format = '($staged$modified$untracked($style))'
-untracked = '[$count untracked](bold green) '
-modified = '[$count modified](bold green) '
-staged = '[$count modified](green) '
+format = '$staged$modified$untracked($style)'
+untracked = '([$count untracked ](bold green))'
+modified = '([$count modified ](bold green))'
+staged = '([$count modified ](green))'
 
 [nodejs]
-format = "[$symbol$version]($style) "
+format = '[$symbol$version]($style) '
 
 [package]
 disabled = false
