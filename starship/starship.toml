@@ -11,6 +11,11 @@ truncation_symbol = " "
 truncate_to_repo = true
 style = "yellow"
 
+[cmd_duration]
+min_time = 500
+format = "[ $duration](bold yellow)"
+show_milliseconds = true
+
 [elixir]
 format = '[$symbol$version \(OTP $otp_version\)]($style) '
 style = "purple"
