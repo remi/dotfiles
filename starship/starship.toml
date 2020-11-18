@@ -39,3 +39,7 @@ format = "[$symbol$version]($style) "
 
 [package]
 disabled = false
+
+[status]
+format = '[$symbol $status]($style) '
+disabled = false
