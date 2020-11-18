@@ -6,15 +6,15 @@ error_symbol = "[\\$](bold red)"
 vicmd_symbol = "[V](bold red)"
 
 [directory]
-truncation_length = 8
-truncation_symbol = "…/"
-truncate_to_repo = false
+truncation_length = 0
+truncation_symbol = " "
+truncate_to_repo = true
 style = "yellow"
 
 [elixir]
 format = '[$symbol$version \(OTP $otp_version\)]($style) '
 style = "purple"
-symbol = "🔮 "
+symbol = " "
 
 [gcloud]
 disabled = true
