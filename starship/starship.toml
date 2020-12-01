@@ -37,11 +37,20 @@ symbol = ' '
 disabled = true
 
 [git_branch]
-format = '[$symbol$branch]($style) '
+format = '[$symbol$branch]($style)'
 style = 'cyan'
 
+[git_commit]
+disabled = false
+commit_hash_length = 6
+tag_symbol = " "
+only_detached = false
+tag_disabled = false
+format = '[$tag]($style) '
+style = 'purple'
+
 [git_status]
-format = '$staged$modified$untracked($style)'
+format = '( $staged$modified$untracked)($style)'
 untracked = '([$count untracked ](bold green))'
 modified = '([$count modified ](bold green))'
 staged = '([$count modified ](green))'
