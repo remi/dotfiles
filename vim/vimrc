@@ -32,23 +32,10 @@ call plug#end()
 " Configuration files
 " ----------------------------------------------------------------------------------------------------
 
-" File types
 source $HOME/.vim/config/filetype.vim
-
-" Settings
 source $HOME/.vim/config/global-settings.vim
-
-" Plugin-specific settings
 source $HOME/.vim/config/plugin-settings.vim
-
-" Custom functions
 source $HOME/.vim/config/functions.vim
-
-" Custom commands
 source $HOME/.vim/config/commands.vim
-
-" Custom mappings
 source $HOME/.vim/config/mappings.vim
-
-" Events
 source $HOME/.vim/config/events.vim
