@@ -5,8 +5,6 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$elixir\
-$nodejs\
 $cmd_duration\
 $line_break\
 $status\
