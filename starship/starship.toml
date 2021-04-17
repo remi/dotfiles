@@ -48,11 +48,12 @@ format = '[$tag]($style) '
 style = 'purple'
 
 [git_status]
-format = '( $staged$modified$deleted$untracked)($style)'
+format = '( $staged$modified$renamed$deleted$untracked)($style)'
 untracked = '([$count untracked ](bold green))'
 modified = '([$count modified ](bold green))'
 staged = '([$count modified ](green))'
 deleted = '([$count deleted ](green))'
+renamed = '([$count renamed ](green))'
 
 [nodejs]
 format = '[$symbol$version]($style) '
