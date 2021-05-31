@@ -37,6 +37,7 @@
 	cm = checkout master
 	rh = reset --hard
 	verbs = !git log --pretty=format:'%s' | cut -d \" \" -f 1 | sort | uniq -c | sort -nr
+	sw = switch
 [branch]
 	autosetupmerge = true
 [core]
