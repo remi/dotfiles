@@ -68,8 +68,8 @@
 	reflog = delta
 	show = delta
 [delta]
-	plus-style = "syntax #012800"
-	minus-style = "syntax #340001"
+	plus-style = "syntax #1c3e1b"
+	minus-style = "syntax #4d090a"
 	syntax-theme = OneHalfDark
 	navigate = true
 [interactive]
