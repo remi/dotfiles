@@ -60,10 +60,19 @@
 	rebase = true
 [credential]
 	helper = osxkeychain
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RX
-	show = diff-so-fancy | less --tabs=1,5 -RX
 [commit]
 	gpgsign = true
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = OneHalfDark
+	navigate = true
+[interactive]
+	diffFilter = delta --color-only
 [includeIf "gitdir:~/Code/mirego/"]
 	path = ~/.gitconfig_mirego

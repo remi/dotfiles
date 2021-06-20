@@ -37,6 +37,7 @@ export SAVEHIST=1000000
 
 # Utilities
 export PAGER='less'
+export DELTA_PAGER='less -R'
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
 export BROWSER='open'
