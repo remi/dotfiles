@@ -72,6 +72,7 @@
 	minus-style = "syntax #4d090a"
 	syntax-theme = OneHalfDark
 	navigate = true
+	line-numbers = true
 [interactive]
 	diffFilter = delta --color-only
 [includeIf "gitdir:~/Code/mirego/"]
