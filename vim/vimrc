@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
