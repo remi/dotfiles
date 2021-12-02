@@ -21,6 +21,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 export PATH="$PATH:$HOME/.dotnet"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.radicle/bin"
 
 # Terminal config
 export DISPLAY
