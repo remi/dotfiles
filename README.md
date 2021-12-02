@@ -16,6 +16,6 @@ individual line.
 
 ## License
 
-Teamocil is © 2010-2019 [Rémi Prévost](https://www.exomel.com) and may be freely
+These files are © 2010-2021 [Rémi Prévost](https://exomel.com) and may be freely
 distributed under the [MIT license](https://github.com/remiprev/dotfiles/blob/master/LICENSE.md).
 See the `LICENSE.md` file for more information.
