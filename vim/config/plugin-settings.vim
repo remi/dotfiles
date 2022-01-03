@@ -10,7 +10,7 @@ map <Leader>o :CtrlP %:p:h<CR>
 map <Leader>, :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRU<CR>
 map <Leader>l :CtrlPLine<CR>
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_show_hidden = 1
 
