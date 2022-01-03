@@ -11,8 +11,8 @@ $status\
 $character"""
 
 [character]
-success_symbol = '[\$](bold green)'
-error_symbol = '[\$](bold red)'
+success_symbol = '[\$](fg:bright-green)'
+error_symbol = '[\$](fg:bright-red)'
 vicmd_symbol = '[\$](blue)'
 
 [directory]
@@ -23,7 +23,7 @@ style = 'yellow'
 
 [cmd_duration]
 min_time = 500
-format = '[ $duration](bold yellow)'
+format = '[ $duration](fg:bright-yellow)'
 show_milliseconds = true
 
 [elixir]
@@ -49,11 +49,11 @@ style = 'purple'
 
 [git_status]
 format = '( $staged$modified$renamed$deleted$untracked)($style)'
-untracked = '([$count untracked ](bold green))'
-modified = '([$count modified ](bold green))'
-staged = '([$count modified ](green))'
-deleted = '([$count deleted ](green))'
-renamed = '([$count renamed ](green))'
+untracked = '([$count untracked ](italic fg:bright-green))'
+modified = '([$count modified ](italic fg:bright-green))'
+staged = '([$count modified ](italic green))'
+deleted = '([$count deleted ](italic green))'
+renamed = '([$count renamed ](italic green))'
 
 [nodejs]
 format = '[$symbol$version]($style) '
