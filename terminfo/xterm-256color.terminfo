@@ -1,0 +1,17 @@
+# A xterm-256color based TERMINFO that adds the escape sequences for italic.
+#
+# Install:
+#
+#   tic -o ~/.terminfo xterm-256color.terminfo
+#
+#   Note: by writing to the home folder, we override the default 256color theme.
+#   We could instead save this as another name, but that would report a terminal
+#   that an ssh host does not understand, which causes issues with the delete key.
+#
+# Usage:
+#
+#   export TERM=xterm-256color
+#
+xterm-256color|xterm with 256 colors and italic,
+	sitm=\E[3m, ritm=\E[23m,
+	use=xterm-256color,
