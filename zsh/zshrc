@@ -34,8 +34,6 @@ source $HOME/.zsh/config/options.zsh
 progress
 source $HOME/.zsh/config/completion.zsh
 progress
-source $HOME/.zsh/config/functions.zsh
-progress
 source $HOME/.zsh/config/variables.zsh
 progress
 source $HOME/.zsh/config/aliases.zsh
@@ -61,21 +59,6 @@ zmodload -a zsh/mapfile mapfile
 # --------------------------------------
 progress
 source $HOME/.asdf/asdf.sh
-
-# Final PATH adjustments
-# --------------------------------------
-
-# Make sure our own custom binaries are always picked up first
-progress
-export PATH="$HOME/Dropbox/Bin:$PATH"
-
-# Make sure we can run NPM modules “binaries” from the project directory
-progress
-export PATH="./node_modules/.bin:$PATH"
-
-# Make sure we can run Rails “binaries” from the project directory
-progress
-export PATH="./bin:$PATH"
 
 # Startship
 eval "$(starship init zsh)"
