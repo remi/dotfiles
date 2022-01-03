@@ -1,14 +1,14 @@
 # Boot time helper functions
 # --------------------------------------
-function progress() { echo -n "${XPR_LIGHT_BLUE}••${XPR_NO_COLOR}" }
+function progress() { echo -n "\e[90m••$terminfo[sgr0]" }
 function get_unix_time() { echo $(/usr/local/opt/coreutils/libexec/gnubin/date +%s%3N) }
 function print_startup_time() { print_banner_line "shell startup time" "was $(echo $2 - $1 | bc | tr -d '\n') ms" }
 function print_current_time() { print_banner_line "current time" "is $(date | sed -e "s/\s\s\+/ /g" | sed -e "s/ \{1,\}/ /g")" }
 function print_uptime() { print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]*up \([^,]*\),.*/\1/" | sed -e "s/^ *//" | sed -e "s/ \{1,\}/ /g")" }
 
 function print_banner_line() {
-  echo -n "${XPR_GREEN}• ${XPR_YELLOW}$1${XPR_NO_COLOR} "
-  echo $2 | sed -e "s/\([0-9]\+\)/${XPR_LIGHT_GREEN}\1${XPR_NO_COLOR}/g"
+  echo -n "\e[90m• \e[3m\e[90m$1$terminfo[sgr0] "
+  echo $2
 }
 
 # Start!

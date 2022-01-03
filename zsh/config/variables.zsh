@@ -1,17 +1,3 @@
-# Easy-to-use terminal colours variables
-# --------------------------------------
-autoload colors zsh/terminfo
-if [[ "$terminfo[colors]" -ge 8 ]]; then
-  colors
-fi
-for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE BLACK; do
-  eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-  eval export XPR_$color='$terminfo[bold]$fg[${(L)color}]'
-  eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-  eval export XPR_LIGHT_$color='$fg[${(L)color}]'
-  (( count = $count + 1 ))
-done
-
 # Global variables
 # --------------------------------------
 export PATH="$HOME/.zsh/bin:$PATH"
@@ -56,8 +42,6 @@ export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
 # Prompt
-export PR_NO_COLOR="%{$terminfo[sgr0]%}"
-export XPR_NO_COLOR="$terminfo[sgr0]"
 export PROMPT='$(generate_prompt)'
 export RPROMPT=''
 
