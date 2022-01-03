@@ -1,4 +1,4 @@
 HOME=/Users/remi
-TERM=xterm-color-italic
+TERM=xterm-256color
 USERNAME=remi
 USER=remi

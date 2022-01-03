@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/.radicle/bin"
 # Terminal config
 export DISPLAY
 export WORDCHARS='*?_[]~=&;!#$%^(){}'
-export TERM="xterm-color-italic"
+export TERM="xterm-256color"
 
 # Timezone
 export TZ="America/Montreal"
