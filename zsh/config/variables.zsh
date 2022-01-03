@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/.radicle/bin"
 
 # Terminal config
 export WORDCHARS='*?_[]~=&;!#$%^(){}'
-export TERM="xterm-256color"
+export TERM="tmux-256color"
 
 # Timezone
 export TZ="America/Montreal"

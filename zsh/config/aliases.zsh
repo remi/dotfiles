@@ -11,6 +11,7 @@ alias ..='cd ..'
 alias ~='cd ~'
 alias tree='exa -T'
 alias cat='bat'
+alias ssh="TERM=${TERM/tmux/xterm} ssh"
 
 # Editor (always forward to Neovim!)
 alias vi='nvim'
