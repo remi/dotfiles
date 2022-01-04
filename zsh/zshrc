@@ -60,7 +60,7 @@ zmodload -a zsh/mapfile mapfile
 progress
 source $HOME/.asdf/asdf.sh
 
-# Startship
+# Starship
 eval "$(starship init zsh)"
 
 # Output startup time and current date
