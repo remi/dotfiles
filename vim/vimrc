@@ -3,6 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Global plugins
+" ----------------------------------------------------------------------------------------------------
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'embear/vim-localvimrc'
 Plug 'ervandew/supertab'
