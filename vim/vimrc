@@ -28,6 +28,7 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'github/copilot.vim'
+Plug 'earthly/earthly.vim', { 'branch': 'main' }
 
 call plug#end()
 
