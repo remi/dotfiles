@@ -29,6 +29,7 @@ Plug 'vim-scripts/camelcasemotion'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'github/copilot.vim'
 Plug 'earthly/earthly.vim', { 'branch': 'main' }
+Plug 'mhinz/vim-signify'
 
 call plug#end()
 
