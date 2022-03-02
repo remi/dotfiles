@@ -7,7 +7,7 @@ function print_current_time() { print_banner_line "current time" "is $(date | se
 function print_uptime() { print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]*up \([^,]*\),.*/\1/" | sed -e "s/^ *//" | sed -e "s/ \{1,\}/ /g")" }
 
 function print_banner_line() {
-  echo -n "\e[90m• $1$fg[blue] "
+  echo -n "\e[90m•$fg[cyan] $1$fg[blue] "
   echo $2 | sed -e "s/\([0-9]\)/$terminfo[bold]\1$terminfo[sgr0]$fg[blue]/g"
 }
 
