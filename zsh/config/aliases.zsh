@@ -39,7 +39,4 @@ alias kc="kubectx"
 alias kn="kubens"
 
 # Daemons
-alias redis-daemon="redis-server /usr/local/etc/redis.conf"
-alias elasticsearch-daemon="elasticsearch -d"
-alias pg-daemon-10="$HOME/.asdf/installs/postgres/10.10/bin/pg_ctl -D $HOME/.asdf/installs/postgres/10.10/data -l /usr/local/var/postgres-10.10/server.log start"
-alias pg-daemon-11="$HOME/.asdf/installs/postgres/11.5/bin/pg_ctl -D $HOME/.asdf/installs/postgres/11.5/data -l /usr/local/var/postgres-11.5/server.log start"
+alias pg-daemon-12="$HOME/.asdf/installs/postgres/12.10/bin/pg_ctl -D $HOME/.asdf/installs/postgres/12.10/data -l $HOME/.asdf/installs/postgres/12.10/server.log start"
