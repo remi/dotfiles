@@ -2,10 +2,6 @@
 # --------------------------------------
 function progress() { echo -n "\e[90m••$terminfo[sgr0]" }
 function get_unix_time() { echo $(/opt/homebrew/opt/coreutils/libexec/gnubin/date +%s%3N) }
-function print_hostname() { print_banner_line "hostname" $(hostname) }
-function print_startup_time() { print_banner_line "shell startup time" "was $(echo $2 - $1 | bc | tr -d '\n') ms" }
-function print_current_time() { print_banner_line "current time" "is $(date | sed -e "s/\s\s\+/ /g" | sed -e "s/ \{1,\}/ /g")" }
-function print_uptime() { print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]*up \([^,]*\),.*/\1/" | sed -e "s/^ *//" | sed -e "s/ \{1,\}/ /g")" }
 
 function print_banner_line() {
   echo -n "\e[90m•$fg[cyan] $1$fg[blue] "
@@ -14,8 +10,8 @@ function print_banner_line() {
 
 # Start!
 # --------------------------------------
-local start_time=$(get_unix_time)
 progress
+local start_time=$(get_unix_time)
 
 # zplug
 # --------------------------------------
@@ -25,7 +21,9 @@ source $ZPLUG_HOME/init.zsh
 
 progress
 zplug "zsh-users/zsh-autosuggestions"
+progress
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+progress
 zplug load
 
 # Configuration
@@ -62,18 +60,21 @@ progress
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Starship
+progress
 eval "$(starship init zsh)"
 
 # Output startup time and current date
 # --------------------------------------
+progress
 echo ""
 local end_time=$(get_unix_time)
-print_hostname
-print_startup_time $start_time $end_time
-print_uptime
-print_current_time
+print_banner_line "hostname is" $(hostname)
+print_banner_line "ip address is" $(ifconfig | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1' | sed '1 d' | head -n1)
+print_banner_line "shell startup time" "was $(echo $end_time - $start_time | bc | tr -d '\n') ms"
+print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]*up \([^,]*\),.*/\1/" | sed -e "s/^ *//" | sed -e "s/ \{1,\}/ /g")"
+print_banner_line "current time" "is $(date | sed -e "s/\s\s\+/ /g" | sed -e "s/ \{1,\}/ /g")"
 echo ""
 
 # Cleanup functions
 # --------------------------------------
-unfunction get_unix_time print_startup_time print_uptime print_current_time print_banner_line progress
+unfunction get_unix_time print_banner_line progress
