@@ -14,7 +14,7 @@ export PATH="./bin:$PATH"
 
 # Terminal config
 export WORDCHARS='*?_[]~=&;!#$%^(){}'
-export TERM="tmux-256color"
+export TERM="xterm-256color"
 
 # Timezone
 export TZ="America/Montreal"
