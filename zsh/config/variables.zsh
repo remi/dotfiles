@@ -12,6 +12,9 @@ export PATH="$HOME/Dropbox/Bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="./bin:$PATH"
 
+# User config directory
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Terminal config
 export WORDCHARS='*?_[]~=&;!#$%^(){}'
 export TERM="xterm-256color"
