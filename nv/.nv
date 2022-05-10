@@ -1,4 +1,5 @@
 HOME=/Users/remi
-TERM=tmux-256color
+TERM=xterm-256color
 USERNAME=remi
 USER=remi
+ERL_AFLAGS=-kernel shell_history enabled
