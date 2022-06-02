@@ -35,7 +35,7 @@ symbol = ' '
 disabled = true
 
 [git_branch]
-format = '[$symbol$branch]($style)'
+format = '[$symbol$branch]($style) '
 style = 'cyan'
 
 [git_commit]
