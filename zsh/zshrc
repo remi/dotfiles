@@ -1,80 +1,36 @@
-# Boot time helper functions
-# --------------------------------------
-function progress() { echo -n "\e[90m••$terminfo[sgr0]" }
-function get_unix_time() { echo $(/opt/homebrew/opt/coreutils/libexec/gnubin/date +%s%3N) }
-
-function print_banner_line() {
-  echo -n "\e[90m•$fg[cyan] $1$fg[blue] "
-  echo $2 | sed -e "s/\([0-9]\)/$terminfo[bold]\1$terminfo[sgr0]$fg[blue]/g"
-}
-
-# Start!
-# --------------------------------------
-progress
-local start_time=$(get_unix_time)
-
 # zplug
 # --------------------------------------
-progress
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-progress
 zplug "zsh-users/zsh-autosuggestions"
-progress
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-progress
 zplug load
 
 # Configuration
 # --------------------------------------
-progress
 source $HOME/.zsh/config/options.zsh
-progress
 source $HOME/.zsh/config/completion.zsh
-progress
 source $HOME/.zsh/config/variables.zsh
-progress
 source $HOME/.zsh/config/aliases.zsh
-progress
 source $HOME/.zsh/config/bindings.zsh
-progress
 source $HOME/.zsh/config/syntax-highlighting.zsh
-progress
 source $HOME/.zsh/config/suggestions.zsh
 
 # zsh modules autoloading
 # --------------------------------------
-progress
 zmodload -a zsh/stat stat
-progress
 zmodload -a zsh/zpty zpty
-progress
 zmodload -a zsh/zprof zprof
-progress
 zmodload -a zsh/mapfile mapfile
 
 # ASDF version manager
 # --------------------------------------
-progress
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Starship
-progress
 eval "$(starship init zsh)"
 
-# Output startup time and current date
+# Output cool information
 # --------------------------------------
-progress
-echo ""
-local end_time=$(get_unix_time)
-print_banner_line "hostname is" $(hostname)
-print_banner_line "ip address is" $(ifconfig | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1' | sed '1 d' | head -n1)
-print_banner_line "shell startup time" "was $(echo $end_time - $start_time | bc | tr -d '\n') ms"
-print_banner_line "machine uptime" "is $(uptime | sed -e "s/^[^u]*up \([^,]*\),.*/\1/" | sed -e "s/^ *//" | sed -e "s/ \{1,\}/ /g")"
-print_banner_line "current time" "is $(date | sed -e "s/\s\s\+/ /g" | sed -e "s/ \{1,\}/ /g")"
-echo ""
-
-# Cleanup functions
-# --------------------------------------
-unfunction get_unix_time print_banner_line progress
+neofetch
