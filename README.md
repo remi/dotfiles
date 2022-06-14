@@ -16,7 +16,7 @@ individual line.
 
 ## Screenshot
 
-<img width="983" alt="dotfiles in action" src="https://user-images.githubusercontent.com/11348/148234390-e5c700ff-213d-4ee3-b274-796c24eff6bd.png">
+![dotfiles in action](https://user-images.githubusercontent.com/11348/173559485-ff4c3409-1f27-43d1-a5f1-d9852e4bcd4a.jpg)
 
 ## License
 
