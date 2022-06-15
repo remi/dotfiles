@@ -4,7 +4,7 @@
 
 This repository contains all my “dotfiles” — the configuration files used by many command-line tools I use every day:
 
-* [vim](https://www.vim.org)
+* [vim](https://www.vim.org) ([neovim](https://neovim.io) actually)
 * [zsh](https://www.zsh.org)
 * [git](https://git-scm.com)
 * [tmux](https://tmux.github.io)
