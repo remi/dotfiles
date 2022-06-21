@@ -12,6 +12,7 @@ This repository contains all my “dotfiles” — the configuration files used 
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [bat](https://github.com/sharkdp/bat)
+* [GeekTool](https://www.tynsoe.org/geektool/)
 * etc.
 
 ## Usage
