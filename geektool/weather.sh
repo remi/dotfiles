@@ -5,8 +5,12 @@
 # $ bash weather.sh
 #
 # Output:
-# ✿  15°C (Montreal, Canada)
+# ✿  Quebec · +15°C (+15°C) ///
+# ✿  Montreal · +18°C (+18°C) mmm
 
 echo -n "✿  "
-curl -s "https://wttr.in/?0?q?T" | awk '/°(C|F)/ {printf $(NF-1) $(NF) " ("a")"} /,/ {a=$0}'
+curl -s "https://wttr.in/Quebec?format=%l+·+%t+(%f)+%x"
+echo ""
+echo -n "✿  "
+curl -s "https://wttr.in/Montreal?format=%l+·+%t+(%f)+%x"
 echo ""
