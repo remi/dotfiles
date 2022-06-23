@@ -9,7 +9,7 @@
 # ✿  Montreal · +18°C (+18°C) mmm
 
 echo -n "✿  "
-curl -s "https://wttr.in/Quebec?format=%l+·+%t+(%f)+%x"
+curl -s "https://wttr.in/Quebec%20City?format=%l+·+%t+(%f)+%x"
 echo ""
 echo -n "✿  "
 curl -s "https://wttr.in/Montreal?format=%l+·+%t+(%f)+%x"
