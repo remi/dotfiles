@@ -2,6 +2,8 @@
 " ----------------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+let g:coc_global_extensions = ['coc-prettier', 'coc-eslint', 'coc-tsserver', 'coc-json', 'coc-elixir', 'coc-git', 'coc-css', 'coc-ember', 'coc-html']
+
 " Global plugins
 " ----------------------------------------------------------------------------------------------------
 Plug 'ctrlpvim/ctrlp.vim'

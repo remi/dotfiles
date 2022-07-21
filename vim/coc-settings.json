@@ -1,11 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "diagnostic-languageserver.filetypes": {
-    "elixir": ["mix_credo"],
-    "eelixir": ["mix_credo"]
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "elixir": "mix_format",
-    "eelixir": "mix_format"
-  }
+  "elixirLS.dialyzerEnabled": false,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "eslint.autoFixOnSave": true
 }
