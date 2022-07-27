@@ -2,5 +2,7 @@
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "elixirLS.dialyzerEnabled": false,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "stylelintplus.autoFixOnFormat": true,
+  "stylelintplus.autoFixOnSave": true
 }

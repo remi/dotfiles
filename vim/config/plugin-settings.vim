@@ -119,6 +119,7 @@ nmap <Leader>ah <Plug>(coc-type-definition)
 nmap <Leader>ar <Plug>(coc-references)
 nmap <Leader>ai <Plug>(coc-implementation)
 nmap <silent> <leader>h :call CocActionAsync('doHover')<cr>
+nmap <silent> <leader>H :call CocActionAsync('doHover', 'preview')<cr>
 
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
