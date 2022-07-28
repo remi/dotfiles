@@ -3,6 +3,8 @@
   "elixirLS.dialyzerEnabled": false,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "eslint.autoFixOnSave": true,
+  "prettier.enable": true,
+  "prettier.disableLanguages": ["html.handlebars", "html"],
   "stylelintplus.autoFixOnFormat": true,
   "stylelintplus.autoFixOnSave": true
 }
