@@ -43,6 +43,7 @@ npm-debug.log
 .env
 .env.dev.*
 .env.*.local
+.env.local
 
 # ASDF
 .tool-versions
