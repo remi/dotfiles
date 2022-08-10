@@ -4,7 +4,7 @@
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "eslint.autoFixOnSave": true,
   "prettier.enable": true,
-  "prettier.disableLanguages": ["html.handlebars", "html"],
+  "prettier.disableLanguages": ["html.handlebars", "html", "yaml"],
   "stylelintplus.autoFixOnFormat": true,
   "stylelintplus.autoFixOnSave": true
 }
