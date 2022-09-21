@@ -1,7 +1,7 @@
 [user]
 	name = Rémi Prévost
 	email = remi@exomel.com
-	signingkey = 4816EB98558841E3
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv4Xq2pXro/PWbr9oJeIl/VWOMLNJBpiWHRvlJWkMfCP9OO1i1Dz7bDd9a5r6HdG9aIoY5DMxo3FdkOEws2uDCN3tybsL6evH5f/j7OEQ8FzsXHVtFB4HI8K88ioXkF8timQB8lgDb24028EnTEAdck8vF1Hyp+U/5U4g+9ISTDy7aAgyyhzFdYecGpwxFuBfytVc2ebfxkHPu3tCG5m6KpTOl+1W2k/o7uKfo1Ab9FlROqmW/AgQZ3V+SYn6iysGHcIr3RPyPOYW+1Gug0w+WO6PMMKRuqEKpxYyP09rYr2APunskzmqaB/Y+m/zrgGWlrueuAiN4ahR6ZBD1MV/l
 [color]
 	diff = auto
 	status = auto
@@ -58,8 +58,10 @@
 	date = local
 [pull]
 	rebase = true
-[credential]
-	helper = osxkeychain
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
 	gpgsign = true
 [pager]
