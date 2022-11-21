@@ -32,10 +32,6 @@ tags-ja
 # Ack
 .agignore
 
-# Node
-node_modules
-npm-debug.log
-
 # Elixir
 .elixir_ls
 
