@@ -28,6 +28,12 @@ zmodload -a zsh/mapfile mapfile
 # --------------------------------------
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+# HSTR configuration
+# --------------------------------------
+setopt histignorespace
+export HSTR_CONFIG=hicolor
+bindkey -s "\C-r" "\C-u hstr -- \C-m"
+
 # Starship
 eval "$(starship init zsh)"
 
