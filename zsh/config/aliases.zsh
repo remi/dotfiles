@@ -12,6 +12,7 @@ alias ~='cd ~'
 alias tree='exa -T'
 alias cat='bat'
 alias ssh="TERM=${TERM/tmux/xterm} ssh"
+alias gh="op plugin run -- gh"
 
 # Editor (always forward to Neovim!)
 alias vi='nvim'
