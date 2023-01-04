@@ -62,5 +62,5 @@ format = '[$symbol$version]($style) '
 disabled = false
 
 [status]
-format = '[$symbol $status]($style) '
+format = '[$status]($style) '
 disabled = false
