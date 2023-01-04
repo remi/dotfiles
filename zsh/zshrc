@@ -31,7 +31,7 @@ zmodload -a zsh/mapfile mapfile
 # HSTR configuration
 # --------------------------------------
 setopt histignorespace
-export HSTR_CONFIG=hicolor
+export HSTR_CONFIG=hicolor,raw-history-view,hide-help,prompt-bottom
 bindkey -s "\C-r" "\C-u hstr -- \C-m"
 
 # Starship
