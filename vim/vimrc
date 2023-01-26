@@ -20,14 +20,12 @@ let g:coc_global_extensions = [
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'earthly/earthly.vim', { 'branch': 'main' }
 Plug 'embear/vim-localvimrc'
 Plug 'ervandew/supertab'
 Plug 'fvictorio/vim-extract-variable'
 Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jszakmeister/vim-togglecursor'
-Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
