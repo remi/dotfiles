@@ -2,25 +2,40 @@
 " ----------------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-let g:coc_global_extensions = ['coc-prettier', 'coc-eslint', 'coc-stylelintplus', 'coc-tsserver', 'coc-json', 'coc-elixir', 'coc-git', 'coc-css', 'coc-ember', 'coc-solargraph']
+let g:coc_global_extensions = [
+\  'coc-css',
+\  'coc-elixir',
+\  'coc-ember',
+\  'coc-eslint',
+\  'coc-git',
+\  'coc-json',
+\  'coc-prettier',
+\  'coc-solargraph',
+\  'coc-stylelintplus',
+\  'coc-tsserver',
+\]
 
 " Global plugins
 " ----------------------------------------------------------------------------------------------------
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'earthly/earthly.vim', { 'branch': 'main' }
 Plug 'embear/vim-localvimrc'
 Plug 'ervandew/supertab'
 Plug 'fvictorio/vim-extract-variable'
+Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'remi/vim-colors-solarized'
-Plug 'OmniSharp/omnisharp-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'tmhedberg/matchit'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -28,10 +43,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
-Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'github/copilot.vim'
-Plug 'earthly/earthly.vim', { 'branch': 'main' }
-Plug 'mhinz/vim-signify'
 
 call plug#end()
 

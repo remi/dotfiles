@@ -66,8 +66,8 @@ endfunction
 " Strip trailing whitespace
 " ----------------------------------------------------------------------------------------------------
 fun! StripTrailingWhitespace()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
 endfun
