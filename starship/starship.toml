@@ -13,7 +13,7 @@ $character"""
 [character]
 success_symbol = '[\$](fg:bright-green)'
 error_symbol = '[\$](fg:bright-red)'
-vicmd_symbol = '[\$](blue)'
+vicmd_symbol = '[](blue)'
 
 [directory]
 truncation_length = 0
