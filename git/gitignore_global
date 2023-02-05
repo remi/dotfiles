@@ -41,10 +41,6 @@ tags-ja
 .env.*.local
 .env.local
 
-# ASDF
-.tool-versions
-.tool-versions-e
-
 # Local
 /local-remi
 
