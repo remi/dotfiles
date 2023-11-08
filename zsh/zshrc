@@ -5,6 +5,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "marlonrichert/zsh-autocomplete"
 zplug load
 
 # Configuration
@@ -29,10 +30,11 @@ zmodload -a zsh/mapfile mapfile
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # HSTR configuration
+# (Disabled for now, zsh-autocomplete do that for us)
 # --------------------------------------
-setopt histignorespace
-export HSTR_CONFIG=hicolor,raw-history-view,hide-help,prompt-bottom
-bindkey -s "\C-r" "\C-u hstr -- \C-m"
+# setopt histignorespace
+# export HSTR_CONFIG=hicolor,raw-history-view,hide-help,prompt-bottom
+# bindkey -s "\C-r" "\C-u hstr -- \C-m"
 
 # Starship
 eval "$(starship init zsh)"
