@@ -28,12 +28,14 @@ zmodload -a zsh/mapfile mapfile
 # --------------------------------------
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-# HSTR configuration
-# (Disabled for now, zsh-autocomplete do that for us)
+# McFly configuration
 # --------------------------------------
 setopt histignorespace
-export HSTR_CONFIG=hicolor,raw-history-view,hide-help,prompt-bottom
-bindkey -s "\C-r" "\C-u hstr -- \C-m"
+export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_DISABLE_MENU=TRUE
+export MCFLY_PROMPT="→"
+export MCFLY_RESULTS=50
+eval "$(mcfly init zsh)"
 
 # Starship
 eval "$(starship init zsh)"
