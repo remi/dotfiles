@@ -17,27 +17,17 @@ let g:coc_global_extensions = [
 
 " Global plugins
 " ----------------------------------------------------------------------------------------------------
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'embear/vim-localvimrc'
-Plug 'ervandew/supertab'
 Plug 'fvictorio/vim-extract-variable'
 Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jszakmeister/vim-togglecursor'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'remi/vim-colors-solarized'
 Plug 'sheerun/vim-polyglot'
-Plug 'stefandtw/quickfix-reflector.vim'
-Plug 'tmhedberg/matchit'
-Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
