@@ -76,3 +76,12 @@ nmap <silent> <leader>H :call CocActionAsync('doHover', 'preview')<cr>
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine
 xmap <Leader>cc <Plug>Commentary
+
+" Copilot settings
+" ----------------------------------------------------------------------------------------------------
+vmap <leader>ic <cmd>CopilotChat<cr>
+vmap <leader>id <cmd>CopilotChatDocs<cr>
+vmap <leader>ie <cmd>CopilotChatExplain<cr>
+vmap <leader>ie <cmd>CopilotChatFix<cr>
+vmap <leader>io <cmd>CopilotChatOptimize<cr>
+vmap <leader>it <cmd>CopilotChatTests<cr>

@@ -32,6 +32,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'stevearc/oil.nvim'
+Plug 'zbirenbaum/copilot.lua'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 
 call plug#end()
 
