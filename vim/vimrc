@@ -31,6 +31,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
+Plug 'stevearc/oil.nvim'
 
 call plug#end()
 
