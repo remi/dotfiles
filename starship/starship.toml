@@ -22,7 +22,7 @@ truncate_to_repo = true
 style = 'yellow'
 
 [cmd_duration]
-min_time = 500
+min_time = 0
 format = '[ $duration](fg:bright-yellow)'
 show_milliseconds = true
 
