@@ -79,7 +79,8 @@ xmap <Leader>cc <Plug>Commentary
 
 " Copilot settings
 " ----------------------------------------------------------------------------------------------------
-vmap <leader>ic <cmd>CopilotChat<cr>
+nmap <leader>ic <cmd>CopilotChatToggle<cr>
+vmap <leader>ic <cmd>CopilotChatToggle<cr>
 vmap <leader>id <cmd>CopilotChatDocs<cr>
 vmap <leader>ie <cmd>CopilotChatExplain<cr>
 vmap <leader>ie <cmd>CopilotChatFix<cr>
