@@ -3,22 +3,26 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 lua <<EOF
-  require("oil").setup({
-    buf_options = {
-      buflisted = true,
-      bufhidden = "hide",
-    },
-    columns = {
-      "icon",
-    },
-  })
-EOF
+require("oil").setup({
+  buf_options = {
+    buflisted = true,
+    bufhidden = "hide",
+  },
+  columns = {
+    "icon",
+  },
+})
 
-lua << EOF
-require("CopilotChat").setup {
+require("CopilotChat").setup({
   window = {
     layout = "vertical",
     title = "Copilot Chat",
   },
-}
+})
+
+require('telescope').setup({
+  defaults = {
+    prompt_prefix = '→ ',
+  },
+})
 EOF
