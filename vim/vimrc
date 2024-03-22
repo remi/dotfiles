@@ -17,7 +17,8 @@ let g:coc_global_extensions = [
 
 " Global plugins
 " ----------------------------------------------------------------------------------------------------
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'fvictorio/vim-extract-variable'
 Plug 'github/copilot.vim'
 Plug 'jiangmiao/auto-pairs'
