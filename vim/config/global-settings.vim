@@ -12,6 +12,7 @@ endif
 
 syntax on
 colorscheme solarized
+set notermguicolors
 
 " Window title
 " ----------------------------------------------------------------------------------------------------
