@@ -17,13 +17,13 @@ vicmd_symbol = '[](blue)'
 
 [directory]
 truncation_length = 0
-truncation_symbol = ' '
+truncation_symbol = '  '
 truncate_to_repo = true
 style = 'yellow'
 
 [cmd_duration]
 min_time = 0
-format = '[ $duration](fg:bright-yellow)'
+format = '[  $duration](fg:bright-yellow)'
 show_milliseconds = true
 
 [elixir]
@@ -35,7 +35,7 @@ symbol = ' '
 disabled = true
 
 [git_branch]
-format = '[$symbol$branch]($style) '
+format = '[ $symbol$branch]($style) '
 style = 'cyan'
 
 [git_commit]
@@ -48,7 +48,7 @@ format = '[$tag]($style) '
 style = 'purple'
 
 [git_status]
-format = '( $staged$modified$renamed$deleted$untracked)($style)'
+format = '(  $staged$modified$renamed$deleted$untracked)($style)'
 untracked = '([$count untracked ](italic fg:bright-green))'
 modified = '([$count modified ](italic fg:bright-green))'
 staged = '([$count modified ](italic green))'
