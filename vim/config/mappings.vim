@@ -112,10 +112,9 @@ nmap Q :echo "BOOYA! Ex mode is disabled."<cr>
 " ----------------------------------------------------------------------------------------------------
 map <Leader>a :call ShowHighlightGroup()<CR>
 
-" Disable arrow keys
+" Disable a few arrow keys
 " ----------------------------------------------------------------------------------------------------
 inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 nnoremap <Left> <NOP>
