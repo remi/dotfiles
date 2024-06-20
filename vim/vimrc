@@ -21,6 +21,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'fvictorio/vim-extract-variable'
 Plug 'github/copilot.vim'
+Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'mhinz/vim-signify'
@@ -33,7 +34,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'stevearc/oil.nvim'
-Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 

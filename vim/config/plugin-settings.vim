@@ -54,10 +54,13 @@ xmap <Leader>cc <Plug>Commentary
 
 " Copilot settings
 " ----------------------------------------------------------------------------------------------------
+let g:copilot_no_tab_map = v:true
+imap <silent><script><expr> <S-Tab> copilot#Accept("\<cr>")
+
+" Copilot Chat settings
+" ----------------------------------------------------------------------------------------------------
 nmap <leader>ic <cmd>CopilotChatToggle<cr>
 vmap <leader>ic <cmd>CopilotChatToggle<cr>
 vmap <leader>id <cmd>CopilotChatDocs<cr>
 vmap <leader>ie <cmd>CopilotChatExplain<cr>
 vmap <leader>ie <cmd>CopilotChatFix<cr>
-vmap <leader>io <cmd>CopilotChatOptimize<cr>
-vmap <leader>it <cmd>CopilotChatTests<cr>
