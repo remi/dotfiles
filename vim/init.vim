@@ -15,8 +15,12 @@ require("oil").setup({
 
 require("CopilotChat").setup({
   window = {
-    layout = "vertical",
     title = "Copilot Chat",
+    layout = 'float',
+    relative = 'cursor',
+    width = 1,
+    height = 0.4,
+    row = 1
   },
 })
 

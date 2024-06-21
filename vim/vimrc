@@ -18,7 +18,7 @@ let g:coc_global_extensions = [
 " Global plugins
 " ----------------------------------------------------------------------------------------------------
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'fvictorio/vim-extract-variable'
 Plug 'github/copilot.vim'
 Plug 'ervandew/supertab'
@@ -34,7 +34,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'stevearc/oil.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 
 call plug#end()
