@@ -49,8 +49,8 @@ style = 'purple'
 
 [git_status]
 format = '(  $staged$modified$renamed$deleted$untracked)($style)'
-untracked = '([$count untracked ](italic fg:bright-green))'
-modified = '([$count modified ](italic fg:bright-green))'
+untracked = '([$count untracked ](italic fg:bright-black))'
+modified = '([$count modified ](italic fg:bright-black))'
 staged = '([$count modified ](italic green))'
 deleted = '([$count deleted ](italic green))'
 renamed = '([$count renamed ](italic green))'
