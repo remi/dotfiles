@@ -5,8 +5,8 @@ local config = {}
 config.font = wezterm.font 'VictorMono Nerd Font'
 config.font_size = 17.0
 config.color_scheme = 'Twilight (dark) (terminal.sexy)'
--- config.window_background_opacity = 0.9
--- config.macos_window_background_blur = 20
+config.window_background_opacity = 0.9
+config.macos_window_background_blur = 20
 
 -- Tabs
 config.enable_tab_bar = false
