@@ -11,7 +11,7 @@ $status\
 $character"""
 
 [character]
-success_symbol = '[\$](fg:bright-green)'
+success_symbol = '[\$](fg:white)'
 error_symbol = '[\$](fg:bright-red)'
 vicmd_symbol = '[](blue)'
 
