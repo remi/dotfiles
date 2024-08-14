@@ -1,7 +1,7 @@
 " Easy new lines
 " ----------------------------------------------------------------------------------------------------
-noremap <silent> ø mo<Esc>o<Esc>k`o
-noremap <silent> Ø mo<Esc>O<Esc>j`o
+noremap <silent> <M-o> mo<Esc>o<Esc>k`o
+noremap <silent> <M-S-o> mo<Esc>O<Esc>j`o
 noremap K <Esc>i<CR><Esc><Esc>
 
 " Always go to the mark’s line and column
