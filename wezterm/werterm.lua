@@ -1,15 +1,24 @@
 local wezterm = require 'wezterm'
 local config = {}
 
--- Appearance
+-- Font
 config.font = wezterm.font 'VictorMono Nerd Font'
 config.font_size = 17.0
+
+-- Colors
 config.color_scheme = 'Twilight (dark) (terminal.sexy)'
+config.colors = { background = '#0a0a0a', cursor_bg = '#aaa' }
+
+-- Window
+config.window_padding = { left = 0, right = 0, top = 40, bottom = 0 }
 config.window_background_opacity = 0.9
-config.macos_window_background_blur = 20
+config.macos_window_background_blur = 40
+config.use_resize_increments = true
+
+-- Cursor
+config.animation_fps = 1
 config.cursor_thickness = '10px'
 config.default_cursor_style = 'BlinkingBlock'
-config.animation_fps = 1
 config.cursor_blink_ease_in = 'Constant'
 config.cursor_blink_ease_out = 'Constant'
 
