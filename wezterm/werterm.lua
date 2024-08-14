@@ -1,5 +1,7 @@
 local wezterm = require 'wezterm'
-local config = {}
+local config = wezterm.config_builder()
+
+config.window_close_confirmation = 'NeverPrompt'
 
 -- Font
 config.font = wezterm.font 'VictorMono Nerd Font'
@@ -32,6 +34,7 @@ config.keys = {
   { key = 'q', mods = 'CMD', action = wezterm.action.QuitApplication },
   { key = 'v', mods = 'CMD', action = wezterm.action.PasteFrom 'Clipboard' },
   { key = 'c', mods = 'CMD', action = wezterm.action.CopyTo 'Clipboard' },
+  { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
 }
 
 return config
