@@ -4,8 +4,9 @@ local config = wezterm.config_builder()
 config.window_close_confirmation = 'NeverPrompt'
 
 -- Font
-config.font = wezterm.font 'VictorMono Nerd Font'
-config.font_size = 17.0
+config.font = wezterm.font('VictorMono Nerd Font Mono', { weight = 'Medium' })
+config.font_size = 16.0
+config.cell_width = 1.05
 
 -- Colors
 config.color_scheme = 'Twilight (dark) (terminal.sexy)'
