@@ -13,8 +13,6 @@ config.colors = { background = '#0a0a0a', cursor_bg = '#aaa' }
 
 -- Window
 config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 40
 config.use_resize_increments = true
 
 -- Cursor
