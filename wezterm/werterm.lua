@@ -16,13 +16,6 @@ config.colors = { background = '#0a0a0a', cursor_bg = '#aaa' }
 config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
 config.use_resize_increments = true
 
--- Cursor
-config.animation_fps = 1
-config.cursor_thickness = '5px'
-config.default_cursor_style = 'SteadyBar'
-config.cursor_blink_ease_in = 'Constant'
-config.cursor_blink_ease_out = 'Constant'
-
 -- Tabs
 config.enable_tab_bar = false
 
