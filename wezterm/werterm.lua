@@ -9,8 +9,31 @@ config.font_size = 16.0
 config.cell_width = 1.05
 
 -- Colors
-config.color_scheme = 'Twilight (dark) (terminal.sexy)'
-config.colors = { background = '#0a0a0a', cursor_bg = '#aaa' }
+config.colors = {
+  background = '#0a0a0a',
+  foreground = '#a7a7a7',
+  cursor_bg = '#aaa',
+  ansi = {
+    '#1e1e1e', -- black
+    '#cf6a4c', -- red
+    '#8f9d6a', -- green
+    '#f9ee98', -- yellow
+    '#7587a6', -- blue
+    '#9b859d', -- magenta
+    '#afc4db', -- cyan
+    '#a7a7a7', -- white
+  },
+  brights = {
+    '#5f5a60', -- black
+    '#cf6a4c', -- red
+    '#8f9d6a', -- green
+    '#f9ee98', -- yellow
+    '#7587a6', -- blue
+    '#9b859d', -- magenta
+    '#afc4db', -- cyan
+    '#ffffff', -- white
+  },
+}
 
 -- Window
 config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
@@ -27,6 +50,7 @@ config.keys = {
   { key = 'v', mods = 'CMD', action = wezterm.action.PasteFrom 'Clipboard' },
   { key = 'c', mods = 'CMD', action = wezterm.action.CopyTo 'Clipboard' },
   { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
+  { key = ' ', mods = 'CTRL', action = wezterm.action.QuickSelect },
 }
 
 return config
