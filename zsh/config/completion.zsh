@@ -22,5 +22,3 @@ zmodload -i zsh/complist
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 compctl -g "~/.teamocil/*(:t:r)" teamocil
-
-source <(kubectl completion zsh)
