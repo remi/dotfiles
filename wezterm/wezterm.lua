@@ -38,6 +38,8 @@ config.colors = {
 -- Window
 config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
 config.use_resize_increments = true
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 30
 
 -- Tabs
 config.enable_tab_bar = false
