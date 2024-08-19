@@ -4,9 +4,9 @@ let g:plug_window = 'topleft new'
 
 " telescope.nvim settings
 " ----------------------------------------------------------------------------------------------------
-nnoremap <leader>t <cmd>Telescope find_files<cr>
-nnoremap <leader>T <cmd>Telescope find_files<cr>
-nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<cr>
+nnoremap <leader>t <cmd>lua require('telescope.builtin').find_files({ follow = true })<cr>
+nnoremap <leader>T <cmd>lua require('telescope.builtin').find_files({ follow = true, hidden = true })<cr>
+nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h'), follow = true })<cr>
 nnoremap <leader>, <cmd>lua require('telescope.builtin').buffers({ ignore_current_buffer = true })<cr>
 nnoremap <leader>m <cmd>Telescope oldfiles<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
