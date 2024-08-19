@@ -74,7 +74,7 @@
 [delta]
 	plus-style = "syntax #1c3e1b"
 	minus-style = "syntax #4d090a"
-	syntax-theme = OneHalfDark
+	syntax-theme = base16
 	navigate = true
 	line-numbers = true
 [interactive]
