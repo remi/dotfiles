@@ -1,8 +1,6 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.window_close_confirmation = 'NeverPrompt'
-
 -- Font
 config.font = wezterm.font('VictorMono Nerd Font Mono', { weight = 'Medium' })
 config.font_size = 16.0
@@ -40,6 +38,8 @@ config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
 config.use_resize_increments = true
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 30
+config.window_decorations = "TITLE | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
+config.window_close_confirmation = 'NeverPrompt'
 
 -- Tabs
 config.enable_tab_bar = false
