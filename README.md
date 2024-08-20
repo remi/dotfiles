@@ -4,16 +4,18 @@
 
 This repository contains all my “dotfiles” — the configuration files used by many command-line tools I use every day:
 
-* [vim](https://www.vim.org) ([neovim](https://neovim.io) actually)
-* [zsh](https://www.zsh.org)
-* [git](https://git-scm.com)
-* [tmux](https://tmux.github.io)
-* [starship](https://starship.rs/)
-* [neofetch](https://github.com/dylanaraps/neofetch)
-* [ripgrep](https://github.com/BurntSushi/ripgrep)
-* [bat](https://github.com/sharkdp/bat)
-* [GeekTool](https://www.tynsoe.org/geektool/)
-* etc.
+- [bat](https://github.com/sharkdp/bat)
+- [delta](https://dandavison.github.io/delta/)
+- [GeekTool](https://www.tynsoe.org/geektool/)
+- [git](https://git-scm.com)
+- [neofetch](https://github.com/dylanaraps/neofetch)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [starship](https://starship.rs/)
+- [tmux](https://tmux.github.io)
+- [vim](https://www.vim.org) ([neovim](https://neovim.io) actually)
+- [zsh](https://www.zsh.org)
+- [WezTerm](https://wezfurlong.org/wezterm/)
+- etc.
 
 ## Usage
 
