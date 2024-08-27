@@ -53,6 +53,7 @@ config.keys = {
   { key = 'c', mods = 'CMD', action = wezterm.action.CopyTo 'Clipboard' },
   { key = 'L', mods = 'CTRL', action = wezterm.action.ShowDebugOverlay },
   { key = ' ', mods = 'CTRL', action = wezterm.action.QuickSelect },
+  { key = 'h', mods = 'CMD', action = wezterm.action.HideApplication },
 }
 
 return config
