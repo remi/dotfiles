@@ -36,7 +36,7 @@ config.colors = {
 -- Window
 config.window_padding = { left = 20, right = 20, top = 40, bottom = 0 }
 config.use_resize_increments = true
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 30
 config.window_decorations = "TITLE | RESIZE | MACOS_FORCE_ENABLE_SHADOW"
 config.window_close_confirmation = 'NeverPrompt'
