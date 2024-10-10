@@ -95,6 +95,7 @@ require("catppuccin").setup({
       Todo = { fg = colors.surface0, bg = colors.none },
       DiffAdd = { fg = colors.green, bg = colors.none },
       DiffDelete = { fg = colors.red, bg = colors.none },
+      DiffChange = { fg = colors.blue, bg = colors.none },
       WinSeparator = { fg = colors.overlay1, bg = colors.none },
       GitSignsCurrentLineBlame = { fg = colors.overlay0, bg = colors.none },
       CopilotSuggestion = { fg = colors.overlay1, bg = colors.none, style = { "italic" } },
