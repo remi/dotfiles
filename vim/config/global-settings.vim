@@ -11,7 +11,7 @@ endif
 " ----------------------------------------------------------------------------------------------------
 
 syntax on
-colorscheme solarized
+colorscheme catppuccin
 set notermguicolors
 
 " Window title
@@ -46,7 +46,7 @@ set showmode " Display the current mode
 set ignorecase " Ignore case when searching
 set smartcase " Smart-case search mode
 set incsearch " Start to search as soon as we type
-set mouse= " Never use the mouse
+set mouse=n " Only allow mouse in normal mode
 set number " Show line numbers
 set ts=2 " A tab = 4 spaces
 set sw=2 " Shift width

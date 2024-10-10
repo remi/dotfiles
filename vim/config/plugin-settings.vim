@@ -54,16 +54,3 @@ nmap <silent> <leader>H :call CocActionAsync('doHover', 'preview')<cr>
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine
 xmap <Leader>cc <Plug>Commentary
-
-" Copilot settings
-" ----------------------------------------------------------------------------------------------------
-imap <silent><script><expr> <Right> copilot#Accept("\<cr>")
-let g:copilot_no_tab_map = v:true
-
-" Copilot Chat settings
-" ----------------------------------------------------------------------------------------------------
-nmap <leader>ic <cmd>CopilotChatToggle<cr>
-vmap <leader>ic <cmd>CopilotChatToggle<cr>
-vmap <leader>id <cmd>CopilotChatDocs<cr>
-vmap <leader>ie <cmd>CopilotChatExplain<cr>
-vmap <leader>ie <cmd>CopilotChatFix<cr>
