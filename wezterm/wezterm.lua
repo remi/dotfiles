@@ -8,29 +8,13 @@ config.cell_width = 1.05
 
 -- Colors
 config.colors = {
-  background = '#0a0a0a',
-  foreground = '#a7a7a7',
-  cursor_bg = '#aaa',
-  ansi = {
-    '#1e1e1e', -- black
-    '#cf6a4c', -- red
-    '#8f9d6a', -- green
-    '#f9ee98', -- yellow
-    '#7587a6', -- blue
-    '#9b859d', -- magenta
-    '#afc4db', -- cyan
-    '#a7a7a7', -- white
-  },
-  brights = {
-    '#5f5a60', -- black
-    '#cf6a4c', -- red
-    '#8f9d6a', -- green
-    '#f9ee98', -- yellow
-    '#7587a6', -- blue
-    '#9b859d', -- magenta
-    '#afc4db', -- cyan
-    '#ffffff', -- white
-  },
+  background = '#11111b',
+  cursor_bg = '#f5e0dc',
+  cursor_border = '#f5e0dc',
+  cursor_fg = '#11111b',
+  foreground = '#cdd6f4',
+  ansi = { '#45475a', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#f5c2e7', '#94e2d5', '#bac2de', },
+  brights = { '#585b70', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#f5c2e7', '#94e2d5', '#ffffff', }
 }
 
 -- Window
