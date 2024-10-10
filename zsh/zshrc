@@ -9,6 +9,7 @@ zplug load
 
 # Configuration
 # --------------------------------------
+source $HOME/.zsh-private
 source $HOME/.zsh/config/options.zsh
 source $HOME/.zsh/config/completion.zsh
 source $HOME/.zsh/config/variables.zsh
