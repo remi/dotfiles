@@ -52,7 +52,7 @@ require('avante_lib').load()
 require('avante').setup({
   provider = "claude",
   auto_suggestions_provider = "copilot",
-  hints = { enabled = true },
+  hints = { enabled = false },
   windows = {
     width = 40,
     sidebar_header = {
