@@ -86,6 +86,7 @@ require("catppuccin").setup({
 
   custom_highlights = function(colors)
     return {
+      Visual = { fg = colors.none, bg = colors.surface1 },
       User1 = { fg = "#ffffff", bg = colors.overlay2 },
       User3 = { fg = colors.surface1, bg = colors.none },
       User4 = { fg = colors.white, bg = colors.none },
