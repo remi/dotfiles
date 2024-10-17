@@ -38,6 +38,8 @@ vmap <BS> dk$
 nmap <C-c> <C-W>c<CR>
 nmap <C-K> <C-W><C-K>
 nmap <C-J> <C-W><C-J>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
 
 " Because 'CTRL-T' is easier to type on a canadian keyboard
 " ----------------------------------------------------------------------------------------------------
