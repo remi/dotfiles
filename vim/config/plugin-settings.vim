@@ -54,3 +54,7 @@ nmap <silent> <leader>H :call CocActionAsync('doHover', 'preview')<cr>
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine
 xmap <Leader>cc <Plug>Commentary
+
+" nvim-treesitter settings
+" ----------------------------------------------------------------------------------------------------
+nmap <Leader>l :NvimTreeToggle<cr>

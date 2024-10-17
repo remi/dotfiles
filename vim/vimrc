@@ -41,6 +41,7 @@ Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 
 call plug#end()
 
