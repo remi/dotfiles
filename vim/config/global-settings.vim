@@ -1,6 +1,5 @@
 " Set local directory based on Neovim presence
 " ----------------------------------------------------------------------------------------------------
-
 if has('nvim')
   let s:vimlocal=$HOME.'/.nvim-local'
 else
@@ -9,10 +8,7 @@ endif
 
 " Activate syntax highlighting
 " ----------------------------------------------------------------------------------------------------
-
 syntax on
-colorscheme catppuccin
-set notermguicolors
 
 " Window title
 " ----------------------------------------------------------------------------------------------------
