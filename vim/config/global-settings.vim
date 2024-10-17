@@ -54,7 +54,7 @@ set sts=2 " Short tab stop
 set et " Use spaces instead of tabs
 set whichwrap=h,l,~,[,],<,> " Which caracters to wrap
 set scrolloff=4 " Scroll offset
-set laststatus=2 " Always show the status line
+set laststatus=3 " Show the status line for the last window only
 set noautoread " Do not reload the file if it changes
 set title " Display filename in window title
 set showmatch " Show matching parentheses
