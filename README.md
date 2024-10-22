@@ -8,7 +8,7 @@ This repository contains all my “dotfiles” — the configuration files used 
 - [delta](https://dandavison.github.io/delta/)
 - [GeekTool](https://www.tynsoe.org/geektool/)
 - [git](https://git-scm.com)
-- [neofetch](https://github.com/dylanaraps/neofetch)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [starship](https://starship.rs/)
 - [tmux](https://tmux.github.io)
