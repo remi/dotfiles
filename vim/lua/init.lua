@@ -1,3 +1,6 @@
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
 vim.opt.showcmd = true
 vim.opt.showmode = true
 vim.opt.ignorecase = true
@@ -69,9 +72,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
-vim.g.mapleader = ","
-vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
