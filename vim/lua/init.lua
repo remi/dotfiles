@@ -166,7 +166,11 @@ require('render-markdown').setup({
 })
 
 require('avante').setup({
-  provider = "claude",
+  provider = "openai",
+  openai = {
+    endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
+    model = "claude-3-5-sonnet-latest",
+  },
   auto_suggestions_provider = "copilot",
   hints = { enabled = false },
   windows = {
