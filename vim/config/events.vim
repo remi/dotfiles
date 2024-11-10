@@ -4,6 +4,13 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 
 " Strip trailing whitespace on save
 " ----------------------------------------------------------------------------------------------------
+fun! StripTrailingWhitespace()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
 autocmd FileType * autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
 
 " QuickFix

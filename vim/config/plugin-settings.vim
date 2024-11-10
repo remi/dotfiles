@@ -36,20 +36,6 @@ autocmd BufLeave \[YankRing\] set scrolloff=4 nocursorline
 " ----------------------------------------------------------------------------------------------------
 let g:ackprg = 'rg --no-heading --color=never --column --line-number'
 
-" coc.vim settings
-" ----------------------------------------------------------------------------------------------------
-set nobackup
-set nowritebackup
-set updatetime=100
-set shortmess+=c
-
-nmap <Leader>ad <Plug>(coc-definition)
-nmap <Leader>ah <Plug>(coc-type-definition)
-nmap <Leader>ar <Plug>(coc-references)
-nmap <Leader>ai <Plug>(coc-implementation)
-nmap <silent> <leader>h :call CocActionAsync('doHover')<cr>
-nmap <silent> <leader>H :call CocActionAsync('doHover', 'preview')<cr>
-
 " vim-commentary settings
 " ----------------------------------------------------------------------------------------------------
 nmap <Leader>cc <Plug>CommentaryLine

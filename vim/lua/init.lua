@@ -1,3 +1,58 @@
+vim.opt.showcmd = true
+vim.opt.showmode = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
+vim.opt.mouse = 'n'
+vim.opt.number = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.whichwrap:append('h,l,~,[,],<,>')
+vim.opt.scrolloff = 4
+vim.opt.laststatus = 3
+vim.opt.autoread = false
+vim.opt.title = true
+vim.opt.showmatch = true
+vim.opt.autoindent = false
+vim.opt.smartindent = false
+vim.opt.cindent = true
+vim.opt.showtabline = 0
+vim.opt.hlsearch = true
+vim.opt.visualbell = false
+vim.opt.modelines = 10
+vim.opt.eol = false
+vim.opt.wildmenu = true
+vim.opt.wildmode = 'full'
+vim.opt.switchbuf = 'useopen'
+vim.opt.backspace = 'indent,eol,start'
+vim.opt.tabpagemax = 50
+vim.opt.iskeyword:append('-,?,!')
+vim.opt.hidden = true
+vim.opt.gdefault = true
+vim.opt.shell = 'zsh'
+vim.opt.clipboard = 'unnamed'
+vim.opt.startofline = false
+vim.opt.lazyredraw = true
+vim.opt.inccommand = 'nosplit'
+
+vim.opt.wrap = false
+vim.opt.sidescroll = 4
+vim.opt.sidescrolloff = 14
+vim.opt.listchars = 'precedes:←,extends:→,nbsp:◊,trail:⠿,eol: ,tab:●·'
+vim.opt.list = true
+
+vim.filetype.add({
+  pattern = {
+    ['Procfile'] = 'yaml',
+    ['.env'] = 'sh',
+    ['.env.*'] = 'sh',
+    ['%.jsonschema$'] = 'json',
+    ['%.plist$'] = 'xml',
+  },
+})
+
 require("oil").setup({
   buf_options = {
     buflisted = true,
@@ -37,7 +92,8 @@ require('copilot').setup({
 })
 
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "markdown", "markdown_inline", "query" },
+  ensure_installed = { "markdown", "markdown_inline", "query", "elixir", "typescript", "ruby" },
+  auto_install = true,
   highlight = {
     enable = true,
   }
