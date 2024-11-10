@@ -53,6 +53,68 @@ vim.filetype.add({
   },
 })
 
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ","
+vim.g.maplocalleader = "\\"
+
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = {
+    'catppuccin/nvim',
+    {
+      'nvim-telescope/telescope.nvim',
+      dependencies = {
+        'nvim-lua/plenary.nvim',
+      },
+    },
+    'fvictorio/vim-extract-variable',
+    'ervandew/supertab',
+    'jiangmiao/auto-pairs',
+    'jszakmeister/vim-togglecursor',
+    'mileszs/ack.vim',
+    'tpope/vim-commentary',
+    'tpope/vim-surround',
+    'vim-scripts/YankRing.vim',
+    'vim-scripts/camelcasemotion',
+    'stevearc/oil.nvim',
+    'lewis6991/gitsigns.nvim',
+    {
+      "yetone/avante.nvim",
+      event = "VeryLazy",
+      lazy = false,
+      version = false,
+      build = "make",
+      dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+        "stevearc/dressing.nvim",
+        "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
+        "zbirenbaum/copilot.lua",
+      },
+    },
+    'MeanderingProgrammer/render-markdown.nvim',
+    'nvim-tree/nvim-web-devicons',
+    'nvim-tree/nvim-tree.lua',
+  },
+  checker = { enabled = true },
+})
+
 require("oil").setup({
   buf_options = {
     buflisted = true,
@@ -102,8 +164,6 @@ require('nvim-treesitter.configs').setup({
 require('render-markdown').setup({
   file_types = { 'markdown', 'Avante' }
 })
-
-require('avante_lib').load()
 
 require('avante').setup({
   provider = "claude",
@@ -162,9 +222,6 @@ require("catppuccin").setup({
 })
 
 vim.cmd.colorscheme "catppuccin"
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
   on_attach = function(bufnr)

@@ -1,36 +1,4 @@
-" vim-plugged plugins
-" ----------------------------------------------------------------------------------------------------
-call plug#begin('~/.vim/plugged')
-
-" Global plugins
-" ----------------------------------------------------------------------------------------------------
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'fvictorio/vim-extract-variable'
-Plug 'ervandew/supertab'
-Plug 'jiangmiao/auto-pairs'
-Plug 'jszakmeister/vim-togglecursor'
-Plug 'mileszs/ack.vim'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'vim-scripts/camelcasemotion'
-Plug 'stevearc/oil.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'stevearc/dressing.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'zbirenbaum/copilot.lua'
-Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'MeanderingProgrammer/render-markdown.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
-
-call plug#end()
-
-" Configuration files
+" Legacy Vimscript files
 " ----------------------------------------------------------------------------------------------------
 source $HOME/.vim/config/global-settings.vim
 source $HOME/.vim/config/plugin-settings.vim
