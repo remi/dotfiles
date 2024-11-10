@@ -1,6 +1,8 @@
+-- Leader keys
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
+-- Global options
 vim.opt.showcmd = true
 vim.opt.showmode = true
 vim.opt.ignorecase = true
@@ -39,13 +41,13 @@ vim.opt.clipboard = 'unnamed'
 vim.opt.startofline = false
 vim.opt.lazyredraw = true
 vim.opt.inccommand = 'nosplit'
-
 vim.opt.wrap = false
 vim.opt.sidescroll = 4
 vim.opt.sidescrolloff = 14
 vim.opt.listchars = 'precedes:←,extends:→,nbsp:◊,trail:⠿,eol: ,tab:●·'
 vim.opt.list = true
 
+-- Custom filetypes
 vim.filetype.add({
   pattern = {
     ['Procfile'] = 'yaml',
@@ -54,6 +56,159 @@ vim.filetype.add({
     ['%.jsonschema$'] = 'json',
     ['%.plist$'] = 'xml',
   },
+})
+
+local opts = { noremap = true, silent = true }
+
+-- Easy new lines
+vim.keymap.set('n', '<M-o>', 'mo<Esc>o<Esc>k`o', opts)
+vim.keymap.set('n', '<M-S-o>', 'mo<Esc>O<Esc>j`o', opts)
+vim.keymap.set('n', 'K', '<Esc>i<CR><Esc><Esc>', opts)
+
+-- Mark navigation
+vim.keymap.set('n', "'", '`', opts)
+vim.keymap.set('v', "'", '`', opts)
+vim.keymap.set('', "g'", 'g`', opts)
+vim.keymap.set('v', "g'", 'g`', opts)
+vim.keymap.set('n', 'â', '^a', opts)
+vim.keymap.set('n', 'î', '^i', opts)
+vim.keymap.set('n', 'ô', '^o', opts)
+
+-- Text objects for forward slash
+vim.keymap.set('o', 'i/', ':normal T/vt/<CR>', opts)
+vim.keymap.set('v', 'i/', 't/oT/', opts)
+vim.keymap.set('o', 'a/', ':normal F/vf/<CR>', opts)
+vim.keymap.set('v', 'a/', 'f/oF/', opts)
+
+-- Text objects for vertical bar
+vim.keymap.set('o', 'i|', ':normal T|vt|<CR>', opts)
+vim.keymap.set('v', 'i|', 't|oT|', opts)
+vim.keymap.set('o', 'a|', ':normal F|vf|<CR>', opts)
+vim.keymap.set('v', 'a|', 'f|oF|', opts)
+
+-- Remap Enter and Backspace in visual mode
+vim.keymap.set('v', '<CR>', '<NOP>', opts)
+vim.keymap.set('v', '<BS>', 'dk$', opts)
+
+-- Split navigation
+vim.keymap.set('n', '<C-c>', '<C-W>c<CR>', opts)
+vim.keymap.set('n', '<C-K>', '<C-W><C-K>', opts)
+vim.keymap.set('n', '<C-J>', '<C-W><C-J>', opts)
+vim.keymap.set('n', '<C-H>', '<C-W><C-H>', opts)
+vim.keymap.set('n', '<C-L>', '<C-W><C-L>', opts)
+
+-- CTRL-T for tags (Canadian keyboard optimization)
+vim.keymap.set('n', '<C-T>', '<C-]>', { noremap = true })
+
+-- Line moving
+vim.keymap.set('n', '<M-j>', 'ddp', opts)
+vim.keymap.set('n', '<M-k>', 'ddkkp', opts)
+vim.keymap.set('v', '<M-j>', 'djPV`]', opts)
+vim.keymap.set('v', '<M-k>', 'dkPV`]', opts)
+
+-- Buffer navigation
+vim.keymap.set('n', '>', ':bnext<CR>', opts)
+vim.keymap.set('n', '<', ':bprevious<CR>', opts)
+
+-- Insert current date
+vim.keymap.set('i', '<M-d>', '<C-R>=strftime("%Y%m%d")<CR>', opts)
+vim.keymap.set('i', '<M-D>', '<C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>', opts)
+
+-- Duplicate line
+vim.keymap.set('n', '<M-d>', "m'yyP`'k", opts)
+vim.keymap.set('v', '<M-d>', "m'y'>p`'", opts)
+
+-- Select text characters in current line
+vim.keymap.set('n', '<M-v>', '^v$h', opts)
+
+-- Indentation in visual mode
+vim.keymap.set('v', '<', '<gv', opts)
+vim.keymap.set('v', '>', '>gv', opts)
+vim.keymap.set('v', '<Tab>', '>gv', opts)
+vim.keymap.set('v', '<S-Tab>', '<gv', opts)
+vim.keymap.set('n', '<Tab>', 'mzV>`zl', opts)
+vim.keymap.set('n', '<S-Tab>', 'mzV<`zh', opts)
+
+-- Clear search highlighting
+vim.keymap.set('n', '<Space>', ':silent noh<Bar>echo<CR>', opts)
+
+-- Change working directory to current file
+vim.keymap.set('n', 'èè', ':lcd %:p:h<CR>', opts)
+
+-- Alt-4 for end of line (except last character)
+vim.keymap.set('v', '<M-4>', '$h', opts)
+
+-- Disable ex mode
+vim.keymap.set('n', 'Q', ':echo "BOOYA! Ex mode is disabled."<CR>', opts)
+
+-- Disable arrow keys
+local arrows = { '<Left>', '<Up>', '<Down>', '<Right>' }
+for _, key in ipairs(arrows) do
+  vim.keymap.set('i', key, '<NOP>', opts)
+  vim.keymap.set('n', key, '<NOP>', opts)
+end
+
+-- CamelCaseMotion mappings
+local camel_maps = { 'w', 'b', 'e' }
+for _, key in ipairs(camel_maps) do
+  vim.keymap.set('', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
+  vim.keymap.set('o', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
+end
+
+-- Unmap for CamelCase
+vim.keymap.del('s', 'w')
+vim.keymap.del('s', 'b')
+vim.keymap.del('s', 'e')
+
+-- CamelCase text objects
+local camel_objects = { 'iw', 'ib', 'ie' }
+for _, motion in ipairs(camel_objects) do
+  vim.keymap.set('o', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
+  vim.keymap.set('x', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
+end
+
+-- Leader mappings (after CamelCaseMotion)
+vim.keymap.set('n', '<Leader>!d', ':bdelete!<CR>', opts)
+vim.keymap.set('n', '<Leader>d', ':bdelete<CR>', opts)
+vim.keymap.set('n', '<Leader>D', ':bufdo bdelete!<CR>', opts)
+vim.keymap.set('n', '<Leader>w', ':w!<CR>', opts)
+
+-- Restore last cursor position
+vim.api.nvim_create_autocmd('BufReadPost', {
+  pattern = '*',
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local lcount = vim.api.nvim_buf_line_count(0)
+    if mark[1] > 0 and mark[1] <= lcount then
+      pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    end
+  end,
+})
+
+-- Strip trailing whitespace on save
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*',
+  callback = function()
+    local cursor_pos = vim.api.nvim_win_get_cursor(0)
+    vim.cmd([[%s/\s\+$//e]])
+    vim.api.nvim_win_set_cursor(0, cursor_pos)
+  end
+})
+
+-- QuickFix
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function()
+    vim.opt_local.scrolloff = 0
+    vim.opt_local.cursorline = true
+    vim.keymap.set('n', '<CR>', '<CR>', { buffer = true })
+  end,
+})
+
+-- Git
+vim.api.nvim_create_autocmd('BufReadPost', {
+  pattern = 'COMMIT_EDITMSG',
+  command = 'normal! gg'
 })
 
 -- Bootstrap lazy.nvim
@@ -194,6 +349,20 @@ require('gitsigns').setup({
   },
 })
 
+require("nvim-tree").setup({
+  on_attach = function(bufnr)
+    local api = require("nvim-tree.api")
+    api.config.mappings.default_on_attach(bufnr)
+    vim.keymap.set('n', '<Right>', api.tree.change_root_to_node, { desc = "nvim-tree: Right", buffer = bufnr, noremap = true, silent = true, nowait = true })
+    vim.keymap.set('n', '<Up>', api.tree.change_root_to_parent, { desc = "nvim-tree: Up", buffer = bufnr, noremap = true, silent = true, nowait = true })
+  end,
+  sync_root_with_cwd = true,
+  filters = {
+    git_ignored = false,
+    dotfiles = false,
+  },
+})
+
 require("catppuccin").setup({
   flavour = "mocha",
   transparent_background = true,
@@ -226,17 +395,3 @@ require("catppuccin").setup({
 })
 
 vim.cmd.colorscheme "catppuccin"
-
-require("nvim-tree").setup({
-  on_attach = function(bufnr)
-    local api = require("nvim-tree.api")
-    api.config.mappings.default_on_attach(bufnr)
-    vim.keymap.set('n', '<Right>', api.tree.change_root_to_node, { desc = "nvim-tree: Right", buffer = bufnr, noremap = true, silent = true, nowait = true })
-    vim.keymap.set('n', '<Up>', api.tree.change_root_to_parent, { desc = "nvim-tree: Up", buffer = bufnr, noremap = true, silent = true, nowait = true })
-  end,
-  sync_root_with_cwd = true,
-  filters = {
-    git_ignored = false,
-    dotfiles = false,
-  },
-})
