@@ -1,3 +1,6 @@
+-- Locale
+vim.env.LC_ALL = "fr_CA.UTF-8"
+
 -- Leader keys
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
@@ -46,6 +49,34 @@ vim.opt.sidescroll = 4
 vim.opt.sidescrolloff = 14
 vim.opt.listchars = 'precedes:←,extends:→,nbsp:◊,trail:⠿,eol: ,tab:●·'
 vim.opt.list = true
+vim.opt.titlestring = vim.fn.hostname()
+vim.opt.title = true
+
+vim.opt.backup = true
+vim.opt.swapfile = true
+
+local vimlocal = vim.fn.expand('$HOME') .. '/.nvim-local'
+
+vim.opt.shadafile = vimlocal .. '/info'
+vim.opt.shada = "'50,<1000,s100,h"
+
+vim.opt.backupdir = vimlocal .. '/backup'
+vim.opt.directory = vimlocal .. '/swap'
+vim.opt.undofile = true
+vim.opt.undodir = vimlocal .. '/undo'
+
+local function ensure_dir(dir)
+  if vim.fn.isdirectory(dir) == 0 then
+    vim.fn.mkdir(dir, "p")
+  end
+end
+
+ensure_dir(vim.opt.backupdir:get()[1])
+ensure_dir(vim.opt.directory:get()[1])
+ensure_dir(vim.opt.undodir:get()[1])
+
+-- Custom match
+vim.fn.matchadd('Todo', [[\(\t\|\s\)\+$]])
 
 -- Custom filetypes
 vim.filetype.add({
@@ -173,6 +204,13 @@ vim.keymap.set('n', '<Leader>d', ':bdelete<CR>', opts)
 vim.keymap.set('n', '<Leader>D', ':bufdo bdelete!<CR>', opts)
 vim.keymap.set('n', '<Leader>w', ':w!<CR>', opts)
 
+-- vim-commentary
+vim.keymap.set('n', '<Leader>cc', '<Plug>CommentaryLine')
+vim.keymap.set('x', '<Leader>cc', '<Plug>Commentary')
+
+-- nvim-treesitter
+vim.keymap.set('n', '<Leader>l', ':NvimTreeToggle<CR>', { silent = true })
+
 -- Restore last cursor position
 vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = '*',
@@ -211,6 +249,11 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   command = 'normal! gg'
 })
 
+-- Ack.vim → Ag.vim
+vim.api.nvim_create_user_command('Ag', function(opts)
+  vim.cmd('Ack ' .. opts.args)
+end, { nargs = '*', complete = 'file' })
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -245,7 +288,15 @@ require("lazy").setup({
     'mileszs/ack.vim',
     'tpope/vim-commentary',
     'tpope/vim-surround',
-    'vim-scripts/YankRing.vim',
+    {
+      "gbprod/yanky.nvim",
+      opts = {
+        highlight = {
+          on_put = false,
+          on_yank = false,
+        },
+      },
+    },
     'vim-scripts/camelcasemotion',
     'stevearc/oil.nvim',
     'lewis6991/gitsigns.nvim',
@@ -266,8 +317,7 @@ require("lazy").setup({
     'MeanderingProgrammer/render-markdown.nvim',
     'nvim-tree/nvim-web-devicons',
     'nvim-tree/nvim-tree.lua',
-  },
-  checker = { enabled = true },
+  }
 })
 
 require("oil").setup({
@@ -294,6 +344,17 @@ require('telescope').setup({
     },
   },
 })
+
+local telescope_builtin = require('telescope.builtin')
+local telescope = require("telescope")
+telescope.load_extension("yank_history")
+vim.keymap.set('n', '<leader>t', telescope_builtin.find_files)
+vim.keymap.set('n', '<leader>T', function() telescope_builtin.find_files({ hidden = true }) end)
+vim.keymap.set('n', '<leader>o', function() telescope_builtin.find_files({ cwd = vim.fn.expand('%:p:h') }) end)
+vim.keymap.set('n', '<leader>,', telescope_builtin.buffers)
+vim.keymap.set('n', '<leader>m', telescope_builtin.oldfiles)
+vim.keymap.set('n', '<leader>g', telescope_builtin.live_grep)
+vim.keymap.set('n', '<leader>y', function() telescope.extensions.yank_history.yank_history() end)
 
 require('copilot').setup({
   suggestion = {
