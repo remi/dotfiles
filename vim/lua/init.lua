@@ -179,38 +179,6 @@ for _, key in ipairs(arrows) do
   vim.keymap.set('n', key, '<NOP>', opts)
 end
 
--- CamelCaseMotion mappings
-local camel_maps = { 'w', 'b', 'e' }
-for _, key in ipairs(camel_maps) do
-  vim.keymap.set('', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
-  vim.keymap.set('o', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
-end
-
--- Unmap for CamelCase
-vim.keymap.del('s', 'w')
-vim.keymap.del('s', 'b')
-vim.keymap.del('s', 'e')
-
--- CamelCase text objects
-local camel_objects = { 'iw', 'ib', 'ie' }
-for _, motion in ipairs(camel_objects) do
-  vim.keymap.set('o', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
-  vim.keymap.set('x', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
-end
-
--- Leader mappings (after CamelCaseMotion)
-vim.keymap.set('n', '<Leader>!d', ':bdelete!<CR>', opts)
-vim.keymap.set('n', '<Leader>d', ':bdelete<CR>', opts)
-vim.keymap.set('n', '<Leader>D', ':bufdo bdelete!<CR>', opts)
-vim.keymap.set('n', '<Leader>w', ':w!<CR>', opts)
-
--- vim-commentary
-vim.keymap.set('n', '<Leader>cc', '<Plug>CommentaryLine')
-vim.keymap.set('x', '<Leader>cc', '<Plug>Commentary')
-
--- nvim-treesitter
-vim.keymap.set('n', '<Leader>l', ':NvimTreeToggle<CR>', { silent = true })
-
 -- Restore last cursor position
 vim.api.nvim_create_autocmd('BufReadPost', {
   pattern = '*',
@@ -249,11 +217,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   command = 'normal! gg'
 })
 
--- Ack.vim → Ag.vim
-vim.api.nvim_create_user_command('Ag', function(opts)
-  vim.cmd('Ack ' .. opts.args)
-end, { nargs = '*', complete = 'file' })
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -274,20 +237,97 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    'catppuccin/nvim',
+    'fvictorio/vim-extract-variable',
+    'ervandew/supertab',
+    'jiangmiao/auto-pairs',
+    'jszakmeister/vim-togglecursor',
+    'tpope/vim-surround',
+    {
+      'catppuccin/nvim',
+      config = function()
+        require('catppuccin').setup({
+          flavour = "mocha",
+          transparent_background = true,
+          color_overrides = {
+            mocha = {
+              overlay0 = "#333333",
+            },
+          },
+          custom_highlights = function(colors)
+            return {
+              Visual = { fg = colors.none, bg = colors.surface1 },
+              User1 = { fg = "#ffffff", bg = colors.overlay2 },
+              User3 = { fg = colors.surface1, bg = colors.none },
+              User4 = { fg = colors.white, bg = colors.none },
+              User5 = { fg = colors.blue, bg = colors.none },
+              User6 = { fg = colors.red, bg = colors.none },
+              User7 = { fg = colors.peach, bg = colors.none },
+              Todo = { fg = colors.surface0, bg = colors.none },
+              DiffAdd = { fg = colors.green, bg = colors.none },
+              DiffDelete = { fg = colors.red, bg = colors.none },
+              DiffChange = { fg = colors.blue, bg = colors.none },
+              WinSeparator = { fg = colors.overlay1, bg = colors.none },
+              GitSignsCurrentLineBlame = { fg = colors.surface1, bg = colors.none },
+              CopilotSuggestion = { fg = colors.overlay1, bg = colors.none, style = { "italic" } },
+              Comment = { fg = colors.overlay2, bg = colors.none, style = { "italic" } },
+            }
+          end
+        })
+
+        vim.cmd.colorscheme "catppuccin"
+      end
+    },
     {
       'nvim-telescope/telescope.nvim',
       dependencies = {
         'nvim-lua/plenary.nvim',
       },
+      opts = {
+        defaults = {
+          prompt_prefix = '→ ',
+        },
+        pickers = {
+          find_files = {
+            follow = true,
+          },
+          buffers = {
+            sort_lastused = true,
+            ignore_current_buffer = true,
+          },
+        },
+      },
+      init = function ()
+        local telescope_builtin = require('telescope.builtin')
+        local telescope = require("telescope")
+
+        telescope.load_extension("yank_history")
+
+        vim.keymap.set('n', '<leader>t', telescope_builtin.find_files)
+        vim.keymap.set('n', '<leader>T', function() telescope_builtin.find_files({ hidden = true }) end)
+        vim.keymap.set('n', '<leader>o', function() telescope_builtin.find_files({ cwd = vim.fn.expand('%:p:h') }) end)
+        vim.keymap.set('n', '<leader>,', telescope_builtin.buffers)
+        vim.keymap.set('n', '<leader>m', telescope_builtin.oldfiles)
+        vim.keymap.set('n', '<leader>g', telescope_builtin.live_grep)
+        vim.keymap.set('n', '<leader>y', function() telescope.extensions.yank_history.yank_history() end)
+      end
     },
-    'fvictorio/vim-extract-variable',
-    'ervandew/supertab',
-    'jiangmiao/auto-pairs',
-    'jszakmeister/vim-togglecursor',
-    'mileszs/ack.vim',
-    'tpope/vim-commentary',
-    'tpope/vim-surround',
+    {
+      'mileszs/ack.vim',
+      init = function()
+        vim.g.ackprg = 'rg --no-heading --color=never --column --line-number'
+
+        vim.api.nvim_create_user_command('Ag', function(opts)
+          vim.cmd('Ack ' .. opts.args)
+        end, { nargs = '*', complete = 'file' })
+      end,
+    },
+    {
+      'tpope/vim-commentary',
+      init = function()
+        vim.keymap.set('n', '<Leader>cc', '<Plug>CommentaryLine')
+        vim.keymap.set('x', '<Leader>cc', '<Plug>Commentary')
+      end
+    },
     {
       "gbprod/yanky.nvim",
       opts = {
@@ -297,9 +337,57 @@ require("lazy").setup({
         },
       },
     },
-    'vim-scripts/camelcasemotion',
-    'stevearc/oil.nvim',
-    'lewis6991/gitsigns.nvim',
+    {
+      'vim-scripts/camelcasemotion',
+      init = function()
+        local camel_maps = { 'w', 'b', 'e' }
+        for _, key in ipairs(camel_maps) do
+          vim.keymap.set('', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
+          vim.keymap.set('o', key, '<Plug>CamelCaseMotion_' .. key, { silent = true })
+        end
+
+        vim.keymap.del('s', 'w')
+        vim.keymap.del('s', 'b')
+        vim.keymap.del('s', 'e')
+
+        local camel_objects = { 'iw', 'ib', 'ie' }
+        for _, motion in ipairs(camel_objects) do
+          vim.keymap.set('o', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
+          vim.keymap.set('x', motion, '<Plug>CamelCaseMotion_' .. motion, { silent = true })
+        end
+
+        vim.keymap.set('n', '<Leader>!d', ':bdelete!<CR>', opts)
+        vim.keymap.set('n', '<Leader>d', ':bdelete<CR>', opts)
+        vim.keymap.set('n', '<Leader>D', ':bufdo bdelete!<CR>', opts)
+        vim.keymap.set('n', '<Leader>w', ':w!<CR>', opts)
+      end
+    },
+    {
+      'stevearc/oil.nvim',
+      opts = {
+        buf_options = {
+          buflisted = true,
+          bufhidden = "hide",
+        },
+        columns = {
+          "icon",
+        }
+      }
+    },
+    {
+      'lewis6991/gitsigns.nvim',
+      opts = {
+        current_line_blame = true,
+        current_line_blame_opts = {
+          virt_text = true,
+          virt_text_pos = 'eol',
+          delay = 100,
+          ignore_whitespace = false,
+          virt_text_priority = 1000,
+          use_focus = true,
+        },
+      }
+    },
     {
       "yetone/avante.nvim",
       event = "VeryLazy",
@@ -307,152 +395,110 @@ require("lazy").setup({
       version = false,
       build = "make",
       dependencies = {
-        "nvim-treesitter/nvim-treesitter",
         "stevearc/dressing.nvim",
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
-        "zbirenbaum/copilot.lua",
       },
+      opts = {
+        provider = "openai",
+        openai = {
+          endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
+          model = "claude-3-5-sonnet-latest",
+        },
+
+        --provider = 'ollama',
+        --vendors = {
+        --  ---@type AvanteProvider
+        --  ollama = {
+        --    ['local'] = true,
+        --    endpoint = '127.0.0.1:11434/v1',
+        --    model = 'qwen2.5-coder:32b',
+        --    parse_response_data = function(data_stream, event_state, opts)
+        --      require('avante.providers').copilot.parse_response(data_stream, event_state, opts)
+        --    end,
+        --    parse_curl_args = function(opts, code_opts)
+        --      return {
+        --        url = opts.endpoint .. '/chat/completions',
+        --        headers = {
+        --          ['Accept'] = 'application/json',
+        --          ['Content-Type'] = 'application/json',
+        --        },
+        --        body = {
+        --          model = opts.model,
+        --          messages = require('avante.providers').copilot.parse_messages(code_opts),
+        --          max_tokens = 2048,
+        --          stream = true,
+        --        },
+        --      }
+        --    end,
+        --  },
+        --},
+
+        auto_suggestions_provider = "copilot",
+        hints = { enabled = false },
+        windows = {
+          width = 40,
+          sidebar_header = {
+            align = "center", -- left, center, right for title
+            rounded = false,
+          },
+        },
+      }
     },
-    'MeanderingProgrammer/render-markdown.nvim',
-    'nvim-tree/nvim-web-devicons',
-    'nvim-tree/nvim-tree.lua',
+    {
+      'MeanderingProgrammer/render-markdown.nvim',
+      opts = {
+        file_types = { 'markdown', 'Avante' }
+      }
+    },
+    {
+      'nvim-tree/nvim-tree.lua',
+      dependencies = {
+        'nvim-tree/nvim-web-devicons',
+      },
+      init = function()
+        vim.keymap.set('n', '<Leader>l', ':NvimTreeToggle<CR>', { silent = true })
+      end,
+      opts = {
+        on_attach = function(bufnr)
+          local api = require("nvim-tree.api")
+          api.config.mappings.default_on_attach(bufnr)
+          vim.keymap.set('n', '<Right>', api.tree.change_root_to_node, { desc = "nvim-tree: Right", buffer = bufnr, noremap = true, silent = true, nowait = true })
+          vim.keymap.set('n', '<Up>', api.tree.change_root_to_parent, { desc = "nvim-tree: Up", buffer = bufnr, noremap = true, silent = true, nowait = true })
+        end,
+        sync_root_with_cwd = true,
+        filters = {
+          git_ignored = false,
+          dotfiles = false,
+        },
+      }
+    },
+    {
+      "zbirenbaum/copilot.lua",
+      opts = {
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          keymap = {
+            accept = "<Right>",
+            dismiss = "<Left>",
+            next = "<Down>",
+            prev = "<Up>",
+          },
+        },
+      }
+    },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      config = function()
+        require('nvim-treesitter.configs').setup({
+          ensure_installed = { "markdown", "markdown_inline", "query", "elixir", "typescript", "ruby" },
+          auto_install = true,
+          highlight = {
+            enable = true,
+          }
+        })
+      end
+    },
   }
 })
-
-require("oil").setup({
-  buf_options = {
-    buflisted = true,
-    bufhidden = "hide",
-  },
-  columns = {
-    "icon",
-  },
-})
-
-require('telescope').setup({
-  defaults = {
-    prompt_prefix = '→ ',
-  },
-  pickers = {
-    find_files = {
-      follow = true,
-    },
-    buffers = {
-      sort_lastused = true,
-      ignore_current_buffer = true,
-    },
-  },
-})
-
-local telescope_builtin = require('telescope.builtin')
-local telescope = require("telescope")
-telescope.load_extension("yank_history")
-vim.keymap.set('n', '<leader>t', telescope_builtin.find_files)
-vim.keymap.set('n', '<leader>T', function() telescope_builtin.find_files({ hidden = true }) end)
-vim.keymap.set('n', '<leader>o', function() telescope_builtin.find_files({ cwd = vim.fn.expand('%:p:h') }) end)
-vim.keymap.set('n', '<leader>,', telescope_builtin.buffers)
-vim.keymap.set('n', '<leader>m', telescope_builtin.oldfiles)
-vim.keymap.set('n', '<leader>g', telescope_builtin.live_grep)
-vim.keymap.set('n', '<leader>y', function() telescope.extensions.yank_history.yank_history() end)
-
-require('copilot').setup({
-  suggestion = {
-    enabled = true,
-    auto_trigger = true,
-    keymap = {
-      accept = "<Right>",
-      dismiss = "<Left>",
-      next = "<Down>",
-      prev = "<Up>",
-    },
-  },
-})
-
-require('nvim-treesitter.configs').setup({
-  ensure_installed = { "markdown", "markdown_inline", "query", "elixir", "typescript", "ruby" },
-  auto_install = true,
-  highlight = {
-    enable = true,
-  }
-})
-
-require('render-markdown').setup({
-  file_types = { 'markdown', 'Avante' }
-})
-
-require('avante').setup({
-  provider = "openai",
-  openai = {
-    endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
-    model = "claude-3-5-sonnet-latest",
-  },
-  auto_suggestions_provider = "copilot",
-  hints = { enabled = false },
-  windows = {
-    width = 40,
-    sidebar_header = {
-      align = "center", -- left, center, right for title
-      rounded = false,
-    },
-  },
-})
-
-require('gitsigns').setup({
-  current_line_blame = true,
-  current_line_blame_opts = {
-    virt_text = true,
-    virt_text_pos = 'eol',
-    delay = 100,
-    ignore_whitespace = false,
-    virt_text_priority = 1000,
-    use_focus = true,
-  },
-})
-
-require("nvim-tree").setup({
-  on_attach = function(bufnr)
-    local api = require("nvim-tree.api")
-    api.config.mappings.default_on_attach(bufnr)
-    vim.keymap.set('n', '<Right>', api.tree.change_root_to_node, { desc = "nvim-tree: Right", buffer = bufnr, noremap = true, silent = true, nowait = true })
-    vim.keymap.set('n', '<Up>', api.tree.change_root_to_parent, { desc = "nvim-tree: Up", buffer = bufnr, noremap = true, silent = true, nowait = true })
-  end,
-  sync_root_with_cwd = true,
-  filters = {
-    git_ignored = false,
-    dotfiles = false,
-  },
-})
-
-require("catppuccin").setup({
-  flavour = "mocha",
-  transparent_background = true,
-
-  color_overrides = {
-    mocha = {
-      overlay0 = "#333333",
-    },
-  },
-
-  custom_highlights = function(colors)
-    return {
-      Visual = { fg = colors.none, bg = colors.surface1 },
-      User1 = { fg = "#ffffff", bg = colors.overlay2 },
-      User3 = { fg = colors.surface1, bg = colors.none },
-      User4 = { fg = colors.white, bg = colors.none },
-      User5 = { fg = colors.blue, bg = colors.none },
-      User6 = { fg = colors.red, bg = colors.none },
-      User7 = { fg = colors.peach, bg = colors.none },
-      Todo = { fg = colors.surface0, bg = colors.none },
-      DiffAdd = { fg = colors.green, bg = colors.none },
-      DiffDelete = { fg = colors.red, bg = colors.none },
-      DiffChange = { fg = colors.blue, bg = colors.none },
-      WinSeparator = { fg = colors.overlay1, bg = colors.none },
-      GitSignsCurrentLineBlame = { fg = colors.surface1, bg = colors.none },
-      CopilotSuggestion = { fg = colors.overlay1, bg = colors.none, style = { "italic" } },
-      Comment = { fg = colors.overlay2, bg = colors.none, style = { "italic" } },
-    }
-  end
-})
-
-vim.cmd.colorscheme "catppuccin"
