@@ -16,12 +16,19 @@ return {
     }, '')
   end,
 
-  get_modified = function() return vim.bo.modified and ' (modified) ' or ' ' end,
+  get_modified = function()
+    if not(vim.fn.expand('%:t') == '') and vim.bo.modified then
+      return ' (modified) '
+    else
+      return ' '
+    end
+  end,
+
   get_help = function() return vim.bo.buftype == 'help' and ' (help) ' or '' end,
   get_readonly = function() return vim.bo.readonly and ' (read-only) ' or ' ' end,
 
   get_name = function()
     if vim.fn.expand('%:t') == '' then return '<none>' end
-    return string.gsub(vim.fn.expand('%:p'), vim.fn.getcwd() .. '/', '')
+    return vim.fn.expand('%')
   end
 }

@@ -6,6 +6,8 @@ return {
   opts = {
     defaults = {
       prompt_prefix = '→ ',
+      layout_strategy = "bottom_pane",
+      layout_config = { height = 25, prompt_position = "bottom" }
     },
     pickers = {
       find_files = {
