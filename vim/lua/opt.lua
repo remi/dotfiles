@@ -1,4 +1,4 @@
-vim.env.LC_ALL = "fr_CA.UTF-8"
+vim.env.LC_ALL = "en_CA.UTF-8"
 
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
