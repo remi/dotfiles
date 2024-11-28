@@ -7,7 +7,7 @@ return {
       require("mason").setup()
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "elixirls", "lua_ls", "biome", "solargraph", }
+        ensure_installed = { "elixirls", "lua_ls", "solargraph", }
       })
 
       require("lspconfig").elixirls.setup({
@@ -24,7 +24,6 @@ return {
         }
       })
 
-      require("lspconfig").biome.setup({})
       require("lspconfig").solargraph.setup({})
 
       vim.api.nvim_create_autocmd('LspAttach', {
