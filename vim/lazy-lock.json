@@ -1,7 +1,7 @@
 {
   "ack.vim": { "branch": "master", "commit": "36e40f9ec91bdbf6f1adf408522a73a6925c3042" },
   "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
-  "avante.nvim": { "branch": "main", "commit": "3b390040f5b206e3b21176ac065eaa475512cd29" },
+  "avante.nvim": { "branch": "main", "commit": "3c010e38ac6a40d8dbcd91399d316b9da5f53c52" },
   "camelcasemotion": { "branch": "master", "commit": "8db17bdee3f42bd71839ead2a84b2ee1916e45c2" },
   "copilot.lua": { "branch": "master", "commit": "f8d8d872bb319f640d5177dad5fbf01f7a16d7d0" },
   "dressing.nvim": { "branch": "master", "commit": "fc78a3ca96f4db9f8893bb7e2fd9823e0780451b" },
