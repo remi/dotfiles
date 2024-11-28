@@ -54,5 +54,14 @@ return {
         rounded = false,
       },
     },
+    mappings = {
+      edit = "<leader>ai",
+      refresh = "<leader>aR",
+      toggle = {
+        debug = "<leader>aD",
+        hint = "<leader>aH",
+        repomap = "<leader>aM",
+      }
+    }
   }
 }
