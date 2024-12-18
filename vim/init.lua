@@ -1,8 +1,8 @@
-require('opt')
-require('filetype')
-require('keymap')
-require('autocmd')
-require('statusline').setup()
+require("opt")
+require("filetype")
+require("keymap")
+require("autocmd")
+require("statusline").setup()
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -23,11 +23,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    'fvictorio/vim-extract-variable',
-    'ervandew/supertab',
-    'jiangmiao/auto-pairs',
-    'jszakmeister/vim-togglecursor',
-    'tpope/vim-surround',
-    {import = 'plugins'},
-  }
+    "fvictorio/vim-extract-variable",
+    "ervandew/supertab",
+    "jiangmiao/auto-pairs",
+    "jszakmeister/vim-togglecursor",
+    "tpope/vim-surround",
+    { import = "plugins" },
+  },
 })

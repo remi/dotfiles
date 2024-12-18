@@ -7,7 +7,7 @@ return {
       require("mason").setup()
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "elixirls", "lua_ls", "solargraph", "ts_ls" }
+        ensure_installed = { "elixirls", "lua_ls", "solargraph", "ts_ls" },
       })
 
       require("lspconfig").elixirls.setup({
@@ -18,19 +18,17 @@ return {
         settings = {
           Lua = {
             diagnostics = {
-              globals = { "vim" }
-            }
-          }
-        }
+              globals = { "vim" },
+            },
+          },
+        },
       })
 
       require("lspconfig").solargraph.setup({})
       require("lspconfig").ts_ls.setup({})
 
-      vim.api.nvim_create_autocmd('LspAttach', {
+      vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-
           -- Configure signs
           local signs = {
             { name = "DiagnosticSignError", text = "" },
@@ -61,17 +59,8 @@ return {
           vim.api.nvim_buf_set_keymap(args.buf, "n", "<leader>ad", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
           vim.api.nvim_buf_set_keymap(args.buf, "n", "<leader>ar", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
           vim.api.nvim_buf_set_keymap(args.buf, "n", "<leader>ah", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-
-          -- Format the current buffer on save, if supported by LSP
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              callback = function()
-                vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-              end,
-            })
-          end
         end,
       })
-    end
-  }
+    end,
+  },
 }

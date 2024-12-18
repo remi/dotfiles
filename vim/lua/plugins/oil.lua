@@ -1,5 +1,5 @@
 return {
-  'stevearc/oil.nvim',
+  "stevearc/oil.nvim",
   opts = {
     buf_options = {
       buflisted = true,
@@ -7,6 +7,6 @@ return {
     },
     columns = {
       "icon",
-    }
-  }
+    },
+  },
 }

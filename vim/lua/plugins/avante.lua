@@ -5,7 +5,7 @@ return {
   version = false,
   build = "make",
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    "nvim-tree/nvim-web-devicons",
     "stevearc/dressing.nvim",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
@@ -61,7 +61,7 @@ return {
         debug = "<leader>aD",
         hint = "<leader>aH",
         repomap = "<leader>aM",
-      }
-    }
-  }
+      },
+    },
+  },
 }

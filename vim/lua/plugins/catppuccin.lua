@@ -1,7 +1,7 @@
 return {
-  'catppuccin/nvim',
+  "catppuccin/nvim",
   config = function()
-    require('catppuccin').setup({
+    require("catppuccin").setup({
       flavour = "mocha",
       transparent_background = true,
       color_overrides = {
@@ -27,9 +27,9 @@ return {
           CopilotSuggestion = { fg = colors.overlay1, bg = colors.none, style = { "italic" } },
           Comment = { fg = colors.overlay2, bg = colors.none, style = { "italic" } },
         }
-      end
+      end,
     })
 
-    vim.cmd.colorscheme "catppuccin"
-  end
+    vim.cmd.colorscheme("catppuccin")
+  end,
 }
