@@ -9,4 +9,7 @@ return {
       "icon",
     },
   },
+  init = function()
+    vim.keymap.set("n", "-", vim.cmd.Oil, { desc = "Open file explorer" })
+  end,
 }
