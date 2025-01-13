@@ -1,5 +1,5 @@
 # Font
-font-family = "VictorMono NFM Medium"
+font-family = VictorMono NFM Medium
 font-size = 16
 
 # Appearance
@@ -29,7 +29,7 @@ palette = 12=#89b4fa
 palette = 13=#f5c2e7
 palette = 14=#94e2d5
 palette = 15=#ffffff
-background = "#11111b"
+background = #11111b
 foreground = #cdd6f4
 selection-background = #585b70
 selection-foreground = #cdd6f4
