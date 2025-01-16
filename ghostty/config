@@ -38,3 +38,13 @@ selection-foreground = #cdd6f4
 keybind = cmd+enter=toggle_fullscreen
 keybind = cmd+shift+r=reload_config
 macos-option-as-alt = left
+
+# Icon
+macos-icon = custom-style
+macos-icon-ghost-color = #ffffff
+macos-icon-screen-color = #11111b
+macos-icon-frame = beige
+
+# Title
+title = Ghostty
+macos-titlebar-proxy-icon = hidden
