@@ -23,7 +23,7 @@ The recommended way to use these files is to take a look at their content and co
 
 ## Screenshot
 
-![dotfiles in action](https://github.com/user-attachments/assets/db4639c0-1c7d-409b-9210-5335ad7cbd8f)
+![dotfiles in action](https://github.com/user-attachments/assets/903d04ee-9530-49f4-9421-78add1299c63)
 
 ## License
 
