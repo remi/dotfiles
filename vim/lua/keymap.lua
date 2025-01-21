@@ -28,12 +28,6 @@ vim.keymap.set("n", "<C-L>", "<C-W><C-L>", opts)
 -- CTRL-T for tags (Canadian keyboard optimization)
 vim.keymap.set("n", "<C-T>", "<C-]>", { noremap = true })
 
--- Line moving
-vim.keymap.set("n", "<M-j>", "ddp", opts)
-vim.keymap.set("n", "<M-k>", "ddkkp", opts)
-vim.keymap.set("v", "<M-j>", "djPV`]", opts)
-vim.keymap.set("v", "<M-k>", "dkPV`]", opts)
-
 -- Buffer navigation
 vim.keymap.set("n", ">", ":bnext<CR>", opts)
 vim.keymap.set("n", "<", ":bprevious<CR>", opts)
@@ -48,14 +42,6 @@ vim.keymap.set("v", "<M-d>", "m'y'>p`'", opts)
 
 -- Select text characters in current line
 vim.keymap.set("n", "<M-v>", "^v$h", opts)
-
--- Indentation in visual mode
-vim.keymap.set("v", "<", "<gv", opts)
-vim.keymap.set("v", ">", ">gv", opts)
-vim.keymap.set("v", "<Tab>", ">gv", opts)
-vim.keymap.set("v", "<S-Tab>", "<gv", opts)
-vim.keymap.set("n", "<Tab>", "mzV>`zl", opts)
-vim.keymap.set("n", "<S-Tab>", "mzV<`zh", opts)
 
 -- Clear search highlighting
 vim.keymap.set("n", "<Space>", ":silent noh<Bar>echo<CR>", opts)

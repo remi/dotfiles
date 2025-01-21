@@ -4,6 +4,18 @@ return {
     require("mini.ai").setup()
     require("mini.cursorword").setup()
     require("mini.pairs").setup()
+    require("mini.move").setup({
+      mappings = {
+        left = "<S-Tab>",
+        right = "<Tab>",
+        down = "<M-j>",
+        up = "<M-k>",
+        line_left = "<S-Tab>",
+        line_right = "<Tab>",
+        line_down = "<M-j>",
+        line_up = "<M-k>",
+      },
+    })
 
     require("mini.comment").setup({
       mappings = {
