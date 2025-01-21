@@ -23,11 +23,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    "fvictorio/vim-extract-variable",
     "ervandew/supertab",
-    "jiangmiao/auto-pairs",
     "jszakmeister/vim-togglecursor",
-    "tpope/vim-surround",
     { import = "plugins" },
   },
 })

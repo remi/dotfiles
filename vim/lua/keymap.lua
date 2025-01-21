@@ -14,18 +14,6 @@ vim.keymap.set("n", "â", "^a", opts)
 vim.keymap.set("n", "î", "^i", opts)
 vim.keymap.set("n", "ô", "^o", opts)
 
--- Text objects for forward slash
-vim.keymap.set("o", "i/", ":normal T/vt/<CR>", opts)
-vim.keymap.set("v", "i/", "t/oT/", opts)
-vim.keymap.set("o", "a/", ":normal F/vf/<CR>", opts)
-vim.keymap.set("v", "a/", "f/oF/", opts)
-
--- Text objects for vertical bar
-vim.keymap.set("o", "i|", ":normal T|vt|<CR>", opts)
-vim.keymap.set("v", "i|", "t|oT|", opts)
-vim.keymap.set("o", "a|", ":normal F|vf|<CR>", opts)
-vim.keymap.set("v", "a|", "f|oF|", opts)
-
 -- Remap Enter and Backspace in visual mode
 vim.keymap.set("v", "<CR>", "<NOP>", opts)
 vim.keymap.set("v", "<BS>", "dk$", opts)
