@@ -9,6 +9,7 @@ cursor-color = #f5e0dc
 cursor-style = block
 fullscreen = true
 macos-non-native-fullscreen = true
+macos-titlebar-style = hidden
 window-padding-x = 5
 window-padding-y = 40,0
 
