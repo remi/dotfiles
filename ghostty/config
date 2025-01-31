@@ -45,7 +45,3 @@ macos-icon = custom-style
 macos-icon-ghost-color = #ffffff
 macos-icon-screen-color = #11111b
 macos-icon-frame = beige
-
-# Title
-title = Ghostty
-macos-titlebar-proxy-icon = hidden
