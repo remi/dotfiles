@@ -1,10 +1,12 @@
 return {
   "vim-scripts/camelcasemotion",
   init = function()
+    local opts = { noremap = true, silent = true }
     local camel_maps = { "w", "b", "e" }
+
     for _, key in ipairs(camel_maps) do
-      vim.keymap.set("", key, "<Plug>CamelCaseMotion_" .. key, { silent = true })
-      vim.keymap.set("o", key, "<Plug>CamelCaseMotion_" .. key, { silent = true })
+      vim.keymap.set("", key, "<Plug>CamelCaseMotion_" .. key, opts)
+      vim.keymap.set("o", key, "<Plug>CamelCaseMotion_" .. key, opts)
     end
 
     vim.keymap.del("s", "w")
@@ -13,13 +15,8 @@ return {
 
     local camel_objects = { "iw", "ib", "ie" }
     for _, motion in ipairs(camel_objects) do
-      vim.keymap.set("o", motion, "<Plug>CamelCaseMotion_" .. motion, { silent = true })
-      vim.keymap.set("x", motion, "<Plug>CamelCaseMotion_" .. motion, { silent = true })
+      vim.keymap.set("o", motion, "<Plug>CamelCaseMotion_" .. motion, opts)
+      vim.keymap.set("x", motion, "<Plug>CamelCaseMotion_" .. motion, opts)
     end
-
-    vim.keymap.set("n", "<Leader>!d", ":bdelete!<CR>", opts)
-    vim.keymap.set("n", "<Leader>d", ":bdelete<CR>", opts)
-    vim.keymap.set("n", "<Leader>D", ":bufdo bdelete!<CR>", opts)
-    vim.keymap.set("n", "<Leader>w", ":w!<CR>", opts)
   end,
 }

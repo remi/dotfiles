@@ -1,5 +1,11 @@
 local opts = { noremap = true, silent = true }
 
+-- Buffers
+vim.keymap.set("n", "<Leader>!d", ":bdelete!<CR>", opts)
+vim.keymap.set("n", "<Leader>d", ":bdelete<CR>", opts)
+vim.keymap.set("n", "<Leader>D", ":bufdo bdelete!<CR>", opts)
+vim.keymap.set("n", "<Leader>w", ":w!<CR>", opts)
+
 -- Easy new lines
 vim.keymap.set("n", "<M-o>", "mo<Esc>o<Esc>k`o", opts)
 vim.keymap.set("n", "<M-S-o>", "mo<Esc>O<Esc>j`o", opts)
