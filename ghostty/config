@@ -8,6 +8,7 @@ bold-is-bright = true
 cursor-color = #f5e0dc
 cursor-style = block
 fullscreen = true
+macos-icon = retro
 macos-non-native-fullscreen = true
 macos-titlebar-style = hidden
 window-padding-x = 5
