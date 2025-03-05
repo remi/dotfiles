@@ -11,40 +11,15 @@ return {
     "MunifTanjim/nui.nvim",
   },
   opts = {
-    provider = "openai",
-    openai = {
-      endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
-      model = "claude-3-5-sonnet-latest",
+    provider = "scout",
+    vendors = {
+      scout = {
+        __inherited_from = "openai",
+        api_key_name = "SCOUT_API_KEY",
+        endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
+        model = "claude-3-7-sonnet",
+      },
     },
-
-    --provider = 'ollama',
-    --vendors = {
-    --  ---@type AvanteProvider
-    --  ollama = {
-    --    ['local'] = true,
-    --    endpoint = '127.0.0.1:11434/v1',
-    --    model = 'qwen2.5-coder:32b',
-    --    parse_response_data = function(data_stream, event_state, opts)
-    --      require('avante.providers').copilot.parse_response(data_stream, event_state, opts)
-    --    end,
-    --    parse_curl_args = function(opts, code_opts)
-    --      return {
-    --        url = opts.endpoint .. '/chat/completions',
-    --        headers = {
-    --          ['Accept'] = 'application/json',
-    --          ['Content-Type'] = 'application/json',
-    --        },
-    --        body = {
-    --          model = opts.model,
-    --          messages = require('avante.providers').copilot.parse_messages(code_opts),
-    --          max_tokens = 2048,
-    --          stream = true,
-    --        },
-    --      }
-    --    end,
-    --  },
-    --},
-
     auto_suggestions_provider = "copilot",
     hints = { enabled = false },
     windows = {
