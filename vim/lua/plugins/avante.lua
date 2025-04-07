@@ -17,7 +17,7 @@ return {
         __inherited_from = "openai",
         api_key_name = "SCOUT_API_KEY",
         endpoint = "https://scout.mirego.com/api/chat/openai_compatible",
-        model = "claude-3-7-sonnet",
+        model = "gpt-4o", -- claude-3-7-sonnet doesn’t stream…
       },
     },
     auto_suggestions_provider = "copilot",
