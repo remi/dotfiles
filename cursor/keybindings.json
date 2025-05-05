@@ -34,5 +34,10 @@
         "key": "ctrl+cmd+f",
         "command": "-workbench.action.toggleFullScreen",
         "when": "!isIOS"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
     }
 ]
