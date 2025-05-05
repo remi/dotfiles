@@ -1,0 +1,64 @@
+{
+  "chat.editor.fontSize": 15,
+  "cursor.cpp.enablePartialAccepts": true,
+  "debug.console.fontSize": 15,
+  "editor.fontFamily": "VictorMono Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "all",
+  "extensions.ignoreRecommendations": true,
+  "files.hotExit": "off",
+  "git.confirmSync": false,
+  "makefile.configureOnOpen": false,
+  "markdown.preview.fontSize": 15,
+  "php.validate.executablePath": "/opt/homebrew/bin/php",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 15,
+  "update.releaseTrack": "prerelease",
+  "vim.leader": ",",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["ª"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["ø"],
+      "commands": ["editor.action.insertLineAfter"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["ª"],
+      "commands": ["editor.action.duplicateSelection"]
+    },
+    {
+      "before": ["tab"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["shift+tab"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "window.commandCenter": false,
+  "window.restoreWindows": "none",
+  "window.systemColorTheme": "dark",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "single",
+}
