@@ -18,6 +18,8 @@
   "terminal.integrated.fontSize": 15,
   "update.releaseTrack": "prerelease",
   "vim.leader": ",",
+  "vim.enableNeovim": true,
+  "vim.neovimUseConfigFile": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "w"],
@@ -38,6 +40,10 @@
     {
       "before": ["ø"],
       "commands": ["editor.action.insertLineAfter"]
+    },
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": ["workbench.action.showAllEditors"]
     }
   ],
   "vim.visualModeKeyBindings": [
