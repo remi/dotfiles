@@ -12,9 +12,10 @@ alias cat="bat"
 alias ssh="TERM=${TERM/tmux/xterm} ssh"
 alias gh="op plugin run -- gh"
 
-# Editor (always forward to Neovim!)
-alias vi="nvim"
-alias vim="nvim"
+# Editor (always forward to Cursor!)
+alias vi="cursor"
+alias vim="cursor"
+alias nvim="cursor"
 
 # Ripgrep
 alias ag="rg"
