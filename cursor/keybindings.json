@@ -39,5 +39,9 @@
     {
         "key": "alt+cmd+tab",
         "command": "-workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
     }
 ]

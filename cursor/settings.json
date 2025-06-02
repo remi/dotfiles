@@ -46,6 +46,7 @@
       "commands": ["workbench.action.showAllEditors"]
     }
   ],
+  "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindings": [
     {
       "before": ["ª"],
@@ -60,11 +61,14 @@
       "commands": ["editor.action.outdentLines"]
     }
   ],
-  "window.commandCenter": false,
   "window.restoreWindows": "none",
   "window.systemColorTheme": "dark",
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.editor.showTabs": "single",
+  "workbench.navigationControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.autoDetectHighContrast": false,
+  "editor.wordWrap": "off",
 }
