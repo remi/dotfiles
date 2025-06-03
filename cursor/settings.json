@@ -71,4 +71,5 @@
   "workbench.layoutControl.enabled": false,
   "window.autoDetectHighContrast": false,
   "editor.wordWrap": "off",
+  "window.newWindowProfile": "Rémi",
 }
