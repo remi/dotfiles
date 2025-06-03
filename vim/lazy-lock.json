@@ -21,6 +21,6 @@
   "render-markdown.nvim": { "branch": "main", "commit": "7f81e9dcc15504c044f20df39d28a590cd5c6ca5" },
   "supertab": { "branch": "main", "commit": "8705ae0e43b34339c06328fa6dab24ecaf21aab6" },
   "telescope.nvim": { "branch": "master", "commit": "a4ed82509cecc56df1c7138920a1aeaf246c0ac5" },
-  "vim-togglecursor": { "branch": "master", "commit": "d600bd99b6c90a3e4d376759e26d575ec509346d" },
+  "vim-togglecursor": { "branch": "main", "commit": "d600bd99b6c90a3e4d376759e26d575ec509346d" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }
