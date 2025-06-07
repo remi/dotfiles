@@ -10,7 +10,12 @@ alias ~="cd ~"
 alias tree="eza -T"
 alias cat="bat"
 alias ssh="TERM=${TERM/tmux/xterm} ssh"
+alias dog="doggo"
+
+# 1Password
+export OP_PLUGIN_ALIASES_SOURCED=1
 alias gh="op plugin run -- gh"
+alias aws="op plugin run -- aws"
 
 # Editor (always forward to Cursor!)
 alias vi="cursor"
