@@ -1,6 +1,6 @@
 # Local aliases
 # --------------------------------------
-alias ls="eza --long --time-style=long-iso --git --group-directories-first --header --links"
+alias ls="eza --long --time-style=long-iso --group-directories-first --header --links"
 alias ll="ls -la"
 alias l="ls -l"
 alias rm="rm -i"
