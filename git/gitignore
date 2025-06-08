@@ -48,3 +48,6 @@ tags-ja
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# 1Password
+.op/*
