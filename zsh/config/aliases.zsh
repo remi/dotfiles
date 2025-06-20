@@ -18,9 +18,8 @@ alias gh="op plugin run -- gh"
 alias aws="op plugin run -- aws"
 
 # Editor (always forward to Cursor!)
-alias vi="cursor"
-alias vim="cursor"
-alias nvim="cursor"
+alias vi="vim"
+alias vim="nvim"
 
 # Ripgrep
 alias ag="rg"
