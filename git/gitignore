@@ -51,3 +51,6 @@ tags-ja
 
 # 1Password
 .op/*
+
+# Claude Code
+.claude/settings.local.json
