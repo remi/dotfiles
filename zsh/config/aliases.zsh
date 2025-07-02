@@ -41,3 +41,4 @@ alias kn="kubens"
 # Daemons
 alias pg-daemon-12="$HOME/.asdf/installs/postgres/12.10/bin/pg_ctl -D $HOME/.asdf/installs/postgres/12.10/data -l $HOME/.asdf/installs/postgres/12.10/server.log start"
 alias pg-daemon-15="$HOME/.asdf/installs/postgres/15.13/bin/pg_ctl -D $HOME/.asdf/installs/postgres/15.13/data -l $HOME/.asdf/installs/postgres/15.13/server.log start"
+alias pg-daemon-17="$HOME/.asdf/installs/postgres/17.5/bin/pg_ctl -D $HOME/.asdf/installs/postgres/17.5/data -l $HOME/.asdf/installs/postgres/17.5/server.log start"
