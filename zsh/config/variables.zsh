@@ -1,11 +1,10 @@
 # Global variables
 # --------------------------------------
 export PATH="$HOME/.zsh/bin:$PATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/sbin:$PATH"
+export PATH="$(brew --prefix)/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 export PATH="$PATH:$HOME/.dotnet"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.radicle/bin"
@@ -46,7 +45,3 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-
-# Go
-export GOPATH="/usr/local/share/go"
-export PATH="$PATH:$GOPATH/bin"
