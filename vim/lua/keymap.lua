@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-H>", "<C-W><C-H>", opts)
 vim.keymap.set("n", "<C-L>", "<C-W><C-L>", opts)
 
 -- CTRL-T for tags (Canadian keyboard optimization)
-vim.keymap.set("n", "<C-T>", "<C-]>", { noremap = true })
+vim.keymap.set("n", "<C-T>", "<C-]>", opts)
 
 -- CTRL-P for jumping to newer cursor position (because <C-I> / <Tab> is used for completion)
 -- <https://github.com/tmux/tmux/issues/2705>
