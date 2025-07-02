@@ -8,6 +8,7 @@ return {
 
       require("mason-lspconfig").setup({
         ensure_installed = { "elixirls", "lua_ls", "solargraph", "ts_ls" },
+        automatic_enable = false
       })
 
       require("lspconfig").elixirls.setup({
@@ -18,7 +19,7 @@ return {
         settings = {
           Lua = {
             diagnostics = {
-              globals = { "vim" },
+              globals = { "vim", "require" },
             },
           },
         },
