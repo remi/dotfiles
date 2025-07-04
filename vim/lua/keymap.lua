@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 -- Buffers
 vim.keymap.set("n", "<Leader>!d", ":bdelete!<CR>", opts)
 vim.keymap.set("n", "<Leader>d", ":bdelete<CR>", opts)
-vim.keymap.set("n", "<Leader>D", ":bufdo bdelete!<CR>", opts)
+vim.keymap.set("n", "<Leader>D", ":bufdo bdelete!<CR>:lua MiniStarter.open()<CR>", opts)
 vim.keymap.set("n", "<Leader>w", ":w!<CR>", opts)
 
 -- Easy new lines
