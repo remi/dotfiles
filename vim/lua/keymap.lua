@@ -42,6 +42,10 @@ vim.keymap.set("n", "<C-P>", "<C-I>", opts)
 vim.keymap.set("n", ">", ":bnext<CR>", opts)
 vim.keymap.set("n", "<", ":bprevious<CR>", opts)
 
+-- Changelist navigation
+vim.keymap.set("n", "<M-Down>", ":cnext<CR>", opts)
+vim.keymap.set("n", "<M-Up>", ":cprevious<CR>", opts)
+
 -- Insert current date
 vim.keymap.set("i", "<M-d>", '<C-R>=strftime("%Y%m%d")<CR>', opts)
 vim.keymap.set("i", "<M-D>", '<C-R>=strftime("%Y-%m-%dT%H:%M:%S%z")<CR>', opts)
