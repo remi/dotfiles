@@ -31,6 +31,10 @@
       "format": "{4} ({5})"
     },
     {
+      "type": "wifi",
+      "timeout": 1000
+    },
+    {
       "type": "publicip",
       "timeout": 1000
     },
