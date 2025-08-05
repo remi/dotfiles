@@ -43,4 +43,4 @@ eval "$(starship init zsh)"
 
 # Output cool information
 # --------------------------------------
-fastfetch
+fastfetch --config "$HOME/.config/fastfetch/config-full.jsonc"
