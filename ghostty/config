@@ -13,7 +13,7 @@ title = "Ghostty"
 macos-non-native-fullscreen = true
 window-padding-x = 5
 window-padding-y = 40,0
-mouse-scroll-multiplier = 0.01
+mouse-scroll-multiplier = 0.25
 mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
 
