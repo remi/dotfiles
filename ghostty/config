@@ -1,22 +1,24 @@
 # Font
 font-family = VictorMono NFM Medium
 font-size = 16
+font-feature = ss02, ss06, ss07
 
 # Appearance
+background-blur = 20
 background-opacity = 0.9
 bold-is-bright = true
-cursor-color = #f5e0dc
 cursor-style = block
+
+# Window
 fullscreen = true
-macos-icon = official
 macos-non-native-fullscreen = true
-window-padding-x = 5
-window-padding-y = 5
-mouse-scroll-multiplier = 0.25
-mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.25
 window-decoration = none
+window-padding-x = 5
+window-padding-y = 5
 
 # Palette
 palette = 0=#45475a
@@ -35,6 +37,7 @@ palette = 12=#89b4fa
 palette = 13=#f5c2e7
 palette = 14=#94e2d5
 palette = 15=#ffffff
+cursor-color = #f5e0dc
 background = #11111b
 foreground = #cdd6f4
 selection-background = #585b70
