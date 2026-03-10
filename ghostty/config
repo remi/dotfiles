@@ -11,6 +11,7 @@ cursor-style = block
 
 # Window
 fullscreen = true
+macos-icon = xray
 macos-non-native-fullscreen = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = hidden
