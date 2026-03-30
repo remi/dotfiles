@@ -30,6 +30,25 @@ vim.pack.add({
   { src = "https://github.com/echasnovski/mini.nvim" },
 })
 
+-- Explicitly load plugins from opt directory
+vim.cmd.packadd("nvim")
+vim.cmd.packadd("plenary.nvim")
+vim.cmd.packadd("telescope.nvim")
+vim.cmd.packadd("ack.vim")
+vim.cmd.packadd("yanky.nvim")
+vim.cmd.packadd("oil.nvim")
+vim.cmd.packadd("nvim-treesitter")
+vim.cmd.packadd("mason.nvim")
+vim.cmd.packadd("mason-lspconfig.nvim")
+vim.cmd.packadd("nvim-lspconfig")
+vim.cmd.packadd("gitsigns.nvim")
+vim.cmd.packadd("copilot.lua")
+vim.cmd.packadd("camelcasemotion")
+vim.cmd.packadd("render-markdown.nvim")
+vim.cmd.packadd("supertab")
+vim.cmd.packadd("vim-togglecursor")
+vim.cmd.packadd("mini.nvim")
+
 -- Load plugin configurations after Neovim finishes initialization
 vim.api.nvim_create_autocmd("VimEnter", {
   once = true,
@@ -56,10 +75,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
       once = true,
       callback = function()
         if not formatting_setup then
+          vim.cmd.packadd("conform.nvim")
           require("plugins.formatting")
           formatting_setup = true
         end
         if not linting_setup then
+          vim.cmd.packadd("nvim-lint")
           require("plugins.linting")
           linting_setup = true
         end
