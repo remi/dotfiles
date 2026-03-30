@@ -30,34 +30,37 @@ vim.pack.add({
   { src = "https://github.com/echasnovski/mini.nvim" },
 })
 
--- Load plugin configurations (except formatting and linting which are lazy-loaded)
-require("plugins.catppuccin")
-require("plugins.telescope")
-require("plugins.ack")
-require("plugins.yanky")
-require("plugins.oil")
-require("plugins.nvim-treesitter")
-require("plugins.lsp")
-require("plugins.gitsigns")
-require("plugins.copilot")
-require("plugins.camelcasemotion")
-require("plugins.render-markdown")
-require("plugins.mini")
+-- Defer plugin configurations until plugins are loaded
+vim.schedule(function()
+  -- Load plugin configurations (except formatting and linting which are lazy-loaded)
+  require("plugins.catppuccin")
+  require("plugins.telescope")
+  require("plugins.ack")
+  require("plugins.yanky")
+  require("plugins.oil")
+  require("plugins.nvim-treesitter")
+  require("plugins.lsp")
+  require("plugins.gitsigns")
+  require("plugins.copilot")
+  require("plugins.camelcasemotion")
+  require("plugins.render-markdown")
+  require("plugins.mini")
 
--- Lazy-load formatters and linters on first buffer read
-local formatting_setup = false
-local linting_setup = false
+  -- Lazy-load formatters and linters on first buffer read
+  local formatting_setup = false
+  local linting_setup = false
 
-vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
-  once = true,
-  callback = function()
-    if not formatting_setup then
-      require("plugins.formatting")
-      formatting_setup = true
-    end
-    if not linting_setup then
-      require("plugins.linting")
-      linting_setup = true
-    end
-  end,
-})
+  vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
+    once = true,
+    callback = function()
+      if not formatting_setup then
+        require("plugins.formatting")
+        formatting_setup = true
+      end
+      if not linting_setup then
+        require("plugins.linting")
+        linting_setup = true
+      end
+    end,
+  })
+end)
