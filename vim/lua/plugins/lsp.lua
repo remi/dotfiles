@@ -5,11 +5,12 @@ require("mason-lspconfig").setup({
   automatic_enable = false,
 })
 
-require("lspconfig").elixirls.setup({
+-- Configure LSP servers using the new vim.lsp.config API
+vim.lsp.config.elixirls = {
   cmd = { vim.fn.stdpath("data") .. "/mason/packages/elixir-ls/language_server.sh" },
-})
+}
 
-require("lspconfig").lua_ls.setup({
+vim.lsp.config.lua_ls = {
   settings = {
     Lua = {
       diagnostics = {
@@ -17,10 +18,16 @@ require("lspconfig").lua_ls.setup({
       },
     },
   },
-})
+}
 
-require("lspconfig").solargraph.setup({})
-require("lspconfig").ts_ls.setup({})
+vim.lsp.config.solargraph = {}
+vim.lsp.config.ts_ls = {}
+
+-- Enable LSP servers
+vim.lsp.enable("elixirls")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("solargraph")
+vim.lsp.enable("ts_ls")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
