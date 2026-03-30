@@ -30,61 +30,46 @@ vim.pack.add({
   { src = "https://github.com/echasnovski/mini.nvim" },
 })
 
--- Explicitly load plugins from opt directory
-vim.cmd.packadd("nvim")
-vim.cmd.packadd("plenary.nvim")
-vim.cmd.packadd("telescope.nvim")
-vim.cmd.packadd("ack.vim")
-vim.cmd.packadd("yanky.nvim")
-vim.cmd.packadd("oil.nvim")
-vim.cmd.packadd("nvim-treesitter")
-vim.cmd.packadd("mason.nvim")
-vim.cmd.packadd("mason-lspconfig.nvim")
-vim.cmd.packadd("nvim-lspconfig")
-vim.cmd.packadd("gitsigns.nvim")
-vim.cmd.packadd("copilot.lua")
-vim.cmd.packadd("camelcasemotion")
-vim.cmd.packadd("render-markdown.nvim")
-vim.cmd.packadd("supertab")
-vim.cmd.packadd("vim-togglecursor")
-vim.cmd.packadd("mini.nvim")
+-- Load plugins (vim.pack installs to opt/, so we need to load them explicitly)
+for _, plugin in ipairs({
+  "nvim", "plenary.nvim", "telescope.nvim", "ack.vim", "yanky.nvim",
+  "oil.nvim", "nvim-treesitter", "mason.nvim", "mason-lspconfig.nvim",
+  "nvim-lspconfig", "gitsigns.nvim", "copilot.lua", "camelcasemotion",
+  "render-markdown.nvim", "supertab", "vim-togglecursor", "mini.nvim"
+}) do
+  vim.cmd.packadd(plugin)
+end
 
--- Load plugin configurations after Neovim finishes initialization
-vim.api.nvim_create_autocmd("VimEnter", {
+-- Configure plugins
+require("plugins.catppuccin")
+require("plugins.telescope")
+require("plugins.ack")
+require("plugins.yanky")
+require("plugins.oil")
+require("plugins.nvim-treesitter")
+require("plugins.lsp")
+require("plugins.gitsigns")
+require("plugins.copilot")
+require("plugins.camelcasemotion")
+require("plugins.render-markdown")
+require("plugins.mini")
+
+-- Lazy-load formatters and linters on first buffer read
+local formatting_setup = false
+local linting_setup = false
+
+vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
   once = true,
   callback = function()
-    -- Load plugin configurations (except formatting and linting which are lazy-loaded)
-    require("plugins.catppuccin")
-    require("plugins.telescope")
-    require("plugins.ack")
-    require("plugins.yanky")
-    require("plugins.oil")
-    require("plugins.nvim-treesitter")
-    require("plugins.lsp")
-    require("plugins.gitsigns")
-    require("plugins.copilot")
-    require("plugins.camelcasemotion")
-    require("plugins.render-markdown")
-    require("plugins.mini")
-
-    -- Lazy-load formatters and linters on first buffer read
-    local formatting_setup = false
-    local linting_setup = false
-
-    vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
-      once = true,
-      callback = function()
-        if not formatting_setup then
-          vim.cmd.packadd("conform.nvim")
-          require("plugins.formatting")
-          formatting_setup = true
-        end
-        if not linting_setup then
-          vim.cmd.packadd("nvim-lint")
-          require("plugins.linting")
-          linting_setup = true
-        end
-      end,
-    })
+    if not formatting_setup then
+      vim.cmd.packadd("conform.nvim")
+      require("plugins.formatting")
+      formatting_setup = true
+    end
+    if not linting_setup then
+      vim.cmd.packadd("nvim-lint")
+      require("plugins.linting")
+      linting_setup = true
+    end
   end,
 })

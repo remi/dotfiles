@@ -30,13 +30,3 @@ require("mini.surround").setup({
     replace = "cs",
   },
 })
-
-local starter = require("mini.starter")
-starter.setup({
-  items = {
-    starter.sections.builtin_actions(),
-    starter.sections.telescope(),
-  },
-  footer = "",
-  silent = true,
-})
