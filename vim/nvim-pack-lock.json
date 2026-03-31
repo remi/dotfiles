@@ -4,10 +4,6 @@
       "rev": "36e40f9ec91bdbf6f1adf408522a73a6925c3042",
       "src": "https://github.com/mileszs/ack.vim"
     },
-    "camelcasemotion": {
-      "rev": "8db17bdee3f42bd71839ead2a84b2ee1916e45c2",
-      "src": "https://github.com/vim-scripts/camelcasemotion"
-    },
     "conform.nvim": {
       "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
       "src": "https://github.com/stevearc/conform.nvim"
