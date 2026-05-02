@@ -120,3 +120,5 @@
 	diffFilter = delta --color-only
 [includeIf "gitdir:~/Code/mirego/"]
 	path = ~/.gitconfig_mirego
+[init]
+	defaultBranch = main
