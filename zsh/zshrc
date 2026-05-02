@@ -44,6 +44,3 @@ eval "$(starship init zsh)"
 # Output cool information
 # --------------------------------------
 fastfetch --config "$HOME/.config/fastfetch/config-full.jsonc"
-
-# Matter CLI
-export PATH="/Users/remi/.matter/bin:$PATH"
