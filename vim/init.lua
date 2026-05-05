@@ -84,16 +84,23 @@ vim.api.nvim_create_autocmd("VimEnter", {
     })
     telescope.load_extension("yank_history")
     vim.keymap.set("n", "<leader>t", telescope_builtin.find_files)
-    vim.keymap.set("n", "<leader>T", function() telescope_builtin.find_files({ hidden = true }) end)
-    vim.keymap.set("n", "<leader>o", function() telescope_builtin.find_files({ cwd = vim.fn.expand("%:p:h") }) end)
+    vim.keymap.set("n", "<leader>T", function()
+      telescope_builtin.find_files({ hidden = true })
+    end)
+    vim.keymap.set("n", "<leader>o", function()
+      telescope_builtin.find_files({ cwd = vim.fn.expand("%:p:h") })
+    end)
     vim.keymap.set("n", "<leader>,", telescope_builtin.buffers)
     vim.keymap.set("n", "<leader>m", telescope_builtin.oldfiles)
     vim.keymap.set("n", "<leader>g", telescope_builtin.live_grep)
-    vim.keymap.set("n", "<leader>y", function() telescope.extensions.yank_history.yank_history() end)
+    vim.keymap.set("n", "<leader>y", function()
+      telescope.extensions.yank_history.yank_history()
+    end)
 
     -- Ack
-    vim.api.nvim_create_user_command("Ag", function(opts) vim.cmd("Ack " .. opts.args) end,
-      { nargs = "*", complete = "file" })
+    vim.api.nvim_create_user_command("Ag", function(opts)
+      vim.cmd("Ack " .. opts.args)
+    end, { nargs = "*", complete = "file" })
 
     -- Yanky
     require("yanky").setup({ highlight = { on_put = false, on_yank = false } })
@@ -103,11 +110,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.keymap.set("n", "-", vim.cmd.Oil, { desc = "Open file explorer" })
 
     -- Treesitter
-    require("nvim-treesitter").setup({
-      ensure_installed = { "c", "elixir", "lua", "markdown", "markdown_inline", "query", "ruby", "ssh_config", "typescript", "vim", "vimdoc" },
-      auto_install = true,
-      highlight = { enable = true },
-    })
+    require("nvim-treesitter").setup()
+    require("nvim-treesitter").install({ "elixir", "lua", "markdown", "markdown_inline", "query", "ruby", "ssh_config", "typescript", "vim", "vimdoc" })
 
     -- Mason & LSP
     require("mason").setup()
@@ -122,7 +126,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.lsp.enable("ts_ls")
     vim.api.nvim_create_autocmd("LspAttach", {
       callback = function(args)
-        vim.diagnostic.config({ virtual_text = true, signs = { text = { [vim.diagnostic.severity.ERROR] = "", [vim.diagnostic.severity.WARN] = "", [vim.diagnostic.severity.INFO] = "", [vim.diagnostic.severity.HINT] = "" } }, update_in_insert = true, underline = true, severity_sort = true })
+        vim.diagnostic.config({
+          virtual_text = true,
+          signs = { text = { [vim.diagnostic.severity.ERROR] = "", [vim.diagnostic.severity.WARN] = "", [vim.diagnostic.severity.INFO] = "", [vim.diagnostic.severity.HINT] = "" } },
+          update_in_insert = true,
+          underline = true,
+          severity_sort = true,
+        })
         vim.bo[args.buf].formatexpr = nil
         vim.bo[args.buf].omnifunc = nil
         local opts = { noremap = true, silent = true }
@@ -158,25 +168,39 @@ vim.api.nvim_create_autocmd("VimEnter", {
     -- Conform (formatting)
     local conform = require("conform")
     conform.setup({
-      formatters_by_ft = { javascript = { "prettierd" }, typescript = { "prettierd" }, javascriptreact = { "prettierd" }, typescriptreact = { "prettierd" }, css = { "prettierd" }, json = { "prettierd" }, markdown = { "prettierd" }, graphql = { "prettierd" }, lua = { "stylua" } },
+      formatters_by_ft = {
+        javascript = { "prettierd" },
+        typescript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescriptreact = { "prettierd" },
+        css = { "prettierd" },
+        json = { "prettierd" },
+        markdown = { "prettierd" },
+        graphql = { "prettierd" },
+        lua = { "stylua" },
+      },
       format_on_save = function(bufnr)
-        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then return end
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+          return
+        end
         return { timeout_ms = 2000, lsp_format = "fallback" }
       end,
     })
 
-    vim.api.nvim_create_user_command("FormatDisable",
-      function(args)
-        if args.bang then vim.b.disable_autoformat = true else vim.g.disable_autoformat = true end
-        print("Autoformat-on-save disabled")
-      end, { desc = "Disable autoformat-on-save", bang = true })
+    vim.api.nvim_create_user_command("FormatDisable", function(args)
+      if args.bang then
+        vim.b.disable_autoformat = true
+      else
+        vim.g.disable_autoformat = true
+      end
+      print("Autoformat-on-save disabled")
+    end, { desc = "Disable autoformat-on-save", bang = true })
 
-    vim.api.nvim_create_user_command("FormatEnable",
-      function()
-        vim.b.disable_autoformat = false
-        vim.g.disable_autoformat = false
-        print("Autoformat-on-save enabled")
-      end, { desc = "Re-enable autoformat-on-save" })
+    vim.api.nvim_create_user_command("FormatEnable", function()
+      vim.b.disable_autoformat = false
+      vim.g.disable_autoformat = false
+      print("Autoformat-on-save enabled")
+    end, { desc = "Re-enable autoformat-on-save" })
 
     local opts = { noremap = true, silent = true }
     vim.keymap.set("n", "<leader>fe", ":FormatEnable<CR>", opts)
@@ -186,7 +210,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
     local lint = require("lint")
     lint.linters_by_ft = { elixir = { "credo" }, ruby = { "rubocop" }, javascript = { "eslint_d" }, typescript = { "eslint_d" }, javascriptreact = { "eslint_d" }, typescriptreact = { "eslint_d" } }
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" },
-      { group = lint_augroup, callback = function() lint.try_lint() end })
+    vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+      group = lint_augroup,
+      callback = function()
+        lint.try_lint()
+      end,
+    })
   end,
 })

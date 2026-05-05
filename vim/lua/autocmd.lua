@@ -20,6 +20,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- Treesitter highlighting (new nvim-treesitter delegates this to Neovim's built-in API)
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
 -- QuickFix
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "qf",
