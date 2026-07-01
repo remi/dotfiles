@@ -22,7 +22,6 @@ vim.pack.add({
   { src = "https://github.com/williamboman/mason-lspconfig.nvim" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
-  { src = "https://github.com/zbirenbaum/copilot.lua" },
   { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
   { src = "https://github.com/ervandew/supertab" },
   { src = "https://github.com/jszakmeister/vim-togglecursor" },
@@ -146,12 +145,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
     require("gitsigns").setup({
       current_line_blame = true,
       current_line_blame_opts = { virt_text = true, virt_text_pos = "eol", delay = 100, ignore_whitespace = false, virt_text_priority = 1000, use_focus = true },
-    })
-
-    -- Copilot
-    require("copilot").setup({
-      filetypes = { gitcommit = true },
-      suggestion = { enabled = true, auto_trigger = true, keymap = { accept = "<Right>", dismiss = "<Left>", next = "<Down>", prev = "<Up>" } },
     })
 
     -- Render Markdown
