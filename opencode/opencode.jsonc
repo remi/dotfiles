@@ -92,10 +92,10 @@
             "output": 128000
           },
           "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3.75
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2.5
           }
         },
         "claude-sonnet-4-6": {
@@ -281,7 +281,7 @@
           "cost": {
             "input": 1.54,
             "output": 4.84,
-            "cached_read": 0.286
+            "cache_read": 0.286
           },
           "modalities": {
             "input": [
@@ -315,8 +315,13 @@
         "grok-4.5": {
           "name": "Grok 4.5",
           "modalities": {
-            "input": ["text", "image"],
-            "output": ["text"]
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
           },
           "limit": {
             "context": 500000,
