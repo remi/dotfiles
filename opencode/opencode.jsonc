@@ -1,28 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "forra/claude-opus-4-8",
-  "disabled_providers": [
-    "opencode"
-  ],
+  "disabled_providers": ["opencode", "anthropic", "openai"],
   "agent": {
-    "build": {
-      "mode": "primary",
-      "model": "forra/claude-sonnet-4-6",
-      "tools": {
-        "write": true,
-        "edit": true,
-        "bash": true
-      }
-    },
-    "plan": {
-      "mode": "primary",
-      "model": "forra/claude-opus-4-8",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": true
-      }
-    }
+    "plan": { "model": "forra/claude-opus-4-8" },
+    "build": { "model": "forra/claude-opus-4-8" },
+    "sidekick": { "model": "forra/grok-4.5" },
+    "explore": { "model": "forra/glm-5.2" },
+    "research": { "model": "forra/glm-5.2" },
+    "design": { "model": "forra/claude-opus-4-8" },
+    "reviewer": { "model": "forra/claude-opus-4-8" }
   },
   "provider": {
     "forra": {
