@@ -183,7 +183,54 @@
           },
           "modalities": {
             "input": [
+              "text",
+              "image"
+            ],
+            "output": [
               "text"
+            ]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "minimal": {
+              "reasoningEffort": "minimal"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
+        },
+        "kimi-k2.7-code": {
+          "id": "azure-kimi-k2.7-code",
+          "name": "Kimi K2.7-Code",
+          "tool_call": true,
+          "attachment": true,
+          "reasoning": true,
+          "temperature": true,
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "cost": {
+            "input": 1.045,
+            "output": 4.4,
+            "cache_read": 0.176
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
             ],
             "output": [
               "text"
