@@ -168,6 +168,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
         typescriptreact = { "prettierd" },
         css = { "prettierd" },
         json = { "prettierd" },
+        jsonc = { "prettierd" },
         markdown = { "prettierd" },
         graphql = { "prettierd" },
         lua = { "stylua" },

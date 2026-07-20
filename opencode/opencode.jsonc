@@ -22,13 +22,8 @@
         "claude-fable-5": {
           "name": "Claude Fable 5",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 1000000,
@@ -44,13 +39,8 @@
         "claude-opus-4-8": {
           "name": "Claude Opus 4.8",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 1000000,
@@ -66,13 +56,8 @@
         "claude-sonnet-5": {
           "name": "Claude Sonnet 5",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 1000000,
@@ -88,13 +73,8 @@
         "claude-sonnet-4-6": {
           "name": "Claude Sonnet 4.6",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 1000000,
@@ -110,12 +90,8 @@
         "claude-haiku-4-5": {
           "name": "Claude Haiku 4.5",
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           },
           "limit": {
             "context": 200000,
@@ -131,13 +107,8 @@
         "gpt-5.5": {
           "name": "GPT-5.5",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 1050000,
@@ -182,13 +153,8 @@
             "output": 4
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -228,13 +194,8 @@
             "cache_read": 0.176
           },
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -273,12 +234,8 @@
             "output": 3.48
           },
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -318,12 +275,8 @@
             "cache_read": 0.286
           },
           "modalities": {
-            "input": [
-              "text"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text"],
+            "output": ["text"]
           },
           "variants": {
             "none": {
@@ -349,13 +302,8 @@
         "grok-4.5": {
           "name": "Grok 4.5",
           "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
+            "input": ["text", "image"],
+            "output": ["text"]
           },
           "limit": {
             "context": 500000,
