@@ -10,12 +10,30 @@
     "plan": { "model": "forra/claude-opus-4-8" },
     "build": { "model": "forra/claude-opus-4-8" },
     "sidekick": { "model": "forra/grok-4.5" },
-    "explore": { "model": "forra/glm-5.2" },
-    "research": { "model": "forra/glm-5.2" },
+    "explore": { "model": "ollama/laguna-xs-2.1:latest" },
+    "research": { "model": "ollama/laguna-xs-2.1:latest" },
     "design": { "model": "forra/claude-opus-4-8" },
     "reviewer": { "model": "forra/claude-opus-4-8" }
   },
   "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "laguna-xs-2.1:latest": {
+          "name": "Laguna XS 2.1"
+        },
+        "qwen3.6:35b-a3b-coding-nvfp4": {
+          "name": "Qwen 3.6"
+        },
+        "north-mini-code-1.0:latest": {
+          "name": "North Mini Code 1.0"
+        }
+      }
+    },
     "forra": {
       "name": "Forra",
       "npm": "@ai-sdk/openai-compatible",
