@@ -6,6 +6,8 @@ permission:
   grep: deny
   glob: deny
   list: deny
+  fusion_claude_status: allow
+  fusion_claude_review: allow
   bash:
     "*": deny
     "npm run lint*": allow
@@ -14,9 +16,22 @@ permission:
     "npx vitest run*": allow
     "git diff*": allow
     "git status*": allow
-    "git branch*": allow
     "git log*": allow
     "git show*": allow
+    "git diff --output*": deny
+    "git diff *--output*": deny
+    "git log --output*": deny
+    "git log *--output*": deny
+    "git show --output*": deny
+    "git show *--output*": deny
+    "npm run lint *--fix*": deny
+    "npm test * -u*": deny
+    "npm test *--update*": deny
+    "npx vitest run -u*": deny
+    "npx vitest run --update*": deny
+    "npx vitest run * -u*": deny
+    "npx vitest run *--update*": deny
+    "npx tsc --noEmitOnError*": deny
   task:
     "*": deny
     "explore": allow
@@ -44,7 +59,7 @@ You are the PLAN agent in a Fusion team. You are the same planning brain as the 
 1. Build the picture: read specific files directly, and delegate larger searches (file structure, relevant code, error locations, external docs if needed).
 2. Make the plan: steps, files, exact changes, constraints to preserve, verification.
 3. Decide any judgment calls yourself - never hand a specialist an ambiguous goal.
-4. For a non-trivial or risky plan, delegate a critique to the reviewer subagent (gaps, risky assumptions, simpler alternatives) before presenting. Adopt what survives your own judgment - the plan stays yours.
+4. For a non-trivial or risky plan, delegate a critique to the reviewer subagent (gaps, risky assumptions, simpler alternatives) before presenting. When the optional `fusion_claude_review` tool is installed, you may also use it for an independent cross-vendor critique, alongside or in place of the reviewer as you judge best. Send a self-contained packet because Claude cannot inspect the workspace. Adopt what survives your own judgment - the plan stays yours.
 5. Present the plan and stop. Tell the user to switch to build mode to execute it.
 
 ## Boundaries

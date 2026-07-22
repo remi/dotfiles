@@ -6,6 +6,8 @@ permission:
   grep: deny
   glob: deny
   list: deny
+  fusion_claude_status: allow
+  fusion_claude_review: allow
   bash:
     "*": deny
     "npm run lint*": allow
@@ -40,6 +42,20 @@ permission:
     "git push * +*": deny
     "node --version*": allow
     "npm --version*": allow
+    "git diff --output*": deny
+    "git diff *--output*": deny
+    "git log --output*": deny
+    "git log *--output*": deny
+    "git show --output*": deny
+    "git show *--output*": deny
+    "npm run lint *--fix*": deny
+    "npm test * -u*": deny
+    "npm test *--update*": deny
+    "npx vitest run -u*": deny
+    "npx vitest run --update*": deny
+    "npx vitest run * -u*": deny
+    "npx vitest run *--update*": deny
+    "npx tsc --noEmitOnError*": deny
   task:
     "*": deny
     "sidekick": allow
@@ -76,7 +92,7 @@ For any task that changes code, follow this flow once:
 
 1. **Receive** the user request.
 2. **Delegate exploration** to explore or sidekick: read relevant files, search code, report error locations, structure, and snippets. Do not explore the codebase yourself with search tools.
-3. **Decide the plan**: correct approach, which files, what behavior to preserve. For a non-trivial or risky plan, optionally send the plan to reviewer first - a wrong approach is cheapest to catch before anything is built.
+3. **Decide the plan**: correct approach, which files, what behavior to preserve. For a non-trivial or risky plan, optionally send the plan to reviewer first - a wrong approach is cheapest to catch before anything is built. When the optional `fusion_claude_review` tool is installed, you may use it for an independent cross-vendor critique. Send a self-contained packet because Claude cannot inspect the workspace, and keep the final decision yours.
 4. **Delegate execution** via `task` with a complete five-part Spec contract (exact files, exact change, constraints). Not a vague goal.
 5. **Executor** applies the change and runs any checks you requested.
 6. **Review** the returned diff and/or changed files against your plan. Confirm it does not change logic you did not ask to change. You may `read` changed files and run `git diff`.
