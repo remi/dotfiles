@@ -10,8 +10,8 @@
     "plan": { "model": "forra/claude-opus-4-8" },
     "build": { "model": "forra/claude-opus-4-8" },
     "sidekick": { "model": "forra/grok-4.5" },
-    "explore": { "model": "ollama/laguna-xs-2.1:latest" },
-    "research": { "model": "ollama/laguna-xs-2.1:latest" },
+    "explore": { "model": "forra/glm-5.2" },
+    "research": { "model": "forra/glm-5.2" },
     "design": { "model": "forra/claude-opus-4-8" },
     "reviewer": { "model": "forra/claude-opus-4-8" }
   },
