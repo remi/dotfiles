@@ -1,19 +1,21 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "forra/claude-opus-4-8",
   "disabled_providers": ["opencode", "anthropic", "openai"],
   "keybinds": {
     "leader": "ctrl+x",
     "app_exit": "<leader>q"
   },
   "agent": {
-    "plan": { "model": "forra/claude-opus-4-8" },
-    "build": { "model": "forra/claude-opus-4-8" },
-    "sidekick": { "model": "forra/grok-4.5" },
+    "plan": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
+    "build": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
+    "sidekick": { "model": "forra/glm-5.2" },
     "explore": { "model": "forra/glm-5.2" },
     "research": { "model": "forra/glm-5.2" },
-    "design": { "model": "forra/claude-opus-4-8" },
-    "reviewer": { "model": "forra/claude-opus-4-8" }
+    "design": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
+    "reviewer": {
+      "model": "forra/claude-opus-5-reasoning",
+      "variant": "medium"
+    }
   },
   "provider": {
     "ollama": {
@@ -58,8 +60,8 @@
             "cache_write": 12.5
           }
         },
-        "claude-opus-4-8": {
-          "name": "Claude Opus 4.8",
+        "claude-opus-5-reasoning": {
+          "name": "Claude Opus 5",
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]
@@ -73,9 +75,26 @@
             "output": 25,
             "cache_read": 0.5,
             "cache_write": 6.25
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
           }
         },
-        "claude-sonnet-5": {
+        "claude-sonnet-5-reasoning": {
           "name": "Claude Sonnet 5",
           "modalities": {
             "input": ["text", "image"],
@@ -92,7 +111,41 @@
             "cache_write": 2.5
           }
         },
-        "claude-sonnet-4-6": {
+        "claude-opus-4-8-reasoning": {
+          "name": "Claude Opus 4.8",
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 1000000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25,
+            "cache_read": 0.5,
+            "cache_write": 6.25
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
+          }
+        },
+        "claude-sonnet-4-6-reasoning": {
           "name": "Claude Sonnet 4.6",
           "modalities": {
             "input": ["text", "image"],
@@ -107,6 +160,23 @@
             "output": 15,
             "cache_read": 0.3,
             "cache_write": 3.75
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            },
+            "max": {
+              "reasoningEffort": "max"
+            }
           }
         },
         "claude-haiku-4-5": {
