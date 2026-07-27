@@ -1,0 +1,19 @@
+{
+  "theme": {
+    "name": "opencode",
+    "mode": "dark"
+  },
+  "keybinds": {
+    "leader": "ctrl+x",
+    "app_exit": "<leader>q"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "hide",
+    "scrollbar": false,
+    "thinking": "hide"
+  },
+  "animations": true
+}
