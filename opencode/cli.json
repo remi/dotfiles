@@ -1,19 +1,42 @@
 {
   "theme": {
-    "name": "opencode",
-    "mode": "dark"
+    "name": "catppuccin-black",
+    "mode": "system"
   },
   "keybinds": {
     "leader": "ctrl+x",
     "app_exit": "<leader>q"
   },
   "diffs": {
-    "wrap": "word"
+    "wrap": "word",
+    "tree": true,
+    "single": false
   },
   "session": {
     "sidebar": "hide",
     "scrollbar": false,
-    "thinking": "hide"
+    "thinking": "show",
+    "tabs": false,
+    "grouping": "none",
+    "markdown": "rendered"
   },
-  "animations": true
+  "animations": true,
+  "hints": {
+    "onboarding": false
+  },
+  "attention": {
+    "enabled": false
+  },
+  "debug": {
+    "devtools": false,
+    "turn_tokens": false
+  },
+  "terminal": {
+    "title": true
+  },
+  "prompt": {
+    "paste": "compact",
+    "editor": true
+  },
+  "mouse": true
 }
