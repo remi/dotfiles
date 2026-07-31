@@ -22,13 +22,54 @@
       },
       "models": {
         "laguna-xs-2.1:latest": {
-          "name": "Laguna XS 2.1"
+          "name": "Laguna XS 2.1",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
         },
         "qwen3.6:35b-a3b-coding-nvfp4": {
-          "name": "Qwen 3.6"
+          "name": "Qwen 3.6",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
         },
         "north-mini-code-1.0:latest": {
-          "name": "North Mini Code 1.0"
+          "name": "North Mini Code 1.0",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        }
+      }
+    },
+    "gilfoyle": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Gilfoyle",
+      "options": {
+        "baseURL": "{env:GILFOYLE_API_URL}",
+        "apiKey": "{env:GILFOYLE_API_KEY}"
+      },
+      "models": {
+        "poolside/Laguna-S-2.1-NVFP4": {
+          "name": "Laguna S2.1",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "qwen3.6-35b-a3b-q8": {
+          "name": "Qwen 3.6 Q8",
+          "tool_call": true,
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
         }
       }
     },
@@ -36,7 +77,8 @@
       "name": "Forra",
       "npm": "@ai-sdk/openai-compatible",
       "options": {
-        "baseURL": "{env:FORRA_API_URL}"
+        "baseURL": "{env:FORRA_API_URL}",
+        "apiKey": "{env:FORRA_API_KEY}"
       },
       "models": {
         "claude-fable-5": {
@@ -280,6 +322,47 @@
             "input": 1.045,
             "output": 4.4,
             "cache_read": 0.176
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "variants": {
+            "none": {
+              "reasoningEffort": "none"
+            },
+            "minimal": {
+              "reasoningEffort": "minimal"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh"
+            }
+          }
+        },
+        "kimi-k3": {
+          "id": "azure-kimi-k3",
+          "name": "Kimi K3",
+          "tool_call": true,
+          "attachment": true,
+          "reasoning": true,
+          "temperature": true,
+          "limit": {
+            "context": 1048576,
+            "output": 1048576
+          },
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
           },
           "modalities": {
             "input": ["text", "image"],
