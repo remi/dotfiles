@@ -1,15 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "disabled_providers": ["opencode", "anthropic", "openai"],
-  "agent": {
-    "plan": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
-    "build": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
-    "sidekick": { "model": "forra/glm-5.2", "variant": "high" },
-    "explore": { "model": "forra/glm-5.2", "variant": "high" },
-    "research": { "model": "forra/glm-5.2", "variant": "high" },
-    "design": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" },
-    "reviewer": { "model": "forra/claude-opus-5-reasoning", "variant": "medium" }
-  },
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
