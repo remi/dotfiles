@@ -1,0 +1,5 @@
+{
+  "app.clear": ["ctrl+shift+u"],
+  "tui.input.newLine": ["alt+enter", "shift+enter"],
+  "app.message.followUp": []
+}

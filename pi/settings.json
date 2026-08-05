@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "theme": "catppuccin-black",
+  "defaultProvider": "forra",
+  "defaultModel": "azure-kimi-k3",
+  "defaultThinkingLevel": "high",
+  "quietStartup": true,
+  "showHardwareCursor": false,
+  "hideThinkingBlock": false,
+  "editorPaddingX": 1
+}
+
