@@ -7,6 +7,9 @@
   "quietStartup": true,
   "showHardwareCursor": false,
   "hideThinkingBlock": false,
-  "editorPaddingX": 1
+  "editorPaddingX": 1,
+  "packages": [
+    "npm:pi-cost",
+    "npm:pi-atelier"
+  ]
 }
-
