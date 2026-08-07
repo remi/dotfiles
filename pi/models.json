@@ -32,7 +32,7 @@
       "apiKey": "$GILFOYLE_API_KEY",
       "compat": {
         "supportsDeveloperRole": false,
-        "supportsReasoningEffort": false
+        "requiresThinkingAsText": true
       },
       "models": [
         {
@@ -48,7 +48,15 @@
         {
           "id": "deepseek-v4-flash-0731",
           "name": "Deepseek V4 Flash [0731]",
-          "input": ["text", "image"]
+          "input": ["text", "image"],
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "max": "max",
+            "xhigh": "xhigh",
+            "high": "high",
+            "medium": "medium",
+            "low": "low"
+          }
         }
       ]
     },
