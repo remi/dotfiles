@@ -1,7 +1,7 @@
 {
   "preset": "custom",
   "density": "compact",
-  "sidebarDisabled": true,
+  "showSidebarOnStartup": false,
   "segmentLayout": [
     {
       "id": "brand",
