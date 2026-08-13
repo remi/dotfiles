@@ -122,3 +122,5 @@
 	path = ~/.gitconfig_mirego
 [init]
 	defaultBranch = main
+[credential "https://git.heroku.com"]
+	helper = !heroku git:credentials
