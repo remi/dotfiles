@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "1.0.0",
   "theme": "catppuccin-black",
   "defaultProvider": "forra",
   "defaultModel": "azure-kimi-k3",
@@ -10,6 +10,6 @@
   "editorPaddingX": 1,
   "packages": [
     "npm:pi-cost",
-    "npm:pi-atelier"
+    "npm:pi-footer"
   ]
 }
