@@ -173,6 +173,28 @@
               }
             ]
           }
+        },
+        {
+          "id": "azure-glm-5.3-flash",
+          "name": "GLM-5.3 Flash",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "low": "low",
+            "high": "high",
+            "max": "max"
+          },
+          "input": ["text", "image"],
+          "contextWindow": 1048576,
+          "maxTokens": 131072,
+          "compat": {
+            "maxTokensField": "max_tokens"
+          },
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cacheRead": 0.03,
+            "cacheWrite": 0
+          }
         }
       ]
     }
